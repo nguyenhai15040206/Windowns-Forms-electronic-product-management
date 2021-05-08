@@ -77,6 +77,13 @@ namespace QLSanPhamDienTu
             frm.btnThemMoi.Visible = true;
             frm.ShowDialog();
         }
+
+        private void btnThemDanhMuc_Click(object sender, EventArgs e)
+        {
+            frmThemDanhMuc frm = new frmThemDanhMuc();
+            frm.ShowDialog();
+            
+        }
     }
 
 }

@@ -78,7 +78,7 @@ namespace QLSanPhamDienTu
             this.groupBox1.Controls.Add(this.labelControl1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(622, 180);
+            this.groupBox1.Size = new System.Drawing.Size(675, 180);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
@@ -123,7 +123,7 @@ namespace QLSanPhamDienTu
             // 
             this.pictureBox1.Location = new System.Drawing.Point(465, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(204, 91);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -195,7 +195,7 @@ namespace QLSanPhamDienTu
             this.gridControl1.Location = new System.Drawing.Point(12, 242);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(622, 202);
+            this.gridControl1.Size = new System.Drawing.Size(676, 202);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -370,7 +370,7 @@ namespace QLSanPhamDienTu
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnThoat.Location = new System.Drawing.Point(511, 450);
+            this.btnThoat.Location = new System.Drawing.Point(564, 450);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnThoat.Size = new System.Drawing.Size(124, 37);
@@ -386,7 +386,7 @@ namespace QLSanPhamDienTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 495);
+            this.ClientSize = new System.Drawing.Size(700, 495);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnXoa);
