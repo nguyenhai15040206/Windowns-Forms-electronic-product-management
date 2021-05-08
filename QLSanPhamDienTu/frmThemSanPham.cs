@@ -103,19 +103,26 @@ namespace QLSanPhamDienTu
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             // kiểm tra các thông tin đầu vào
-            string[] thongTinChiTiet = txtThongTinChiTiet.Text.Trim().Split('&');
-            string moTa = thongTinChiTiet[0].Trim().ToString();
-            string motaChiTiet = thongTinChiTiet[1].Trim().ToString();
-            if (SanPhamBUS.instance.capNhatSanPham(int.Parse(txtMaSP.Text.Trim()), txtTenSP.Text.Trim(), int.Parse(numericUpDownSoLuong.Value.ToString()),
-                double.Parse(txtDonGia.Text.Trim()), moTa, motaChiTiet, txtKhuyenMaiDiKem.Text.Trim(), double.Parse(txtGiamGia.Text.Trim()), pickerNgayCN.Value,
-                txtXuatSu.Text.Trim(), txtHinhMH.Text.Trim(), txtDSHinh.Text.Trim(), true, int.Parse(cboThuongHieu.SelectedValue.ToString())))
+            if (txtMaSP.Text.Trim() != "")
             {
-                MessageBox.Show("Cập nhật thành công");
+                string[] thongTinChiTiet = txtThongTinChiTiet.Text.Trim().Split('&');
+                string moTa = thongTinChiTiet[0].Trim().ToString();
+                string motaChiTiet = thongTinChiTiet[1].Trim().ToString();
+                if (SanPhamBUS.instance.capNhatSanPham(int.Parse(txtMaSP.Text.Trim()), txtTenSP.Text.Trim(), int.Parse(numericUpDownSoLuong.Value.ToString()),
+                    double.Parse(txtDonGia.Text.Trim()), moTa, motaChiTiet, txtKhuyenMaiDiKem.Text.Trim(), double.Parse(txtGiamGia.Text.Trim()), pickerNgayCN.Value,
+                    txtXuatSu.Text.Trim(), txtHinhMH.Text.Trim(), txtDSHinh.Text.Trim(), true, int.Parse(cboThuongHieu.SelectedValue.ToString())))
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại các thông tin");
+                }
             }
             else
             {
-                MessageBox.Show("Vui lòng kiểm tra lại các thông tin");
-            }    
+                MessageBox.Show("Cập nhật không thành công! vui lòng kiểm tra lại thông tin");
+            }
 
             
         }
