@@ -23,6 +23,7 @@ namespace QLSanPhamDienTu
             DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
             NhaSanXuatBUS.Instance.loadNhaSanXuatCbo(cboNSX);
             DanhMucBUS.Instance.loadGhiChuCbo(cboGhiChu);
+            txtTenDM.Focus();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -60,19 +61,6 @@ namespace QLSanPhamDienTu
 
         }
 
-        private void btnChoseImages_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open = new OpenFileDialog();
-            open.Filter = openFileDialog1.Filter = "JPG files (*.jpg)|*.jpg|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.ImageLocation = openFileDialog1.FileName;
-                string[] url = openFileDialog1.FileName.Trim().Split('\\');
-            }
-        }
-
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             
@@ -81,7 +69,6 @@ namespace QLSanPhamDienTu
                 txtMaDM.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridColumn1).ToString();
                 txtTenDM.Text= gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridColumn2).ToString();  
                 cboGhiChu.Text =  gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridColumn5).ToString();
-                //pictureBox1.Image = new Bitmap(@"..\\..\\Resources\\");
             }
             catch
             {
@@ -91,18 +78,25 @@ namespace QLSanPhamDienTu
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtTenDM.Text.Trim()))
+            if (!string.IsNullOrEmpty(txtMaDM.Text.Trim()))
             {
+                MessageBox.Show("Vui lòng làm mới danh mục trước khi thêm!");
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(txtTenDM.Text.Trim()))
+                {
                     if (DanhMucBUS.Instance.themDanhMuc(txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), ""))
                     {
                         MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK);
                         DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
                     }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK);
-                txtTenDM.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK);
+                    txtTenDM.Focus();
+                }
             }
         }
 
@@ -125,6 +119,23 @@ namespace QLSanPhamDienTu
                 MessageBox.Show("Vui lòng chọn Danh mục!", "Thông báo", MessageBoxButtons.OK);
                 txtTenDM.Focus();
             }
+        }
+
+        private void cboGhiChu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtMaDM.Text = "";
+            txtTenDM.Text = "";
+            txtTenDM.Focus();
         }
     }
 }

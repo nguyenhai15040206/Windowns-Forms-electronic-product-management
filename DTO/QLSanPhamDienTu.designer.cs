@@ -2413,6 +2413,8 @@ namespace DTO
 		
 		private EntitySet<HoaDon> _HoaDons;
 		
+		private EntitySet<PhieuNhap> _PhieuNhaps;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2440,6 +2442,7 @@ namespace DTO
 		public NguoiDung()
 		{
 			this._HoaDons = new EntitySet<HoaDon>(new Action<HoaDon>(this.attach_HoaDons), new Action<HoaDon>(this.detach_HoaDons));
+			this._PhieuNhaps = new EntitySet<PhieuNhap>(new Action<PhieuNhap>(this.attach_PhieuNhaps), new Action<PhieuNhap>(this.detach_PhieuNhaps));
 			OnCreated();
 		}
 		
@@ -2636,6 +2639,19 @@ namespace DTO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_PhieuNhap", Storage="_PhieuNhaps", ThisKey="maNguoiDung", OtherKey="maNguoiDung")]
+		public EntitySet<PhieuNhap> PhieuNhaps
+		{
+			get
+			{
+				return this._PhieuNhaps;
+			}
+			set
+			{
+				this._PhieuNhaps.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2663,6 +2679,18 @@ namespace DTO
 		}
 		
 		private void detach_HoaDons(HoaDon entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung = null;
+		}
+		
+		private void attach_PhieuNhaps(PhieuNhap entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung = this;
+		}
+		
+		private void detach_PhieuNhaps(PhieuNhap entity)
 		{
 			this.SendPropertyChanging();
 			entity.NguoiDung = null;
@@ -3081,9 +3109,13 @@ namespace DTO
 		
 		private System.Nullable<int> _maNhaCungCap;
 		
+		private System.Nullable<int> _maNguoiDung;
+		
 		private System.Nullable<decimal> _tienNhap;
 		
 		private EntityRef<CTPhieuNhap> _CTPhieuNhap;
+		
+		private EntityRef<NguoiDung> _NguoiDung;
 		
 		private EntityRef<NhaCungCap> _NhaCungCap;
 		
@@ -3097,6 +3129,8 @@ namespace DTO
     partial void OnngayNhapChanged();
     partial void OnmaNhaCungCapChanging(System.Nullable<int> value);
     partial void OnmaNhaCungCapChanged();
+    partial void OnmaNguoiDungChanging(System.Nullable<int> value);
+    partial void OnmaNguoiDungChanged();
     partial void OntienNhapChanging(System.Nullable<decimal> value);
     partial void OntienNhapChanged();
     #endregion
@@ -3104,6 +3138,7 @@ namespace DTO
 		public PhieuNhap()
 		{
 			this._CTPhieuNhap = default(EntityRef<CTPhieuNhap>);
+			this._NguoiDung = default(EntityRef<NguoiDung>);
 			this._NhaCungCap = default(EntityRef<NhaCungCap>);
 			OnCreated();
 		}
@@ -3172,6 +3207,30 @@ namespace DTO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maNguoiDung", DbType="Int")]
+		public System.Nullable<int> maNguoiDung
+		{
+			get
+			{
+				return this._maNguoiDung;
+			}
+			set
+			{
+				if ((this._maNguoiDung != value))
+				{
+					if (this._NguoiDung.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmaNguoiDungChanging(value);
+					this.SendPropertyChanging();
+					this._maNguoiDung = value;
+					this.SendPropertyChanged("maNguoiDung");
+					this.OnmaNguoiDungChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tienNhap", DbType="Money")]
 		public System.Nullable<decimal> tienNhap
 		{
@@ -3217,6 +3276,40 @@ namespace DTO
 						value.PhieuNhap = this;
 					}
 					this.SendPropertyChanged("CTPhieuNhap");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_PhieuNhap", Storage="_NguoiDung", ThisKey="maNguoiDung", OtherKey="maNguoiDung", IsForeignKey=true)]
+		public NguoiDung NguoiDung
+		{
+			get
+			{
+				return this._NguoiDung.Entity;
+			}
+			set
+			{
+				NguoiDung previousValue = this._NguoiDung.Entity;
+				if (((previousValue != value) 
+							|| (this._NguoiDung.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NguoiDung.Entity = null;
+						previousValue.PhieuNhaps.Remove(this);
+					}
+					this._NguoiDung.Entity = value;
+					if ((value != null))
+					{
+						value.PhieuNhaps.Add(this);
+						this._maNguoiDung = value.maNguoiDung;
+					}
+					else
+					{
+						this._maNguoiDung = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("NguoiDung");
 				}
 			}
 		}

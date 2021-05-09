@@ -41,7 +41,7 @@ namespace QLSanPhamDienTu
             this.phânQuyềnNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQuanLySanPham = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuNhapHangNCC = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNghiệpVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trảHàngTừKháchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -135,7 +135,7 @@ namespace QLSanPhamDienTu
             // 
             this.quảnLýNhàCungCấpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuQuanLySanPham,
-            this.nhàCungCấpToolStripMenuItem});
+            this.menuNhapHangNCC});
             this.quảnLýNhàCungCấpToolStripMenuItem.Name = "quảnLýNhàCungCấpToolStripMenuItem";
             this.quảnLýNhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.quảnLýNhàCungCấpToolStripMenuItem.Text = "Quản lý kho hàng";
@@ -143,15 +143,15 @@ namespace QLSanPhamDienTu
             // menuQuanLySanPham
             // 
             this.menuQuanLySanPham.Name = "menuQuanLySanPham";
-            this.menuQuanLySanPham.Size = new System.Drawing.Size(196, 24);
+            this.menuQuanLySanPham.Size = new System.Drawing.Size(202, 24);
             this.menuQuanLySanPham.Text = "Quản lý sản phẩm";
             this.menuQuanLySanPham.Click += new System.EventHandler(this.quảnLýSảnPhẩmToolStripMenuItem_Click);
             // 
-            // nhàCungCấpToolStripMenuItem
+            // menuNhapHangNCC
             // 
-            this.nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
-            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(196, 24);
-            this.nhàCungCấpToolStripMenuItem.Text = "Trả hàng NCC";
+            this.menuNhapHangNCC.Name = "menuNhapHangNCC";
+            this.menuNhapHangNCC.Size = new System.Drawing.Size(202, 24);
+            this.menuNhapHangNCC.Text = "Nhập hàng từ NCC";
             // 
             // quảnLýNghiệpVụToolStripMenuItem
             // 
@@ -232,7 +232,7 @@ namespace QLSanPhamDienTu
         private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhàCungCấpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuQuanLySanPham;
-        private System.Windows.Forms.ToolStripMenuItem nhàCungCấpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuNhapHangNCC;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNghiệpVụToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bánHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trảHàngTừKháchToolStripMenuItem;

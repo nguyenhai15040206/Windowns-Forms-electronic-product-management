@@ -60,7 +60,7 @@ namespace DAO
 
 
         // cập nhập danh mục
-        public bool capNhat(int maDM, string tenDM, int maNSX, string ghiChu, string logo)
+        public bool capNhat(int maDM, string tenDM, int maNSX, string ghiChu, string log)
         {
             DanhMuc dm = new DanhMuc();
             dm = db.DanhMucs.SingleOrDefault(m => m.maDanhMuc == maDM);
@@ -70,7 +70,6 @@ namespace DAO
                 dm.tenDanhMuc =tenDM;
                 dm.maNhaSanXuat = maNSX;
                 dm.ghiChu = ghiChu;
-                dm.logoTungDanhMucSP = logo;
                 db.SubmitChanges();
                 return true;
             }

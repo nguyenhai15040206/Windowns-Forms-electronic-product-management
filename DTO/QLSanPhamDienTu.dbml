@@ -117,6 +117,7 @@
       <Column Name="ngayVaoLam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="hoatDong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="NguoiDung_HoaDon" Member="HoaDons" ThisKey="maNguoiDung" OtherKey="maNguoiDung" Type="HoaDon" />
+      <Association Name="NguoiDung_PhieuNhap" Member="PhieuNhaps" ThisKey="maNguoiDung" OtherKey="maNguoiDung" Type="PhieuNhap" />
     </Type>
   </Table>
   <Table Name="dbo.NhaCungCap" Member="NhaCungCaps">
@@ -145,8 +146,10 @@
       <Column Name="maPhieuNhap" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ngayNhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="maNhaCungCap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="maNguoiDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="tienNhap" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Association Name="PhieuNhap_CTPhieuNhap" Member="CTPhieuNhap" ThisKey="maPhieuNhap" OtherKey="maPhieuNhap" Type="CTPhieuNhap" Cardinality="One" />
+      <Association Name="NguoiDung_PhieuNhap" Member="NguoiDung" ThisKey="maNguoiDung" OtherKey="maNguoiDung" Type="NguoiDung" IsForeignKey="true" />
       <Association Name="NhaCungCap_PhieuNhap" Member="NhaCungCap" ThisKey="maNhaCungCap" OtherKey="maNhaCungCap" Type="NhaCungCap" IsForeignKey="true" />
     </Type>
   </Table>

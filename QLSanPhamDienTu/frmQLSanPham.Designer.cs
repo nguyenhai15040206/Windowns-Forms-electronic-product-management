@@ -168,7 +168,7 @@ namespace QLSanPhamDienTu
             this.btnThemDanhMuc.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnThemDanhMuc.Size = new System.Drawing.Size(173, 40);
             this.btnThemDanhMuc.TabIndex = 0;
-            this.btnThemDanhMuc.Text = "Thêm Danh mục";
+            this.btnThemDanhMuc.Text = "Chi tiết danh mục";
             this.btnThemDanhMuc.Click += new System.EventHandler(this.btnThemDanhMuc_Click);
             // 
             // panelControl2
@@ -197,6 +197,12 @@ namespace QLSanPhamDienTu
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.AppearancePrint.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.AppearancePrint.HeaderPanel.Options.UseFont = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
