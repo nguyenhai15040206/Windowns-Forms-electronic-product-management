@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace QLSanPhamDienTu
 {
@@ -35,8 +37,58 @@ namespace QLSanPhamDienTu
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            //phanQuyen(menuStrip1);
         }
+
+        public void phanQuyen(MenuStrip menuStrip1)
+        {
+            List<int> nhomND = NguoiDungBUS.Instance.getMaNhomNguoiDung(1);
+
+            foreach (int item in nhomND)
+            {
+                List<QL_PhanQuyen> dsQuyen = NguoiDungBUS.Instance.getMaManHinh(item);
+                for (int i = 0; i < dsQuyen.Count; i++)
+                {
+                    FindMenuPhanQuyen(menuStrip1.Items, dsQuyen[i].maManHinh.ToString(), (bool)dsQuyen[i].coQuyen);
+                }
+
+            }
+        }
+
+        private void FindMenuPhanQuyen(ToolStripItemCollection mnuItems, string pScreenName, bool pEnable)
+        {
+            foreach (ToolStripItem menu in mnuItems)
+            {
+                if (menu is ToolStripMenuItem && ((ToolStripMenuItem)(menu)).DropDownItems.Count > 0)
+                {
+
+                    FindMenuPhanQuyen(((ToolStripMenuItem)(menu)).DropDownItems, pScreenName, pEnable);
+                    menu.Enabled = CheckAllMenuChildVisible(((ToolStripMenuItem)(menu)).DropDownItems);
+                    menu.Visible = menu.Enabled;
+                }
+                else if (string.Equals(pScreenName, menu.Tag))
+                {
+                    menu.Enabled = pEnable; menu.Visible = pEnable;
+                }
+            }
+        }
+
+        private bool CheckAllMenuChildVisible(ToolStripItemCollection mnuItems)
+        {
+            foreach (ToolStripItem menuItem in mnuItems)
+            {
+                if (menuItem is ToolStripMenuItem && menuItem.Enabled)
+                {
+                    return true;
+                }
+                else if (menuItem is ToolStripSeparator)
+                {
+                    continue;
+                }
+            }
+            return false;
+        }
+
 
         private Form IstActive(Type type)
         {

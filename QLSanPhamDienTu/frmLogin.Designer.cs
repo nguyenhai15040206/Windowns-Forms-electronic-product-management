@@ -29,23 +29,27 @@ namespace QLSanPhamDienTu
         /// </summary>
         private void InitializeComponent()
         {
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenDN = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenDN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // textEdit1
+            // txtTenDN
             // 
-            this.textEdit1.Location = new System.Drawing.Point(236, 38);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(259, 26);
-            this.textEdit1.TabIndex = 1;
+            this.txtTenDN.Location = new System.Drawing.Point(236, 38);
+            this.txtTenDN.Name = "txtTenDN";
+            this.txtTenDN.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDN.Properties.Appearance.Options.UseFont = true;
+            this.txtTenDN.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDN.Properties.AppearanceFocused.Options.UseFont = true;
+            this.txtTenDN.Size = new System.Drawing.Size(259, 26);
+            this.txtTenDN.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -57,12 +61,16 @@ namespace QLSanPhamDienTu
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Tên người dùng:";
             // 
-            // textEdit2
+            // txtMatKhau
             // 
-            this.textEdit2.Location = new System.Drawing.Point(236, 94);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(259, 26);
-            this.textEdit2.TabIndex = 1;
+            this.txtMatKhau.Location = new System.Drawing.Point(236, 94);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
+            this.txtMatKhau.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Properties.AppearanceFocused.Options.UseFont = true;
+            this.txtMatKhau.Size = new System.Drawing.Size(259, 26);
+            this.txtMatKhau.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -74,31 +82,32 @@ namespace QLSanPhamDienTu
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Tên người dùng:";
             // 
-            // simpleButton2
+            // btnHuy
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.BackgroundImage = global::QLSanPhamDienTu.Properties.Resources.btuufon112;
-            this.simpleButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.simpleButton2.Location = new System.Drawing.Point(378, 126);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton2.Size = new System.Drawing.Size(117, 38);
-            this.simpleButton2.TabIndex = 4;
-            this.simpleButton2.Text = "Hủy";
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.BackgroundImage = global::QLSanPhamDienTu.Properties.Resources.btuufon112;
+            this.btnHuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHuy.Location = new System.Drawing.Point(378, 126);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnHuy.Size = new System.Drawing.Size(117, 38);
+            this.btnHuy.TabIndex = 4;
+            this.btnHuy.Text = "Hủy";
             // 
-            // simpleButton1
+            // btnLogin
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.BackgroundImage = global::QLSanPhamDienTu.Properties.Resources.btuufon112;
-            this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.simpleButton1.Location = new System.Drawing.Point(236, 126);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton1.Size = new System.Drawing.Size(117, 38);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "Đăng nhập";
+            this.btnLogin.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Appearance.Options.UseFont = true;
+            this.btnLogin.BackgroundImage = global::QLSanPhamDienTu.Properties.Resources.btuufon112;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogin.Location = new System.Drawing.Point(236, 126);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnLogin.Size = new System.Drawing.Size(117, 38);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel1
             // 
@@ -115,20 +124,20 @@ namespace QLSanPhamDienTu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(507, 176);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtMatKhau);
+            this.Controls.Add(this.txtTenDN);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenDN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,11 +146,11 @@ namespace QLSanPhamDienTu
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtTenDN;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtMatKhau;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnLogin;
+        private DevExpress.XtraEditors.SimpleButton btnHuy;
     }
 }

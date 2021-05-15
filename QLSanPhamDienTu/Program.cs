@@ -18,7 +18,12 @@ namespace QLSanPhamDienTu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThemDanhMuc());
+            //frmLogin frm = new frmLogin();
+            //if (frm.ShowDialog() == DialogResult.OK)
+            //{
+             //   frm.Close();
+                Application.Run(new frmLogin());
+            //}
         }
     }
 }

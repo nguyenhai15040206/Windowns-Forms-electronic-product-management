@@ -73,6 +73,16 @@ namespace QLSanPhamDienTu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1601833 {
+            get {
+                object obj = ResourceManager.GetObject("1601833", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6954027_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("6954027-removebg-preview", resourceCulture);
@@ -203,6 +213,16 @@ namespace QLSanPhamDienTu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LoginLogo {
             get {
                 object obj = ResourceManager.GetObject("LoginLogo", resourceCulture);
@@ -236,6 +256,16 @@ namespace QLSanPhamDienTu.Properties {
         internal static System.Drawing.Bitmap refresh_icon_small {
             get {
                 object obj = ResourceManager.GetObject("refresh-icon-small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Update_icon {
+            get {
+                object obj = ResourceManager.GetObject("Update-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

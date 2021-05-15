@@ -42,6 +42,8 @@ namespace DAO
 
         }
 
+
+
         public List<NguoiDung> loadNguoiDung()
         {
             var listNguoiDung = db.NguoiDungs.ToList();
@@ -69,6 +71,53 @@ namespace DAO
                 row["coQuyen"] = item.coQuyen;
             }
             return table;
+        }
+
+        // lấy được mã nhóm người dùng với maNguoiDung
+        public List<int> getMaNhomNguoiDung(int maNguoiDung)
+        {
+            var nguoiDung = db.QL_NguoiDungNhomNguoiDungs.Where(m => m.maNguoiDung == maNguoiDung).Select(m=>m.maNhom).ToList();
+            return nguoiDung;
+        }
+
+        // lấy được danh sách phân quyền từ maNhom
+        public List<QL_PhanQuyen> getMaManHinh(int maNhom)
+        {
+            var phanQuyen = db.QL_PhanQuyens.Where(m => m.maNhom == maNhom).ToList();
+            return phanQuyen;
+        }
+
+        // các chức năng
+
+        // thêm người dùng
+        public bool themNguoiDung(string tenNguoiDung, string tenDangNhap, string matKhau, string diaChi, string soDienThoai, 
+            string email, DateTime ngayVaoLam, bool hoatDong )
+        {
+            try
+            {
+                NguoiDung nd = new NguoiDung();
+                nd.tenNguoiDung = tenNguoiDung;
+                nd.tenDangNhap = tenDangNhap;
+                nd.matKhau = matKhau;
+                nd.diaChi = diaChi;
+                nd.soDienThoai = soDienThoai;
+                nd.email = email;
+                nd.ngayVaoLam = ngayVaoLam;
+                nd.hoatDong = hoatDong;
+                db.NguoiDungs.InsertOnSubmit(nd);
+                db.SubmitChanges();
+                return true;
+            }catch
+            {
+                return false;
+            }
+        }
+
+        // đăng nhập
+        public NguoiDung dangNhapHeThong(string tenDangNhap, string matKhau)
+        {
+            var nguoiDung = db.NguoiDungs.SingleOrDefault(m => m.tenDangNhap == tenDangNhap && m.matKhau == matKhau);
+            return nguoiDung;
         }
 
 

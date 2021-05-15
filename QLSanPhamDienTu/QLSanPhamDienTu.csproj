@@ -196,8 +196,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data_disk.ico" />
+    <None Include="Resources\Update-icon.png" />
     <None Include="Resources\nen1.jpg" />
     <None Include="Resources\meo-ban-hang-online-dat-khach-dat-hang.jpg" />
+    <None Include="Resources\1601833.png" />
+    <None Include="Resources\images.jpg" />
     <Content Include="Resources\SanPham\IPHONE11PRO_TRANG.png" />
     <None Include="Resources\add21.ico" />
     <None Include="Resources\close1.png" />
@@ -221,6 +224,10 @@
     <ProjectReference Include="..\CustomControls\CustomControls.csproj">
       <Project>{e4d83e5f-971b-4783-9370-c70e2e13b2fa}</Project>
       <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{1B0CD86F-66CE-4A8F-AF34-7D85C4291C7E}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
