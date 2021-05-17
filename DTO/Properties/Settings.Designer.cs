@@ -27,10 +27,23 @@ namespace DTO.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QL_SanPham;User ID=sa;Password=tanha" +
-            "i123")]
+            "i")]
         public string QL_SanPhamConnectionString {
             get {
                 return ((string)(this["QL_SanPhamConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QL_SanPham;User ID=sa;Password=sa201" +
+            "2")]
+        public string Conn {
+            get {
+                return ((string)(this["Conn"]));
+            }
+            set {
+                this["Conn"] = value;
             }
         }
     }

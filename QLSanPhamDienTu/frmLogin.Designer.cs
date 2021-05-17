@@ -49,7 +49,7 @@ namespace QLSanPhamDienTu
             this.txtTenDN.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDN.Properties.AppearanceFocused.Options.UseFont = true;
             this.txtTenDN.Size = new System.Drawing.Size(259, 26);
-            this.txtTenDN.TabIndex = 1;
+            this.txtTenDN.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -58,7 +58,7 @@ namespace QLSanPhamDienTu
             this.labelControl1.Location = new System.Drawing.Point(236, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(107, 20);
-            this.labelControl1.TabIndex = 2;
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Tên người dùng:";
             // 
             // txtMatKhau
@@ -79,7 +79,7 @@ namespace QLSanPhamDienTu
             this.labelControl2.Location = new System.Drawing.Point(236, 68);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(107, 20);
-            this.labelControl2.TabIndex = 2;
+            this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Tên người dùng:";
             // 
             // btnHuy
@@ -92,7 +92,7 @@ namespace QLSanPhamDienTu
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnHuy.Size = new System.Drawing.Size(117, 38);
-            this.btnHuy.TabIndex = 4;
+            this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Hủy";
             // 
             // btnLogin
@@ -105,7 +105,7 @@ namespace QLSanPhamDienTu
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnLogin.Size = new System.Drawing.Size(117, 38);
-            this.btnLogin.TabIndex = 3;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -116,7 +116,7 @@ namespace QLSanPhamDienTu
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 152);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 6;
             // 
             // frmLogin
             // 

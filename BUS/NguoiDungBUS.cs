@@ -12,6 +12,7 @@ using DevExpress.XtraTreeList.Nodes;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid;
 using System.Data;
+using System.Data.Sql;
 
 namespace BUS
 {
@@ -36,14 +37,34 @@ namespace BUS
         public void loadNhomNguoiDung(TreeList tv)
         {
             tv.BeginUnboundLoad();
-            TreeListNode parentForRootNodes = null;
-            for(int i =0; i < NguoiDungDAO.Instance.loadNhomNguoiDung().Rows.Count; i++)
+
+            tv.Nodes.Clear();
+            List<QL_NhomNguoiDung> nd = NguoiDungDAO.Instance.loadNhomNguoiDung();
+            for (int i = 0; i < nd.Count; i++)
             {
-                TreeListNode node =
-                    tv.Nodes.Add(NguoiDungDAO.Instance.loadNhomNguoiDung().Rows[i][0], parentForRootNodes);
+                TreeListNode nodes = tv.AppendNode(null, null);
+                nodes.SetValue("name", nd[i].tenNhom.ToString());
+                nodes.Tag = (nd[i].maNhom.ToString()).ToString();
+                string maNhom = (string)nodes.Tag;
+                List<NguoiDung> ndNhomND = NguoiDungDAO.Instance.loadNguoiDungTheoNhom(int.Parse(maNhom.ToString()));
+                for(int j=0;j < ndNhomND.Count; j++)
+                {
+                    TreeListNode childNodes = null;
+                    childNodes = tv.AppendNode(null, nodes);
+                    childNodes.SetValue("name", "Tài khoản: "+ndNhomND[j].tenDangNhap);
+                }    
+
+
             }
             tv.EndUnboundLoad();
         }
+
+        // load dười dùng chưa có nhóm
+        public void loadNguoiDungChuaCoNhom(GridControl dgv)
+        {
+            dgv.DataSource = null;
+            dgv.DataSource = NguoiDungDAO.Instance.loadNguoiDungChuaCoNhom();
+        }    
 
 
         // load tất cả người dùng
@@ -52,10 +73,27 @@ namespace BUS
             gv.DataSource = NguoiDungDAO.Instance.loadNguoiDung();
         }
 
+
+        //load danh sách Nhóm người dùng
+        public void loadDSNhomNguoiDungComboBox(ComboBox cbo)
+        {
+            cbo.DataSource = NguoiDungDAO.Instance.loadNhomNguoiDung();
+            cbo.DisplayMember = "tenNhom";
+            cbo.ValueMember = "maNhom";
+        }
+
+        public void loadDSNhomNguoiDungTheoMaNhom(int maNhom, GridControl gv)
+        {
+            gv.DataSource = null;
+            gv.DataSource = NguoiDungDAO.Instance.loadNguoiDungTheoNhom(maNhom);
+        }
+        // load màn hình
         public void loadDMManHinh(GridControl gv)
         {
             gv.DataSource = NguoiDungDAO.Instance.loadDanhMucManHinh("admin");
         }
+
+
 
 
         // get mã nhóm người dùng
@@ -70,6 +108,7 @@ namespace BUS
             return NguoiDungDAO.Instance.getMaManHinh(maNhom);
         }
 
+
         // chức năng
         // thêm người dùng
         public bool themNguoiDung(string tenNguoiDung, string tenDangNhap, string matKhau, string diaChi, string soDienThoai,
@@ -78,27 +117,64 @@ namespace BUS
             return NguoiDungDAO.Instance.themNguoiDung(tenNguoiDung, tenDangNhap, Encryptor.MD5Hash(matKhau), diaChi, soDienThoai, email, ngayVaoLam, hoatDong);
         }
 
+        // thêm người dùng vào nhóm
+        public bool themNguoiDungVaoNhom(int maNguoiDung, int maNhom, string ghiChu)
+        {
+            return NguoiDungDAO.Instance.themNguoiDungVaoNhom(maNguoiDung, maNhom, ghiChu);
+        }
+
+        // xóa người dùng ra khỏi nhóm
+        public bool xoaNguoiDungRaKhoiNhom(int maNguoiDung, int maNhom)
+        {
+            return NguoiDungDAO.Instance.xoaNguoiDungRaKhoiNhom(maNguoiDung, maNhom);
+        }
+
         // đăng nhập
-        public bool dangNhapHeThong(string tenDangNhap, string matKhau)
+
+        // checkConfig
+        public int checkConfig()
+        {
+            return NguoiDungDAO.Instance.checConfig();
+        }
+
+        public void getServerName(ComboBox cbo)
+        {
+            cbo.Items.Clear();
+            cbo.Items.Add(@".\SQLEXPRESS");
+            cbo.Items.Add(string.Format(@"{0}\SQLEXPRESS", Environment.MachineName));
+        }
+
+        public void getDatabaseName(string server, string user, string pass, ComboBox cbo)
         {
             try
             {
-                var nguoiDung = NguoiDungDAO.Instance.dangNhapHeThong(tenDangNhap, Encryptor.MD5Hash(matKhau));
-                if (nguoiDung == null)
-                {
-                    return false;
-                }
-                if (nguoiDung.hoatDong == false)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }catch
+                cbo.DataSource = NguoiDungDAO.Instance.getDatabaseName(server, user, pass);
+                cbo.DisplayMember = "name";
+            }
+            catch
             {
-                return false;
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+            }
+        }
+
+        public void saveConfig(string pServer, string pUser, string pPass, string pDatabaseName)
+        {
+            NguoiDungDAO.Instance.saveConfig(pServer, pUser, pPass, pDatabaseName);
+        }
+        public int dangNhapHeThong(string tenDangNhap, string matKhau)
+        {
+            var nguoiDung = NguoiDungDAO.Instance.dangNhapHeThong(tenDangNhap, Encryptor.MD5Hash(matKhau));
+            if (nguoiDung == null)
+            {
+                return 100;
+            }
+            if (nguoiDung.hoatDong == false)
+            {
+                return 200;
+            }
+            else
+            {
+                return 300;
             }
         }
     }

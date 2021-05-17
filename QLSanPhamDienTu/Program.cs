@@ -22,7 +22,7 @@ namespace QLSanPhamDienTu
             //if (frm.ShowDialog() == DialogResult.OK)
             //{
              //   frm.Close();
-                Application.Run(new frmLogin());
+                Application.Run(new frmQLNhanVienPhanQuyen());
             //}
         }
     }
