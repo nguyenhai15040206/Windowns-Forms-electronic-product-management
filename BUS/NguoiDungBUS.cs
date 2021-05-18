@@ -59,6 +59,11 @@ namespace BUS
             tv.EndUnboundLoad();
         }
 
+        public void loadNhomNguoiDung_GridCOntrol(GridControl gv)
+        {
+            gv.DataSource = NguoiDungDAO.Instance.loadNhomNguoiDung();
+        }
+
         // load dười dùng chưa có nhóm
         public void loadNguoiDungChuaCoNhom(GridControl dgv)
         {
@@ -94,7 +99,10 @@ namespace BUS
         }
 
 
-
+        public int layMaNHomNguoiDungDauTien()
+        {
+            return NguoiDungDAO.Instance.maNhomNguoiDungDauTien();
+        }
 
         // get mã nhóm người dùng
         public List<int> getMaNhomNguoiDung(int maNguoiDung)

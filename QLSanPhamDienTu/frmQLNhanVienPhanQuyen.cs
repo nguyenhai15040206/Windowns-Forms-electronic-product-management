@@ -16,13 +16,22 @@ namespace QLSanPhamDienTu
 {
     public partial class frmQLNhanVienPhanQuyen : Form
     {
+        int maNhom = 0;
         int row = -1;
         int rowMaNDNhom = -1;
         public frmQLNhanVienPhanQuyen()
         {
             InitializeComponent();
+            maNhom = NguoiDungBUS.Instance.layMaNHomNguoiDungDauTien();
         }
-
+        public void loadLaiForm()
+        {
+            NguoiDungBUS.Instance.loadNguoiDungChuaCoNhom(gridControl2);
+            NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), gridControl3);
+            NguoiDungBUS.Instance.loadNhomNguoiDung(treeViewNguoiDung);
+            rowMaNDNhom = -1;
+            row = -1;
+        }
         private void frmQLNhanVienPhanQuyen_Load(object sender, EventArgs e)
         {
             // load nhóm người dùng lên treeList
@@ -36,6 +45,16 @@ namespace QLSanPhamDienTu
 
             // laod ds người dùng chưa có nhóm
             NguoiDungBUS.Instance.loadNguoiDungChuaCoNhom(gridControl2);
+
+            // load người dùng có mã nhóm đầu tiên
+            NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(maNhom, gridControl3);
+
+            // load danh mục màn hình lên treeList
+            DanhMucManHinhPhanQuyenBUS.Instance.loadDanhMucManHinh(treeListManHinh);
+
+
+            // load nhóm người dùng lên gridControl
+            NguoiDungBUS.Instance.loadNhomNguoiDung_GridCOntrol(gridControlQLNhomND);
         }
 
         private void menuItemClean_Click(object sender, EventArgs e)
@@ -44,11 +63,6 @@ namespace QLSanPhamDienTu
         }
 
         private void menuItemThem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
         {
             if (NguoiDungBUS.Instance.themNguoiDung(txtTenNguoiDung.Text.Trim(), txtTenDangNhap.Text.Trim(), txtMatKhau.Text,
                 txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, true))
@@ -59,16 +73,6 @@ namespace QLSanPhamDienTu
             {
                 // thêm thất bại
             }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            NguoiDungBUS.Instance.loadNhomNguoiDung(treeViewNguoiDung);
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
 
@@ -83,8 +87,7 @@ namespace QLSanPhamDienTu
                 if (NguoiDungBUS.Instance.themNguoiDungVaoNhom(row, int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), ""))
                 {
                     MessageBox.Show("Thêm người dùng vào nhóm thành công!");
-                    NguoiDungBUS.Instance.loadNguoiDungChuaCoNhom(gridControl2);
-                    NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), gridControl3);
+                    loadLaiForm();
                 }
             }    
         }
@@ -105,8 +108,7 @@ namespace QLSanPhamDienTu
                 if (NguoiDungBUS.Instance.xoaNguoiDungRaKhoiNhom(rowMaNDNhom, int.Parse(cboNhomNguoiDung.SelectedValue.ToString())))
                 {
                     MessageBox.Show("Loại người dùng ra khỏi nhóm thành công!");
-                    NguoiDungBUS.Instance.loadNguoiDungChuaCoNhom(gridControl2);
-                    NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), gridControl3);
+                    loadLaiForm();
                 }
 
             }    
@@ -127,7 +129,21 @@ namespace QLSanPhamDienTu
             }
             catch
             {
-                NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(int.Parse(1.ToString()), gridControl3);
+                NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(maNhom, gridControl3);
+            }
+        }
+
+        private void gridView6_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            // load danh sách quyền chức năng
+            try
+            {
+                int maNhom = int.Parse(gridView6.GetRowCellValue(gridView6.FocusedRowHandle, gridColumn29).ToString());
+                DanhMucManHinhPhanQuyenBUS.Instance.loadDanhSachQuyenChucNang(gridControl6, maNhom);
+            }
+            catch
+            {
+                return;
             }
         }
     }

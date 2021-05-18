@@ -73,6 +73,13 @@ namespace DAO
             return listNguoiDung;
         }
 
+        // lấy Nhóm người dùng có mã đầu tiền
+        public int maNhomNguoiDungDauTien()
+        {
+            var maNhom = db.QL_NhomNguoiDungs.Take(1).OrderByDescending(m => m.maNhom).Single();
+            return maNhom.maNhom;
+        }
+
 
         // load danh mục màn hình
         public DataTable loadDanhMucManHinh(string maNhomNguoiDung)

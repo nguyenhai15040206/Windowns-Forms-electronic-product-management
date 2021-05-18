@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DanhMucManHinhPhanQuyenDAO.cs" />
     <Compile Include="DanhMucSanPhamDAO.cs" />
     <Compile Include="NguoiDungDAO.cs" />
     <Compile Include="NhaSanXuatDAO.cs" />
