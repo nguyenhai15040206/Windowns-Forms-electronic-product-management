@@ -83,10 +83,10 @@ namespace QLSanPhamDienTu
             this.treeViewDanhMucSP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewDanhMucSP.ImageIndex = 0;
             this.treeViewDanhMucSP.ImageList = this.imageList1;
-            this.treeViewDanhMucSP.Location = new System.Drawing.Point(2, 34);
+            this.treeViewDanhMucSP.Location = new System.Drawing.Point(2, 23);
             this.treeViewDanhMucSP.Name = "treeViewDanhMucSP";
             this.treeViewDanhMucSP.SelectedImageIndex = 0;
-            this.treeViewDanhMucSP.Size = new System.Drawing.Size(539, 725);
+            this.treeViewDanhMucSP.Size = new System.Drawing.Size(264, 736);
             this.treeViewDanhMucSP.TabIndex = 0;
             this.treeViewDanhMucSP.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewDanhMucSP_AfterSelect);
             // 
@@ -106,7 +106,7 @@ namespace QLSanPhamDienTu
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(543, 761);
+            this.groupControl1.Size = new System.Drawing.Size(268, 761);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh mục mặt hàng";
             // 
@@ -116,9 +116,9 @@ namespace QLSanPhamDienTu
             this.panelControl1.Controls.Add(this.btnThemSP);
             this.panelControl1.Controls.Add(this.btnThemDanhMuc);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(543, 0);
+            this.panelControl1.Location = new System.Drawing.Point(268, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(851, 140);
+            this.panelControl1.Size = new System.Drawing.Size(1126, 71);
             this.panelControl1.TabIndex = 1;
             // 
             // btnXuatExcel
@@ -175,9 +175,9 @@ namespace QLSanPhamDienTu
             // 
             this.panelControl2.Controls.Add(this.gridControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(543, 140);
+            this.panelControl2.Location = new System.Drawing.Point(268, 71);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(851, 621);
+            this.panelControl2.Size = new System.Drawing.Size(1126, 690);
             this.panelControl2.TabIndex = 2;
             // 
             // gridControl1
@@ -190,7 +190,7 @@ namespace QLSanPhamDienTu
             this.repositoryItemImageEdit1,
             this.ButtonDelete,
             this.ButtonDetails});
-            this.gridControl1.Size = new System.Drawing.Size(847, 617);
+            this.gridControl1.Size = new System.Drawing.Size(1122, 686);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -382,7 +382,7 @@ namespace QLSanPhamDienTu
             // 
             // frmQLSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 761);
             this.Controls.Add(this.panelControl2);
