@@ -63,7 +63,7 @@ namespace QLSanPhamDienTu
         {
             if (NguoiDungBUS.Instance.dangNhapHeThong(txtTenDN.Text.Trim(), txtMatKhau.Text.Trim()) == 300)
             {
-                MessageBox.Show("OK");
+                this.DialogResult = DialogResult.OK;
             }
             if (NguoiDungBUS.Instance.dangNhapHeThong(txtTenDN.Text.Trim(), txtMatKhau.Text.Trim()) == 200)
             {

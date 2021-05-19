@@ -64,15 +64,37 @@ namespace QLSanPhamDienTu
 
         private void menuItemThem_Click(object sender, EventArgs e)
         {
-            if (NguoiDungBUS.Instance.themNguoiDung(txtTenNguoiDung.Text.Trim(), txtTenDangNhap.Text.Trim(), txtMatKhau.Text,
-                txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, true))
+            if(txtTenNguoiDung.Text.Trim().Length>0&&txtTenDangNhap.Text.Trim().Length>0 && txtMatKhau.Text.Trim().Length>0 && txtDiaChi.Text.Trim().Length>0 &&
+                txtSoDienThoai.Text.Trim().Length>0||txtEmail.Text.Trim().Length>0)
             {
-                MessageBox.Show("Thêm thành công!");
-            }
+                if(CheckData.Instances.KtraSoDienThoai(txtSoDienThoai.Text))
+                {
+                    if(CheckData.Instances.KtraEmail(txtEmail.Text))
+                    {
+                        if (NguoiDungBUS.Instance.themNguoiDung(txtTenNguoiDung.Text.Trim(), txtTenDangNhap.Text.Trim(), txtMatKhau.Text,
+                        txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, true))
+                        {
+                            MessageBox.Show("Thêm thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm thất bại");
+                        }
+                    }   
+                    else
+                    {
+                        MessageBox.Show("Nhập sai định dạng email");
+                    }    
+                }    
+                else
+                {
+                    MessageBox.Show("Nhập sai định dạng số điện thoại");
+                }    
+            }   
             else
             {
-                // thêm thất bại
-            }
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+            }    
         }
 
 
@@ -145,6 +167,16 @@ namespace QLSanPhamDienTu
             {
                 return;
             }
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            //foreach(Control control in )
         }
     }
 }

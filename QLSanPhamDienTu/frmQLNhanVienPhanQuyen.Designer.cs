@@ -30,16 +30,16 @@ namespace QLSanPhamDienTu
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLNhanVienPhanQuyen));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject37 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject40 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -310,7 +310,7 @@ namespace QLSanPhamDienTu
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1394, 45);
+            this.panelControl1.Size = new System.Drawing.Size(1394, 65);
             this.panelControl1.TabIndex = 0;
             // 
             // label1
@@ -320,7 +320,7 @@ namespace QLSanPhamDienTu
             this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 25);
+            this.label1.Size = new System.Drawing.Size(551, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "PHÂN QUYỀN VÀ SỬ DỤNG HỆ THỐNG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -332,10 +332,10 @@ namespace QLSanPhamDienTu
             this.panelControl2.Controls.Add(this.panel2);
             this.panelControl2.Controls.Add(this.panel1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 45);
+            this.panelControl2.Location = new System.Drawing.Point(0, 65);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1394, 701);
+            this.panelControl2.Size = new System.Drawing.Size(1394, 681);
             this.panelControl2.TabIndex = 1;
             // 
             // panel2
@@ -344,7 +344,7 @@ namespace QLSanPhamDienTu
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(264, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1128, 697);
+            this.panel2.Size = new System.Drawing.Size(1128, 677);
             this.panel2.TabIndex = 2;
             // 
             // tabPane1
@@ -368,9 +368,9 @@ namespace QLSanPhamDienTu
             this.tabNavigationPage1,
             this.tabNavigationPage2,
             this.tabNavigationPage3});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1128, 697);
+            this.tabPane1.RegularSize = new System.Drawing.Size(1128, 677);
             this.tabPane1.SelectedPage = this.tabNavigationPage1;
-            this.tabPane1.Size = new System.Drawing.Size(1128, 697);
+            this.tabPane1.Size = new System.Drawing.Size(1128, 677);
             this.tabPane1.TabIndex = 2;
             this.tabPane1.Text = "tabPane1";
             // 
@@ -382,7 +382,7 @@ namespace QLSanPhamDienTu
             this.tabNavigationPage1.Controls.Add(this.panel3);
             this.tabNavigationPage1.Controls.Add(this.panel4);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1128, 668);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1128, 634);
             // 
             // panel3
             // 
@@ -390,7 +390,7 @@ namespace QLSanPhamDienTu
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 386);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1128, 282);
+            this.panel3.Size = new System.Drawing.Size(1128, 248);
             this.panel3.TabIndex = 5;
             // 
             // groupControl2
@@ -404,7 +404,7 @@ namespace QLSanPhamDienTu
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1128, 282);
+            this.groupControl2.Size = new System.Drawing.Size(1354, 298);
             this.groupControl2.TabIndex = 4;
             this.groupControl2.Text = "Quản lý người dùng && nhóm người dùng";
             // 
@@ -413,9 +413,9 @@ namespace QLSanPhamDienTu
             this.panel6.Controls.Add(this.groupBox2);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(540, 23);
+            this.panel6.Location = new System.Drawing.Point(540, 34);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(586, 257);
+            this.panel6.Size = new System.Drawing.Size(812, 262);
             this.panel6.TabIndex = 1;
             // 
             // groupBox2
@@ -425,7 +425,7 @@ namespace QLSanPhamDienTu
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(93, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(493, 257);
+            this.groupBox2.Size = new System.Drawing.Size(719, 262);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DS đã phân nhóm";
@@ -433,12 +433,12 @@ namespace QLSanPhamDienTu
             // gridControl3
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl3.Location = new System.Drawing.Point(3, 61);
+            this.gridControl3.Location = new System.Drawing.Point(3, 71);
             this.gridControl3.MainView = this.gridViewNguoiDungDaCoNhom;
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4});
-            this.gridControl3.Size = new System.Drawing.Size(487, 193);
+            this.gridControl3.Size = new System.Drawing.Size(713, 188);
             this.gridControl3.TabIndex = 5;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewNguoiDungDaCoNhom,
@@ -577,9 +577,9 @@ namespace QLSanPhamDienTu
             this.panel8.Controls.Add(this.cboNhomNguoiDung);
             this.panel8.Controls.Add(this.label19);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(3, 23);
+            this.panel8.Location = new System.Drawing.Point(3, 33);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(487, 38);
+            this.panel8.Size = new System.Drawing.Size(713, 38);
             this.panel8.TabIndex = 2;
             // 
             // cboNhomNguoiDung
@@ -587,7 +587,7 @@ namespace QLSanPhamDienTu
             this.cboNhomNguoiDung.FormattingEnabled = true;
             this.cboNhomNguoiDung.Location = new System.Drawing.Point(160, 3);
             this.cboNhomNguoiDung.Name = "cboNhomNguoiDung";
-            this.cboNhomNguoiDung.Size = new System.Drawing.Size(296, 28);
+            this.cboNhomNguoiDung.Size = new System.Drawing.Size(296, 39);
             this.cboNhomNguoiDung.TabIndex = 1;
             this.cboNhomNguoiDung.SelectedIndexChanged += new System.EventHandler(this.cboNhomNguoiDung_SelectedIndexChanged);
             // 
@@ -596,7 +596,7 @@ namespace QLSanPhamDienTu
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(20, 11);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(134, 20);
+            this.label19.Size = new System.Drawing.Size(209, 31);
             this.label19.TabIndex = 0;
             this.label19.Text = "Nhóm người dùng:";
             // 
@@ -607,7 +607,7 @@ namespace QLSanPhamDienTu
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(93, 257);
+            this.panel7.Size = new System.Drawing.Size(93, 262);
             this.panel7.TabIndex = 0;
             // 
             // btnRemove
@@ -640,9 +640,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel5.Controls.Add(this.groupBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(2, 23);
+            this.panel5.Location = new System.Drawing.Point(2, 34);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(538, 257);
+            this.panel5.Size = new System.Drawing.Size(538, 262);
             this.panel5.TabIndex = 0;
             // 
             // groupBox1
@@ -651,7 +651,7 @@ namespace QLSanPhamDienTu
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(538, 257);
+            this.groupBox1.Size = new System.Drawing.Size(538, 262);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DS người dùng chưa có nhóm";
@@ -659,12 +659,12 @@ namespace QLSanPhamDienTu
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(3, 23);
+            this.gridControl2.Location = new System.Drawing.Point(3, 33);
             this.gridControl2.MainView = this.gridViewnguoiDungChuaCoNhom;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit3});
-            this.gridControl2.Size = new System.Drawing.Size(532, 231);
+            this.gridControl2.Size = new System.Drawing.Size(532, 226);
             this.gridControl2.TabIndex = 4;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewnguoiDungChuaCoNhom,
@@ -810,7 +810,7 @@ namespace QLSanPhamDienTu
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1128, 386);
+            this.groupControl1.Size = new System.Drawing.Size(1354, 667);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Quản lý người dùng";
             // 
@@ -818,9 +818,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel9.Controls.Add(this.gridContrrolNguoiDung);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(421, 23);
+            this.panel9.Location = new System.Drawing.Point(421, 34);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(705, 361);
+            this.panel9.Size = new System.Drawing.Size(931, 631);
             this.panel9.TabIndex = 1;
             // 
             // gridContrrolNguoiDung
@@ -831,7 +831,7 @@ namespace QLSanPhamDienTu
             this.gridContrrolNguoiDung.Name = "gridContrrolNguoiDung";
             this.gridContrrolNguoiDung.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.ButtonDelete});
-            this.gridContrrolNguoiDung.Size = new System.Drawing.Size(705, 361);
+            this.gridContrrolNguoiDung.Size = new System.Drawing.Size(931, 631);
             this.gridContrrolNguoiDung.TabIndex = 2;
             this.gridContrrolNguoiDung.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -1002,9 +1002,9 @@ namespace QLSanPhamDienTu
             this.panel10.Controls.Add(this.label11);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel10.Location = new System.Drawing.Point(2, 23);
+            this.panel10.Location = new System.Drawing.Point(2, 34);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(419, 361);
+            this.panel10.Size = new System.Drawing.Size(419, 631);
             this.panel10.TabIndex = 0;
             // 
             // toolStrip1
@@ -1017,7 +1017,7 @@ namespace QLSanPhamDienTu
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStrip1.Size = new System.Drawing.Size(419, 37);
+            this.toolStrip1.Size = new System.Drawing.Size(419, 39);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -1028,7 +1028,7 @@ namespace QLSanPhamDienTu
             this.menutItemThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.menutItemThem.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.menutItemThem.Name = "menutItemThem";
-            this.menutItemThem.Size = new System.Drawing.Size(34, 34);
+            this.menutItemThem.Size = new System.Drawing.Size(34, 36);
             this.menutItemThem.Text = "toolStripButton1";
             this.menutItemThem.ToolTipText = "Thêm mới";
             this.menutItemThem.Click += new System.EventHandler(this.menuItemThem_Click);
@@ -1040,7 +1040,7 @@ namespace QLSanPhamDienTu
             this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(34, 34);
+            this.btnUpdate.Size = new System.Drawing.Size(34, 36);
             this.btnUpdate.Text = "toolStripButton1";
             this.btnUpdate.ToolTipText = "Cập nhật";
             // 
@@ -1054,23 +1054,25 @@ namespace QLSanPhamDienTu
             this.btnClean.Size = new System.Drawing.Size(34, 34);
             this.btnClean.Text = "toolStripButton2";
             this.btnClean.ToolTipText = "làm mới";
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // ckbHoatDong
             // 
             this.ckbHoatDong.AutoSize = true;
             this.ckbHoatDong.Location = new System.Drawing.Point(127, 333);
             this.ckbHoatDong.Name = "ckbHoatDong";
-            this.ckbHoatDong.Size = new System.Drawing.Size(100, 24);
+            this.ckbHoatDong.Size = new System.Drawing.Size(149, 35);
             this.ckbHoatDong.TabIndex = 3;
             this.ckbHoatDong.Text = "Hoạt động";
             this.ckbHoatDong.UseVisualStyleBackColor = true;
             // 
             // dateTimePickerNgayVL
             // 
+            this.dateTimePickerNgayVL.Enabled = false;
             this.dateTimePickerNgayVL.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerNgayVL.Location = new System.Drawing.Point(127, 296);
             this.dateTimePickerNgayVL.Name = "dateTimePickerNgayVL";
-            this.dateTimePickerNgayVL.Size = new System.Drawing.Size(278, 27);
+            this.dateTimePickerNgayVL.Size = new System.Drawing.Size(278, 37);
             this.dateTimePickerNgayVL.TabIndex = 2;
             // 
             // label18
@@ -1078,7 +1080,7 @@ namespace QLSanPhamDienTu
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(5, 303);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(104, 20);
+            this.label18.Size = new System.Drawing.Size(159, 31);
             this.label18.TabIndex = 0;
             this.label18.Text = "Ngày vào làm:";
             // 
@@ -1086,7 +1088,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtEmail.Location = new System.Drawing.Point(127, 260);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(278, 27);
+            this.txtEmail.Size = new System.Drawing.Size(278, 37);
             this.txtEmail.TabIndex = 1;
             // 
             // label17
@@ -1094,7 +1096,7 @@ namespace QLSanPhamDienTu
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(5, 267);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 20);
+            this.label17.Size = new System.Drawing.Size(75, 31);
             this.label17.TabIndex = 0;
             this.label17.Text = "Email:";
             // 
@@ -1102,7 +1104,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtSoDienThoai.Location = new System.Drawing.Point(127, 224);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(278, 27);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(278, 37);
             this.txtSoDienThoai.TabIndex = 1;
             // 
             // label16
@@ -1110,7 +1112,7 @@ namespace QLSanPhamDienTu
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(5, 231);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 20);
+            this.label16.Size = new System.Drawing.Size(153, 31);
             this.label16.TabIndex = 0;
             this.label16.Text = "Số điện thoại:";
             // 
@@ -1119,7 +1121,7 @@ namespace QLSanPhamDienTu
             this.txtDiaChi.BackColor = System.Drawing.Color.White;
             this.txtDiaChi.Location = new System.Drawing.Point(127, 188);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(278, 27);
+            this.txtDiaChi.Size = new System.Drawing.Size(278, 37);
             this.txtDiaChi.TabIndex = 1;
             // 
             // label15
@@ -1127,7 +1129,7 @@ namespace QLSanPhamDienTu
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(5, 195);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 20);
+            this.label15.Size = new System.Drawing.Size(89, 31);
             this.label15.TabIndex = 0;
             this.label15.Text = "Địa chỉ:";
             // 
@@ -1136,17 +1138,17 @@ namespace QLSanPhamDienTu
             this.txtMatKhau.BackColor = System.Drawing.Color.White;
             this.txtMatKhau.Location = new System.Drawing.Point(127, 152);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.ReadOnly = true;
-            this.txtMatKhau.Size = new System.Drawing.Size(278, 27);
+            this.txtMatKhau.Size = new System.Drawing.Size(278, 37);
             this.txtMatKhau.TabIndex = 1;
             this.txtMatKhau.UseSystemPasswordChar = true;
+            this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(5, 159);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 20);
+            this.label14.Size = new System.Drawing.Size(115, 31);
             this.label14.TabIndex = 0;
             this.label14.Text = "Mật khẩu:";
             // 
@@ -1154,7 +1156,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtTenDangNhap.Location = new System.Drawing.Point(127, 116);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(278, 27);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(278, 37);
             this.txtTenDangNhap.TabIndex = 1;
             // 
             // label13
@@ -1162,7 +1164,7 @@ namespace QLSanPhamDienTu
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(5, 123);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 20);
+            this.label13.Size = new System.Drawing.Size(171, 31);
             this.label13.TabIndex = 0;
             this.label13.Text = "Tên đăng nhập:";
             // 
@@ -1170,7 +1172,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtTenNguoiDung.Location = new System.Drawing.Point(127, 80);
             this.txtTenNguoiDung.Name = "txtTenNguoiDung";
-            this.txtTenNguoiDung.Size = new System.Drawing.Size(278, 27);
+            this.txtTenNguoiDung.Size = new System.Drawing.Size(278, 37);
             this.txtTenNguoiDung.TabIndex = 1;
             // 
             // label12
@@ -1178,7 +1180,7 @@ namespace QLSanPhamDienTu
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(5, 87);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 20);
+            this.label12.Size = new System.Drawing.Size(181, 31);
             this.label12.TabIndex = 0;
             this.label12.Text = "Tên người dùng:";
             // 
@@ -1187,7 +1189,7 @@ namespace QLSanPhamDienTu
             this.txtMaNguoiDung.Location = new System.Drawing.Point(127, 44);
             this.txtMaNguoiDung.Name = "txtMaNguoiDung";
             this.txtMaNguoiDung.ReadOnly = true;
-            this.txtMaNguoiDung.Size = new System.Drawing.Size(157, 27);
+            this.txtMaNguoiDung.Size = new System.Drawing.Size(157, 37);
             this.txtMaNguoiDung.TabIndex = 1;
             // 
             // label11
@@ -1195,7 +1197,7 @@ namespace QLSanPhamDienTu
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(5, 51);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 20);
+            this.label11.Size = new System.Drawing.Size(179, 31);
             this.label11.TabIndex = 0;
             this.label11.Text = "Mã người dùng:";
             // 
@@ -1220,9 +1222,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel13.Controls.Add(this.groupControl4);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 254);
+            this.panel13.Location = new System.Drawing.Point(0, 527);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1128, 414);
+            this.panel13.Size = new System.Drawing.Size(1354, 275);
             this.panel13.TabIndex = 1;
             // 
             // groupControl4
@@ -1236,7 +1238,7 @@ namespace QLSanPhamDienTu
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(0, 0);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1128, 414);
+            this.groupControl4.Size = new System.Drawing.Size(1354, 275);
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Thêm danh mục màn hình";
             // 
@@ -1244,9 +1246,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel21.Controls.Add(this.gridControl5);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(366, 23);
+            this.panel21.Location = new System.Drawing.Point(366, 34);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(760, 389);
+            this.panel21.Size = new System.Drawing.Size(986, 239);
             this.panel21.TabIndex = 2;
             // 
             // gridControl5
@@ -1257,7 +1259,7 @@ namespace QLSanPhamDienTu
             this.gridControl5.Name = "gridControl5";
             this.gridControl5.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit8});
-            this.gridControl5.Size = new System.Drawing.Size(760, 389);
+            this.gridControl5.Size = new System.Drawing.Size(986, 239);
             this.gridControl5.TabIndex = 4;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView9});
@@ -1344,9 +1346,9 @@ namespace QLSanPhamDienTu
             this.panel20.Controls.Add(this.textBox3);
             this.panel20.Controls.Add(this.label23);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel20.Location = new System.Drawing.Point(2, 23);
+            this.panel20.Location = new System.Drawing.Point(2, 34);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(364, 389);
+            this.panel20.Size = new System.Drawing.Size(364, 239);
             this.panel20.TabIndex = 1;
             // 
             // simpleButton1
@@ -1377,7 +1379,7 @@ namespace QLSanPhamDienTu
             // 
             this.textBox2.Location = new System.Drawing.Point(109, 55);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(249, 27);
+            this.textBox2.Size = new System.Drawing.Size(249, 37);
             this.textBox2.TabIndex = 1;
             // 
             // label22
@@ -1385,7 +1387,7 @@ namespace QLSanPhamDienTu
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(5, 62);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(100, 20);
+            this.label22.Size = new System.Drawing.Size(157, 31);
             this.label22.TabIndex = 0;
             this.label22.Text = "Tên Màn hình:";
             // 
@@ -1394,7 +1396,7 @@ namespace QLSanPhamDienTu
             this.textBox3.Location = new System.Drawing.Point(109, 19);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(148, 27);
+            this.textBox3.Size = new System.Drawing.Size(148, 37);
             this.textBox3.TabIndex = 1;
             // 
             // label23
@@ -1402,7 +1404,7 @@ namespace QLSanPhamDienTu
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(5, 26);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(98, 20);
+            this.label23.Size = new System.Drawing.Size(155, 31);
             this.label23.TabIndex = 0;
             this.label23.Text = "Mã Màn hình:";
             // 
@@ -1412,7 +1414,7 @@ namespace QLSanPhamDienTu
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1128, 254);
+            this.panel12.Size = new System.Drawing.Size(1354, 439);
             this.panel12.TabIndex = 0;
             // 
             // groupControl3
@@ -1426,7 +1428,7 @@ namespace QLSanPhamDienTu
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1128, 254);
+            this.groupControl3.Size = new System.Drawing.Size(1354, 439);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Thêm nhóm người dùng";
             // 
@@ -1434,9 +1436,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel15.Controls.Add(this.gridControl4);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(366, 23);
+            this.panel15.Location = new System.Drawing.Point(366, 34);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(760, 229);
+            this.panel15.Size = new System.Drawing.Size(986, 403);
             this.panel15.TabIndex = 1;
             // 
             // gridControl4
@@ -1447,7 +1449,7 @@ namespace QLSanPhamDienTu
             this.gridControl4.Name = "gridControl4";
             this.gridControl4.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit5});
-            this.gridControl4.Size = new System.Drawing.Size(760, 229);
+            this.gridControl4.Size = new System.Drawing.Size(986, 403);
             this.gridControl4.TabIndex = 3;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -1546,9 +1548,9 @@ namespace QLSanPhamDienTu
             this.panel14.Controls.Add(this.txtMaManHinh);
             this.panel14.Controls.Add(this.label20);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(2, 23);
+            this.panel14.Location = new System.Drawing.Point(2, 34);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(364, 229);
+            this.panel14.Size = new System.Drawing.Size(364, 403);
             this.panel14.TabIndex = 0;
             // 
             // btnCapNhatMH
@@ -1579,7 +1581,7 @@ namespace QLSanPhamDienTu
             // 
             this.textBox4.Location = new System.Drawing.Point(109, 91);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(249, 27);
+            this.textBox4.Size = new System.Drawing.Size(249, 37);
             this.textBox4.TabIndex = 1;
             // 
             // label24
@@ -1587,7 +1589,7 @@ namespace QLSanPhamDienTu
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(5, 98);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(61, 20);
+            this.label24.Size = new System.Drawing.Size(97, 31);
             this.label24.TabIndex = 0;
             this.label24.Text = "Ghi chú:";
             // 
@@ -1595,7 +1597,7 @@ namespace QLSanPhamDienTu
             // 
             this.textBox1.Location = new System.Drawing.Point(109, 55);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 27);
+            this.textBox1.Size = new System.Drawing.Size(249, 37);
             this.textBox1.TabIndex = 1;
             // 
             // label21
@@ -1603,7 +1605,7 @@ namespace QLSanPhamDienTu
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(5, 62);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(103, 20);
+            this.label21.Size = new System.Drawing.Size(158, 31);
             this.label21.TabIndex = 0;
             this.label21.Text = "Tên nhóm ND:";
             // 
@@ -1612,7 +1614,7 @@ namespace QLSanPhamDienTu
             this.txtMaManHinh.Location = new System.Drawing.Point(109, 19);
             this.txtMaManHinh.Name = "txtMaManHinh";
             this.txtMaManHinh.ReadOnly = true;
-            this.txtMaManHinh.Size = new System.Drawing.Size(148, 27);
+            this.txtMaManHinh.Size = new System.Drawing.Size(148, 37);
             this.txtMaManHinh.TabIndex = 1;
             // 
             // label20
@@ -1620,7 +1622,7 @@ namespace QLSanPhamDienTu
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(5, 26);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(101, 20);
+            this.label20.Size = new System.Drawing.Size(156, 31);
             this.label20.TabIndex = 0;
             this.label20.Text = "Mã nhóm ND:";
             // 
@@ -1646,9 +1648,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel19.Controls.Add(this.groupBox4);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(409, 71);
+            this.panel19.Location = new System.Drawing.Point(848, 146);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(719, 597);
+            this.panel19.Size = new System.Drawing.Size(505, 655);
             this.panel19.TabIndex = 2;
             // 
             // groupBox4
@@ -1657,7 +1659,7 @@ namespace QLSanPhamDienTu
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(719, 597);
+            this.groupBox4.Size = new System.Drawing.Size(505, 655);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách quyền chức năng";
@@ -1665,12 +1667,12 @@ namespace QLSanPhamDienTu
             // gridControl6
             // 
             this.gridControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl6.Location = new System.Drawing.Point(3, 23);
+            this.gridControl6.Location = new System.Drawing.Point(3, 33);
             this.gridControl6.MainView = this.gridView7;
             this.gridControl6.Name = "gridControl6";
             this.gridControl6.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit7});
-            this.gridControl6.Size = new System.Drawing.Size(713, 571);
+            this.gridControl6.Size = new System.Drawing.Size(499, 619);
             this.gridControl6.TabIndex = 5;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -1752,9 +1754,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel18.Controls.Add(this.groupBox3);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel18.Location = new System.Drawing.Point(0, 71);
+            this.panel18.Location = new System.Drawing.Point(0, 146);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(409, 597);
+            this.panel18.Size = new System.Drawing.Size(707, 655);
             this.panel18.TabIndex = 1;
             // 
             // groupBox3
@@ -1763,7 +1765,7 @@ namespace QLSanPhamDienTu
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(409, 597);
+            this.groupBox3.Size = new System.Drawing.Size(707, 655);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách nhóm người dùng";
@@ -1771,12 +1773,12 @@ namespace QLSanPhamDienTu
             // gridControlQLNhomND
             // 
             this.gridControlQLNhomND.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlQLNhomND.Location = new System.Drawing.Point(3, 23);
+            this.gridControlQLNhomND.Location = new System.Drawing.Point(3, 33);
             this.gridControlQLNhomND.MainView = this.gridView6;
             this.gridControlQLNhomND.Name = "gridControlQLNhomND";
             this.gridControlQLNhomND.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6});
-            this.gridControlQLNhomND.Size = new System.Drawing.Size(403, 571);
+            this.gridControlQLNhomND.Size = new System.Drawing.Size(701, 619);
             this.gridControlQLNhomND.TabIndex = 6;
             this.gridControlQLNhomND.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6,
@@ -1874,7 +1876,7 @@ namespace QLSanPhamDienTu
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1128, 71);
+            this.panel17.Size = new System.Drawing.Size(1354, 122);
             this.panel17.TabIndex = 0;
             // 
             // buttonDesign1
@@ -1901,7 +1903,7 @@ namespace QLSanPhamDienTu
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 697);
+            this.panel1.Size = new System.Drawing.Size(262, 677);
             this.panel1.TabIndex = 1;
             // 
             // treeListManHinh
@@ -1949,7 +1951,7 @@ namespace QLSanPhamDienTu
             this.treeListManHinh.MinWidth = 27;
             this.treeListManHinh.Name = "treeListManHinh";
             this.treeListManHinh.OptionsBehavior.Editable = false;
-            this.treeListManHinh.Size = new System.Drawing.Size(262, 486);
+            this.treeListManHinh.Size = new System.Drawing.Size(262, 466);
             this.treeListManHinh.TabIndex = 1;
             this.treeListManHinh.TreeLevelWidth = 24;
             // 
@@ -2293,18 +2295,18 @@ namespace QLSanPhamDienTu
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions1.Image = global::QLSanPhamDienTu.Properties.Resources.close1;
+            editorButtonImageOptions9.Image = global::QLSanPhamDienTu.Properties.Resources.close1;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // repositoryItemButtonEdit2
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
-            editorButtonImageOptions2.Image = global::QLSanPhamDienTu.Properties.Resources.add21;
+            editorButtonImageOptions10.Image = global::QLSanPhamDienTu.Properties.Resources.add21;
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit2.ContextImageOptions.Image = global::QLSanPhamDienTu.Properties.Resources.add21;
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -2419,7 +2421,7 @@ namespace QLSanPhamDienTu
             // 
             // frmQLNhanVienPhanQuyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 746);
             this.Controls.Add(this.panelControl2);

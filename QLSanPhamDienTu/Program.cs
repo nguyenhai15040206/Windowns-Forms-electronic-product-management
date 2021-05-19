@@ -21,8 +21,8 @@ namespace QLSanPhamDienTu
             //frmLogin frm = new frmLogin();
             //if (frm.ShowDialog() == DialogResult.OK)
             //{
-             //   frm.Close();
-                Application.Run(new frmQLNhanVienPhanQuyen());
+            //    frm.Close();
+                Application.Run(new frmQLSanPham());
             //}
         }
     }

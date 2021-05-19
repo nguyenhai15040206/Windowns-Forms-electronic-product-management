@@ -31,11 +31,11 @@ namespace QLSanPhamDienTu
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLSanPham));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.treeViewDanhMucSP = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -83,10 +83,10 @@ namespace QLSanPhamDienTu
             this.treeViewDanhMucSP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewDanhMucSP.ImageIndex = 0;
             this.treeViewDanhMucSP.ImageList = this.imageList1;
-            this.treeViewDanhMucSP.Location = new System.Drawing.Point(2, 23);
+            this.treeViewDanhMucSP.Location = new System.Drawing.Point(2, 34);
             this.treeViewDanhMucSP.Name = "treeViewDanhMucSP";
             this.treeViewDanhMucSP.SelectedImageIndex = 0;
-            this.treeViewDanhMucSP.Size = new System.Drawing.Size(237, 736);
+            this.treeViewDanhMucSP.Size = new System.Drawing.Size(539, 725);
             this.treeViewDanhMucSP.TabIndex = 0;
             this.treeViewDanhMucSP.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewDanhMucSP_AfterSelect);
             // 
@@ -106,7 +106,7 @@ namespace QLSanPhamDienTu
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(241, 761);
+            this.groupControl1.Size = new System.Drawing.Size(543, 761);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh mục mặt hàng";
             // 
@@ -116,9 +116,9 @@ namespace QLSanPhamDienTu
             this.panelControl1.Controls.Add(this.btnThemSP);
             this.panelControl1.Controls.Add(this.btnThemDanhMuc);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(241, 0);
+            this.panelControl1.Location = new System.Drawing.Point(543, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1153, 62);
+            this.panelControl1.Size = new System.Drawing.Size(851, 140);
             this.panelControl1.TabIndex = 1;
             // 
             // btnXuatExcel
@@ -175,9 +175,9 @@ namespace QLSanPhamDienTu
             // 
             this.panelControl2.Controls.Add(this.gridControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(241, 62);
+            this.panelControl2.Location = new System.Drawing.Point(543, 140);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1153, 699);
+            this.panelControl2.Size = new System.Drawing.Size(851, 621);
             this.panelControl2.TabIndex = 2;
             // 
             // gridControl1
@@ -190,7 +190,7 @@ namespace QLSanPhamDienTu
             this.repositoryItemImageEdit1,
             this.ButtonDelete,
             this.ButtonDetails});
-            this.gridControl1.Size = new System.Drawing.Size(1149, 695);
+            this.gridControl1.Size = new System.Drawing.Size(847, 617);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -254,9 +254,9 @@ namespace QLSanPhamDienTu
             // ButtonDetails
             // 
             this.ButtonDetails.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.ButtonDetails.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, false, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, false, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ButtonDetails.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ButtonDetails.ContextImageOptions.Image")));
             this.ButtonDetails.Name = "ButtonDetails";
             this.ButtonDetails.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -382,7 +382,7 @@ namespace QLSanPhamDienTu
             // 
             // frmQLSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 761);
             this.Controls.Add(this.panelControl2);
