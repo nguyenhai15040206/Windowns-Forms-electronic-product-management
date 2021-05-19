@@ -143,7 +143,7 @@ namespace QLSanPhamDienTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 232);
+            this.ClientSize = new System.Drawing.Size(462, 226);
             this.Controls.Add(this.btnHuyBo);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.cboDatabase);

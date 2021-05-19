@@ -58,6 +58,7 @@ namespace QLSanPhamDienTu
         {
             frmConfig frm = new frmConfig();
             frm.ShowDialog();
+            this.Hide();
         }
         public void ProcessLogin()
         {
