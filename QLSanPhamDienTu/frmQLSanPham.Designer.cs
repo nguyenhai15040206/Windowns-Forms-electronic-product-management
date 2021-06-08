@@ -125,6 +125,8 @@ namespace QLSanPhamDienTu
             // 
             this.btnXuatExcel.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnXuatExcel.Appearance.Options.UseForeColor = true;
+            this.btnXuatExcel.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatExcel.AppearanceHovered.Options.UseFont = true;
             this.btnXuatExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.BackgroundImage")));
             this.btnXuatExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnXuatExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.ImageOptions.Image")));
@@ -141,6 +143,8 @@ namespace QLSanPhamDienTu
             // 
             this.btnThemSP.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnThemSP.Appearance.Options.UseForeColor = true;
+            this.btnThemSP.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemSP.AppearanceHovered.Options.UseFont = true;
             this.btnThemSP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemSP.BackgroundImage")));
             this.btnThemSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThemSP.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.ImageOptions.Image")));
@@ -158,6 +162,8 @@ namespace QLSanPhamDienTu
             // 
             this.btnThemDanhMuc.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnThemDanhMuc.Appearance.Options.UseForeColor = true;
+            this.btnThemDanhMuc.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemDanhMuc.AppearanceHovered.Options.UseFont = true;
             this.btnThemDanhMuc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemDanhMuc.BackgroundImage")));
             this.btnThemDanhMuc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThemDanhMuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemDanhMuc.ImageOptions.Image")));

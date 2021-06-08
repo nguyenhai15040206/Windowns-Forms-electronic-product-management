@@ -17,8 +17,9 @@ namespace CustomControls
             this.ForeColor = System.Drawing.Color.Black;
             this.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Appearance.Options.UseFont = true;
+            this.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppearanceHovered.Options.UseFont = true;
             this.ResumeLayout(false);
         }
-
     }
 }

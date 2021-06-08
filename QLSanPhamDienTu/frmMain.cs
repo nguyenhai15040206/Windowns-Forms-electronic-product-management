@@ -37,7 +37,7 @@ namespace QLSanPhamDienTu
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //phanQuyen(menuStrip1);
+            phanQuyen(menuStrip1);
         }
 
         public void phanQuyen(MenuStrip menuStrip1)
