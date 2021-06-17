@@ -78,9 +78,9 @@ namespace QLSanPhamDienTu
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(236, 68);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(107, 20);
+            this.labelControl2.Size = new System.Drawing.Size(64, 20);
             this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "Tên người dùng:";
+            this.labelControl2.Text = "Mật khẩu:";
             // 
             // btnHuy
             // 
@@ -122,7 +122,7 @@ namespace QLSanPhamDienTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MistyRose;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(507, 176);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLogin);
