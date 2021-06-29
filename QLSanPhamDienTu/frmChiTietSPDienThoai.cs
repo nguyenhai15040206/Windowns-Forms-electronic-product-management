@@ -50,12 +50,21 @@ namespace QLSanPhamDienTu
 
         private void btnHoatTat_Click(object sender, EventArgs e)
         {
-            tryenDuLieu = txtManHinh.Text.Trim() + " | " + txtCameraSau.Text.Trim() + " | " + txtCameraSelfi.Text.Trim() + " | " +
-                txtCPU.Text.Trim() + " | " + numRAM.Value.ToString()+" GB" + " | " + numBoNhoTrong.Value.ToString() + " GB" + " & " +
+            if (txtManHinh.Text.Trim().Length > 0 && txtCameraSau.Text.Trim().Length > 0 && txtCameraSelfi.Text.Trim().Length > 0
+                && txtCPU.Text.Trim().Length > 0 && txtDungLuongPin.Text.Trim().Length > 0 && txtGPU.Text.Trim().Length > 0
+                && txtHeDieuHanh.Text.Trim().Length>0&&txtTheSim.Text.Trim().Length>0&&numBoNhoTrong.Value>0&&numRAM.Value>0)
+            {
+                tryenDuLieu = txtManHinh.Text.Trim() + " | " + txtCameraSau.Text.Trim() + " | " + txtCameraSelfi.Text.Trim() + " | " +
+                txtCPU.Text.Trim() + " | " + numRAM.Value.ToString() + " GB" + " | " + numBoNhoTrong.Value.ToString() + " GB" + " & " +
                 txtGPU.Text.Trim() + " | " + txtDungLuongPin.Text.Trim() + " | " + txtTheSim.Text.Trim() + " | " +
                 txtHeDieuHanh.Text.Trim();
-            frmThemSanPham.thongTinChiTietSP = tryenDuLieu;
-            this.Close();
+                frmThemSanPham.thongTinChiTietSP = tryenDuLieu;
+                this.Close();
+            }    
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+            }    
                 
         }
     }

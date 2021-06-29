@@ -57,5 +57,16 @@ namespace DTO.Properties {
                 return ((string)(this["QL_SanPhamConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4MGR8RB\\SQLEXPRESS;Initial Catalog=QL_SanPham;User ID=sa;Pass" +
+            "word=tanhai123")]
+        public string QL_SanPhamConnectionString2 {
+            get {
+                return ((string)(this["QL_SanPhamConnectionString2"]));
+            }
+        }
     }
 }
