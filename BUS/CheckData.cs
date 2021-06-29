@@ -35,7 +35,8 @@ namespace BUS
                 return true;
             return false;
         }
-        bool KtraDuLieu(string input)
+
+        public bool KtraDuLieu(string input)
         {
             foreach(char c in input)
             {
@@ -60,6 +61,8 @@ namespace BUS
             return false;
         }
 
+
+       
 
     }
 }

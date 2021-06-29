@@ -75,5 +75,10 @@ namespace QLSanPhamDienTu
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
             }
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

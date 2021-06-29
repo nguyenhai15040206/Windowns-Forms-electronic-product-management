@@ -42,13 +42,14 @@ namespace QLSanPhamDienTu
             // 
             // txtTenDN
             // 
+            this.txtTenDN.EditValue = "diem";
             this.txtTenDN.Location = new System.Drawing.Point(236, 38);
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDN.Properties.Appearance.Options.UseFont = true;
             this.txtTenDN.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDN.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtTenDN.Size = new System.Drawing.Size(259, 26);
+            this.txtTenDN.Size = new System.Drawing.Size(259, 32);
             this.txtTenDN.TabIndex = 0;
             // 
             // labelControl1
@@ -57,19 +58,21 @@ namespace QLSanPhamDienTu
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(236, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(107, 20);
+            this.labelControl1.Size = new System.Drawing.Size(136, 25);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Tên người dùng:";
             // 
             // txtMatKhau
             // 
+            this.txtMatKhau.EditValue = "123";
             this.txtMatKhau.Location = new System.Drawing.Point(236, 94);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
             this.txtMatKhau.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtMatKhau.Size = new System.Drawing.Size(259, 26);
+            this.txtMatKhau.Properties.UseSystemPasswordChar = true;
+            this.txtMatKhau.Size = new System.Drawing.Size(259, 32);
             this.txtMatKhau.TabIndex = 1;
             // 
             // labelControl2
@@ -78,7 +81,7 @@ namespace QLSanPhamDienTu
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(236, 68);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(64, 20);
+            this.labelControl2.Size = new System.Drawing.Size(83, 25);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Mật khẩu:";
             // 
@@ -94,6 +97,7 @@ namespace QLSanPhamDienTu
             this.btnHuy.Size = new System.Drawing.Size(117, 38);
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLogin
             // 
@@ -120,7 +124,7 @@ namespace QLSanPhamDienTu
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(507, 176);

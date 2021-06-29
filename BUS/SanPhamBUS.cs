@@ -180,10 +180,20 @@ namespace BUS
         }
 
         // thêm sản phẩm
-        public bool themSanPham( string tenSanPham, int soLuong, double donGia, string moTa, string moTaChiTiet,
-            string khuyenMai, double giamGia, DateTime ngayCapNhat, string xuatXu, string hinhMinhHoa, string dsHinh, bool tinhTrang, int maDanhMuc)
+        public bool themSanPham( string tenSanPham, int soLuong, double donGia,double donGiaNhap ,string moTa, string moTaChiTiet,
+            string khuyenMai, double giamGia, DateTime ngayCapNhat, string xuatXu, string hinhMinhHoa, string dsHinh, int maDanhMuc, bool tinhTrang)
         {
-            return SanPhamDAO.Instance.themSanPham(tenSanPham, soLuong, donGia, moTa, moTaChiTiet, khuyenMai, giamGia, ngayCapNhat, xuatXu, hinhMinhHoa, dsHinh, tinhTrang, maDanhMuc);
+            return SanPhamDAO.Instance.themSanPham(tenSanPham, soLuong, donGia,donGiaNhap, moTa, moTaChiTiet, khuyenMai, giamGia, ngayCapNhat, xuatXu, hinhMinhHoa, dsHinh, maDanhMuc, tinhTrang);
+        }
+
+        public bool themSanPham(string v1, int v2, double v3, object moTa, string motaChiTiet, string v4, double v5, DateTime value, string v6, string v7, string v8, bool v9, int v10)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool themSanPham(string v1, int v2, double v3, object moTa, object motaChiTiet, string v4, double v5, DateTime value, string v6, string v7, string v8, bool v9, int v10)
+        {
+            throw new NotImplementedException();
         }
     }
 }

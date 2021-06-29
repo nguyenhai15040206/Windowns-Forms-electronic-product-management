@@ -141,20 +141,58 @@ namespace QLSanPhamDienTu
             
         }
 
-        private void btnThemMoi_Click(object sender, EventArgs e)
+        public void ThemSanPham(string moTa, string motaChiTiet)
         {
-            string[] thongTinChiTiet = txtThongTinChiTiet.Text.Trim().Split('&');
-            string moTa = thongTinChiTiet[0].Trim().ToString();
-            string motaChiTiet = thongTinChiTiet[1].Trim().ToString();
             if (SanPhamBUS.instance.themSanPham(txtTenSP.Text.Trim(), int.Parse(numericUpDownSoLuong.Value.ToString()),
-                double.Parse(txtDonGia.Text.Trim()), moTa, motaChiTiet, txtKhuyenMaiDiKem.Text.Trim(), double.Parse(txtGiamGia.Text.Trim()), pickerNgayCN.Value,
-                txtXuatSu.Text.Trim(), txtHinhMH.Text.Trim(), txtDSHinh.Text.Trim(), true, int.Parse(cboThuongHieu.SelectedValue.ToString())))
+                            double.Parse(txtDonGia.Text.Trim()), 0, moTa, motaChiTiet, txtKhuyenMaiDiKem.Text.Trim(), double.Parse(txtGiamGia.Text.Trim()), pickerNgayCN.Value,
+                            txtXuatSu.Text.Trim(), txtHinhMH.Text.Trim(), txtDSHinh.Text.Trim(), int.Parse(cboThuongHieu.SelectedValue.ToString()), true))
             {
                 MessageBox.Show("Thêm thành công");
             }
             else
             {
                 MessageBox.Show("Vui lòng kiểm tra lại các thông tin");
+            }
+        }
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            if (txtTenSP.Text.Trim().Length > 0 && txtXuatSu.Text.Trim().Length > 0 && numericUpDownSoLuong.Value > 0 && txtDonGia.Text.Trim().Length > 0
+                    && txtHinhMH.Text.Trim().Length > 0 && txtGiamGia.Text.Trim().Length > 0 && txtDSHinh.Text.Trim().Length > 0 && txtKhuyenMaiDiKem.Text.Trim().Length > 0)
+            {
+                if(CheckData.Instances.KtraDuLieu(txtDonGia.Text)&&CheckData.Instances.KtraDuLieu(txtGiamGia.Text))
+                {
+                    if (cboDanhMuc.Text == "LapTop" || cboDanhMuc.Text == "DienThoai")
+                    {
+
+                        if (txtThongTinChiTiet.Text.Trim() != "")
+                        {
+                            string[] thongTinChiTiet = txtThongTinChiTiet.Text.Trim().Split('&');
+                            string moTa = thongTinChiTiet[0].Trim().ToString();
+                            string motaChiTiet = thongTinChiTiet[1].Trim().ToString();
+                            ThemSanPham(moTa, motaChiTiet);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nhập chi tiết thông tin sản phẩm");
+                        }
+
+                    }
+                    else
+                    {
+                        string moTa = "";
+                        string motaChiTiet = "";
+                        ThemSanPham(moTa, motaChiTiet);
+                    }
+                }    
+                else
+                {
+                    MessageBox.Show("Nhập sai định dạng");
+                }    
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
             }
         }
     }

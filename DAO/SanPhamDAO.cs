@@ -73,8 +73,8 @@ namespace DAO
             return false;
         }
 
-        public bool themSanPham(string tenSanPham, int soLuong, double donGia, string moTa, string moTaChiTiet,
-            string khuyenMai, double giamGia, DateTime ngayCapNhat, string xuatXu, string hinhMinhHoa, string dsHinh, bool tinhTrang, int maDanhMuc)
+        public bool themSanPham(string tenSanPham, int soLuong, double donGia, double donGiaNhap,string moTa, string moTaChiTiet,
+            string khuyenMai, double giamGia, DateTime ngayCapNhat, string xuatXu, string hinhMinhHoa, string dsHinh, int maDanhMuc, bool tinhTrang)
         {
             try
             {
@@ -82,6 +82,7 @@ namespace DAO
                 sp.tenSanPham = tenSanPham;
                 sp.soLuong = soLuong;
                 sp.donGia = (decimal)donGia;
+                sp.donGiaNhap = (decimal)donGiaNhap;
                 sp.moTa = moTa;
                 sp.moTaChiTiet = moTaChiTiet;
                 sp.khuyenMai = khuyenMai;
@@ -90,8 +91,8 @@ namespace DAO
                 sp.xuatXu = xuatXu;
                 sp.hinhMinhHoa = hinhMinhHoa;
                 sp.dsHinh = dsHinh;
-                sp.tinhTrang = tinhTrang;
                 sp.maDanhMuc = maDanhMuc;
+                sp.tinhTrang = tinhTrang;
                 db.SanPhams.InsertOnSubmit(sp);
                 db.SubmitChanges();
                 return true;

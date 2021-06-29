@@ -83,10 +83,10 @@ namespace QLSanPhamDienTu
             this.treeViewDanhMucSP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewDanhMucSP.ImageIndex = 0;
             this.treeViewDanhMucSP.ImageList = this.imageList1;
-            this.treeViewDanhMucSP.Location = new System.Drawing.Point(2, 23);
+            this.treeViewDanhMucSP.Location = new System.Drawing.Point(2, 28);
             this.treeViewDanhMucSP.Name = "treeViewDanhMucSP";
             this.treeViewDanhMucSP.SelectedImageIndex = 0;
-            this.treeViewDanhMucSP.Size = new System.Drawing.Size(264, 736);
+            this.treeViewDanhMucSP.Size = new System.Drawing.Size(264, 731);
             this.treeViewDanhMucSP.TabIndex = 0;
             this.treeViewDanhMucSP.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewDanhMucSP_AfterSelect);
             // 
@@ -200,6 +200,7 @@ namespace QLSanPhamDienTu
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
@@ -388,7 +389,7 @@ namespace QLSanPhamDienTu
             // 
             // frmQLSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 761);
             this.Controls.Add(this.panelControl2);
