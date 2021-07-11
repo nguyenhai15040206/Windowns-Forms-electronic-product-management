@@ -211,6 +211,7 @@
     <None Include="Resources\1601833.png" />
     <None Include="Resources\images.jpg" />
     <None Include="Resources\images-removebg-preview.png" />
+    <Content Include="Resources\SanPham\bao-da-2-dien-thoai-tien-dung-davis-3_79a648427d99440b88cbc06769c27fd5_master.jpg" />
     <Content Include="Resources\SanPham\IPHONE11PRO_TRANG.png" />
     <None Include="Resources\add21.ico" />
     <None Include="Resources\close1.png" />

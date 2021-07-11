@@ -56,8 +56,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodedUI_CapNhatSP.cs" />
     <Compile Include="CodeUI_ThemSP.cs" />
-    <Compile Include="CodeUI_XoaSanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIMap.cs">
       <DependentUpon>UIMap.uitest</DependentUpon>

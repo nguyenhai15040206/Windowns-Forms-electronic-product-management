@@ -40,6 +40,9 @@ namespace QLSanPhamDienTu
                 }
                 catch { }
             }
+            btnThemMoi.Enabled = false;
+            btnThemSP.Enabled = true;
+           
         }
 
 
@@ -103,21 +106,56 @@ namespace QLSanPhamDienTu
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             // kiểm tra các thông tin đầu vào
-            if (txtMaSP.Text.Trim() != "")
+            if(txtTenSP.Text.Trim().Length > 0 && txtXuatSu.Text.Trim().Length > 0 && numericUpDownSoLuong.Value > 0 && txtDonGia.Text.Trim().Length > 0
+                    && txtHinhMH.Text.Trim().Length > 0 && txtGiamGia.Text.Trim().Length > 0 && txtDSHinh.Text.Trim().Length > 0 && txtKhuyenMaiDiKem.Text.Trim().Length > 0)
+
             {
-                string[] thongTinChiTiet = txtThongTinChiTiet.Text.Trim().Split('&');
-                string moTa = thongTinChiTiet[0].Trim().ToString();
-                string motaChiTiet = thongTinChiTiet[1].Trim().ToString();
-                if (SanPhamBUS.instance.capNhatSanPham(int.Parse(txtMaSP.Text.Trim()), txtTenSP.Text.Trim(), int.Parse(numericUpDownSoLuong.Value.ToString()),
-                    double.Parse(txtDonGia.Text.Trim()), moTa, motaChiTiet, txtKhuyenMaiDiKem.Text.Trim(), double.Parse(txtGiamGia.Text.Trim()), pickerNgayCN.Value,
-                    txtXuatSu.Text.Trim(), txtHinhMH.Text.Trim(), txtDSHinh.Text.Trim(), true, int.Parse(cboThuongHieu.SelectedValue.ToString())))
+                if(CheckData.Instances.KtraDuLieu(txtDonGia.Text) && CheckData.Instances.KtraDuLieu(txtGiamGia.Text))
                 {
-                    MessageBox.Show("Cập nhật thành công");
+                    if(cboDanhMuc.Text == "LapTop" || cboDanhMuc.Text == "DienThoai")
+                    {
+                        if (txtMaSP.Text.Trim() != "")
+                        {
+                            string[] thongTinChiTiet = txtThongTinChiTiet.Text.Trim().Split('&');
+                            string moTa = thongTinChiTiet[0].Trim().ToString();
+                            string motaChiTiet = thongTinChiTiet[1].Trim().ToString();
+                            if (SanPhamBUS.instance.capNhatSanPham(int.Parse(txtMaSP.Text.Trim()), txtTenSP.Text.Trim(), int.Parse(numericUpDownSoLuong.Value.ToString()),
+                                double.Parse(txtDonGia.Text.Trim()), moTa, motaChiTiet, txtKhuyenMaiDiKem.Text.Trim(), double.Parse(txtGiamGia.Text.Trim()), pickerNgayCN.Value,
+                                txtXuatSu.Text.Trim(), txtHinhMH.Text.Trim(), txtDSHinh.Text.Trim(), true, int.Parse(cboThuongHieu.SelectedValue.ToString())))
+                            {
+                                MessageBox.Show("Cập nhật thành công");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Vui lòng kiểm tra lại các thông tin");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Nhập thông tin mô tả");
+                        }    
+                    }    
+                    else
+                    {
+                        string moTa = "";
+                        string motaChiTiet = "";
+                        if (SanPhamBUS.instance.capNhatSanPham(int.Parse(txtMaSP.Text.Trim()), txtTenSP.Text.Trim(), int.Parse(numericUpDownSoLuong.Value.ToString()),
+                                double.Parse(txtDonGia.Text.Trim()), moTa, motaChiTiet, txtKhuyenMaiDiKem.Text.Trim(), double.Parse(txtGiamGia.Text.Trim()), pickerNgayCN.Value,
+                                txtXuatSu.Text.Trim(), txtHinhMH.Text.Trim(), txtDSHinh.Text.Trim(), true, int.Parse(cboThuongHieu.SelectedValue.ToString())))
+                        {
+                            MessageBox.Show("Cập nhật thành công");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng kiểm tra lại các thông tin");
+                        }
+                    }    
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng kiểm tra lại các thông tin");
-                }
+                    MessageBox.Show("Sai định dạng tiền");
+                }    
             }
             else
             {
@@ -148,6 +186,7 @@ namespace QLSanPhamDienTu
                             txtXuatSu.Text.Trim(), txtHinhMH.Text.Trim(), txtDSHinh.Text.Trim(), int.Parse(cboThuongHieu.SelectedValue.ToString()), true))
             {
                 MessageBox.Show("Thêm thành công");
+                btnThemMoi.Enabled = false;
             }
             else
             {
@@ -157,6 +196,7 @@ namespace QLSanPhamDienTu
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
+            btnThemSP.Enabled = true;
             if (txtTenSP.Text.Trim().Length > 0 && txtXuatSu.Text.Trim().Length > 0 && numericUpDownSoLuong.Value > 0 && txtDonGia.Text.Trim().Length > 0
                     && txtHinhMH.Text.Trim().Length > 0 && txtGiamGia.Text.Trim().Length > 0 && txtDSHinh.Text.Trim().Length > 0 && txtKhuyenMaiDiKem.Text.Trim().Length > 0)
             {
@@ -193,6 +233,61 @@ namespace QLSanPhamDienTu
             else
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            }
+        }
+
+        public void LamMoiDuLieu()
+        {
+            foreach (Control control in groupBox1.Controls)
+            {
+                if (control.GetType() == typeof(TextBox))
+                {
+                    if(control.Name!= "txtMaSP")
+                    {
+                        control.Text = string.Empty;
+                    }  
+                    else
+                    {
+                        continue;
+                    }    
+                }
+
+            }
+            btnThemMoi.Enabled = true;
+
+        }
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            LamMoiDuLieu();
+            btnThemSP.Enabled = false;
+            
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if(open.ShowDialog()==DialogResult.OK)
+            {
+                string filename;
+                filename = open.FileName;
+                //MessageBox.Show(filename);
+                pictureBox1.ImageLocation = filename;
+                string[] url = filename.Trim().Split('\\');
+                txtHinhMH.Text = url.Last();
+            }    
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                string filename;
+                filename = open.FileName;
+                //MessageBox.Show(filename);
+                //pictureBox1.ImageLocation = filename;
+                string[] url = filename.Trim().Split('\\');
+                txtDSHinh.Text = url.Last();
             }
         }
     }

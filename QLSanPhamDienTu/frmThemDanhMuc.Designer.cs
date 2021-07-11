@@ -31,6 +31,9 @@ namespace QLSanPhamDienTu
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemDanhMuc));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cboNSX = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.cboGhiChu = new System.Windows.Forms.ComboBox();
@@ -51,15 +54,12 @@ namespace QLSanPhamDienTu
             this.btnLamMoi = new CustomControls.ButtonDesign();
             this.btnThoat = new CustomControls.ButtonDesign();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaDM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -82,12 +82,42 @@ namespace QLSanPhamDienTu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(419, 58);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton1.Size = new System.Drawing.Size(33, 35);
+            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLSanPhamDienTu.Properties.Resources.nen1;
+            this.pictureBox1.Location = new System.Drawing.Point(458, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(211, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(406, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Logo:";
+            // 
             // cboNSX
             // 
             this.cboNSX.FormattingEnabled = true;
             this.cboNSX.Location = new System.Drawing.Point(129, 139);
             this.cboNSX.Name = "cboNSX";
-            this.cboNSX.Size = new System.Drawing.Size(540, 28);
+            this.cboNSX.Size = new System.Drawing.Size(540, 33);
             this.cboNSX.TabIndex = 3;
             // 
             // labelControl3
@@ -96,7 +126,7 @@ namespace QLSanPhamDienTu
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(27, 144);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(88, 20);
+            this.labelControl3.Size = new System.Drawing.Size(114, 25);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Nhà sản xuất:";
             // 
@@ -105,7 +135,7 @@ namespace QLSanPhamDienTu
             this.cboGhiChu.FormattingEnabled = true;
             this.cboGhiChu.Location = new System.Drawing.Point(129, 102);
             this.cboGhiChu.Name = "cboGhiChu";
-            this.cboGhiChu.Size = new System.Drawing.Size(250, 28);
+            this.cboGhiChu.Size = new System.Drawing.Size(250, 33);
             this.cboGhiChu.TabIndex = 2;
             this.cboGhiChu.SelectedIndexChanged += new System.EventHandler(this.cboGhiChu_SelectedIndexChanged);
             // 
@@ -115,7 +145,7 @@ namespace QLSanPhamDienTu
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(27, 110);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(100, 20);
+            this.labelControl5.Size = new System.Drawing.Size(128, 25);
             this.labelControl5.TabIndex = 7;
             this.labelControl5.Text = "Loại danh mục:";
             this.labelControl5.Click += new System.EventHandler(this.labelControl5_Click);
@@ -128,7 +158,7 @@ namespace QLSanPhamDienTu
             this.txtTenDM.Properties.Appearance.Options.UseFont = true;
             this.txtTenDM.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDM.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.txtTenDM.Size = new System.Drawing.Size(250, 26);
+            this.txtTenDM.Size = new System.Drawing.Size(250, 32);
             this.txtTenDM.TabIndex = 1;
             // 
             // labelControl2
@@ -137,7 +167,7 @@ namespace QLSanPhamDienTu
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(27, 73);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(95, 20);
+            this.labelControl2.Size = new System.Drawing.Size(122, 25);
             this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "Tên danh mục:";
             // 
@@ -150,7 +180,7 @@ namespace QLSanPhamDienTu
             this.txtMaDM.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDM.Properties.AppearanceDisabled.Options.UseFont = true;
             this.txtMaDM.Properties.ReadOnly = true;
-            this.txtMaDM.Size = new System.Drawing.Size(250, 26);
+            this.txtMaDM.Size = new System.Drawing.Size(250, 32);
             this.txtMaDM.TabIndex = 0;
             // 
             // labelControl1
@@ -159,7 +189,7 @@ namespace QLSanPhamDienTu
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(27, 38);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(93, 20);
+            this.labelControl1.Size = new System.Drawing.Size(120, 25);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Mã danh mục:";
             // 
@@ -343,38 +373,9 @@ namespace QLSanPhamDienTu
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(406, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 20);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Logo:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLSanPhamDienTu.Properties.Resources.nen1;
-            this.pictureBox1.Location = new System.Drawing.Point(458, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(419, 58);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton1.Size = new System.Drawing.Size(33, 35);
-            this.simpleButton1.TabIndex = 4;
-            // 
             // frmThemDanhMuc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 495);
             this.Controls.Add(this.btnThoat);
@@ -395,11 +396,11 @@ namespace QLSanPhamDienTu
             this.Load += new System.EventHandler(this.frmThemDanhMuc_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaDM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

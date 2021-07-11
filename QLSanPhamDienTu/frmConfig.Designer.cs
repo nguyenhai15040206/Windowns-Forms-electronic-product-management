@@ -46,7 +46,7 @@ namespace QLSanPhamDienTu
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(35, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 20);
+            this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Server name:";
             // 
@@ -55,7 +55,7 @@ namespace QLSanPhamDienTu
             this.cboServername.FormattingEnabled = true;
             this.cboServername.Location = new System.Drawing.Point(135, 17);
             this.cboServername.Name = "cboServername";
-            this.cboServername.Size = new System.Drawing.Size(270, 28);
+            this.cboServername.Size = new System.Drawing.Size(270, 33);
             this.cboServername.TabIndex = 0;
             this.cboServername.DropDown += new System.EventHandler(this.cboServername_DropDown);
             // 
@@ -64,7 +64,7 @@ namespace QLSanPhamDienTu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(35, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "User name:";
             // 
@@ -72,7 +72,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtUsername.Location = new System.Drawing.Point(135, 54);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(270, 27);
+            this.txtUsername.Size = new System.Drawing.Size(270, 32);
             this.txtUsername.TabIndex = 1;
             // 
             // label3
@@ -80,7 +80,7 @@ namespace QLSanPhamDienTu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(35, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(95, 25);
             this.label3.TabIndex = 8;
             this.label3.Text = "Password:";
             // 
@@ -88,15 +88,16 @@ namespace QLSanPhamDienTu
             // 
             this.txtPass.Location = new System.Drawing.Point(135, 90);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(270, 27);
+            this.txtPass.Size = new System.Drawing.Size(270, 32);
             this.txtPass.TabIndex = 2;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // cboDatabase
             // 
             this.cboDatabase.FormattingEnabled = true;
             this.cboDatabase.Location = new System.Drawing.Point(135, 126);
             this.cboDatabase.Name = "cboDatabase";
-            this.cboDatabase.Size = new System.Drawing.Size(270, 28);
+            this.cboDatabase.Size = new System.Drawing.Size(270, 33);
             this.cboDatabase.TabIndex = 3;
             this.cboDatabase.DropDown += new System.EventHandler(this.cboDatabase_DropDown);
             // 
@@ -105,7 +106,7 @@ namespace QLSanPhamDienTu
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(35, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.Size = new System.Drawing.Size(94, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Database:";
             // 
@@ -141,7 +142,7 @@ namespace QLSanPhamDienTu
             // 
             // frmConfig
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 226);
             this.Controls.Add(this.btnHuyBo);

@@ -210,11 +210,106 @@ namespace DAO
             var nguoiDung = db.NguoiDungs.SingleOrDefault(m => m.tenDangNhap == tenDangNhap && m.matKhau == matKhau);
             return nguoiDung;
         }
+        public bool LayNguoiDungCoSoDienThoaiTonTai(string input)
+        {
+            try
+            {
+                var sdt = db.NguoiDungs.Where(m => m.soDienThoai == input).ToList();
+                if(sdt.Count>0)
+                {
+                    return false;
+                }    
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool CapNhatThongTinNguoiDung(int ma, string tenNguoiDung, string tenDangNhap, string matKhau, string diaChi, string soDienThoai,
+            string email, DateTime ngayVaoLam, bool hoatDong)
+        {
+            try
+            {
+                var nv = db.NguoiDungs.SingleOrDefault(m => m.maNguoiDung == ma);
+                if(nv==null)
+                {
+                    return false;
+                } 
+                if(soDienThoai==nv.soDienThoai)
+                {
+                    nv.tenNguoiDung = tenNguoiDung;
+                    nv.tenDangNhap = tenDangNhap;
+                    nv.matKhau = matKhau;
+                    nv.email = email;
+                    nv.diaChi = diaChi;
+                    nv.ngayVaoLam = ngayVaoLam;
+                    nv.hoatDong = hoatDong;
+                    db.SubmitChanges();
+                    return true;
+                }   
+                else
+                {
+                    if(LayNguoiDungCoSoDienThoaiTonTai(soDienThoai))
+                    {
+                        nv.tenNguoiDung = tenNguoiDung;
+                        nv.tenDangNhap = tenDangNhap;
+                        nv.matKhau = matKhau;
+                        nv.soDienThoai = soDienThoai;
+                        nv.email = email;
+                        nv.diaChi = diaChi;
+                        nv.ngayVaoLam = ngayVaoLam;
+                        nv.hoatDong = hoatDong;
+                        db.SubmitChanges();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }    
+
+                }    
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
 
+        public bool KtraTenNguoiDung(string tenNguoiDung)
+        {
+            try
+            {
+                var nd = db.NguoiDungs.Where(m => m.tenDangNhap == tenNguoiDung).ToList();
+                if(nd.Count>0)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
 
-
+        public bool XoaNguoiDung(int maNgDung)
+        {
+            try
+            {
+                NguoiDung nd = db.NguoiDungs.SingleOrDefault(m => m.maNguoiDung == maNgDung);
+                db.NguoiDungs.DeleteOnSubmit(nd);
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
 
 

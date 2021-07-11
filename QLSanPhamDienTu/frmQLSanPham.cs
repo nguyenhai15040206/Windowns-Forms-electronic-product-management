@@ -75,6 +75,7 @@ namespace QLSanPhamDienTu
         {
             frmThemSanPham frm = new frmThemSanPham();
             frm.btnThemMoi.Visible = true;
+            frm.btnCapNhat.Visible = false;
             frm.ShowDialog();
         }
 

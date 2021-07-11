@@ -13,6 +13,8 @@ namespace QLSanPhamDienTu
 {
     public partial class frmThemDanhMuc : Form
     {
+
+        string logo = "";
         public frmThemDanhMuc()
         {
             InitializeComponent();
@@ -40,10 +42,11 @@ namespace QLSanPhamDienTu
                     DialogResult rs = MessageBox.Show("Bạn có chắc muốn cập nhật Danh mục này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (rs == DialogResult.Yes)
                     {
-                        if (DanhMucBUS.Instance.capNhatDanhMuc(int.Parse(txtMaDM.Text.Trim()), txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), ""))
+                        if (DanhMucBUS.Instance.capNhatDanhMuc(int.Parse(txtMaDM.Text.Trim()), txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), logo))
                         {
                             MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK);
                             DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
+                            frmThemDanhMuc_Load(sender, e);
                         }
                     }
                 }
@@ -86,10 +89,11 @@ namespace QLSanPhamDienTu
             {
                 if (!string.IsNullOrEmpty(txtTenDM.Text.Trim()))
                 {
-                    if (DanhMucBUS.Instance.themDanhMuc(txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), ""))
+                    if (DanhMucBUS.Instance.themDanhMuc(txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), logo))
                     {
                         MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK);
                         DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
+                        frmThemDanhMuc_Load(sender, e);
                     }
                 }
                 else
@@ -111,6 +115,7 @@ namespace QLSanPhamDienTu
                     {
                         MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK);
                         DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
+                        frmThemDanhMuc_Load(sender, e);
                     }
                 }
             }
@@ -136,6 +141,20 @@ namespace QLSanPhamDienTu
             txtMaDM.Text = "";
             txtTenDM.Text = "";
             txtTenDM.Focus();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                string filename;
+                filename = open.FileName;
+                //MessageBox.Show(filename);
+                pictureBox1.ImageLocation = filename;
+                string[] url = filename.Trim().Split('\\');
+                logo = url.Last();
+            }
         }
     }
 }

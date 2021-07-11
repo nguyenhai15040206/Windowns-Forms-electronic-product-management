@@ -117,7 +117,7 @@ namespace QLSanPhamDienTu
             this.cboThuongHieu.FormattingEnabled = true;
             this.cboThuongHieu.Location = new System.Drawing.Point(412, 62);
             this.cboThuongHieu.Name = "cboThuongHieu";
-            this.cboThuongHieu.Size = new System.Drawing.Size(229, 39);
+            this.cboThuongHieu.Size = new System.Drawing.Size(229, 33);
             this.cboThuongHieu.TabIndex = 28;
             // 
             // label14
@@ -125,7 +125,7 @@ namespace QLSanPhamDienTu
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(341, 70);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 31);
+            this.label14.Size = new System.Drawing.Size(86, 25);
             this.label14.TabIndex = 27;
             this.label14.Text = "DMục(*):";
             // 
@@ -134,7 +134,7 @@ namespace QLSanPhamDienTu
             this.ckbTinhTrang.AutoSize = true;
             this.ckbTinhTrang.Location = new System.Drawing.Point(155, 406);
             this.ckbTinhTrang.Name = "ckbTinhTrang";
-            this.ckbTinhTrang.Size = new System.Drawing.Size(263, 35);
+            this.ckbTinhTrang.Size = new System.Drawing.Size(220, 29);
             this.ckbTinhTrang.TabIndex = 26;
             this.ckbTinhTrang.Text = "Tình trạng (Còn hàng)";
             this.ckbTinhTrang.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@ namespace QLSanPhamDienTu
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(22, 317);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(193, 31);
+            this.label12.Size = new System.Drawing.Size(159, 25);
             this.label12.TabIndex = 24;
             this.label12.Text = "Thông tin chi tiết:";
             // 
@@ -167,7 +167,7 @@ namespace QLSanPhamDienTu
             this.label13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(707, 241);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 23);
+            this.label13.Size = new System.Drawing.Size(98, 19);
             this.label13.TabIndex = 23;
             this.label13.Text = "hình minh họa";
             // 
@@ -184,7 +184,7 @@ namespace QLSanPhamDienTu
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(25, 284);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(155, 31);
+            this.label11.Size = new System.Drawing.Size(127, 25);
             this.label11.TabIndex = 21;
             this.label11.Text = "K/Mãi đi kèm:";
             // 
@@ -192,7 +192,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtGiamGia.Location = new System.Drawing.Point(155, 244);
             this.txtGiamGia.Name = "txtGiamGia";
-            this.txtGiamGia.Size = new System.Drawing.Size(175, 37);
+            this.txtGiamGia.Size = new System.Drawing.Size(175, 32);
             this.txtGiamGia.TabIndex = 20;
             // 
             // simpleButton2
@@ -203,6 +203,7 @@ namespace QLSanPhamDienTu
             this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton2.Size = new System.Drawing.Size(38, 27);
             this.simpleButton2.TabIndex = 19;
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -212,12 +213,13 @@ namespace QLSanPhamDienTu
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(38, 27);
             this.simpleButton1.TabIndex = 16;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtDSHinh
             // 
             this.txtDSHinh.Location = new System.Drawing.Point(409, 244);
             this.txtDSHinh.Name = "txtDSHinh";
-            this.txtDSHinh.Size = new System.Drawing.Size(188, 37);
+            this.txtDSHinh.Size = new System.Drawing.Size(188, 32);
             this.txtDSHinh.TabIndex = 17;
             // 
             // label9
@@ -225,7 +227,7 @@ namespace QLSanPhamDienTu
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(25, 215);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(169, 31);
+            this.label9.Size = new System.Drawing.Size(141, 25);
             this.label9.TabIndex = 15;
             this.label9.Text = "Hình minh họa:";
             // 
@@ -234,7 +236,7 @@ namespace QLSanPhamDienTu
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(341, 251);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 31);
+            this.label10.Size = new System.Drawing.Size(79, 25);
             this.label10.TabIndex = 18;
             this.label10.Text = "DSHình:";
             // 
@@ -253,7 +255,7 @@ namespace QLSanPhamDienTu
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(25, 251);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 31);
+            this.label6.Size = new System.Drawing.Size(91, 25);
             this.label6.TabIndex = 8;
             this.label6.Text = "Giảm giá:";
             // 
@@ -261,7 +263,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtXuatSu.Location = new System.Drawing.Point(412, 136);
             this.txtXuatSu.Name = "txtXuatSu";
-            this.txtXuatSu.Size = new System.Drawing.Size(230, 37);
+            this.txtXuatSu.Size = new System.Drawing.Size(230, 32);
             this.txtXuatSu.TabIndex = 13;
             // 
             // label8
@@ -269,7 +271,7 @@ namespace QLSanPhamDienTu
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(341, 143);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 31);
+            this.label8.Size = new System.Drawing.Size(78, 25);
             this.label8.TabIndex = 12;
             this.label8.Text = "Xuất sứ:";
             // 
@@ -279,7 +281,7 @@ namespace QLSanPhamDienTu
             this.pickerNgayCN.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.pickerNgayCN.Location = new System.Drawing.Point(155, 136);
             this.pickerNgayCN.Name = "pickerNgayCN";
-            this.pickerNgayCN.Size = new System.Drawing.Size(175, 37);
+            this.pickerNgayCN.Size = new System.Drawing.Size(175, 32);
             this.pickerNgayCN.TabIndex = 11;
             // 
             // label7
@@ -287,7 +289,7 @@ namespace QLSanPhamDienTu
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(25, 143);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(168, 31);
+            this.label7.Size = new System.Drawing.Size(138, 25);
             this.label7.TabIndex = 10;
             this.label7.Text = "Ngày cập nhật:";
             // 
@@ -295,14 +297,14 @@ namespace QLSanPhamDienTu
             // 
             this.txtHinhMH.Location = new System.Drawing.Point(155, 208);
             this.txtHinhMH.Name = "txtHinhMH";
-            this.txtHinhMH.Size = new System.Drawing.Size(442, 37);
+            this.txtHinhMH.Size = new System.Drawing.Size(442, 32);
             this.txtHinhMH.TabIndex = 9;
             // 
             // txtDonGia
             // 
             this.txtDonGia.Location = new System.Drawing.Point(412, 172);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(230, 37);
+            this.txtDonGia.Size = new System.Drawing.Size(230, 32);
             this.txtDonGia.TabIndex = 7;
             // 
             // label5
@@ -310,7 +312,7 @@ namespace QLSanPhamDienTu
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(341, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 31);
+            this.label5.Size = new System.Drawing.Size(82, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Đơn giá:";
             // 
@@ -323,7 +325,7 @@ namespace QLSanPhamDienTu
             0,
             0});
             this.numericUpDownSoLuong.Name = "numericUpDownSoLuong";
-            this.numericUpDownSoLuong.Size = new System.Drawing.Size(175, 37);
+            this.numericUpDownSoLuong.Size = new System.Drawing.Size(175, 32);
             this.numericUpDownSoLuong.TabIndex = 6;
             // 
             // label4
@@ -331,7 +333,7 @@ namespace QLSanPhamDienTu
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(25, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 31);
+            this.label4.Size = new System.Drawing.Size(91, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Số lượng:";
             // 
@@ -339,7 +341,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtTenSP.Location = new System.Drawing.Point(155, 99);
             this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(487, 37);
+            this.txtTenSP.Size = new System.Drawing.Size(487, 32);
             this.txtTenSP.TabIndex = 5;
             // 
             // label3
@@ -347,7 +349,7 @@ namespace QLSanPhamDienTu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 31);
+            this.label3.Size = new System.Drawing.Size(132, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên sản phẩm:";
             // 
@@ -356,7 +358,7 @@ namespace QLSanPhamDienTu
             this.cboDanhMuc.FormattingEnabled = true;
             this.cboDanhMuc.Location = new System.Drawing.Point(155, 62);
             this.cboDanhMuc.Name = "cboDanhMuc";
-            this.cboDanhMuc.Size = new System.Drawing.Size(175, 39);
+            this.cboDanhMuc.Size = new System.Drawing.Size(175, 33);
             this.cboDanhMuc.TabIndex = 3;
             this.cboDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cboDanhMuc_SelectedIndexChanged);
             // 
@@ -365,7 +367,7 @@ namespace QLSanPhamDienTu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 31);
+            this.label2.Size = new System.Drawing.Size(155, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nhóm sản phẩm:";
             // 
@@ -374,7 +376,7 @@ namespace QLSanPhamDienTu
             this.txtMaSP.Location = new System.Drawing.Point(155, 26);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.ReadOnly = true;
-            this.txtMaSP.Size = new System.Drawing.Size(175, 37);
+            this.txtMaSP.Size = new System.Drawing.Size(175, 32);
             this.txtMaSP.TabIndex = 1;
             this.txtMaSP.TextChanged += new System.EventHandler(this.txtMaSP_TextChanged);
             // 
@@ -383,7 +385,7 @@ namespace QLSanPhamDienTu
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 31);
+            this.label1.Size = new System.Drawing.Size(130, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã sản phẩm:";
             // 
@@ -397,7 +399,7 @@ namespace QLSanPhamDienTu
             this.btnThemMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThemMoi.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnThemMoi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThemMoi.ImageOptions.SvgImage")));
-            this.btnThemMoi.Location = new System.Drawing.Point(338, 462);
+            this.btnThemMoi.Location = new System.Drawing.Point(338, 457);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnThemMoi.Size = new System.Drawing.Size(156, 42);
@@ -439,10 +441,11 @@ namespace QLSanPhamDienTu
             this.btnThemSP.Size = new System.Drawing.Size(156, 42);
             this.btnThemSP.TabIndex = 3;
             this.btnThemSP.Text = "Làm mới";
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
             // frmThemSanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 521);
             this.Controls.Add(this.btnThemMoi);

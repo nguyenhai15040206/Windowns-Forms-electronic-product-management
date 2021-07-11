@@ -1286,6 +1286,343 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIVivoY518GB128GBCell">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="39" Y="7" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIItem32Cell">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="45" Y="15" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIItemCell5">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="21" Y="24" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIThôngbáoWindow.UIYesWindow.UIYesButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="64" Y="7" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIOKWindow.UIOKButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="61" Y="10" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod11">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIIPhone1264GBCell">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="108" Y="20" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIRow0ColumnmaSPEdit" Comment="ValueTypeName">
+      <ParameterName />
+      <Value Encoded="false">System.Int32</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIRow0ColumnmaSPEdit" Comment="ValueAsString">
+      <ParameterName />
+      <Value Encoded="false">1 [SelectionStart]0</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIItemCell6">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="51" Y="23" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtTenSPWindow.UITxtTenSPEdit">
+      <ParameterName />
+      <Value Encoded="false" />
+      <Type>String</Type>
+    </SetValueAction>
+    <SendKeysAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtTenSPWindow.UITxtTenSPEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Back}{Back}{Back}{Back}{Back}{Back}</Text>
+    </SendKeysAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtXuatSuWindow.UITxtXuatSuEdit">
+      <ParameterName />
+      <Value Encoded="false">Trung Quố</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UINumericUpDownSpinner.UINumericUpDownEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="73" Y="13" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SendKeysAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UINumericUpDownSpinner.UINumericUpDownEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Back}</Text>
+    </SendKeysAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtDonGiaWindow.UITxtDonGiaEdit">
+      <ParameterName />
+      <Value Encoded="false">28000000</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtHinhMHWindow.UITxtHinhMHEdit">
+      <ParameterName />
+      <Value Encoded="false">IPHONE11PRO_TRANG.PN</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtGiamGiaWindow.UITxtGiamGiaEdit">
+      <ParameterName />
+      <Value Encoded="false">25000000</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtDSHinhWindow.UITxtDSHinhEdit">
+      <ParameterName />
+      <Value Encoded="false">pngg</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtKhuyenMaiDiKemWindow.UITxtKhuyenMaiDiKemEdit">
+      <ParameterName />
+      <Value Encoded="false">Giảm ngay 15.000.000đ | Tặng Sim đồng hương hiệu Moifone Gọi Thả fGa F160 1T đầu 07/08/09 | Trả góp 0%</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UITxtThongTinChiTietWindow.UITxtThongTinChiTietEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="429" Y="38" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UITxtManHinhWindow.UITxtManHinhEdit">
+      <ParameterName />
+      <Value Encoded="false">6.1", Liquid Retina HD, IPS LCD, 828 x 1792 Pixelr</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UITxtCameraSauWindow.UITxtCameraSauEdit">
+      <ParameterName />
+      <Value Encoded="false">12.0 MPr</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UITxtCameraSelfiWindow.UITxtCameraSelfiEdit">
+      <ParameterName />
+      <Value Encoded="false">7.0 MPr</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SendKeysAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UINumericUpDownSpinner.UINumericUpDownEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">5</Text>
+    </SendKeysAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UINumericUpDownSpinner.UINumericUpDownEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="186" Y="15" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UINumericUpDownSpinner.UINumericUpDownEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="160" Y="5" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SendKeysAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UINumericUpDownSpinner.UINumericUpDownEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">5</Text>
+    </SendKeysAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UIGBSpinner.UIGBEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="138" Y="7" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SendKeysAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UIGBSpinner.UIGBEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">5</Text>
+    </SendKeysAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UITxtCPUWindow.UITxtCPUEdit">
+      <ParameterName />
+      <Value Encoded="false">A12 Bionicg</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UITxtGPUWindow.UITxtGPUEdit">
+      <ParameterName />
+      <Value Encoded="false">Apple GPU 4 nhâng</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UITxtDungLuongPinWindow.UITxtDungLuongPinEdit">
+      <ParameterName />
+      <Value Encoded="false">3110 mAlg</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UITxtTheSimWindow.UITxtTheSimEdit">
+      <ParameterName />
+      <Value Encoded="false">2, 1 eSIM, 1 Nano Sng</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UIThôngtinmôtảsảnphẩmGroup.UIIOS14Window">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="143" Y="1" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UITxtHeDieuHanhWindow.UITxtHeDieuHanhEdit">
+      <ParameterName />
+      <Value Encoded="false">iOS 14g</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinmôtảchitiếtsWindow.UIHoàntấtButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="1" Y="1" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <DragDropAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UICậpnhậtButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <TargetElementName>UIMap.UIThôngtinsảnphẩmWindow.UIThôngtinsảnphẩmClient</TargetElementName>
+      <MouseButton>Left</MouseButton>
+      <StartLocation X="54" Y="3" />
+      <StopLocation X="755" Y="460" />
+    </DragDropAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UICậpnhậtButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="1" Y="1" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIOKWindow.UIOKButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="41" Y="12" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod12">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIRow0ColumngridColumnEdit.UIEditorButton0Button">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="17" Y="13" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <DragDropAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UINumericUpDownSpinner.UINumericUpDownEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <TargetElementName>UIMap.UIThôngtinsảnphẩmWindow.UIThôngtinsảnphẩmWindow1.UIThôngtinsảnphẩmGroup</TargetElementName>
+      <MouseButton>Left</MouseButton>
+      <StartLocation X="16" Y="3" />
+      <StopLocation X="132" Y="178" />
+    </DragDropAction>
+    <SendKeysAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UINumericUpDownSpinner.UINumericUpDownEdit">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">0</Text>
+    </SendKeysAction>
+    <MouseAction UIObjectName="UIMap.UIThôngtinsảnphẩmWindow.UICậpnhậtButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="1" Y="1" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIOKWindow.UIOKButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="60" Y="20" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="RecordedMethod13">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
   </ExecuteActions>
   <CleanupActions />
   <OnErrorActions />
@@ -1559,6 +1896,103 @@
                       </AndCondition>
                       <SupportLevel>0</SupportLevel>
                       <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Cell" Id="UIVivoY518GB128GBCell" FriendlyName="Vivo Y51 8GB - 128GB" SpecialControlType="None">
+                      <TechnologyName>DevExpress.v19.2</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Sản phẩm</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="Name">gridControl1GridControlCell[View]gridView1[Row]31[Column]gridColumn4</PropertyCondition>
+                        <PropertyCondition Name="ClassName">GridControlCell</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Cell" Id="UIItem32Cell" FriendlyName="32" SpecialControlType="None">
+                      <TechnologyName>DevExpress.v19.2</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Sản phẩm</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="Name">gridControl1GridControlCell[View]gridView1[Row]27[Column]maSP</PropertyCondition>
+                        <PropertyCondition Name="ClassName">GridControlCell</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Cell" Id="UIItemCell5" FriendlyName="" SpecialControlType="None">
+                      <TechnologyName>DevExpress.v19.2</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Sản phẩm</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="Name">gridControl1GridControlCell[View]gridView1[Row]27[Column]gridColumn1</PropertyCondition>
+                        <PropertyCondition Name="ClassName">GridControlCell</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Cell" Id="UIIPhone1264GBCell" FriendlyName="iPhone 12 64GB" SpecialControlType="None">
+                      <TechnologyName>DevExpress.v19.2</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Sản phẩm</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="Name">gridControl1GridControlCell[View]gridView1[Row]2[Column]gridColumn4</PropertyCondition>
+                        <PropertyCondition Name="ClassName">GridControlCell</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Edit" Id="UIRow0ColumnmaSPEdit" FriendlyName="[Row]0[Column]maSP" SpecialControlType="None">
+                      <TechnologyName>DevExpress.v19.2</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Sản phẩm</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="Name">gridControl1TextEdit[View]gridView1[Row]0[Column]maSP</PropertyCondition>
+                        <PropertyCondition Name="ClassName">TextEdit</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Cell" Id="UIItemCell6" FriendlyName="" SpecialControlType="None">
+                      <TechnologyName>DevExpress.v19.2</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Sản phẩm</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="Name">gridControl1GridControlCell[View]gridView1[Row]0[Column]gridColumn2</PropertyCondition>
+                        <PropertyCondition Name="ClassName">GridControlCell</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Edit" Id="UIRow0ColumngridColumnEdit" FriendlyName="[Row]0[Column]gridColumn2" SpecialControlType="None">
+                      <TechnologyName>DevExpress.v19.2</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Sản phẩm</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="Name">gridControl1ButtonEdit[View]gridView1[Row]0[Column]gridColumn2</PropertyCondition>
+                        <PropertyCondition Name="ClassName">ButtonEdit</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants>
+                        <UIObject ControlType="Button" Id="UIEditorButton0Button" FriendlyName="EditorButton0" SpecialControlType="None">
+                          <TechnologyName>DevExpress.v19.2</TechnologyName>
+                          <WindowTitles>
+                            <WindowTitle>Sản phẩm</WindowTitle>
+                          </WindowTitles>
+                          <AndCondition>
+                            <PropertyCondition Name="Name">gridControl1ButtonEdit[View]gridView1[Row]0[Column]gridColumn2Button[0]</PropertyCondition>
+                            <PropertyCondition Name="ClassName">EditorButton</PropertyCondition>
+                          </AndCondition>
+                          <SupportLevel>0</SupportLevel>
+                          <Descendants />
+                        </UIObject>
+                      </Descendants>
                     </UIObject>
                   </Descendants>
                 </UIObject>
@@ -2009,6 +2443,33 @@
                 </UIObject>
               </Descendants>
             </UIObject>
+            <UIObject ControlType="Button" Id="UICậpnhậtButton" FriendlyName="Cập nhật" SpecialControlType="None">
+              <TechnologyName>DevExpress.v19.2</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Thông tin sản phẩm</WindowTitle>
+              </WindowTitles>
+              <AndCondition>
+                <PropertyCondition Name="Name">btnCapNhat</PropertyCondition>
+                <PropertyCondition Name="ClassName">ButtonDesign</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants />
+            </UIObject>
+            <UIObject ControlType="Client" Id="UIThôngtinsảnphẩmClient" FriendlyName="Thông tin sản phẩm" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Thông tin sản phẩm</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">Thông tin sản phẩm</PropertyCondition>
+                <PropertyCondition Name="ControlType">Client</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants />
+            </UIObject>
           </Descendants>
         </TopLevelWindow>
         <TopLevelWindow ControlType="Window" Id="UIItemWindow" FriendlyName="" SpecialControlType="None" SessionId="2951466">
@@ -2457,6 +2918,22 @@
                     <PropertyCondition Name="ClassName" Operator="Contains">WindowsForms10.EDIT</PropertyCondition>
                     <PropertyCondition Name="ControlType">Window</PropertyCondition>
                     <PropertyCondition Name="Instance">4</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+                <UIObject ControlType="Window" Id="UIIOS14Window" FriendlyName="iOS 14" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Thông tin mô tả chi tiết sản phẩm</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">iOS 14</PropertyCondition>
+                    <PropertyCondition Name="ClassName" Operator="Contains">WindowsForms10.EDIT</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Window</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />

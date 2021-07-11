@@ -758,6 +758,208 @@ namespace CodedUI_QLSanPham
             Mouse.Click(uIOKButton, new Point(69, 20));
         }
         
+        /// <summary>
+        /// RecordedMethod11
+        /// </summary>
+        public void RecordedMethod11()
+        {
+            #region Variable Declarations
+            DXCell uIVivoY518GB128GBCell = this.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIVivoY518GB128GBCell;
+            DXCell uIItem32Cell = this.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIItem32Cell;
+            DXCell uIItemCell5 = this.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIItemCell5;
+            WinButton uIYesButton = this.UIThôngbáoWindow.UIYesWindow.UIYesButton;
+            WinButton uIOKButton = this.UIOKWindow.UIOKButton;
+            #endregion
+
+            // Click 'Vivo Y51 8GB - 128GB' cell
+            Mouse.Click(uIVivoY518GB128GBCell, new Point(39, 7));
+
+            // Click '32' cell
+            Mouse.Click(uIItem32Cell, new Point(45, 15));
+
+            // Click cell
+            Mouse.Click(uIItemCell5, new Point(21, 24));
+
+            // Click '&Yes' button
+            Mouse.Click(uIYesButton, new Point(64, 7));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(61, 10));
+        }
+        
+        /// <summary>
+        /// RecordedMethod12 - Use 'RecordedMethod12Params' to pass parameters into this method.
+        /// </summary>
+        public void RecordedMethod12()
+        {
+            #region Variable Declarations
+            DXCell uIIPhone1264GBCell = this.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIIPhone1264GBCell;
+            DXTextEdit uIRow0ColumnmaSPEdit = this.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIRow0ColumnmaSPEdit;
+            DXCell uIItemCell6 = this.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIItemCell6;
+            WinEdit uITxtTenSPEdit = this.UIThôngtinsảnphẩmWindow.UITxtTenSPWindow.UITxtTenSPEdit;
+            WinEdit uITxtXuatSuEdit = this.UIThôngtinsảnphẩmWindow.UITxtXuatSuWindow.UITxtXuatSuEdit;
+            WinEdit uINumericUpDownEdit = this.UIThôngtinsảnphẩmWindow.UINumericUpDownSpinner.UINumericUpDownEdit;
+            WinEdit uITxtDonGiaEdit = this.UIThôngtinsảnphẩmWindow.UITxtDonGiaWindow.UITxtDonGiaEdit;
+            WinEdit uITxtHinhMHEdit = this.UIThôngtinsảnphẩmWindow.UITxtHinhMHWindow.UITxtHinhMHEdit;
+            WinEdit uITxtGiamGiaEdit = this.UIThôngtinsảnphẩmWindow.UITxtGiamGiaWindow.UITxtGiamGiaEdit;
+            WinEdit uITxtDSHinhEdit = this.UIThôngtinsảnphẩmWindow.UITxtDSHinhWindow.UITxtDSHinhEdit;
+            WinEdit uITxtKhuyenMaiDiKemEdit = this.UIThôngtinsảnphẩmWindow.UITxtKhuyenMaiDiKemWindow.UITxtKhuyenMaiDiKemEdit;
+            WinEdit uITxtThongTinChiTietEdit = this.UIThôngtinsảnphẩmWindow.UITxtThongTinChiTietWindow.UITxtThongTinChiTietEdit;
+            WinEdit uITxtManHinhEdit = this.UIThôngtinmôtảchitiếtsWindow.UITxtManHinhWindow.UITxtManHinhEdit;
+            WinEdit uITxtCameraSauEdit = this.UIThôngtinmôtảchitiếtsWindow.UITxtCameraSauWindow.UITxtCameraSauEdit;
+            WinEdit uITxtCameraSelfiEdit = this.UIThôngtinmôtảchitiếtsWindow.UITxtCameraSelfiWindow.UITxtCameraSelfiEdit;
+            WinEdit uINumericUpDownEdit1 = this.UIThôngtinmôtảchitiếtsWindow.UINumericUpDownSpinner.UINumericUpDownEdit;
+            WinEdit uIGBEdit = this.UIThôngtinmôtảchitiếtsWindow.UIGBSpinner.UIGBEdit;
+            WinEdit uITxtCPUEdit = this.UIThôngtinmôtảchitiếtsWindow.UITxtCPUWindow.UITxtCPUEdit;
+            WinEdit uITxtGPUEdit = this.UIThôngtinmôtảchitiếtsWindow.UITxtGPUWindow.UITxtGPUEdit;
+            WinEdit uITxtDungLuongPinEdit = this.UIThôngtinmôtảchitiếtsWindow.UITxtDungLuongPinWindow.UITxtDungLuongPinEdit;
+            WinEdit uITxtTheSimEdit = this.UIThôngtinmôtảchitiếtsWindow.UITxtTheSimWindow.UITxtTheSimEdit;
+            WinWindow uIIOS14Window = this.UIThôngtinmôtảchitiếtsWindow.UIThôngtinmôtảsảnphẩmGroup.UIIOS14Window;
+            WinEdit uITxtHeDieuHanhEdit = this.UIThôngtinmôtảchitiếtsWindow.UITxtHeDieuHanhWindow.UITxtHeDieuHanhEdit;
+            DXButton uIHoàntấtButton = this.UIThôngtinmôtảchitiếtsWindow.UIHoàntấtButton;
+            DXButton uICậpnhậtButton = this.UIThôngtinsảnphẩmWindow.UICậpnhậtButton;
+            WinClient uIThôngtinsảnphẩmClient = this.UIThôngtinsảnphẩmWindow.UIThôngtinsảnphẩmClient;
+            WinButton uIOKButton = this.UIOKWindow.UIOKButton;
+            #endregion
+
+            // Click 'iPhone 12 64GB' cell
+            Mouse.Click(uIIPhone1264GBCell, new Point(108, 20));
+
+            // Type 'System.Int32' in '[Row]0[Column]maSP' text box
+            //ValueTypeName
+            uIRow0ColumnmaSPEdit.ValueTypeName = this.RecordedMethod12Params.UIRow0ColumnmaSPEditValueTypeName;
+
+            // Type '1 [SelectionStart]0' in '[Row]0[Column]maSP' text box
+            //ValueAsString
+            uIRow0ColumnmaSPEdit.ValueAsString = this.RecordedMethod12Params.UIRow0ColumnmaSPEditValueAsString;
+
+            // Click cell
+            Mouse.Click(uIItemCell6, new Point(51, 23));
+
+            // Type '' in 'txtTenSP' text box
+            uITxtTenSPEdit.Text = this.RecordedMethod12Params.UITxtTenSPEditText;
+
+            // Type '{Back}{Back}{Back}{Back}{Back}{Back}' in 'txtTenSP' text box
+            Keyboard.SendKeys(uITxtTenSPEdit, this.RecordedMethod12Params.UITxtTenSPEditSendKeys, ModifierKeys.None);
+
+            // Type 'Trung Quố' in 'txtXuatSu' text box
+            uITxtXuatSuEdit.Text = this.RecordedMethod12Params.UITxtXuatSuEditText;
+
+            // Click 'NumericUpDown' text box
+            Mouse.Click(uINumericUpDownEdit, new Point(73, 13));
+
+            // Type '{Back}' in 'NumericUpDown' text box
+            Keyboard.SendKeys(uINumericUpDownEdit, this.RecordedMethod12Params.UINumericUpDownEditSendKeys, ModifierKeys.None);
+
+            // Type '28000000' in 'txtDonGia' text box
+            uITxtDonGiaEdit.Text = this.RecordedMethod12Params.UITxtDonGiaEditText;
+
+            // Type 'IPHONE11PRO_TRANG.PN' in 'txtHinhMH' text box
+            uITxtHinhMHEdit.Text = this.RecordedMethod12Params.UITxtHinhMHEditText;
+
+            // Type '25000000' in 'txtGiamGia' text box
+            uITxtGiamGiaEdit.Text = this.RecordedMethod12Params.UITxtGiamGiaEditText;
+
+            // Type 'pngg' in 'txtDSHinh' text box
+            uITxtDSHinhEdit.Text = this.RecordedMethod12Params.UITxtDSHinhEditText;
+
+            // Type 'Giảm ngay 15.000.000đ | Tặng Sim đồng hương hiệu Moifone Gọi Thả fGa F160 1T đầu 07/08/09 | Trả góp 0%' in 'txtKhuyenMaiDiKem' text box
+            uITxtKhuyenMaiDiKemEdit.Text = this.RecordedMethod12Params.UITxtKhuyenMaiDiKemEditText;
+
+            // Click 'txtThongTinChiTiet' text box
+            Mouse.Click(uITxtThongTinChiTietEdit, new Point(429, 38));
+
+            // Type '6.1", Liquid Retina HD, IPS LCD, 828 x 1792 Pixelr' in 'txtManHinh' text box
+            uITxtManHinhEdit.Text = this.RecordedMethod12Params.UITxtManHinhEditText;
+
+            // Type '12.0 MPr' in 'txtCameraSau' text box
+            uITxtCameraSauEdit.Text = this.RecordedMethod12Params.UITxtCameraSauEditText;
+
+            // Type '7.0 MPr' in 'txtCameraSelfi' text box
+            uITxtCameraSelfiEdit.Text = this.RecordedMethod12Params.UITxtCameraSelfiEditText;
+
+            // Type '5' in 'NumericUpDown' text box
+            Keyboard.SendKeys(uINumericUpDownEdit1, this.RecordedMethod12Params.UINumericUpDownEditSendKeys1, ModifierKeys.None);
+
+            // Click 'NumericUpDown' text box
+            Mouse.Click(uINumericUpDownEdit1, new Point(186, 15));
+
+            // Click 'NumericUpDown' text box
+            Mouse.Click(uINumericUpDownEdit1, new Point(160, 5));
+
+            // Type '5' in 'NumericUpDown' text box
+            Keyboard.SendKeys(uINumericUpDownEdit1, this.RecordedMethod12Params.UINumericUpDownEditSendKeys2, ModifierKeys.None);
+
+            // Click 'GB' text box
+            Mouse.Click(uIGBEdit, new Point(138, 7));
+
+            // Type '5' in 'GB' text box
+            Keyboard.SendKeys(uIGBEdit, this.RecordedMethod12Params.UIGBEditSendKeys, ModifierKeys.None);
+
+            // Type 'A12 Bionicg' in 'txtCPU' text box
+            uITxtCPUEdit.Text = this.RecordedMethod12Params.UITxtCPUEditText;
+
+            // Type 'Apple GPU 4 nhâng' in 'txtGPU' text box
+            uITxtGPUEdit.Text = this.RecordedMethod12Params.UITxtGPUEditText;
+
+            // Type '3110 mAlg' in 'txtDungLuongPin' text box
+            uITxtDungLuongPinEdit.Text = this.RecordedMethod12Params.UITxtDungLuongPinEditText;
+
+            // Type '2, 1 eSIM, 1 Nano Sng' in 'txtTheSim' text box
+            uITxtTheSimEdit.Text = this.RecordedMethod12Params.UITxtTheSimEditText;
+
+            // Click 'iOS 14' window
+            Mouse.Click(uIIOS14Window, new Point(143, 1));
+
+            // Type 'iOS 14g' in 'txtHeDieuHanh' text box
+            uITxtHeDieuHanhEdit.Text = this.RecordedMethod12Params.UITxtHeDieuHanhEditText;
+
+            // Click 'Hoàn tất' button
+            Mouse.Click(uIHoàntấtButton, new Point(1, 1));
+
+            // Move 'Cập nhật' button to 'Thông tin sản phẩm' client
+            uIThôngtinsảnphẩmClient.EnsureClickable(new Point(755, 460));
+            Mouse.StartDragging(uICậpnhậtButton, new Point(54, 3));
+            Mouse.StopDragging(uIThôngtinsảnphẩmClient, new Point(755, 460));
+
+            // Click 'Cập nhật' button
+            Mouse.Click(uICậpnhậtButton, new Point(1, 1));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(41, 12));
+        }
+        
+        /// <summary>
+        /// RecordedMethod13 - Use 'RecordedMethod13Params' to pass parameters into this method.
+        /// </summary>
+        public void RecordedMethod13()
+        {
+            #region Variable Declarations
+            DXButton uIEditorButton0Button = this.UISảnphẩmWindow.UIPanelControl2Client.UIGridControl1Table.UIRow0ColumngridColumnEdit.UIEditorButton0Button;
+            WinEdit uINumericUpDownEdit = this.UIThôngtinsảnphẩmWindow.UINumericUpDownSpinner.UINumericUpDownEdit;
+            WinGroup uIThôngtinsảnphẩmGroup = this.UIThôngtinsảnphẩmWindow.UIThôngtinsảnphẩmWindow1.UIThôngtinsảnphẩmGroup;
+            DXButton uICậpnhậtButton = this.UIThôngtinsảnphẩmWindow.UICậpnhậtButton;
+            WinButton uIOKButton = this.UIOKWindow.UIOKButton;
+            #endregion
+
+            // Click 'EditorButton0' button
+            Mouse.Click(uIEditorButton0Button, new Point(17, 13));
+
+            // Move 'NumericUpDown' text box to 'Thông tin sản phẩm' group
+            uIThôngtinsảnphẩmGroup.EnsureClickable(new Point(132, 178));
+            Mouse.StartDragging(uINumericUpDownEdit, new Point(16, 3));
+            Mouse.StopDragging(uIThôngtinsảnphẩmGroup, new Point(132, 178));
+
+            // Type '0' in 'NumericUpDown' text box
+            Keyboard.SendKeys(uINumericUpDownEdit, this.RecordedMethod13Params.UINumericUpDownEditSendKeys, ModifierKeys.None);
+
+            // Click 'Cập nhật' button
+            Mouse.Click(uICậpnhậtButton, new Point(1, 1));
+
+            // Click 'OK' button
+            Mouse.Click(uIOKButton, new Point(60, 20));
+        }
+        
         #region Properties
         public virtual RecordedMethod1Params RecordedMethod1Params
         {
@@ -816,6 +1018,30 @@ namespace CodedUI_QLSanPham
                     this.mRecordedMethod5Params = new RecordedMethod5Params();
                 }
                 return this.mRecordedMethod5Params;
+            }
+        }
+        
+        public virtual RecordedMethod12Params RecordedMethod12Params
+        {
+            get
+            {
+                if ((this.mRecordedMethod12Params == null))
+                {
+                    this.mRecordedMethod12Params = new RecordedMethod12Params();
+                }
+                return this.mRecordedMethod12Params;
+            }
+        }
+        
+        public virtual RecordedMethod13Params RecordedMethod13Params
+        {
+            get
+            {
+                if ((this.mRecordedMethod13Params == null))
+                {
+                    this.mRecordedMethod13Params = new RecordedMethod13Params();
+                }
+                return this.mRecordedMethod13Params;
             }
         }
         
@@ -914,6 +1140,10 @@ namespace CodedUI_QLSanPham
         private RecordedMethod4Params mRecordedMethod4Params;
         
         private RecordedMethod5Params mRecordedMethod5Params;
+        
+        private RecordedMethod12Params mRecordedMethod12Params;
+        
+        private RecordedMethod13Params mRecordedMethod13Params;
         
         private UISảnphẩmWindow mUISảnphẩmWindow;
         
@@ -1368,6 +1598,142 @@ namespace CodedUI_QLSanPham
         /// Expand 'Tất cả' -> 'DienThoai' tree item
         /// </summary>
         public bool UIDienThoaiTreeItemExpanded = true;
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'RecordedMethod12'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "16.0.31306.167")]
+    public class RecordedMethod12Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'System.Int32' in '[Row]0[Column]maSP' text box
+        /// </summary>
+        public string UIRow0ColumnmaSPEditValueTypeName = "System.Int32";
+        
+        /// <summary>
+        /// Type '1 [SelectionStart]0' in '[Row]0[Column]maSP' text box
+        /// </summary>
+        public string UIRow0ColumnmaSPEditValueAsString = "1 [SelectionStart]0";
+        
+        /// <summary>
+        /// Type '' in 'txtTenSP' text box
+        /// </summary>
+        public string UITxtTenSPEditText = "";
+        
+        /// <summary>
+        /// Type '{Back}{Back}{Back}{Back}{Back}{Back}' in 'txtTenSP' text box
+        /// </summary>
+        public string UITxtTenSPEditSendKeys = "{Back}{Back}{Back}{Back}{Back}{Back}";
+        
+        /// <summary>
+        /// Type 'Trung Quố' in 'txtXuatSu' text box
+        /// </summary>
+        public string UITxtXuatSuEditText = "Trung Quố";
+        
+        /// <summary>
+        /// Type '{Back}' in 'NumericUpDown' text box
+        /// </summary>
+        public string UINumericUpDownEditSendKeys = "{Back}";
+        
+        /// <summary>
+        /// Type '28000000' in 'txtDonGia' text box
+        /// </summary>
+        public string UITxtDonGiaEditText = "28000000";
+        
+        /// <summary>
+        /// Type 'IPHONE11PRO_TRANG.PN' in 'txtHinhMH' text box
+        /// </summary>
+        public string UITxtHinhMHEditText = "IPHONE11PRO_TRANG.PN";
+        
+        /// <summary>
+        /// Type '25000000' in 'txtGiamGia' text box
+        /// </summary>
+        public string UITxtGiamGiaEditText = "25000000";
+        
+        /// <summary>
+        /// Type 'pngg' in 'txtDSHinh' text box
+        /// </summary>
+        public string UITxtDSHinhEditText = "pngg";
+        
+        /// <summary>
+        /// Type 'Giảm ngay 15.000.000đ | Tặng Sim đồng hương hiệu Moifone Gọi Thả fGa F160 1T đầu 07/08/09 | Trả góp 0%' in 'txtKhuyenMaiDiKem' text box
+        /// </summary>
+        public string UITxtKhuyenMaiDiKemEditText = "Giảm ngay 15.000.000đ | Tặng Sim đồng hương hiệu Moifone Gọi Thả fGa F160 1T đầu " +
+            "07/08/09 | Trả góp 0%";
+        
+        /// <summary>
+        /// Type '6.1", Liquid Retina HD, IPS LCD, 828 x 1792 Pixelr' in 'txtManHinh' text box
+        /// </summary>
+        public string UITxtManHinhEditText = "6.1\", Liquid Retina HD, IPS LCD, 828 x 1792 Pixelr";
+        
+        /// <summary>
+        /// Type '12.0 MPr' in 'txtCameraSau' text box
+        /// </summary>
+        public string UITxtCameraSauEditText = "12.0 MPr";
+        
+        /// <summary>
+        /// Type '7.0 MPr' in 'txtCameraSelfi' text box
+        /// </summary>
+        public string UITxtCameraSelfiEditText = "7.0 MPr";
+        
+        /// <summary>
+        /// Type '5' in 'NumericUpDown' text box
+        /// </summary>
+        public string UINumericUpDownEditSendKeys1 = "5";
+        
+        /// <summary>
+        /// Type '5' in 'NumericUpDown' text box
+        /// </summary>
+        public string UINumericUpDownEditSendKeys2 = "5";
+        
+        /// <summary>
+        /// Type '5' in 'GB' text box
+        /// </summary>
+        public string UIGBEditSendKeys = "5";
+        
+        /// <summary>
+        /// Type 'A12 Bionicg' in 'txtCPU' text box
+        /// </summary>
+        public string UITxtCPUEditText = "A12 Bionicg";
+        
+        /// <summary>
+        /// Type 'Apple GPU 4 nhâng' in 'txtGPU' text box
+        /// </summary>
+        public string UITxtGPUEditText = "Apple GPU 4 nhâng";
+        
+        /// <summary>
+        /// Type '3110 mAlg' in 'txtDungLuongPin' text box
+        /// </summary>
+        public string UITxtDungLuongPinEditText = "3110 mAlg";
+        
+        /// <summary>
+        /// Type '2, 1 eSIM, 1 Nano Sng' in 'txtTheSim' text box
+        /// </summary>
+        public string UITxtTheSimEditText = "2, 1 eSIM, 1 Nano Sng";
+        
+        /// <summary>
+        /// Type 'iOS 14g' in 'txtHeDieuHanh' text box
+        /// </summary>
+        public string UITxtHeDieuHanhEditText = "iOS 14g";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'RecordedMethod13'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "16.0.31306.167")]
+    public class RecordedMethod13Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '0' in 'NumericUpDown' text box
+        /// </summary>
+        public string UINumericUpDownEditSendKeys = "0";
         #endregion
     }
     
@@ -1830,6 +2196,120 @@ namespace CodedUI_QLSanPham
                 return this.mUIItem102Cell;
             }
         }
+        
+        public DXCell UIVivoY518GB128GBCell
+        {
+            get
+            {
+                if ((this.mUIVivoY518GB128GBCell == null))
+                {
+                    this.mUIVivoY518GB128GBCell = new DXCell(this);
+                    #region Search Criteria
+                    this.mUIVivoY518GB128GBCell.SearchProperties[DXTestControl.PropertyNames.Name] = "gridControl1GridControlCell[View]gridView1[Row]31[Column]gridColumn4";
+                    this.mUIVivoY518GB128GBCell.SearchProperties[DXTestControl.PropertyNames.ClassName] = "GridControlCell";
+                    this.mUIVivoY518GB128GBCell.WindowTitles.Add("Sản phẩm");
+                    #endregion
+                }
+                return this.mUIVivoY518GB128GBCell;
+            }
+        }
+        
+        public DXCell UIItem32Cell
+        {
+            get
+            {
+                if ((this.mUIItem32Cell == null))
+                {
+                    this.mUIItem32Cell = new DXCell(this);
+                    #region Search Criteria
+                    this.mUIItem32Cell.SearchProperties[DXTestControl.PropertyNames.Name] = "gridControl1GridControlCell[View]gridView1[Row]27[Column]maSP";
+                    this.mUIItem32Cell.SearchProperties[DXTestControl.PropertyNames.ClassName] = "GridControlCell";
+                    this.mUIItem32Cell.WindowTitles.Add("Sản phẩm");
+                    #endregion
+                }
+                return this.mUIItem32Cell;
+            }
+        }
+        
+        public DXCell UIItemCell5
+        {
+            get
+            {
+                if ((this.mUIItemCell5 == null))
+                {
+                    this.mUIItemCell5 = new DXCell(this);
+                    #region Search Criteria
+                    this.mUIItemCell5.SearchProperties[DXTestControl.PropertyNames.Name] = "gridControl1GridControlCell[View]gridView1[Row]27[Column]gridColumn1";
+                    this.mUIItemCell5.SearchProperties[DXTestControl.PropertyNames.ClassName] = "GridControlCell";
+                    this.mUIItemCell5.WindowTitles.Add("Sản phẩm");
+                    #endregion
+                }
+                return this.mUIItemCell5;
+            }
+        }
+        
+        public DXCell UIIPhone1264GBCell
+        {
+            get
+            {
+                if ((this.mUIIPhone1264GBCell == null))
+                {
+                    this.mUIIPhone1264GBCell = new DXCell(this);
+                    #region Search Criteria
+                    this.mUIIPhone1264GBCell.SearchProperties[DXTestControl.PropertyNames.Name] = "gridControl1GridControlCell[View]gridView1[Row]2[Column]gridColumn4";
+                    this.mUIIPhone1264GBCell.SearchProperties[DXTestControl.PropertyNames.ClassName] = "GridControlCell";
+                    this.mUIIPhone1264GBCell.WindowTitles.Add("Sản phẩm");
+                    #endregion
+                }
+                return this.mUIIPhone1264GBCell;
+            }
+        }
+        
+        public DXTextEdit UIRow0ColumnmaSPEdit
+        {
+            get
+            {
+                if ((this.mUIRow0ColumnmaSPEdit == null))
+                {
+                    this.mUIRow0ColumnmaSPEdit = new DXTextEdit(this);
+                    #region Search Criteria
+                    this.mUIRow0ColumnmaSPEdit.SearchProperties[DXTestControl.PropertyNames.Name] = "gridControl1TextEdit[View]gridView1[Row]0[Column]maSP";
+                    this.mUIRow0ColumnmaSPEdit.SearchProperties[DXTestControl.PropertyNames.ClassName] = "TextEdit";
+                    this.mUIRow0ColumnmaSPEdit.WindowTitles.Add("Sản phẩm");
+                    #endregion
+                }
+                return this.mUIRow0ColumnmaSPEdit;
+            }
+        }
+        
+        public DXCell UIItemCell6
+        {
+            get
+            {
+                if ((this.mUIItemCell6 == null))
+                {
+                    this.mUIItemCell6 = new DXCell(this);
+                    #region Search Criteria
+                    this.mUIItemCell6.SearchProperties[DXTestControl.PropertyNames.Name] = "gridControl1GridControlCell[View]gridView1[Row]0[Column]gridColumn2";
+                    this.mUIItemCell6.SearchProperties[DXTestControl.PropertyNames.ClassName] = "GridControlCell";
+                    this.mUIItemCell6.WindowTitles.Add("Sản phẩm");
+                    #endregion
+                }
+                return this.mUIItemCell6;
+            }
+        }
+        
+        public UIRow0ColumngridColumnEdit UIRow0ColumngridColumnEdit
+        {
+            get
+            {
+                if ((this.mUIRow0ColumngridColumnEdit == null))
+                {
+                    this.mUIRow0ColumngridColumnEdit = new UIRow0ColumngridColumnEdit(this);
+                }
+                return this.mUIRow0ColumngridColumnEdit;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1850,6 +2330,58 @@ namespace CodedUI_QLSanPham
         private DXCell mUIItemCell4;
         
         private DXCell mUIItem102Cell;
+        
+        private DXCell mUIVivoY518GB128GBCell;
+        
+        private DXCell mUIItem32Cell;
+        
+        private DXCell mUIItemCell5;
+        
+        private DXCell mUIIPhone1264GBCell;
+        
+        private DXTextEdit mUIRow0ColumnmaSPEdit;
+        
+        private DXCell mUIItemCell6;
+        
+        private UIRow0ColumngridColumnEdit mUIRow0ColumngridColumnEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "16.0.31306.167")]
+    public class UIRow0ColumngridColumnEdit : DXTextEdit
+    {
+        
+        public UIRow0ColumngridColumnEdit(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[DXTestControl.PropertyNames.Name] = "gridControl1ButtonEdit[View]gridView1[Row]0[Column]gridColumn2";
+            this.SearchProperties[DXTestControl.PropertyNames.ClassName] = "ButtonEdit";
+            this.WindowTitles.Add("Sản phẩm");
+            #endregion
+        }
+        
+        #region Properties
+        public DXButton UIEditorButton0Button
+        {
+            get
+            {
+                if ((this.mUIEditorButton0Button == null))
+                {
+                    this.mUIEditorButton0Button = new DXButton(this);
+                    #region Search Criteria
+                    this.mUIEditorButton0Button.SearchProperties[DXTestControl.PropertyNames.Name] = "gridControl1ButtonEdit[View]gridView1[Row]0[Column]gridColumn2Button[0]";
+                    this.mUIEditorButton0Button.SearchProperties[DXTestControl.PropertyNames.ClassName] = "EditorButton";
+                    this.mUIEditorButton0Button.WindowTitles.Add("Sản phẩm");
+                    #endregion
+                }
+                return this.mUIEditorButton0Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private DXButton mUIEditorButton0Button;
         #endregion
     }
     
@@ -2039,6 +2571,39 @@ namespace CodedUI_QLSanPham
                 return this.mUIThôngtinsảnphẩmGroup;
             }
         }
+        
+        public DXButton UICậpnhậtButton
+        {
+            get
+            {
+                if ((this.mUICậpnhậtButton == null))
+                {
+                    this.mUICậpnhậtButton = new DXButton(this);
+                    #region Search Criteria
+                    this.mUICậpnhậtButton.SearchProperties[DXTestControl.PropertyNames.Name] = "btnCapNhat";
+                    this.mUICậpnhậtButton.SearchProperties[DXTestControl.PropertyNames.ClassName] = "ButtonDesign";
+                    this.mUICậpnhậtButton.WindowTitles.Add("Thông tin sản phẩm");
+                    #endregion
+                }
+                return this.mUICậpnhậtButton;
+            }
+        }
+        
+        public WinClient UIThôngtinsảnphẩmClient
+        {
+            get
+            {
+                if ((this.mUIThôngtinsảnphẩmClient == null))
+                {
+                    this.mUIThôngtinsảnphẩmClient = new WinClient(this);
+                    #region Search Criteria
+                    this.mUIThôngtinsảnphẩmClient.SearchProperties[WinControl.PropertyNames.Name] = "Thông tin sản phẩm";
+                    this.mUIThôngtinsảnphẩmClient.WindowTitles.Add("Thông tin sản phẩm");
+                    #endregion
+                }
+                return this.mUIThôngtinsảnphẩmClient;
+            }
+        }
         #endregion
         
         #region Fields
@@ -2069,6 +2634,10 @@ namespace CodedUI_QLSanPham
         private DXButton mUIThêmmớiButton;
         
         private UIThôngtinsảnphẩmGroup mUIThôngtinsảnphẩmGroup;
+        
+        private DXButton mUICậpnhậtButton;
+        
+        private WinClient mUIThôngtinsảnphẩmClient;
         #endregion
     }
     
@@ -3264,12 +3833,31 @@ namespace CodedUI_QLSanPham
                 return this.mUITxtGPUWindow;
             }
         }
+        
+        public WinWindow UIIOS14Window
+        {
+            get
+            {
+                if ((this.mUIIOS14Window == null))
+                {
+                    this.mUIIOS14Window = new WinWindow(this);
+                    #region Search Criteria
+                    this.mUIIOS14Window.SearchProperties[WinWindow.PropertyNames.Name] = "iOS 14";
+                    this.mUIIOS14Window.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "WindowsForms10.EDIT", PropertyExpressionOperator.Contains));
+                    this.mUIIOS14Window.WindowTitles.Add("Thông tin mô tả chi tiết sản phẩm");
+                    #endregion
+                }
+                return this.mUIIOS14Window;
+            }
+        }
         #endregion
         
         #region Fields
         private WinWindow mUITxtCameraSelfiWindow;
         
         private WinWindow mUITxtGPUWindow;
+        
+        private WinWindow mUIIOS14Window;
         #endregion
     }
     

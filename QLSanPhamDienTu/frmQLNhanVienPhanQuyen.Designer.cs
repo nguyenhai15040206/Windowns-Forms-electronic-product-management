@@ -265,7 +265,7 @@ namespace QLSanPhamDienTu
             this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 25);
+            this.label1.Size = new System.Drawing.Size(460, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "PHÂN QUYỀN VÀ SỬ DỤNG HỆ THỐNG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,7 +325,7 @@ namespace QLSanPhamDienTu
             this.tabNavigationPage1.Controls.Add(this.panel3);
             this.tabNavigationPage1.Controls.Add(this.panel4);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1128, 684);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1128, 677);
             // 
             // panel3
             // 
@@ -333,7 +333,7 @@ namespace QLSanPhamDienTu
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 386);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1128, 298);
+            this.panel3.Size = new System.Drawing.Size(1128, 291);
             this.panel3.TabIndex = 5;
             // 
             // groupControl2
@@ -347,7 +347,7 @@ namespace QLSanPhamDienTu
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1128, 298);
+            this.groupControl2.Size = new System.Drawing.Size(1128, 291);
             this.groupControl2.TabIndex = 4;
             this.groupControl2.Text = "Quản lý người dùng && nhóm người dùng";
             // 
@@ -356,9 +356,9 @@ namespace QLSanPhamDienTu
             this.panel6.Controls.Add(this.groupBox2);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(540, 23);
+            this.panel6.Location = new System.Drawing.Point(540, 28);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(586, 273);
+            this.panel6.Size = new System.Drawing.Size(586, 261);
             this.panel6.TabIndex = 1;
             // 
             // groupBox2
@@ -368,7 +368,7 @@ namespace QLSanPhamDienTu
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(93, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(493, 273);
+            this.groupBox2.Size = new System.Drawing.Size(493, 261);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DS đã phân nhóm";
@@ -376,12 +376,12 @@ namespace QLSanPhamDienTu
             // gridControl3
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl3.Location = new System.Drawing.Point(3, 61);
+            this.gridControl3.Location = new System.Drawing.Point(3, 66);
             this.gridControl3.MainView = this.gridViewNguoiDungDaCoNhom;
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4});
-            this.gridControl3.Size = new System.Drawing.Size(487, 209);
+            this.gridControl3.Size = new System.Drawing.Size(487, 192);
             this.gridControl3.TabIndex = 5;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewNguoiDungDaCoNhom,
@@ -520,7 +520,7 @@ namespace QLSanPhamDienTu
             this.panel8.Controls.Add(this.cboNhomNguoiDung);
             this.panel8.Controls.Add(this.label19);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(3, 23);
+            this.panel8.Location = new System.Drawing.Point(3, 28);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(487, 38);
             this.panel8.TabIndex = 2;
@@ -530,7 +530,7 @@ namespace QLSanPhamDienTu
             this.cboNhomNguoiDung.FormattingEnabled = true;
             this.cboNhomNguoiDung.Location = new System.Drawing.Point(160, 3);
             this.cboNhomNguoiDung.Name = "cboNhomNguoiDung";
-            this.cboNhomNguoiDung.Size = new System.Drawing.Size(296, 28);
+            this.cboNhomNguoiDung.Size = new System.Drawing.Size(296, 33);
             this.cboNhomNguoiDung.TabIndex = 1;
             this.cboNhomNguoiDung.SelectedIndexChanged += new System.EventHandler(this.cboNhomNguoiDung_SelectedIndexChanged);
             // 
@@ -539,7 +539,7 @@ namespace QLSanPhamDienTu
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(20, 11);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(134, 20);
+            this.label19.Size = new System.Drawing.Size(171, 25);
             this.label19.TabIndex = 0;
             this.label19.Text = "Nhóm người dùng:";
             // 
@@ -550,7 +550,7 @@ namespace QLSanPhamDienTu
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(93, 273);
+            this.panel7.Size = new System.Drawing.Size(93, 261);
             this.panel7.TabIndex = 0;
             // 
             // btnRemove
@@ -583,9 +583,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel5.Controls.Add(this.groupBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(2, 23);
+            this.panel5.Location = new System.Drawing.Point(2, 28);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(538, 273);
+            this.panel5.Size = new System.Drawing.Size(538, 261);
             this.panel5.TabIndex = 0;
             // 
             // groupBox1
@@ -594,7 +594,7 @@ namespace QLSanPhamDienTu
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(538, 273);
+            this.groupBox1.Size = new System.Drawing.Size(538, 261);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DS người dùng chưa có nhóm";
@@ -602,12 +602,12 @@ namespace QLSanPhamDienTu
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(3, 23);
+            this.gridControl2.Location = new System.Drawing.Point(3, 28);
             this.gridControl2.MainView = this.gridViewnguoiDungChuaCoNhom;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit3});
-            this.gridControl2.Size = new System.Drawing.Size(532, 247);
+            this.gridControl2.Size = new System.Drawing.Size(532, 230);
             this.gridControl2.TabIndex = 4;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewnguoiDungChuaCoNhom,
@@ -761,9 +761,9 @@ namespace QLSanPhamDienTu
             // 
             this.panel9.Controls.Add(this.gridContrrolNguoiDung);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(421, 23);
+            this.panel9.Location = new System.Drawing.Point(421, 28);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(705, 361);
+            this.panel9.Size = new System.Drawing.Size(705, 356);
             this.panel9.TabIndex = 1;
             // 
             // gridContrrolNguoiDung
@@ -772,7 +772,7 @@ namespace QLSanPhamDienTu
             this.gridContrrolNguoiDung.Location = new System.Drawing.Point(0, 0);
             this.gridContrrolNguoiDung.MainView = this.gridView2;
             this.gridContrrolNguoiDung.Name = "gridContrrolNguoiDung";
-            this.gridContrrolNguoiDung.Size = new System.Drawing.Size(705, 361);
+            this.gridContrrolNguoiDung.Size = new System.Drawing.Size(705, 356);
             this.gridContrrolNguoiDung.TabIndex = 2;
             this.gridContrrolNguoiDung.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -821,6 +821,8 @@ namespace QLSanPhamDienTu
             this.gridView2.OptionsHint.ShowCellHints = false;
             this.gridView2.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.False;
             this.gridView2.OptionsView.ColumnAutoWidth = false;
+            this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
+            this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
             // 
             // gridColumn1
             // 
@@ -828,7 +830,7 @@ namespace QLSanPhamDienTu
             this.gridColumn1.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 1;
             this.gridColumn1.Width = 32;
             // 
             // ButtonDelete
@@ -846,7 +848,7 @@ namespace QLSanPhamDienTu
             this.gridColumnMaNguoiDung.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.gridColumnMaNguoiDung.Name = "gridColumnMaNguoiDung";
             this.gridColumnMaNguoiDung.Visible = true;
-            this.gridColumnMaNguoiDung.VisibleIndex = 1;
+            this.gridColumnMaNguoiDung.VisibleIndex = 0;
             this.gridColumnMaNguoiDung.Width = 66;
             // 
             // gridColumnTenNguoiDung
@@ -943,9 +945,9 @@ namespace QLSanPhamDienTu
             this.panel10.Controls.Add(this.label11);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel10.Location = new System.Drawing.Point(2, 23);
+            this.panel10.Location = new System.Drawing.Point(2, 28);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(419, 361);
+            this.panel10.Size = new System.Drawing.Size(419, 356);
             this.panel10.TabIndex = 0;
             // 
             // toolStrip1
@@ -1004,10 +1006,11 @@ namespace QLSanPhamDienTu
             this.ckbHoatDong.AutoSize = true;
             this.ckbHoatDong.Location = new System.Drawing.Point(127, 333);
             this.ckbHoatDong.Name = "ckbHoatDong";
-            this.ckbHoatDong.Size = new System.Drawing.Size(100, 24);
+            this.ckbHoatDong.Size = new System.Drawing.Size(123, 29);
             this.ckbHoatDong.TabIndex = 3;
             this.ckbHoatDong.Text = "Hoạt động";
             this.ckbHoatDong.UseVisualStyleBackColor = true;
+            this.ckbHoatDong.CheckedChanged += new System.EventHandler(this.ckbHoatDong_CheckedChanged);
             // 
             // dateTimePickerNgayVL
             // 
@@ -1015,7 +1018,7 @@ namespace QLSanPhamDienTu
             this.dateTimePickerNgayVL.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerNgayVL.Location = new System.Drawing.Point(127, 296);
             this.dateTimePickerNgayVL.Name = "dateTimePickerNgayVL";
-            this.dateTimePickerNgayVL.Size = new System.Drawing.Size(278, 27);
+            this.dateTimePickerNgayVL.Size = new System.Drawing.Size(278, 32);
             this.dateTimePickerNgayVL.TabIndex = 2;
             // 
             // label18
@@ -1023,7 +1026,7 @@ namespace QLSanPhamDienTu
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(5, 303);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(104, 20);
+            this.label18.Size = new System.Drawing.Size(131, 25);
             this.label18.TabIndex = 0;
             this.label18.Text = "Ngày vào làm:";
             // 
@@ -1031,7 +1034,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtEmail.Location = new System.Drawing.Point(127, 260);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(278, 27);
+            this.txtEmail.Size = new System.Drawing.Size(278, 32);
             this.txtEmail.TabIndex = 1;
             // 
             // label17
@@ -1039,7 +1042,7 @@ namespace QLSanPhamDienTu
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(5, 267);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 20);
+            this.label17.Size = new System.Drawing.Size(62, 25);
             this.label17.TabIndex = 0;
             this.label17.Text = "Email:";
             // 
@@ -1047,7 +1050,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtSoDienThoai.Location = new System.Drawing.Point(127, 224);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(278, 27);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(278, 32);
             this.txtSoDienThoai.TabIndex = 1;
             // 
             // label16
@@ -1055,7 +1058,7 @@ namespace QLSanPhamDienTu
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(5, 231);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 20);
+            this.label16.Size = new System.Drawing.Size(127, 25);
             this.label16.TabIndex = 0;
             this.label16.Text = "Số điện thoại:";
             // 
@@ -1064,7 +1067,7 @@ namespace QLSanPhamDienTu
             this.txtDiaChi.BackColor = System.Drawing.Color.White;
             this.txtDiaChi.Location = new System.Drawing.Point(127, 188);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(278, 27);
+            this.txtDiaChi.Size = new System.Drawing.Size(278, 32);
             this.txtDiaChi.TabIndex = 1;
             // 
             // label15
@@ -1072,7 +1075,7 @@ namespace QLSanPhamDienTu
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(5, 195);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 20);
+            this.label15.Size = new System.Drawing.Size(74, 25);
             this.label15.TabIndex = 0;
             this.label15.Text = "Địa chỉ:";
             // 
@@ -1081,7 +1084,7 @@ namespace QLSanPhamDienTu
             this.txtMatKhau.BackColor = System.Drawing.Color.White;
             this.txtMatKhau.Location = new System.Drawing.Point(127, 152);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(278, 27);
+            this.txtMatKhau.Size = new System.Drawing.Size(278, 32);
             this.txtMatKhau.TabIndex = 1;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
@@ -1090,7 +1093,7 @@ namespace QLSanPhamDienTu
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(5, 159);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 20);
+            this.label14.Size = new System.Drawing.Size(95, 25);
             this.label14.TabIndex = 0;
             this.label14.Text = "Mật khẩu:";
             // 
@@ -1098,7 +1101,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtTenDangNhap.Location = new System.Drawing.Point(127, 116);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(278, 27);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(278, 32);
             this.txtTenDangNhap.TabIndex = 1;
             // 
             // label13
@@ -1106,7 +1109,7 @@ namespace QLSanPhamDienTu
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(5, 123);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 20);
+            this.label13.Size = new System.Drawing.Size(141, 25);
             this.label13.TabIndex = 0;
             this.label13.Text = "Tên đăng nhập:";
             // 
@@ -1114,7 +1117,7 @@ namespace QLSanPhamDienTu
             // 
             this.txtTenNguoiDung.Location = new System.Drawing.Point(127, 80);
             this.txtTenNguoiDung.Name = "txtTenNguoiDung";
-            this.txtTenNguoiDung.Size = new System.Drawing.Size(278, 27);
+            this.txtTenNguoiDung.Size = new System.Drawing.Size(278, 32);
             this.txtTenNguoiDung.TabIndex = 1;
             // 
             // label12
@@ -1122,7 +1125,7 @@ namespace QLSanPhamDienTu
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(5, 87);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 20);
+            this.label12.Size = new System.Drawing.Size(148, 25);
             this.label12.TabIndex = 0;
             this.label12.Text = "Tên người dùng:";
             // 
@@ -1131,7 +1134,7 @@ namespace QLSanPhamDienTu
             this.txtMaNguoiDung.Location = new System.Drawing.Point(127, 44);
             this.txtMaNguoiDung.Name = "txtMaNguoiDung";
             this.txtMaNguoiDung.ReadOnly = true;
-            this.txtMaNguoiDung.Size = new System.Drawing.Size(157, 27);
+            this.txtMaNguoiDung.Size = new System.Drawing.Size(157, 32);
             this.txtMaNguoiDung.TabIndex = 1;
             // 
             // label11
@@ -1139,7 +1142,7 @@ namespace QLSanPhamDienTu
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(5, 51);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 20);
+            this.label11.Size = new System.Drawing.Size(146, 25);
             this.label11.TabIndex = 0;
             this.label11.Text = "Mã người dùng:";
             // 
@@ -1184,12 +1187,12 @@ namespace QLSanPhamDienTu
             // gridControl6
             // 
             this.gridControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl6.Location = new System.Drawing.Point(3, 23);
+            this.gridControl6.Location = new System.Drawing.Point(3, 28);
             this.gridControl6.MainView = this.gridView7;
             this.gridControl6.Name = "gridControl6";
             this.gridControl6.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit7});
-            this.gridControl6.Size = new System.Drawing.Size(694, 584);
+            this.gridControl6.Size = new System.Drawing.Size(694, 579);
             this.gridControl6.TabIndex = 5;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -1290,12 +1293,12 @@ namespace QLSanPhamDienTu
             // gridControlQLNhomND
             // 
             this.gridControlQLNhomND.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlQLNhomND.Location = new System.Drawing.Point(3, 23);
+            this.gridControlQLNhomND.Location = new System.Drawing.Point(3, 28);
             this.gridControlQLNhomND.MainView = this.gridView6;
             this.gridControlQLNhomND.Name = "gridControlQLNhomND";
             this.gridControlQLNhomND.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6});
-            this.gridControlQLNhomND.Size = new System.Drawing.Size(422, 584);
+            this.gridControlQLNhomND.Size = new System.Drawing.Size(422, 579);
             this.gridControlQLNhomND.TabIndex = 6;
             this.gridControlQLNhomND.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6,
@@ -1940,7 +1943,7 @@ namespace QLSanPhamDienTu
             // 
             // frmQLNhanVienPhanQuyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 761);
             this.Controls.Add(this.panelControl2);

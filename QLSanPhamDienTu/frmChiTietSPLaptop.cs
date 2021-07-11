@@ -58,11 +58,20 @@ namespace QLSanPhamDienTu
 
         private void btnHoatTat_Click(object sender, EventArgs e)
         {
-            truyenDuLieu = txtManHinh.Text.Trim() + " | " + txtCPU.Text.Trim() + " | " + numRAM.Value.ToString() + " GB" + ", " + txtTTRam.Text.Trim()
+            if(txtCardDoHoa.Text.Trim().Length>0&& txtCPU.Text.Trim().Length>0&& txtHeDieuHanh.Text.Trim().Length>0
+                &&txtKichThuoc.Text.Trim().Length>0&&txtManHinh.Text.Trim().Length>0&&txtTrongLuong.Text.Trim().Length>0&&
+                txtTTOCung.Text.Trim().Length>0&&txtTTRam.Text.Trim().Length>0&&numRAM.Value>0)
+            {
+                truyenDuLieu = txtManHinh.Text.Trim() + " | " + txtCPU.Text.Trim() + " | " + numRAM.Value.ToString() + " GB" + ", " + txtTTRam.Text.Trim()
                 + " | " + txtTTOCung.Text.Trim() + " | " + txtCardDoHoa.Text.Trim() + " & " + txtHeDieuHanh.Text.Trim() + " | " + txtTrongLuong.Text.Trim() + " | "
                 + txtKichThuoc.Text.Trim();
-            frmThemSanPham.thongTinChiTietSP = truyenDuLieu;
-            this.Close();
+                frmThemSanPham.thongTinChiTietSP = truyenDuLieu;
+                this.Close();
+            }    
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+            }    
         }
     }
 }

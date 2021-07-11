@@ -102,7 +102,7 @@ namespace CodedUI_QLSanPham
         public void ThatBai_ThieuSoLuong()
         {
             this.UIMap.RecordedMethod2Params.UITxtTenSPEditText = tenSP;
-            this.UIMap.RecordedMethod2Params.UINumericUpDownEditSendKeys = soLuong.ToString();
+            this.UIMap.RecordedMethod2Params.UINumericUpDownEditSendKeys = 0.ToString();
             this.UIMap.RecordedMethod2Params.UITxtXuatSuEditText = xuatSu;
             this.UIMap.RecordedMethod2Params.UITxtDonGiaEditText = dongia.ToString();
             this.UIMap.RecordedMethod2Params.UITxtHinhMHEditText = hinhMH;

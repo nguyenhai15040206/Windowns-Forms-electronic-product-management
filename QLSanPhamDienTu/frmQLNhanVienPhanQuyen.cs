@@ -11,6 +11,7 @@ using BUS;
 using DevExpress.XtraTreeList;
 using DevExpress.XtraTreeList.Columns;
 using DevExpress.XtraTreeList.Nodes;
+using DevExpress.XtraEditors;
 
 namespace QLSanPhamDienTu
 {
@@ -19,6 +20,8 @@ namespace QLSanPhamDienTu
         int maNhom = 0;
         int row = -1;
         int rowMaNDNhom = -1;
+        bool hoatDong = false;
+        int maKH;
         public frmQLNhanVienPhanQuyen()
         {
             InitializeComponent();
@@ -55,11 +58,31 @@ namespace QLSanPhamDienTu
 
             // load nhóm người dùng lên gridControl
             NguoiDungBUS.Instance.loadNhomNguoiDung_GridCOntrol(gridControlQLNhomND);
+
+
+            menutItemThem.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnClean.Enabled = true;
+
+        }
+
+        public void LamMoiDuLieu()
+        {
+            
+            foreach (Control control in panel10.Controls)
+            {
+                if (control.GetType() == typeof(TextBox))
+                {
+                    control.Text = string.Empty;
+                }
+            }
         }
 
         private void menuItemClean_Click(object sender, EventArgs e)
         {
-            txtMatKhau.ReadOnly = false;
+            LamMoiDuLieu();
+            menutItemThem.Enabled = true;
+            btnClean.Enabled = false;
         }
 
         private void menuItemThem_Click(object sender, EventArgs e)
@@ -67,28 +90,46 @@ namespace QLSanPhamDienTu
             if(txtTenNguoiDung.Text.Trim().Length>0&&txtTenDangNhap.Text.Trim().Length>0 && txtMatKhau.Text.Trim().Length>0 && txtDiaChi.Text.Trim().Length>0 &&
                 txtSoDienThoai.Text.Trim().Length>0||txtEmail.Text.Trim().Length>0)
             {
-                if(CheckData.Instances.KtraSoDienThoai(txtSoDienThoai.Text))
+                if (NguoiDungBUS.Instance.KtraTenNguoiDung(txtTenDangNhap.Text))
                 {
-                    if(CheckData.Instances.KtraEmail(txtEmail.Text))
+                    if (CheckData.Instances.KtraSoDienThoai(txtSoDienThoai.Text))
                     {
-                        if (NguoiDungBUS.Instance.themNguoiDung(txtTenNguoiDung.Text.Trim(), txtTenDangNhap.Text.Trim(), txtMatKhau.Text,
-                        txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, true))
+                        if (NguoiDungBUS.Instance.KTraSoDienThoaiTonTai(txtSoDienThoai.Text))
                         {
-                            MessageBox.Show("Thêm thành công!");
+                            if (CheckData.Instances.KtraEmail(txtEmail.Text))
+                            {
+                                if (NguoiDungBUS.Instance.themNguoiDung(txtTenNguoiDung.Text.Trim(), txtTenDangNhap.Text.Trim(), txtMatKhau.Text,
+                                txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, true))
+                                {
+                                    MessageBox.Show("Thêm thành công!");
+                                    frmQLNhanVienPhanQuyen_Load( sender,e);
+                                    LamMoiDuLieu();
+                                    menutItemThem.Enabled = false;
+                                    btnClean.Enabled = true;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Thêm thất bại");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nhập sai định dạng email");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Thêm thất bại");
+                            MessageBox.Show("Số điện thoại đã tồn tại");
                         }
-                    }   
+                    }
                     else
                     {
-                        MessageBox.Show("Nhập sai định dạng email");
-                    }    
-                }    
+                        MessageBox.Show("Nhập sai định dạng số điện thoại");
+                    }
+                }   
                 else
                 {
-                    MessageBox.Show("Nhập sai định dạng số điện thoại");
+                    MessageBox.Show("Tên người dùng đã tồn tại");
                 }    
             }   
             else
@@ -169,19 +210,98 @@ namespace QLSanPhamDienTu
             }
         }
 
-        private void txtMatKhau_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void btnClean_Click(object sender, EventArgs e)
-        {
-            //foreach(Control control in )
-        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (txtTenNguoiDung.Text.Trim().Length > 0 && txtDiaChi.Text.Trim().Trim().Trim().Length > 0 &&
+                txtSoDienThoai.Text.Trim().Trim().Length > 0 && txtEmail.Text.Trim().Length > 0)
+            {
+                if(CheckData.Instances.KtraEmail(txtEmail.Text))
+                {
+                    if(CheckData.Instances.KtraSoDienThoai(txtSoDienThoai.Text))
+                    {
+                        if (NguoiDungBUS.Instance.CapNhatThongTinNguoiDung(int.Parse(txtMaNguoiDung.Text), txtTenNguoiDung.Text, txtTenDangNhap.Text, txtMatKhau.Text, txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, hoatDong))
+                        {
+                            MessageBox.Show("Cập nhật thành công");
+                            LamMoiDuLieu();
+                            frmQLNhanVienPhanQuyen_Load(sender, e);
+                            btnUpdate.Enabled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật thất bại, Số điện thoại đã tồn tại");
+                        }
+                    }    
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại, Sai định dạng Số điện thoại");
+                    }    
+                } 
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại, Sai định dạng Email");
+                }    
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+            }    
+        }
 
+
+
+        private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            try
+            {
+                txtMaNguoiDung.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnMaNguoiDung).ToString();
+                txtTenNguoiDung.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnTenNguoiDung).ToString();
+                txtTenDangNhap.Text= gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnTenDN).ToString();
+                txtMatKhau.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnMatKhau).ToString();
+                txtSoDienThoai.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnSoDienThoai).ToString();
+                txtDiaChi.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnDiaChi).ToString();
+                txtEmail.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnEmail).ToString();
+                dateTimePickerNgayVL.Value= DateTime.Parse(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnNgayVL).ToString());
+                ckbHoatDong.Checked = bool.Parse(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnHoatDong).ToString());
+                btnUpdate.Enabled = true;
+                maKH= int.Parse(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnMaNguoiDung).ToString());
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void ckbHoatDong_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbHoatDong.Checked)
+                hoatDong = true;
+        }
+
+        private void gridView2_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            if(e.Column.Name== "gridColumn1")
+            {
+                if(XtraMessageBox.Show("Bạn có muốn xóa người dùng này không?","Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    if(NguoiDungBUS.Instance.XoaNguoiDung(maKH))
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        LamMoiDuLieu();
+                        frmQLNhanVienPhanQuyen_Load(sender, e);
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }    
+                }    
+                else
+                {
+                    return;
+                }    
+            }    
         }
     }
 }

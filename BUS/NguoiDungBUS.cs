@@ -185,5 +185,31 @@ namespace BUS
                 return 300;
             }
         }
+
+
+        ///Kiểm tra số điện thoại tồn tại
+        ///
+        public bool KTraSoDienThoaiTonTai(string input)
+        {
+            return NguoiDungDAO.Instance.LayNguoiDungCoSoDienThoaiTonTai(input);
+        }
+
+
+        public bool CapNhatThongTinNguoiDung(int ma, string tenNguoiDung, string tenDangNhap, string matKhau, string diaChi, string soDienThoai,
+            string email, DateTime ngayVaoLam, bool hoatDong)
+        {
+            return NguoiDungDAO.Instance.CapNhatThongTinNguoiDung(ma, tenNguoiDung, tenDangNhap, matKhau, diaChi, soDienThoai, email, ngayVaoLam, hoatDong);
+        }
+
+        public bool KtraTenNguoiDung(string tenNguoiDung)
+        {
+            return NguoiDungDAO.instance.KtraTenNguoiDung(tenNguoiDung);
+        }
+
+        public bool XoaNguoiDung( int ma)
+        {
+            return NguoiDungDAO.instance.XoaNguoiDung(ma);
+        }
+
     }
 }

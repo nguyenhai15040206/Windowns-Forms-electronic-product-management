@@ -52,6 +52,7 @@
     <Compile Include="DanhMucBUS.cs" />
     <Compile Include="DanhMucManHinhPhanQuyenBUS.cs" />
     <Compile Include="Encryptor.cs" />
+    <Compile Include="KhachHangBUS.cs" />
     <Compile Include="NguoiDungBUS.cs" />
     <Compile Include="NhaSanXuatBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
