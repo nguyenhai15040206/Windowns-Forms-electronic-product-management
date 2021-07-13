@@ -25,7 +25,7 @@ namespace QLSanPhamDienTu
         private void frmSanPham_Load(object sender, EventArgs e)
         {
             ProductBUS.Instance.getAllDataProducts(gridControl1);
-            DanhMucBUS.Instance.loadDanhMucTreeView(treeViewDanhMucSP);
+            CategoryBUS.Instance.loadDataCategoriesInTreView(treeViewDanhMucSP);
             treeViewDanhMucSP.ImageIndex = 0;
             for(int i = 0; i < treeViewDanhMucSP.Nodes[0].Nodes.Count; i ++)
             {

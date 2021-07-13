@@ -153,6 +153,16 @@ namespace QLSanPhamDienTu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addpink_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("addpink-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b1 {
             get {
                 object obj = ResourceManager.GetObject("b1", resourceCulture);
@@ -323,9 +333,30 @@ namespace QLSanPhamDienTu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap transparent_online_payment_icon_smartphone_icon_payment_icon_5e24073cc2d615_5165774315794194527981_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("transparent-online-payment-icon-smartphone-icon-payment-icon-5e24073cc2d615.51657" +
+                        "74315794194527981-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Update_icon {
             get {
                 object obj = ResourceManager.GetObject("Update-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z2525335187690_01de74b6b6234fce8c62460120cb2841_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("z2525335187690_01de74b6b6234fce8c62460120cb2841-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

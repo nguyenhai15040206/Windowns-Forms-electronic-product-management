@@ -37,7 +37,7 @@ namespace QLSanPhamDienTu
 
         private void frmThemSanPham_Load(object sender, EventArgs e)
         {
-            DanhMucBUS.Instance.loadGhiChuCbo(cboCategoriesByNote);
+            CategoryBUS.Instance.loadDataCatgoriesNodeInCbo(cboCategoriesByNote);
             if (txtProductCode.Text != null)
             {
                 try
@@ -125,12 +125,12 @@ namespace QLSanPhamDienTu
 
         private void cboDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DanhMucBUS.Instance.loadDanhMucTheoGhiChu(cboTrademark, cboCategoriesByNote.SelectedItem.ToString());
+            CategoryBUS.Instance.loadDataCategoriesByNoteInCbo(cboTrademark, cboCategoriesByNote.SelectedItem.ToString());
             if(txtProductCode.Text.Trim() !=null)
             {
                 try
                 {
-                    cboTrademark.Text = DanhMucBUS.Instance.tenDanhMucTheoMaSP(int.Parse(txtProductCode.Text));
+                    cboTrademark.Text = CategoryBUS.Instance.tenDanhMucTheoMaSP(int.Parse(txtProductCode.Text));
                 }
                 catch { }
             }

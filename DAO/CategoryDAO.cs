@@ -7,37 +7,37 @@ using DTO;
 
 namespace DAO
 {
-    public class DanhMucSanPhamDAO
+    public class CategoryDAO
     {
         QLSanPhamDienTuDataContext db = new QLSanPhamDienTuDataContext();
-        private static DanhMucSanPhamDAO instance;
+        private static CategoryDAO instance;
 
-        public static DanhMucSanPhamDAO Instance
+        public static CategoryDAO Instance
         {
             get 
             {
                 if(instance == null)
                 {
-                    instance = new DanhMucSanPhamDAO();
+                    instance = new CategoryDAO();
                 }
                 return instance;
             }
             
         }
 
-        public List<DanhMuc> loadTatCaDanhMuc()
+        public List<DanhMuc> getAllDataCategories()
         {
             var listDM = db.DanhMucs.ToList();
             return listDM;
         }    
 
-        public List<string> loadDanhMuc()
+        public List<string> getNoteInCategory()
         {
             var listDM = db.DanhMucs.Select(m => m.ghiChu).Distinct().ToList();
             return listDM;
         }
 
-        public List<DanhMuc> loadDanhMucTheoGhiChu(string ghiChu)
+        public List<DanhMuc> getAllDataCategoriesByNote(string ghiChu)
         {
             var listSPDM = db.DanhMucs.Where(m => m.ghiChu == ghiChu).ToList();
             return listSPDM;
@@ -52,7 +52,7 @@ namespace DAO
             return danhMuc ;
         }
 
-        public List<string> loadDMTheoTungLoai(string nghiChu)
+        public List<string> getAllDatCategorisByNote(string nghiChu)
         {
             var listSPDM = db.DanhMucs.Where(m=>m.ghiChu== nghiChu).Select(m=>m.tenDanhMuc).ToList();
             return listSPDM;
@@ -60,16 +60,17 @@ namespace DAO
 
 
         // cập nhập danh mục
-        public bool capNhat(int maDM, string tenDM, int maNSX, string ghiChu, string log)
+        public bool updateCategory(int categoryID, string CategoryName, int producerID, string note, string logo)
         {
             DanhMuc dm = new DanhMuc();
-            dm = db.DanhMucs.SingleOrDefault(m => m.maDanhMuc == maDM);
+            dm = db.DanhMucs.SingleOrDefault(m => m.maDanhMuc == categoryID);
             if(dm !=null)
             {
 
-                dm.tenDanhMuc =tenDM;
-                dm.maNhaSanXuat = maNSX;
-                dm.ghiChu = ghiChu;
+                dm.tenDanhMuc = CategoryName;
+                dm.maNhaSanXuat = producerID;
+                dm.ghiChu = note;
+                dm.logoTungDanhMucSP = logo;
                 db.SubmitChanges();
                 return true;
             }
@@ -77,14 +78,14 @@ namespace DAO
         }
 
         // thêm danh mục
-        public bool themDanhMuc(string tenDM, int maNSX, string ghiChu, string logo)
+        public bool insertCategory(string CategoryName, int producerID, string note, string logo)
         {
             try
             {
                 DanhMuc dm = new DanhMuc();
-                dm.tenDanhMuc = tenDM;
-                dm.maNhaSanXuat = maNSX;
-                dm.ghiChu = ghiChu;
+                dm.tenDanhMuc = CategoryName;
+                dm.maNhaSanXuat = producerID;
+                dm.ghiChu = note;
                 dm.logoTungDanhMucSP = logo;
                 db.DanhMucs.InsertOnSubmit(dm);
                 db.SubmitChanges();
@@ -97,9 +98,9 @@ namespace DAO
         }
 
 
-        public bool xoaDanhMuc(int maDM)
+        public bool deleteCategory(int categoryID)
         {
-            var dm = db.DanhMucs.Single(m => m.maDanhMuc == maDM);
+            var dm = db.DanhMucs.Single(m => m.maDanhMuc == categoryID);
             if (dm != null)
             {
                 db.DanhMucs.DeleteOnSubmit(dm);

@@ -5,24 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAO;
 using DevExpress.XtraGrid;
 using DTO;
+using DAO;
 
 namespace BUS
 {
-    public class DanhMucBUS
+    public class CategoryBUS
     {
         QLSanPhamDienTuDataContext db = new QLSanPhamDienTuDataContext();
-        private static DanhMucBUS instance;
+        private static CategoryBUS instance;
 
-        public static DanhMucBUS Instance
+        public static CategoryBUS Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new DanhMucBUS();
+                    instance = new CategoryBUS();
                 }
                 return instance;
             }
@@ -31,15 +31,15 @@ namespace BUS
 
 
         // load danh mục lên treeView 
-        public void loadDanhMucTreeView(TreeView tv)
+        public void loadDataCategoriesInTreView(TreeView tv)
         {
             tv.Nodes.Add("Tất cả");
-            List<string> nodeCha = DanhMucSanPhamDAO.Instance.loadDanhMuc();
+            List<string> nodeCha = CategoryDAO.Instance.getNoteInCategory();
             for(int i=0; i < nodeCha.Count; i++)
             {
                 tv.Nodes[0].Nodes.Add(nodeCha[i].ToString());
                 tv.Nodes[0].Nodes[i].Tag = "1";
-                List<string> nodeCon = DanhMucSanPhamDAO.Instance.loadDMTheoTungLoai(nodeCha[i].ToString());
+                List<string> nodeCon = CategoryDAO.Instance.getAllDatCategorisByNote(nodeCha[i].ToString());
                 for(int j=0; j< nodeCon.Count; j++)
                 {
                     tv.Nodes[0].Nodes[i].Nodes.Add(""+nodeCon[j].ToString());
@@ -52,20 +52,20 @@ namespace BUS
         
 
 
-        public void loadTaCaDMGridView(GridControl gv )
+        public void loadDataCategoriesInGridControl(GridControl gv )
         {
-            gv.DataSource = DanhMucSanPhamDAO.Instance.loadTatCaDanhMuc();
+            gv.DataSource = CategoryDAO.Instance.getAllDataCategories();
         }
 
-        public void loadGhiChuCbo(ComboBox cbo)
+        public void loadDataCatgoriesNodeInCbo(ComboBox cbo)
         {
-            cbo.DataSource = DanhMucSanPhamDAO.Instance.loadDanhMuc();
+            cbo.DataSource = CategoryDAO.Instance.getNoteInCategory();
             cbo.DisplayMember = "ghiChu";
         }
 
-        public void loadDanhMucTheoGhiChu(ComboBox cbo, string ghiChu)
+        public void loadDataCategoriesByNoteInCbo(ComboBox cbo, string ghiChu)
         {
-            List<DanhMuc> listDM= DanhMucSanPhamDAO.Instance.loadDanhMucTheoGhiChu(ghiChu);
+            List<DanhMuc> listDM= CategoryDAO.Instance.getAllDataCategoriesByNote(ghiChu);
             if (listDM.Count == 0)
             {
                 listDM.Clear();
@@ -79,26 +79,26 @@ namespace BUS
         public string tenDanhMucTheoMaSP(int maSP)
         {
             
-            return DanhMucSanPhamDAO.Instance.traVeDanhMucVoiMaSP(maSP).tenDanhMuc;
+            return CategoryDAO.Instance.traVeDanhMucVoiMaSP(maSP).tenDanhMuc;
         }
 
 
         // cập nhật
-        public bool capNhatDanhMuc(int maDM, string tenDM, int maNSX, string ghiChu, string logo)
+        public bool updateCategory(int categoryID, string CategoryName, int producerID, string note, string logo)
         {
-            return DanhMucSanPhamDAO.Instance.capNhat(maDM, tenDM, maNSX, ghiChu, logo);
+            return CategoryDAO.Instance.updateCategory(categoryID, CategoryName, producerID, note, logo);
         }
 
         // thêm danh mục
-        public bool themDanhMuc(string tenDM, int maNSX, string ghiChu, string logo)
+        public bool insertCategory(string CategoryName, int producerID, string note, string logo)
         {
-            return DanhMucSanPhamDAO.Instance.themDanhMuc(tenDM, maNSX, ghiChu, logo);
+            return CategoryDAO.Instance.insertCategory(CategoryName, producerID, note, logo);
         }
 
         // xuát danh mục
-        public bool xoaDanhMuc(int maDM)
+        public bool deleteCategory(int categoryID)
         {
-            return DanhMucSanPhamDAO.Instance.xoaDanhMuc(maDM);
+            return CategoryDAO.Instance.deleteCategory(categoryID);
         }
     }
 }

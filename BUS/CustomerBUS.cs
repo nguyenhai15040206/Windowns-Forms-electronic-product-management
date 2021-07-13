@@ -13,6 +13,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid;
 using System.Data;
 using System.Data.Sql;
+using DevExpress.XtraEditors;
 
 namespace BUS
 {
@@ -35,6 +36,24 @@ namespace BUS
         public void getAllDataCustomer(GridControl grv)
         {
             grv.DataSource = CustomerDAO.Instance.getAllDataCustomer();
+        }
+
+        public void getAllDataCustomerToGridLookupEdit(GridLookUpEdit gridLookUpEdit)
+        {
+            gridLookUpEdit.Properties.DataSource = CustomerDAO.Instance.getAllDataCustomer();
+            gridLookUpEdit.Properties.ValueMember = "MaKhachHang";
+            gridLookUpEdit.Properties.DisplayMember = "TenKhachHang";
+            gridLookUpEdit.CustomDisplayText += GridLookUpEdit_CustomDisplayText;
+        }
+
+        private void GridLookUpEdit_CustomDisplayText(object sender, DevExpress.XtraEditors.Controls.CustomDisplayTextEventArgs e)
+        {
+            GridLookUpEdit gridLookUpEdit = sender as GridLookUpEdit;
+            KhachHangNews khachHangNews = gridLookUpEdit.Properties.GetRowByKeyValue(e.Value) as KhachHangNews;
+            if(khachHangNews!=null)
+            {
+                e.DisplayText = khachHangNews.TenKhachHang + " - " + khachHangNews.SoDienThoai+ " - "+ khachHangNews.Email;
+            }    
         }
 
         public bool insertCustomer(string customerName, string customerPhoneNumber, string email, string address)

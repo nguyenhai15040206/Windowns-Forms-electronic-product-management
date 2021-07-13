@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using DAO;
 using System.Windows.Forms;
 using DTO;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
 
 namespace BUS
 {
@@ -58,6 +60,26 @@ namespace BUS
                 gv.DataSource = ProductDAO.instance.getDataProductByCategory(node.Text);
             }
         }
+
+        public void getAllProductToDgvComboBoxColumn(DataGridViewComboBoxColumn lookUpEdit)
+        {
+            lookUpEdit.DataSource = ProductDAO.Instance.getAllDataProducts();
+            lookUpEdit.ValueMember = "maSanPham";
+            lookUpEdit.DisplayMember = "tenSanPham";
+        }
+
+        public void getDataProductsByCategoryID(GridLookUpEdit gridLookUpEdit, int  categoriesID)
+        {
+            gridLookUpEdit.Properties.DataSource = ProductDAO.Instance.getDataProductByCategoryID(categoriesID);
+            gridLookUpEdit.Properties.ValueMember = "maSanPham";
+            gridLookUpEdit.Properties.DisplayMember = "tenSanPham";
+        }
+
+
+        public void getAllDataProductsToGridViewByCategoryID(GridControl gv, int categoriesID)
+        {
+            gv.DataSource = ProductDAO.Instance.getDataProductByCategoryID(categoriesID);
+        }    
 
         // trẩ về một sản phẩm theo mã sản phẩm
         #region
@@ -170,9 +192,6 @@ namespace BUS
         #endregion
 
 
-
-
-
         // xóa sản phẩm
         public bool deleteProduct(int productID)
         {
@@ -192,6 +211,21 @@ namespace BUS
         {
             return ProductDAO.Instance.insertProduct(nameProduct, amount, unitPrice, unitPriceImport, description, descriptionDetails, promotion, discount, dateUpdate, madeIn, image, imagesList, catedoryID, status);
         }
+
+
+        //
+        public bool updateAmount_Buy(int productID, int amountBuy)
+        {
+            return ProductDAO.Instance.updateAmount_Buy(productID, amountBuy);
+        }
+
+        public bool updateAmouny_Delete(int productID, int amountDelete)
+        {
+            return ProductDAO.Instance.updateAmouny_Delete(productID, amountDelete);
+        }   
+        
+
+        
 
     }
 }

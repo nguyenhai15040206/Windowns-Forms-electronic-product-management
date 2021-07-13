@@ -44,8 +44,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DanhMucManHinhPhanQuyenDAO.cs" />
-    <Compile Include="DanhMucSanPhamDAO.cs" />
+    <Compile Include="CategoryDAO.cs" />
     <Compile Include="CustomerDAO.cs" />
+    <Compile Include="InvoiceDAO.cs" />
+    <Compile Include="InvoiceDetailsDAO.cs" />
     <Compile Include="NguoiDungDAO.cs" />
     <Compile Include="NhaSanXuatDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

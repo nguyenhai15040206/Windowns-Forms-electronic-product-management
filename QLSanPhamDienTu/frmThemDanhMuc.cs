@@ -22,9 +22,9 @@ namespace QLSanPhamDienTu
 
         private void frmThemDanhMuc_Load(object sender, EventArgs e)
         {
-            DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
+            CategoryBUS.Instance.loadDataCategoriesInGridControl(gridControl1);
             NhaSanXuatBUS.Instance.loadNhaSanXuatCbo(cboNSX);
-            DanhMucBUS.Instance.loadGhiChuCbo(cboGhiChu);
+            CategoryBUS.Instance.loadDataCatgoriesNodeInCbo(cboGhiChu);
             txtTenDM.Focus();
         }
 
@@ -42,10 +42,10 @@ namespace QLSanPhamDienTu
                     DialogResult rs = MessageBox.Show("Bạn có chắc muốn cập nhật Danh mục này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (rs == DialogResult.Yes)
                     {
-                        if (DanhMucBUS.Instance.capNhatDanhMuc(int.Parse(txtMaDM.Text.Trim()), txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), logo))
+                        if (CategoryBUS.Instance.updateCategory(int.Parse(txtMaDM.Text.Trim()), txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), logo))
                         {
                             MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK);
-                            DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
+                            CategoryBUS.Instance.loadDataCategoriesInGridControl(gridControl1);
                             frmThemDanhMuc_Load(sender, e);
                         }
                     }
@@ -89,10 +89,10 @@ namespace QLSanPhamDienTu
             {
                 if (!string.IsNullOrEmpty(txtTenDM.Text.Trim()))
                 {
-                    if (DanhMucBUS.Instance.themDanhMuc(txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), logo))
+                    if (CategoryBUS.Instance.insertCategory(txtTenDM.Text.Trim(), int.Parse(cboNSX.SelectedValue.ToString()), cboGhiChu.SelectedItem.ToString(), logo))
                     {
                         MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK);
-                        DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
+                        CategoryBUS.Instance.loadDataCategoriesInGridControl(gridControl1);
                         frmThemDanhMuc_Load(sender, e);
                     }
                 }
@@ -111,10 +111,10 @@ namespace QLSanPhamDienTu
                 DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa Danh mục này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (rs == DialogResult.Yes)
                 {
-                    if (DanhMucBUS.Instance.xoaDanhMuc(int.Parse(txtMaDM.Text.Trim())))
+                    if (CategoryBUS.Instance.deleteCategory(int.Parse(txtMaDM.Text.Trim())))
                     {
                         MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK);
-                        DanhMucBUS.Instance.loadTaCaDMGridView(gridControl1);
+                        CategoryBUS.Instance.loadDataCategoriesInGridControl(gridControl1);
                         frmThemDanhMuc_Load(sender, e);
                     }
                 }

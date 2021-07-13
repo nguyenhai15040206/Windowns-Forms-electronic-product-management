@@ -48,6 +48,13 @@ namespace DAO
             return listSP;
         }
 
+        // load sản phẩm theo từng danh mục tên danh mục
+        public List<SanPham> getDataProductByCategoryID(int  categoryID)
+        {
+            var listSP = db.SanPhams.Where(m => m.DanhMuc.maDanhMuc == categoryID).ToList();
+            return listSP;
+        }
+
         // trả về thông tin của một sản phẩm
         #region
         public SanPham productByID(int productID)
@@ -136,7 +143,61 @@ namespace DAO
         }
 
 
+        // nhập nhật số lượng khi mua
+        public bool updateAmount_Buy(int productID, int amountBuy)
+        {
+            bool status = true;
+            int InventoryNumber = 0;
+            try
+            {
+                var tu = db.SanPhams.SingleOrDefault(m => m.maSanPham == productID);
+                InventoryNumber = (int)productByID(productID).soLuong;
+                tu.soLuong = (InventoryNumber - amountBuy) <= 0 ? 0 : (InventoryNumber - amountBuy);
+                if (tu.soLuong == 0)
+                {
+                    status = false;
+                }
+                else
+                {
+                    status = true;
+                }
+                tu.tinhTrang = status;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
 
-        
+        }
+
+        public bool updateAmouny_Delete(int productID, int amountDelete)
+        {
+            bool status = true;
+            int InventoryNumber = 0;
+            try
+            {
+                var tu = db.SanPhams.SingleOrDefault(m => m.maSanPham == productID);
+                InventoryNumber = (int)productByID(productID).soLuong;
+                tu.soLuong = (InventoryNumber + amountDelete);
+                if (tu.soLuong == 0)
+                {
+                    status = false;
+                }
+                else
+                {
+                    status = true;
+                }
+                tu.tinhTrang = status;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
     }
 }
