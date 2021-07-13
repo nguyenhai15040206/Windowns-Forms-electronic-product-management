@@ -119,11 +119,11 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhapHangNCC.cs">
+    <Compile Include="frmInsertProductBySupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhapHangNCC.Designer.cs">
-      <DependentUpon>frmNhapHangNCC.cs</DependentUpon>
+    <Compile Include="frmInsertProductBySupplier.Designer.cs">
+      <DependentUpon>frmInsertProductBySupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPayCartManager.cs">
       <SubType>Form</SubType>
@@ -181,8 +181,8 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhapHangNCC.resx">
-      <DependentUpon>frmNhapHangNCC.cs</DependentUpon>
+    <EmbeddedResource Include="frmInsertProductBySupplier.resx">
+      <DependentUpon>frmInsertProductBySupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPayCartManager.resx">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
@@ -250,6 +250,7 @@
     <None Include="Resources\addpink-removebg-preview.png" />
     <None Include="Resources\icloud-removebg-preview.png" />
     <None Include="Resources\addpink-removebg-preview1.png" />
+    <None Include="Resources\addpink-removebg-preview2.png" />
     <Content Include="Resources\SanPham\bao-da-2-dien-thoai-tien-dung-davis-3_79a648427d99440b88cbc06769c27fd5_master.jpg" />
     <Content Include="Resources\SanPham\IPHONE11PRO_TRANG.png" />
     <None Include="Resources\add21.ico" />

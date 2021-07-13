@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLSanPhamDienTu
 {
-    public partial class frmNhapHangNCC : Form
+    public partial class frmInsertProductBySupplier : Form
     {
-        public frmNhapHangNCC()
+        public frmInsertProductBySupplier()
         {
             InitializeComponent();
         }
