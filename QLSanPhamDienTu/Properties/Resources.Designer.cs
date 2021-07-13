@@ -63,6 +63,16 @@ namespace QLSanPhamDienTu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_15479_soccer_ball_clip_art_soccer_balls_coloring_pages_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("1-15479_soccer-ball-clip-art-soccer-balls-coloring-pages-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1269515091_keepassx {
             get {
                 object obj = ResourceManager.GetObject("1269515091_keepassx", resourceCulture);
@@ -133,6 +143,16 @@ namespace QLSanPhamDienTu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addpink_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("addpink-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b1 {
             get {
                 object obj = ResourceManager.GetObject("b1", resourceCulture);
@@ -183,6 +203,16 @@ namespace QLSanPhamDienTu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close1 {
             get {
                 object obj = ResourceManager.GetObject("close1", resourceCulture);
@@ -206,6 +236,16 @@ namespace QLSanPhamDienTu.Properties {
         internal static System.Drawing.Bitmap groups {
             get {
                 object obj = ResourceManager.GetObject("groups", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icloud_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("icloud-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +306,16 @@ namespace QLSanPhamDienTu.Properties {
         internal static System.Drawing.Bitmap refresh_icon_small {
             get {
                 object obj = ResourceManager.GetObject("refresh-icon-small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap savepink_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("savepink-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -92,11 +92,11 @@ namespace QLSanPhamDienTu
             {
                 if (NguoiDungBUS.Instance.KtraTenNguoiDung(txtTenDangNhap.Text))
                 {
-                    if (CheckData.Instances.KtraSoDienThoai(txtSoDienThoai.Text))
+                    if (CheckDataInput.Instances.isPhoneNumber(txtSoDienThoai.Text))
                     {
                         if (NguoiDungBUS.Instance.KTraSoDienThoaiTonTai(txtSoDienThoai.Text))
                         {
-                            if (CheckData.Instances.KtraEmail(txtEmail.Text))
+                            if (CheckDataInput.Instances.isEmail(txtEmail.Text))
                             {
                                 if (NguoiDungBUS.Instance.themNguoiDung(txtTenNguoiDung.Text.Trim(), txtTenDangNhap.Text.Trim(), txtMatKhau.Text,
                                 txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, true))
@@ -217,9 +217,9 @@ namespace QLSanPhamDienTu
             if (txtTenNguoiDung.Text.Trim().Length > 0 && txtDiaChi.Text.Trim().Trim().Trim().Length > 0 &&
                 txtSoDienThoai.Text.Trim().Trim().Length > 0 && txtEmail.Text.Trim().Length > 0)
             {
-                if(CheckData.Instances.KtraEmail(txtEmail.Text))
+                if(CheckDataInput.Instances.isEmail(txtEmail.Text))
                 {
-                    if(CheckData.Instances.KtraSoDienThoai(txtSoDienThoai.Text))
+                    if(CheckDataInput.Instances.isPhoneNumber(txtSoDienThoai.Text))
                     {
                         if (NguoiDungBUS.Instance.CapNhatThongTinNguoiDung(int.Parse(txtMaNguoiDung.Text), txtTenNguoiDung.Text, txtTenDangNhap.Text, txtMatKhau.Text, txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, hoatDong))
                         {

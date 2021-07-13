@@ -68,5 +68,16 @@ namespace DTO.Properties {
                 return ((string)(this["QL_SanPhamConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QL_SanPham;User ID=sa;Password=tanha" +
+            "i123")]
+        public string QL_SanPhamConnectionString3 {
+            get {
+                return ((string)(this["QL_SanPhamConnectionString3"]));
+            }
+        }
     }
 }

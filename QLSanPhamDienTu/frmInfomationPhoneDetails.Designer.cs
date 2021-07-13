@@ -1,7 +1,7 @@
 ﻿
 namespace QLSanPhamDienTu
 {
-    partial class frmChiTietSPDienThoai
+    partial class frmInfomationPhoneDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -29,60 +29,60 @@ namespace QLSanPhamDienTu
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChiTietSPDienThoai));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInfomationPhoneDetails));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtHeDieuHanh = new System.Windows.Forms.TextBox();
+            this.txtOparatingSystem = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtTheSim = new System.Windows.Forms.TextBox();
+            this.txtSim = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtDungLuongPin = new System.Windows.Forms.TextBox();
+            this.txtBatteries = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtGPU = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCPU = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.numBoNhoTrong = new System.Windows.Forms.NumericUpDown();
+            this.numInternalMemory = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.numRAM = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCameraSelfi = new System.Windows.Forms.TextBox();
+            this.txtCameraSelfie = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCameraSau = new System.Windows.Forms.TextBox();
+            this.txtRearCamera = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtManHinh = new System.Windows.Forms.TextBox();
+            this.txtScreen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnHoatTat = new CustomControls.ButtonDesign();
+            this.btnCompleted = new CustomControls.ButtonDesign();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numBoNhoTrong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numInternalMemory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRAM)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtHeDieuHanh);
+            this.groupBox1.Controls.Add(this.txtOparatingSystem);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.txtTheSim);
+            this.groupBox1.Controls.Add(this.txtSim);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtDungLuongPin);
+            this.groupBox1.Controls.Add(this.txtBatteries);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtGPU);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtCPU);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.numBoNhoTrong);
+            this.groupBox1.Controls.Add(this.numInternalMemory);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.numRAM);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtCameraSelfi);
+            this.groupBox1.Controls.Add(this.txtCameraSelfie);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtCameraSau);
+            this.groupBox1.Controls.Add(this.txtRearCamera);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtManHinh);
+            this.groupBox1.Controls.Add(this.txtScreen);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(18, 17);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -93,12 +93,12 @@ namespace QLSanPhamDienTu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin mô tả sản phẩm";
             // 
-            // txtHeDieuHanh
+            // txtOparatingSystem
             // 
-            this.txtHeDieuHanh.Location = new System.Drawing.Point(126, 334);
-            this.txtHeDieuHanh.Name = "txtHeDieuHanh";
-            this.txtHeDieuHanh.Size = new System.Drawing.Size(382, 24);
-            this.txtHeDieuHanh.TabIndex = 5;
+            this.txtOparatingSystem.Location = new System.Drawing.Point(126, 334);
+            this.txtOparatingSystem.Name = "txtOparatingSystem";
+            this.txtOparatingSystem.Size = new System.Drawing.Size(382, 24);
+            this.txtOparatingSystem.TabIndex = 9;
             // 
             // label12
             // 
@@ -109,12 +109,12 @@ namespace QLSanPhamDienTu
             this.label12.TabIndex = 4;
             this.label12.Text = "Hệ điều hành:";
             // 
-            // txtTheSim
+            // txtSim
             // 
-            this.txtTheSim.Location = new System.Drawing.Point(126, 301);
-            this.txtTheSim.Name = "txtTheSim";
-            this.txtTheSim.Size = new System.Drawing.Size(382, 24);
-            this.txtTheSim.TabIndex = 5;
+            this.txtSim.Location = new System.Drawing.Point(126, 301);
+            this.txtSim.Name = "txtSim";
+            this.txtSim.Size = new System.Drawing.Size(382, 24);
+            this.txtSim.TabIndex = 8;
             // 
             // label11
             // 
@@ -125,12 +125,12 @@ namespace QLSanPhamDienTu
             this.label11.TabIndex = 4;
             this.label11.Text = "Thẻ sim:";
             // 
-            // txtDungLuongPin
+            // txtBatteries
             // 
-            this.txtDungLuongPin.Location = new System.Drawing.Point(126, 268);
-            this.txtDungLuongPin.Name = "txtDungLuongPin";
-            this.txtDungLuongPin.Size = new System.Drawing.Size(382, 24);
-            this.txtDungLuongPin.TabIndex = 5;
+            this.txtBatteries.Location = new System.Drawing.Point(126, 268);
+            this.txtBatteries.Name = "txtBatteries";
+            this.txtBatteries.Size = new System.Drawing.Size(382, 24);
+            this.txtBatteries.TabIndex = 7;
             // 
             // label10
             // 
@@ -146,7 +146,7 @@ namespace QLSanPhamDienTu
             this.txtGPU.Location = new System.Drawing.Point(126, 235);
             this.txtGPU.Name = "txtGPU";
             this.txtGPU.Size = new System.Drawing.Size(382, 24);
-            this.txtGPU.TabIndex = 5;
+            this.txtGPU.TabIndex = 6;
             // 
             // label9
             // 
@@ -173,17 +173,19 @@ namespace QLSanPhamDienTu
             this.label8.TabIndex = 4;
             this.label8.Text = "CPU:";
             // 
-            // numBoNhoTrong
+            // numInternalMemory
             // 
-            this.numBoNhoTrong.Location = new System.Drawing.Point(126, 169);
-            this.numBoNhoTrong.Maximum = new decimal(new int[] {
+            this.numInternalMemory.Location = new System.Drawing.Point(126, 169);
+            this.numInternalMemory.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numBoNhoTrong.Name = "numBoNhoTrong";
-            this.numBoNhoTrong.Size = new System.Drawing.Size(228, 24);
-            this.numBoNhoTrong.TabIndex = 3;
+            this.numInternalMemory.Name = "numInternalMemory";
+            this.numInternalMemory.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.numInternalMemory.Size = new System.Drawing.Size(228, 24);
+            this.numInternalMemory.TabIndex = 4;
+            this.numInternalMemory.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -199,8 +201,10 @@ namespace QLSanPhamDienTu
             // 
             this.numRAM.Location = new System.Drawing.Point(126, 136);
             this.numRAM.Name = "numRAM";
+            this.numRAM.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.numRAM.Size = new System.Drawing.Size(228, 24);
             this.numRAM.TabIndex = 3;
+            this.numRAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -230,12 +234,12 @@ namespace QLSanPhamDienTu
             this.label4.TabIndex = 0;
             this.label4.Text = "RAM:";
             // 
-            // txtCameraSelfi
+            // txtCameraSelfie
             // 
-            this.txtCameraSelfi.Location = new System.Drawing.Point(126, 103);
-            this.txtCameraSelfi.Name = "txtCameraSelfi";
-            this.txtCameraSelfi.Size = new System.Drawing.Size(382, 24);
-            this.txtCameraSelfi.TabIndex = 1;
+            this.txtCameraSelfie.Location = new System.Drawing.Point(126, 103);
+            this.txtCameraSelfie.Name = "txtCameraSelfie";
+            this.txtCameraSelfie.Size = new System.Drawing.Size(382, 24);
+            this.txtCameraSelfie.TabIndex = 2;
             // 
             // label3
             // 
@@ -246,12 +250,12 @@ namespace QLSanPhamDienTu
             this.label3.TabIndex = 0;
             this.label3.Text = "Camera Selfie:";
             // 
-            // txtCameraSau
+            // txtRearCamera
             // 
-            this.txtCameraSau.Location = new System.Drawing.Point(126, 70);
-            this.txtCameraSau.Name = "txtCameraSau";
-            this.txtCameraSau.Size = new System.Drawing.Size(382, 24);
-            this.txtCameraSau.TabIndex = 1;
+            this.txtRearCamera.Location = new System.Drawing.Point(126, 70);
+            this.txtRearCamera.Name = "txtRearCamera";
+            this.txtRearCamera.Size = new System.Drawing.Size(382, 24);
+            this.txtRearCamera.TabIndex = 1;
             // 
             // label2
             // 
@@ -262,12 +266,12 @@ namespace QLSanPhamDienTu
             this.label2.TabIndex = 0;
             this.label2.Text = "Camera sau:";
             // 
-            // txtManHinh
+            // txtScreen
             // 
-            this.txtManHinh.Location = new System.Drawing.Point(126, 37);
-            this.txtManHinh.Name = "txtManHinh";
-            this.txtManHinh.Size = new System.Drawing.Size(382, 24);
-            this.txtManHinh.TabIndex = 1;
+            this.txtScreen.Location = new System.Drawing.Point(126, 37);
+            this.txtScreen.Name = "txtScreen";
+            this.txtScreen.Size = new System.Drawing.Size(382, 24);
+            this.txtScreen.TabIndex = 0;
             // 
             // label1
             // 
@@ -278,23 +282,23 @@ namespace QLSanPhamDienTu
             this.label1.TabIndex = 0;
             this.label1.Text = "Màn hình:";
             // 
-            // btnHoatTat
+            // btnCompleted
             // 
-            this.btnHoatTat.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoatTat.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnHoatTat.Appearance.Options.UseFont = true;
-            this.btnHoatTat.Appearance.Options.UseForeColor = true;
-            this.btnHoatTat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHoatTat.BackgroundImage")));
-            this.btnHoatTat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnHoatTat.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnHoatTat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHoatTat.ImageOptions.SvgImage")));
-            this.btnHoatTat.Location = new System.Drawing.Point(378, 403);
-            this.btnHoatTat.Name = "btnHoatTat";
-            this.btnHoatTat.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnHoatTat.Size = new System.Drawing.Size(148, 39);
-            this.btnHoatTat.TabIndex = 1;
-            this.btnHoatTat.Text = "Hoàn tất";
-            this.btnHoatTat.Click += new System.EventHandler(this.btnHoatTat_Click);
+            this.btnCompleted.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompleted.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnCompleted.Appearance.Options.UseFont = true;
+            this.btnCompleted.Appearance.Options.UseForeColor = true;
+            this.btnCompleted.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCompleted.BackgroundImage")));
+            this.btnCompleted.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCompleted.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnCompleted.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCompleted.ImageOptions.SvgImage")));
+            this.btnCompleted.Location = new System.Drawing.Point(378, 403);
+            this.btnCompleted.Name = "btnCompleted";
+            this.btnCompleted.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnCompleted.Size = new System.Drawing.Size(148, 39);
+            this.btnCompleted.TabIndex = 0;
+            this.btnCompleted.Text = "Hoàn tất";
+            this.btnCompleted.Click += new System.EventHandler(this.btnHoatTat_Click);
             // 
             // label13
             // 
@@ -311,9 +315,10 @@ namespace QLSanPhamDienTu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 484);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(550, 484);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.btnHoatTat);
+            this.Controls.Add(this.btnCompleted);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -325,7 +330,7 @@ namespace QLSanPhamDienTu
             this.Load += new System.EventHandler(this.frmChiTietSPDienThoai_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numBoNhoTrong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numInternalMemory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRAM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -335,29 +340,29 @@ namespace QLSanPhamDienTu
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtHeDieuHanh;
+        private System.Windows.Forms.TextBox txtOparatingSystem;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtTheSim;
+        private System.Windows.Forms.TextBox txtSim;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtDungLuongPin;
+        private System.Windows.Forms.TextBox txtBatteries;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtGPU;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCPU;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numBoNhoTrong;
+        private System.Windows.Forms.NumericUpDown numInternalMemory;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numRAM;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCameraSelfi;
+        private System.Windows.Forms.TextBox txtCameraSelfie;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCameraSau;
+        private System.Windows.Forms.TextBox txtRearCamera;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtManHinh;
+        private System.Windows.Forms.TextBox txtScreen;
         private System.Windows.Forms.Label label1;
-        private CustomControls.ButtonDesign btnHoatTat;
+        private CustomControls.ButtonDesign btnCompleted;
         private System.Windows.Forms.Label label13;
     }
 }

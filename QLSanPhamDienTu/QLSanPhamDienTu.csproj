@@ -50,8 +50,15 @@
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeMap.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,17 +69,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmChiTietSPDienThoai.cs">
+    <Compile Include="frmInfomationPhoneDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChiTietSPDienThoai.Designer.cs">
-      <DependentUpon>frmChiTietSPDienThoai.cs</DependentUpon>
+    <Compile Include="frmInfomationPhoneDetails.Designer.cs">
+      <DependentUpon>frmInfomationPhoneDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChiTietSPLaptop.cs">
+    <Compile Include="frmInfomationLaptopDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChiTietSPLaptop.Designer.cs">
-      <DependentUpon>frmChiTietSPLaptop.cs</DependentUpon>
+    <Compile Include="frmInfomationLaptopDetails.Designer.cs">
+      <DependentUpon>frmInfomationLaptopDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConfig.cs">
       <SubType>Form</SubType>
@@ -80,11 +87,11 @@
     <Compile Include="frmConfig.Designer.cs">
       <DependentUpon>frmConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKhachHang.cs">
+    <Compile Include="frmCustomerManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKhachHang.Designer.cs">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <Compile Include="frmCustomerManager.Designer.cs">
+      <DependentUpon>frmCustomerManager.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -116,11 +123,11 @@
     <Compile Include="frmQLNhanVienPhanQuyen.Designer.cs">
       <DependentUpon>frmQLNhanVienPhanQuyen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQLSanPham.cs">
+    <Compile Include="frmProductManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQLSanPham.Designer.cs">
-      <DependentUpon>frmQLSanPham.cs</DependentUpon>
+    <Compile Include="frmProductManager.Designer.cs">
+      <DependentUpon>frmProductManager.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThemDanhMuc.cs">
       <SubType>Form</SubType>
@@ -128,25 +135,25 @@
     <Compile Include="frmThemDanhMuc.Designer.cs">
       <DependentUpon>frmThemDanhMuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemSanPham.cs">
+    <Compile Include="frmInsertProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemSanPham.Designer.cs">
-      <DependentUpon>frmThemSanPham.cs</DependentUpon>
+    <Compile Include="frmInsertProduct.Designer.cs">
+      <DependentUpon>frmInsertProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmChiTietSPDienThoai.resx">
-      <DependentUpon>frmChiTietSPDienThoai.cs</DependentUpon>
+    <EmbeddedResource Include="frmInfomationPhoneDetails.resx">
+      <DependentUpon>frmInfomationPhoneDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChiTietSPLaptop.resx">
-      <DependentUpon>frmChiTietSPLaptop.cs</DependentUpon>
+    <EmbeddedResource Include="frmInfomationLaptopDetails.resx">
+      <DependentUpon>frmInfomationLaptopDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfig.resx">
       <DependentUpon>frmConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKhachHang.resx">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmCustomerManager.resx">
+      <DependentUpon>frmCustomerManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -163,14 +170,14 @@
     <EmbeddedResource Include="frmQLNhanVienPhanQuyen.resx">
       <DependentUpon>frmQLNhanVienPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQLSanPham.resx">
-      <DependentUpon>frmQLSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="frmProductManager.resx">
+      <DependentUpon>frmProductManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemDanhMuc.resx">
       <DependentUpon>frmThemDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemSanPham.resx">
-      <DependentUpon>frmThemSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="frmInsertProduct.resx">
+      <DependentUpon>frmInsertProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -184,6 +191,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -205,12 +213,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data_disk.ico" />
+    <None Include="Resources\savepink-removebg-preview.png" />
     <None Include="Resources\Update-icon.png" />
     <None Include="Resources\nen1.jpg" />
     <None Include="Resources\meo-ban-hang-online-dat-khach-dat-hang.jpg" />
     <None Include="Resources\1601833.png" />
     <None Include="Resources\images.jpg" />
     <None Include="Resources\images-removebg-preview.png" />
+    <None Include="Resources\1-15479_soccer-ball-clip-art-soccer-balls-coloring-pages-removebg-preview1.png" />
+    <None Include="Resources\close.jpg" />
+    <None Include="Resources\addpink-removebg-preview.png" />
+    <None Include="Resources\icloud-removebg-preview.png" />
     <Content Include="Resources\SanPham\bao-da-2-dien-thoai-tien-dung-davis-3_79a648427d99440b88cbc06769c27fd5_master.jpg" />
     <Content Include="Resources\SanPham\IPHONE11PRO_TRANG.png" />
     <None Include="Resources\add21.ico" />

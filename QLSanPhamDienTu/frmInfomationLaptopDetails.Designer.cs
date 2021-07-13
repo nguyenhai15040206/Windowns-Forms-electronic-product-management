@@ -1,7 +1,7 @@
 ﻿
 namespace QLSanPhamDienTu
 {
-    partial class frmChiTietSPLaptop
+    partial class frmInfomationLaptopDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,17 @@ namespace QLSanPhamDienTu
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChiTietSPLaptop));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInfomationLaptopDetails));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtHeDieuHanh = new System.Windows.Forms.TextBox();
+            this.txtHardDriver = new System.Windows.Forms.TextBox();
+            this.txtInfomationRam = new System.Windows.Forms.TextBox();
+            this.txtOperatingSystem = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtKichThuoc = new System.Windows.Forms.TextBox();
+            this.txtSize = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtTrongLuong = new System.Windows.Forms.TextBox();
+            this.txtWeight = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtCardDoHoa = new System.Windows.Forms.TextBox();
+            this.txtGraphicsCard = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCPU = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,27 +47,25 @@ namespace QLSanPhamDienTu
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtManHinh = new System.Windows.Forms.TextBox();
+            this.txtScreen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnHoatTat = new CustomControls.ButtonDesign();
-            this.txtTTRam = new System.Windows.Forms.TextBox();
-            this.txtTTOCung = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRAM)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtTTOCung);
-            this.groupBox1.Controls.Add(this.txtTTRam);
-            this.groupBox1.Controls.Add(this.txtHeDieuHanh);
+            this.groupBox1.Controls.Add(this.txtHardDriver);
+            this.groupBox1.Controls.Add(this.txtInfomationRam);
+            this.groupBox1.Controls.Add(this.txtOperatingSystem);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.txtKichThuoc);
+            this.groupBox1.Controls.Add(this.txtSize);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtTrongLuong);
+            this.groupBox1.Controls.Add(this.txtWeight);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.txtCardDoHoa);
+            this.groupBox1.Controls.Add(this.txtGraphicsCard);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtCPU);
             this.groupBox1.Controls.Add(this.label8);
@@ -73,7 +73,7 @@ namespace QLSanPhamDienTu
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtManHinh);
+            this.groupBox1.Controls.Add(this.txtScreen);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -83,14 +83,27 @@ namespace QLSanPhamDienTu
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin mô tả sản phẩm";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // txtHeDieuHanh
+            // txtHardDriver
             // 
-            this.txtHeDieuHanh.Location = new System.Drawing.Point(144, 218);
-            this.txtHeDieuHanh.Name = "txtHeDieuHanh";
-            this.txtHeDieuHanh.Size = new System.Drawing.Size(364, 27);
-            this.txtHeDieuHanh.TabIndex = 5;
+            this.txtHardDriver.Location = new System.Drawing.Point(144, 109);
+            this.txtHardDriver.Name = "txtHardDriver";
+            this.txtHardDriver.Size = new System.Drawing.Size(364, 27);
+            this.txtHardDriver.TabIndex = 3;
+            // 
+            // txtInfomationRam
+            // 
+            this.txtInfomationRam.Location = new System.Drawing.Point(313, 73);
+            this.txtInfomationRam.Name = "txtInfomationRam";
+            this.txtInfomationRam.Size = new System.Drawing.Size(195, 27);
+            this.txtInfomationRam.TabIndex = 2;
+            // 
+            // txtOperatingSystem
+            // 
+            this.txtOperatingSystem.Location = new System.Drawing.Point(144, 218);
+            this.txtOperatingSystem.Name = "txtOperatingSystem";
+            this.txtOperatingSystem.Size = new System.Drawing.Size(364, 27);
+            this.txtOperatingSystem.TabIndex = 6;
             // 
             // label12
             // 
@@ -101,12 +114,12 @@ namespace QLSanPhamDienTu
             this.label12.TabIndex = 4;
             this.label12.Text = "Hệ điều hành:";
             // 
-            // txtKichThuoc
+            // txtSize
             // 
-            this.txtKichThuoc.Location = new System.Drawing.Point(144, 287);
-            this.txtKichThuoc.Name = "txtKichThuoc";
-            this.txtKichThuoc.Size = new System.Drawing.Size(364, 27);
-            this.txtKichThuoc.TabIndex = 5;
+            this.txtSize.Location = new System.Drawing.Point(144, 287);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(364, 27);
+            this.txtSize.TabIndex = 8;
             // 
             // label11
             // 
@@ -117,12 +130,12 @@ namespace QLSanPhamDienTu
             this.label11.TabIndex = 4;
             this.label11.Text = "kích thước(mm):";
             // 
-            // txtTrongLuong
+            // txtWeight
             // 
-            this.txtTrongLuong.Location = new System.Drawing.Point(144, 251);
-            this.txtTrongLuong.Name = "txtTrongLuong";
-            this.txtTrongLuong.Size = new System.Drawing.Size(364, 27);
-            this.txtTrongLuong.TabIndex = 5;
+            this.txtWeight.Location = new System.Drawing.Point(144, 251);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(364, 27);
+            this.txtWeight.TabIndex = 7;
             // 
             // label10
             // 
@@ -133,12 +146,12 @@ namespace QLSanPhamDienTu
             this.label10.TabIndex = 4;
             this.label10.Text = "Trọng lượng(kg):";
             // 
-            // txtCardDoHoa
+            // txtGraphicsCard
             // 
-            this.txtCardDoHoa.Location = new System.Drawing.Point(144, 182);
-            this.txtCardDoHoa.Name = "txtCardDoHoa";
-            this.txtCardDoHoa.Size = new System.Drawing.Size(364, 27);
-            this.txtCardDoHoa.TabIndex = 5;
+            this.txtGraphicsCard.Location = new System.Drawing.Point(144, 182);
+            this.txtGraphicsCard.Name = "txtGraphicsCard";
+            this.txtGraphicsCard.Size = new System.Drawing.Size(364, 27);
+            this.txtGraphicsCard.TabIndex = 5;
             // 
             // label9
             // 
@@ -154,7 +167,7 @@ namespace QLSanPhamDienTu
             this.txtCPU.Location = new System.Drawing.Point(144, 146);
             this.txtCPU.Name = "txtCPU";
             this.txtCPU.Size = new System.Drawing.Size(364, 27);
-            this.txtCPU.TabIndex = 5;
+            this.txtCPU.TabIndex = 4;
             // 
             // label8
             // 
@@ -170,7 +183,7 @@ namespace QLSanPhamDienTu
             this.numRAM.Location = new System.Drawing.Point(144, 74);
             this.numRAM.Name = "numRAM";
             this.numRAM.Size = new System.Drawing.Size(121, 27);
-            this.numRAM.TabIndex = 3;
+            this.numRAM.TabIndex = 1;
             // 
             // label6
             // 
@@ -200,12 +213,12 @@ namespace QLSanPhamDienTu
             this.label4.TabIndex = 0;
             this.label4.Text = "RAM:";
             // 
-            // txtManHinh
+            // txtScreen
             // 
-            this.txtManHinh.Location = new System.Drawing.Point(144, 37);
-            this.txtManHinh.Name = "txtManHinh";
-            this.txtManHinh.Size = new System.Drawing.Size(364, 27);
-            this.txtManHinh.TabIndex = 1;
+            this.txtScreen.Location = new System.Drawing.Point(144, 37);
+            this.txtScreen.Name = "txtScreen";
+            this.txtScreen.Size = new System.Drawing.Size(364, 27);
+            this.txtScreen.TabIndex = 0;
             // 
             // label1
             // 
@@ -241,29 +254,16 @@ namespace QLSanPhamDienTu
             this.btnHoatTat.Name = "btnHoatTat";
             this.btnHoatTat.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnHoatTat.Size = new System.Drawing.Size(148, 39);
-            this.btnHoatTat.TabIndex = 3;
+            this.btnHoatTat.TabIndex = 0;
             this.btnHoatTat.Text = "Hoàn tất";
             this.btnHoatTat.Click += new System.EventHandler(this.btnHoatTat_Click);
-            // 
-            // txtTTRam
-            // 
-            this.txtTTRam.Location = new System.Drawing.Point(313, 73);
-            this.txtTTRam.Name = "txtTTRam";
-            this.txtTTRam.Size = new System.Drawing.Size(195, 27);
-            this.txtTTRam.TabIndex = 6;
-            // 
-            // txtTTOCung
-            // 
-            this.txtTTOCung.Location = new System.Drawing.Point(144, 109);
-            this.txtTTOCung.Name = "txtTTOCung";
-            this.txtTTOCung.Size = new System.Drawing.Size(364, 27);
-            this.txtTTOCung.TabIndex = 8;
             // 
             // frmChiTietSPLaptop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 415);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(549, 415);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnHoatTat);
             this.Controls.Add(this.groupBox1);
@@ -272,7 +272,6 @@ namespace QLSanPhamDienTu
             this.Name = "frmChiTietSPLaptop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin chi tiết sản phẩm";
-            this.Load += new System.EventHandler(this.frmChiTietSPLaptop_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRAM)).EndInit();
@@ -284,13 +283,13 @@ namespace QLSanPhamDienTu
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtHeDieuHanh;
+        private System.Windows.Forms.TextBox txtOperatingSystem;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtKichThuoc;
+        private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtTrongLuong;
+        private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtCardDoHoa;
+        private System.Windows.Forms.TextBox txtGraphicsCard;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCPU;
         private System.Windows.Forms.Label label8;
@@ -298,11 +297,11 @@ namespace QLSanPhamDienTu
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtManHinh;
+        private System.Windows.Forms.TextBox txtScreen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
         private CustomControls.ButtonDesign btnHoatTat;
-        private System.Windows.Forms.TextBox txtTTRam;
-        private System.Windows.Forms.TextBox txtTTOCung;
+        private System.Windows.Forms.TextBox txtInfomationRam;
+        private System.Windows.Forms.TextBox txtHardDriver;
     }
 }

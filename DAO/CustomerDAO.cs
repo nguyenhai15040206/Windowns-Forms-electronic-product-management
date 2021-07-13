@@ -7,16 +7,16 @@ using DTO;
 
 namespace DAO
 {
-    public class KhachHangDAOcs
+    public class CustomerDAO
     {
-        private static KhachHangDAOcs instance;
-        public static KhachHangDAOcs Instance
+        private static CustomerDAO instance;
+        public static CustomerDAO Instance
         {
             get
             {
                 if(instance==null)
                 {
-                    instance = new KhachHangDAOcs();
+                    instance = new CustomerDAO();
                 }
                 return instance;
             }
@@ -25,7 +25,7 @@ namespace DAO
 
 
         #region load tất cả khách hàng
-        public List<KhachHangNews> LoadTatCaKhachHang()
+        public List<KhachHangNews> getAllDataCustomer()
         {
             var listKH = (from kh in db.KhachHangs
                           select new KhachHangNews
@@ -43,18 +43,27 @@ namespace DAO
             return listKH;
 
         }
+
+        public KhachHang customerByID(int customerId)
+        {
+            KhachHang kh = new KhachHang();
+            kh = db.KhachHangs.Single(m => m.maKhachHang == customerId);
+            if (kh == null)
+                return null;
+            return kh;
+        }
         #endregion
 
         #region thêm một khách hàng mới
-        public bool ThemMotKhachHang(string tenKH, string sdt, string email, string diaChi)
+        public bool insertCustomer(string customerName, string customerPhoneNumber, string customerEmail, string customerAddress)
         {
             try
             {
                 KhachHang kh = new KhachHang();
-                kh.tenDangNhap = tenKH;
-                kh.soDienThoai = sdt;
-                kh.email = email;
-                kh.diaChi = diaChi;
+                kh.tenKhachHang = customerName;
+                kh.soDienThoai = customerPhoneNumber;
+                kh.email = customerEmail;
+                kh.diaChi = customerAddress;
                 kh.tenDangNhap = "";
                 kh.matKhau = "";
                 db.KhachHangs.InsertOnSubmit(kh);
@@ -68,7 +77,7 @@ namespace DAO
         }
 
 
-        public bool KtraSoDienThoaiTonTai(string input)
+        public bool checkCustomerPhoneIsExist(string input)
         {
             try
             {
@@ -89,40 +98,21 @@ namespace DAO
         #endregion
 
         #region cập nhật thông tin một khách hàng
-        public bool capNhatThongTinKH(int maKH, string tenKH, string sdt, string email, string diaChi)
+        public bool updateCustomer(int customerID, string customerName, string customerPhoneNumber, string customerEmail, string customerAddress)
         {
             try
             {
-                var kh = db.KhachHangs.SingleOrDefault(m => m.maKhachHang == maKH);
-                if(kh==null)
+                var kh = db.KhachHangs.SingleOrDefault(m => m.maKhachHang == customerID);
+                if (kh == null)
                 {
                     return false;
-                }    
-                
-                if(sdt==kh.soDienThoai)
-                {
-                    kh.tenKhachHang = tenKH;
-                    kh.email = email;
-                    kh.diaChi = diaChi;
-                    db.SubmitChanges();
-                    return true;
-                }   
-                else
-                {
-                    if(KtraSoDienThoaiTonTai(sdt))
-                    {
-                        kh.tenKhachHang = tenKH;
-                        kh.email = email;
-                        kh.soDienThoai = sdt;
-                        kh.diaChi = diaChi;
-                        db.SubmitChanges();
-                        return true;
-                    }    
-                    else
-                    {
-                        return false;
-                    }    
-                }    
+                }
+                kh.soDienThoai = customerPhoneNumber;
+                kh.tenKhachHang = customerName;
+                kh.email = customerEmail;
+                kh.diaChi = customerAddress;
+                db.SubmitChanges();
+                return true;
             }
             catch
             {
@@ -132,11 +122,11 @@ namespace DAO
         #endregion
 
         #region xóa một khách hàng
-        public bool xoaKhachHang(int maKH)
+        public bool deleteCustomer(int customerID)
         {
             try
             {
-                KhachHang kh = db.KhachHangs.SingleOrDefault(m => m.maKhachHang == maKH);
+                KhachHang kh = db.KhachHangs.SingleOrDefault(m => m.maKhachHang == customerID);
                 db.KhachHangs.DeleteOnSubmit(kh);
                 db.SubmitChanges();
                 return true;

@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class CheckData
+    public class CheckDataInput
     {
         // private static 
         
-        private static CheckData instance;
-        public static CheckData Instances
+        private static CheckDataInput instance;
+        public static CheckDataInput Instances
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new CheckData();
+                    instance = new CheckDataInput();
                 }
                 return instance;
             }
@@ -29,14 +29,14 @@ namespace BUS
         ///Kiểm tra số điện thoại
         ///
 
-        public bool KtraSoDienThoai(string input)
+        public bool isPhoneNumber(string input)
         {
-            if (input[0] == '0' && input.Trim().Length == 10 && KtraDuLieu(input))
+            if (input[0] == '0' && input.Trim().Length == 10 && regex(input))
                 return true;
             return false;
         }
 
-        public bool KtraDuLieu(string input)
+        public bool regex(string input)
         {
             foreach(char c in input)
             {
@@ -45,11 +45,36 @@ namespace BUS
             }
             return true;
         }
+        public bool isInteger(string input)
+        {
+            try
+            {
+                int.Parse(input);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool isDouble(string input)
+        {
+            try
+            {
+                double.Parse(input);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
 
 
         //Ktra email
-        public bool KtraEmail( String input)
+        public bool isEmail( String input)
         {
             input = input ?? string.Empty;
             string strRegex= @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +

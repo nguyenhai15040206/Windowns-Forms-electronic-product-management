@@ -1,7 +1,7 @@
 ﻿
 namespace QLSanPhamDienTu
 {
-    partial class frmQLSanPham
+    partial class frmProductManager
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace QLSanPhamDienTu
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLSanPham));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductManager));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -39,11 +39,9 @@ namespace QLSanPhamDienTu
             this.treeViewDanhMucSP = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnXuatExcel = new CustomControls.ButtonDesign();
-            this.btnThemSP = new CustomControls.ButtonDesign();
-            this.btnThemDanhMuc = new CustomControls.ButtonDesign();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,19 +60,21 @@ namespace QLSanPhamDienTu
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnXuatExcel = new CustomControls.ButtonDesign();
+            this.btnThemDanhMuc = new CustomControls.ButtonDesign();
+            this.btnInsertProduct = new CustomControls.ButtonDesign();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeViewDanhMucSP
@@ -83,10 +83,10 @@ namespace QLSanPhamDienTu
             this.treeViewDanhMucSP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewDanhMucSP.ImageIndex = 0;
             this.treeViewDanhMucSP.ImageList = this.imageList1;
-            this.treeViewDanhMucSP.Location = new System.Drawing.Point(2, 28);
+            this.treeViewDanhMucSP.Location = new System.Drawing.Point(2, 23);
             this.treeViewDanhMucSP.Name = "treeViewDanhMucSP";
             this.treeViewDanhMucSP.SelectedImageIndex = 0;
-            this.treeViewDanhMucSP.Size = new System.Drawing.Size(264, 731);
+            this.treeViewDanhMucSP.Size = new System.Drawing.Size(264, 636);
             this.treeViewDanhMucSP.TabIndex = 0;
             this.treeViewDanhMucSP.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewDanhMucSP_AfterSelect);
             // 
@@ -106,107 +106,51 @@ namespace QLSanPhamDienTu
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(268, 761);
+            this.groupControl1.Size = new System.Drawing.Size(268, 661);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh mục mặt hàng";
             // 
-            // panelControl1
+            // panel1
             // 
-            this.panelControl1.Controls.Add(this.btnXuatExcel);
-            this.panelControl1.Controls.Add(this.btnThemSP);
-            this.panelControl1.Controls.Add(this.btnThemDanhMuc);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(268, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1126, 71);
-            this.panelControl1.TabIndex = 1;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(268, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1026, 661);
+            this.panel1.TabIndex = 3;
             // 
-            // btnXuatExcel
+            // panel3
             // 
-            this.btnXuatExcel.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnXuatExcel.Appearance.Options.UseForeColor = true;
-            this.btnXuatExcel.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatExcel.AppearanceHovered.Options.UseFont = true;
-            this.btnXuatExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.BackgroundImage")));
-            this.btnXuatExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnXuatExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.ImageOptions.Image")));
-            this.btnXuatExcel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnXuatExcel.Location = new System.Drawing.Point(405, 12);
-            this.btnXuatExcel.Name = "btnXuatExcel";
-            this.btnXuatExcel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnXuatExcel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnXuatExcel.Size = new System.Drawing.Size(173, 40);
-            this.btnXuatExcel.TabIndex = 2;
-            this.btnXuatExcel.Text = "Xuất Excel";
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnThemSP.Appearance.Options.UseForeColor = true;
-            this.btnThemSP.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSP.AppearanceHovered.Options.UseFont = true;
-            this.btnThemSP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemSP.BackgroundImage")));
-            this.btnThemSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThemSP.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.ImageOptions.Image")));
-            this.btnThemSP.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnThemSP.Location = new System.Drawing.Point(211, 12);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnThemSP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnThemSP.Size = new System.Drawing.Size(173, 40);
-            this.btnThemSP.TabIndex = 1;
-            this.btnThemSP.Text = "Thêm sản phẩm";
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
-            // 
-            // btnThemDanhMuc
-            // 
-            this.btnThemDanhMuc.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnThemDanhMuc.Appearance.Options.UseForeColor = true;
-            this.btnThemDanhMuc.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemDanhMuc.AppearanceHovered.Options.UseFont = true;
-            this.btnThemDanhMuc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemDanhMuc.BackgroundImage")));
-            this.btnThemDanhMuc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThemDanhMuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemDanhMuc.ImageOptions.Image")));
-            this.btnThemDanhMuc.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnThemDanhMuc.Location = new System.Drawing.Point(17, 12);
-            this.btnThemDanhMuc.Name = "btnThemDanhMuc";
-            this.btnThemDanhMuc.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnThemDanhMuc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnThemDanhMuc.Size = new System.Drawing.Size(173, 40);
-            this.btnThemDanhMuc.TabIndex = 0;
-            this.btnThemDanhMuc.Text = "Chi tiết danh mục";
-            this.btnThemDanhMuc.Click += new System.EventHandler(this.btnThemDanhMuc_Click);
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.gridControl1);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(268, 71);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1126, 690);
-            this.panelControl2.TabIndex = 2;
+            this.panel3.Controls.Add(this.gridControl1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 79);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1026, 582);
+            this.panel3.TabIndex = 11;
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 2);
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemImageEdit1,
             this.ButtonDelete,
             this.ButtonDetails});
-            this.gridControl1.Size = new System.Drawing.Size(1122, 686);
-            this.gridControl1.TabIndex = 2;
+            this.gridControl1.Size = new System.Drawing.Size(1026, 582);
+            this.gridControl1.TabIndex = 7;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
             this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.Row.Options.UseFont = true;
             this.gridView1.AppearancePrint.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.AppearancePrint.HeaderPanel.Options.UseFont = true;
@@ -229,7 +173,6 @@ namespace QLSanPhamDienTu
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindNullPrompt = "Nhập thông tin cần tìm kiếm";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
-            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // gridColumn1
             // 
@@ -292,6 +235,7 @@ namespace QLSanPhamDienTu
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Số lượng";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "soLuong";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.ReadOnly = true;
@@ -302,6 +246,8 @@ namespace QLSanPhamDienTu
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Đơn giá";
+            this.gridColumn6.DisplayFormat.FormatString = "{0:0,0} vnđ";
+            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "donGia";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.ReadOnly = true;
@@ -342,6 +288,8 @@ namespace QLSanPhamDienTu
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Giảm giá";
+            this.gridColumn10.DisplayFormat.FormatString = "{0:0,0} vnđ";
+            this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn10.FieldName = "giamGia";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.ReadOnly = true;
@@ -352,6 +300,7 @@ namespace QLSanPhamDienTu
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Ngày cập nhật";
+            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn11.FieldName = "ngayCapNhat";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.ReadOnly = true;
@@ -387,31 +336,98 @@ namespace QLSanPhamDienTu
             this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
             this.repositoryItemImageEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // frmQLSanPham
+            // panel2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.panel2.Controls.Add(this.btnXuatExcel);
+            this.panel2.Controls.Add(this.btnThemDanhMuc);
+            this.panel2.Controls.Add(this.btnInsertProduct);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1026, 79);
+            this.panel2.TabIndex = 10;
+            // 
+            // btnXuatExcel
+            // 
+            this.btnXuatExcel.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnXuatExcel.Appearance.Options.UseForeColor = true;
+            this.btnXuatExcel.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatExcel.AppearanceHovered.Options.UseFont = true;
+            this.btnXuatExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.BackgroundImage")));
+            this.btnXuatExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXuatExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXuatExcel.ImageOptions.Image")));
+            this.btnXuatExcel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnXuatExcel.Location = new System.Drawing.Point(415, 23);
+            this.btnXuatExcel.Name = "btnXuatExcel";
+            this.btnXuatExcel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnXuatExcel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnXuatExcel.Size = new System.Drawing.Size(173, 40);
+            this.btnXuatExcel.TabIndex = 9;
+            this.btnXuatExcel.Text = "Xuất Excel";
+            // 
+            // btnThemDanhMuc
+            // 
+            this.btnThemDanhMuc.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnThemDanhMuc.Appearance.Options.UseForeColor = true;
+            this.btnThemDanhMuc.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemDanhMuc.AppearanceHovered.Options.UseFont = true;
+            this.btnThemDanhMuc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemDanhMuc.BackgroundImage")));
+            this.btnThemDanhMuc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThemDanhMuc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemDanhMuc.ImageOptions.Image")));
+            this.btnThemDanhMuc.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnThemDanhMuc.Location = new System.Drawing.Point(27, 23);
+            this.btnThemDanhMuc.Name = "btnThemDanhMuc";
+            this.btnThemDanhMuc.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnThemDanhMuc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnThemDanhMuc.Size = new System.Drawing.Size(173, 40);
+            this.btnThemDanhMuc.TabIndex = 7;
+            this.btnThemDanhMuc.Text = "Chi tiết danh mục";
+            this.btnThemDanhMuc.Click += new System.EventHandler(this.btnThemDanhMuc_Click);
+            // 
+            // btnInsertProduct
+            // 
+            this.btnInsertProduct.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnInsertProduct.Appearance.Options.UseForeColor = true;
+            this.btnInsertProduct.AppearanceHovered.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertProduct.AppearanceHovered.Options.UseFont = true;
+            this.btnInsertProduct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInsertProduct.BackgroundImage")));
+            this.btnInsertProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInsertProduct.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertProduct.ImageOptions.Image")));
+            this.btnInsertProduct.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnInsertProduct.Location = new System.Drawing.Point(221, 23);
+            this.btnInsertProduct.Name = "btnInsertProduct";
+            this.btnInsertProduct.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnInsertProduct.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnInsertProduct.Size = new System.Drawing.Size(173, 40);
+            this.btnInsertProduct.TabIndex = 8;
+            this.btnInsertProduct.Text = "Thêm sản phẩm";
+            this.btnInsertProduct.Click += new System.EventHandler(this.btnInsertProduct_Click);
+            // 
+            // frmProductManager
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1394, 761);
-            this.Controls.Add(this.panelControl2);
-            this.Controls.Add(this.panelControl1);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(1294, 661);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmQLSanPham";
+            this.Name = "frmProductManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sản phẩm";
             this.Load += new System.EventHandler(this.frmSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -420,13 +436,16 @@ namespace QLSanPhamDienTu
 
         private System.Windows.Forms.TreeView treeViewDanhMucSP;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonDelete;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonDetails;
         private DevExpress.XtraGrid.Columns.GridColumn maSP;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
@@ -438,12 +457,10 @@ namespace QLSanPhamDienTu
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonDelete;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonDetails;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private System.Windows.Forms.ImageList imageList1;
-        private CustomControls.ButtonDesign btnThemDanhMuc;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
+        private System.Windows.Forms.Panel panel2;
         private CustomControls.ButtonDesign btnXuatExcel;
-        private CustomControls.ButtonDesign btnThemSP;
+        private CustomControls.ButtonDesign btnThemDanhMuc;
+        private CustomControls.ButtonDesign btnInsertProduct;
     }
 }

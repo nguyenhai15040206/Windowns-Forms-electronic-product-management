@@ -47,16 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckData.cs" />
+    <Compile Include="CheckDataInput.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DanhMucBUS.cs" />
     <Compile Include="DanhMucManHinhPhanQuyenBUS.cs" />
     <Compile Include="Encryptor.cs" />
-    <Compile Include="KhachHangBUS.cs" />
+    <Compile Include="CustomerBUS.cs" />
     <Compile Include="NguoiDungBUS.cs" />
     <Compile Include="NhaSanXuatBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SanPhamBUS.cs" />
+    <Compile Include="ProductBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

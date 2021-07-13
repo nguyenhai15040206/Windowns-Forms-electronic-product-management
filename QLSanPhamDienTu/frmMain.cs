@@ -109,10 +109,10 @@ namespace QLSanPhamDienTu
 
         private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = IstActive(typeof(frmQLSanPham));
+            Form form = IstActive(typeof(frmProductManager));
             if (form == null)
             {
-                frmQLSanPham frm = new frmQLSanPham();
+                frmProductManager frm = new frmProductManager();
                 frm.MdiParent = this;
                 frm.Show();
             }
