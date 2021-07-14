@@ -28,7 +28,7 @@ namespace DAO
         // loat tất cả sản phẩm
         public List<SanPham> getAllDataProducts()
         {
-            var listSP = db.SanPhams.ToList();
+            var listSP = db.SanPhams.Where(m=>m.tinhTrang==true).ToList();
 
             return listSP;
         }

@@ -951,7 +951,7 @@ namespace DTO
 		
 		private int _maPhieuNhap;
 		
-		private System.Nullable<int> _maSanPham;
+		private int _maSanPham;
 		
 		private System.Nullable<int> _soLuong;
 		
@@ -969,7 +969,7 @@ namespace DTO
     partial void OnCreated();
     partial void OnmaPhieuNhapChanging(int value);
     partial void OnmaPhieuNhapChanged();
-    partial void OnmaSanPhamChanging(System.Nullable<int> value);
+    partial void OnmaSanPhamChanging(int value);
     partial void OnmaSanPhamChanged();
     partial void OnsoLuongChanging(System.Nullable<int> value);
     partial void OnsoLuongChanged();
@@ -1010,8 +1010,8 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSanPham", DbType="Int")]
-		public System.Nullable<int> maSanPham
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSanPham", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int maSanPham
 		{
 			get
 			{
@@ -1111,12 +1111,12 @@ namespace DTO
 					if ((previousValue != null))
 					{
 						this._PhieuNhap.Entity = null;
-						previousValue.CTPhieuNhap = null;
+						previousValue.CTPhieuNhaps.Remove(this);
 					}
 					this._PhieuNhap.Entity = value;
 					if ((value != null))
 					{
-						value.CTPhieuNhap = this;
+						value.CTPhieuNhaps.Add(this);
 						this._maPhieuNhap = value.maPhieuNhap;
 					}
 					else
@@ -1155,7 +1155,7 @@ namespace DTO
 					}
 					else
 					{
-						this._maSanPham = default(Nullable<int>);
+						this._maSanPham = default(int);
 					}
 					this.SendPropertyChanged("SanPham");
 				}
@@ -3012,7 +3012,7 @@ namespace DTO
 		
 		private System.Nullable<bool> _tinhTrang;
 		
-		private EntityRef<CTPhieuNhap> _CTPhieuNhap;
+		private EntitySet<CTPhieuNhap> _CTPhieuNhaps;
 		
 		private EntityRef<NguoiDung> _NguoiDung;
 		
@@ -3038,7 +3038,7 @@ namespace DTO
 		
 		public PhieuNhap()
 		{
-			this._CTPhieuNhap = default(EntityRef<CTPhieuNhap>);
+			this._CTPhieuNhaps = new EntitySet<CTPhieuNhap>(new Action<CTPhieuNhap>(this.attach_CTPhieuNhaps), new Action<CTPhieuNhap>(this.detach_CTPhieuNhaps));
 			this._NguoiDung = default(EntityRef<NguoiDung>);
 			this._NhaCungCap = default(EntityRef<NhaCungCap>);
 			OnCreated();
@@ -3172,32 +3172,16 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhieuNhap_CTPhieuNhap", Storage="_CTPhieuNhap", ThisKey="maPhieuNhap", OtherKey="maPhieuNhap", IsUnique=true, IsForeignKey=false)]
-		public CTPhieuNhap CTPhieuNhap
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhieuNhap_CTPhieuNhap", Storage="_CTPhieuNhaps", ThisKey="maPhieuNhap", OtherKey="maPhieuNhap")]
+		public EntitySet<CTPhieuNhap> CTPhieuNhaps
 		{
 			get
 			{
-				return this._CTPhieuNhap.Entity;
+				return this._CTPhieuNhaps;
 			}
 			set
 			{
-				CTPhieuNhap previousValue = this._CTPhieuNhap.Entity;
-				if (((previousValue != value) 
-							|| (this._CTPhieuNhap.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._CTPhieuNhap.Entity = null;
-						previousValue.PhieuNhap = null;
-					}
-					this._CTPhieuNhap.Entity = value;
-					if ((value != null))
-					{
-						value.PhieuNhap = this;
-					}
-					this.SendPropertyChanged("CTPhieuNhap");
-				}
+				this._CTPhieuNhaps.Assign(value);
 			}
 		}
 		
@@ -3287,6 +3271,18 @@ namespace DTO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_CTPhieuNhaps(CTPhieuNhap entity)
+		{
+			this.SendPropertyChanging();
+			entity.PhieuNhap = this;
+		}
+		
+		private void detach_CTPhieuNhaps(CTPhieuNhap entity)
+		{
+			this.SendPropertyChanging();
+			entity.PhieuNhap = null;
 		}
 	}
 	

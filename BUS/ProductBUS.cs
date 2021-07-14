@@ -68,6 +68,14 @@ namespace BUS
             lookUpEdit.DisplayMember = "tenSanPham";
         }
 
+        // load thức uống vào lookUpEdit
+        public void getAllProductToLooUpEdit(RepositoryItemLookUpEdit lookUpEdit)
+        {
+            lookUpEdit.DataSource = ProductDAO.Instance.getAllDataProducts();
+            lookUpEdit.ValueMember = "maSanPham";
+            lookUpEdit.DisplayMember = "tenSanPham";
+        }
+
         public void getDataProductsByCategoryID(GridLookUpEdit gridLookUpEdit, int  categoriesID)
         {
             gridLookUpEdit.Properties.DataSource = ProductDAO.Instance.getDataProductByCategoryID(categoriesID);

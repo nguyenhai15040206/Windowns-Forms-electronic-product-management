@@ -163,6 +163,12 @@
     <Compile Include="Report\XtraReportInvoiceDetails.Designer.cs">
       <DependentUpon>XtraReportInvoiceDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\XtraReportPN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportPN.Designer.cs">
+      <DependentUpon>XtraReportPN.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmInfomationPhoneDetails.resx">
       <DependentUpon>frmInfomationPhoneDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +218,9 @@
     </Compile>
     <EmbeddedResource Include="Report\XtraReportInvoiceDetails.resx">
       <DependentUpon>XtraReportInvoiceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportPN.resx">
+      <DependentUpon>XtraReportPN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />

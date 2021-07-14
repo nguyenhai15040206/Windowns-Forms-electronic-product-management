@@ -24,7 +24,7 @@ namespace QLSanPhamDienTu
             //    frm.Close();
             //    Application.Run(new frmMain());
             //}
-            Application.Run(new frmPayCartManager());
+            Application.Run(new frmInsertProductBySupplier());
         }
     }
 }

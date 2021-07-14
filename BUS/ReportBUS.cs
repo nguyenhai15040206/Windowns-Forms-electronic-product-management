@@ -74,6 +74,33 @@ namespace BUS
             return dataTable;
         }
 
+        public DataTable printGoodsReceiveNote(int maPhieu)
+        {
+            DataTable table = new DataTable();
+            var query = (from pn in db.PhieuNhaps
+                         join ctpn in db.CTPhieuNhaps on pn.maPhieuNhap equals ctpn.maPhieuNhap
+                         join tu in db.SanPhams on ctpn.maSanPham equals tu.maSanPham
+                         join ncc in db.NhaCungCaps on pn.maNhaCungCap equals ncc.maNhaCungCap
+                         join nd in db.NguoiDungs on pn.maNguoiDung equals nd.maNguoiDung
+                         where pn.maPhieuNhap == maPhieu
+                         select new
+                         {
+                             pn.maPhieuNhap,
+                             pn.ngayNhap,
+                             nd.tenNguoiDung,
+                             ncc.tenNhaCungCap,
+                             ncc.soDienThoai,
+                             ncc.diaChi,
+                             tu.tenSanPham,
+                             tu.donGiaNhap,
+                             ctpn.ThanhTien,
+                             ctpn.soLuong,
+                             pn.tienNhap,
+                         }).ToList();
+            table = ToDataTable(query);
+            return table;
+        }
+
 
     }
 }
