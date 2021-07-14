@@ -437,8 +437,25 @@ namespace DAO
             }
         }
 
-
-
+        //load người dùng có tên ĐN và Pass
+        public NguoiDung LoadND(int maND, string pass)
+        {
+            return db.NguoiDungs.AsEnumerable().FirstOrDefault(m => m.maNguoiDung == maND && m.matKhau==pass);
+        }
+        public bool doiMatKhau(int tenDN, string pass)
+        {
+            try
+            {
+                NguoiDung ng = db.NguoiDungs.SingleOrDefault(m => m.maNguoiDung == tenDN);
+                ng.matKhau = pass;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
 
     }

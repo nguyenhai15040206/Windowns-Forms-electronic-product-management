@@ -7,7 +7,7 @@ using DTO;
 
 namespace DAO
 {
-   public class InvoiceDAO
+    public class InvoiceDAO
     {
         private static InvoiceDAO instance;
         public static InvoiceDAO Instance
@@ -25,6 +25,34 @@ namespace DAO
 
         QLSanPhamDienTuDataContext db = new QLSanPhamDienTuDataContext();
 
+
+
+
+        #region load tất cả hóa đơn
+        public List<HoaDonNews> getALLHoaDon(bool tinhTrang)
+        {
+            var listhd = (from hd in db.HoaDons
+                          from nd in db.NguoiDungs
+                          from kh in db.KhachHangs
+                          where hd.maNguoiDung == nd.maNguoiDung &&
+                          hd.maKhachHang == kh.maKhachHang &&
+                          hd.tinhTrang == tinhTrang
+                          select new HoaDonNews
+                          {
+                              MaHoaDon = hd.maHoaDon,
+                              TenNguoiDung = nd.tenNguoiDung,
+                              TinhTrang = hd.tinhTrang,
+                              DiaChi = kh.diaChi,
+                              TenKhachHang = kh.tenKhachHang,
+                              SoDienThoai = kh.soDienThoai,
+                              GiamGia = hd.giamGia,
+                              TongTien = hd.tongTien,
+                              NgayBan = hd.ngayBan,
+                              NgayGiao = hd.ngayGiao,
+                          }).ToList();
+            return listhd;
+        }
+        #endregion
         // load hoas ddown
         public List<HoaDon> loadHoaDon(bool tinhTrang)
         {
@@ -90,5 +118,8 @@ namespace DAO
                 return false;
             }
         }
+
+
+
     }
 }

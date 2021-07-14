@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckConfig.cs" />
+    <Compile Include="CTHoaDonNEWS.cs" />
+    <Compile Include="HoaDonNEWS.cs" />
     <Compile Include="KhachHangNews.cs" />
     <Compile Include="NewChiTietPN.cs" />
     <Compile Include="NewPermission.cs" />

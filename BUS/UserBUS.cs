@@ -309,5 +309,26 @@ namespace BUS
             return UserDAO.Instance.phanQuyen(maNhom, maaManHinh, coQuyen);
         }
 
+        public bool KiemTraTenDangNhapPass(int tenDN, string pass)
+        {
+            try
+            {
+                var nguoiDung = UserDAO.Instance.LoadND(tenDN,pass);
+                if (nguoiDung == null)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool doiMatKhau(int tenDN, string pass)
+        {
+            return UserDAO.Instance.doiMatKhau(tenDN, pass);
+        }
+
     }
 }

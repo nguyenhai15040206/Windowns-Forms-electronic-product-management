@@ -88,17 +88,17 @@ namespace QLSanPhamDienTu
 
         private void menuItemInvoiceManager_Click(object sender, EventArgs e)
         {
-            //Form form = IstActive(typeof(frmInv));
-            //if (form == null)
-            //{
-            //    frmPayCartManager frm = new frmPayCartManager();
-            //    frm.MdiParent = this;
-            //    frm.Show();
-            //}
-            //else
-            //{
-            //    form.Activate();
-            //}
+            Form form = IstActive(typeof(frmQLThongTinHoaDon));
+            if (form == null)
+            {
+                frmQLThongTinHoaDon frm = new frmQLThongTinHoaDon();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                form.Activate();
+            }
         }
 
         private void menuItemCustomerManager_Click(object sender, EventArgs e)
@@ -178,6 +178,26 @@ namespace QLSanPhamDienTu
                 // Console app
                 System.Environment.Exit(1);
             }
+        }
+
+        private void menuItemLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItemChangePass_Click(object sender, FormClosingEventArgs e)
+        {
+            //Form form = IstActive(typeof(frmChangePassword));
+            //if (form == null)
+            //{
+            //    frmProductManager frm = new frmProductManager();
+            //    frm.MdiParent = this;
+            //    frm.Show();
+            //}
+            //else
+            //{
+            //    form.Activate();
+            //}
         }
     }
 }

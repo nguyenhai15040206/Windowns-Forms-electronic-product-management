@@ -83,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInfomationPhoneDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     <Compile Include="frmPayCartManager.Designer.cs">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLThongTinHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLThongTinHoaDon.Designer.cs">
+      <DependentUpon>frmQLThongTinHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmScreenAndPermission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +181,9 @@
     <Compile Include="Report\XtraReportPN.Designer.cs">
       <DependentUpon>XtraReportPN.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInfomationPhoneDetails.resx">
       <DependentUpon>frmInfomationPhoneDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPayCartManager.resx">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLThongTinHoaDon.resx">
+      <DependentUpon>frmQLThongTinHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScreenAndPermission.resx">
       <DependentUpon>frmScreenAndPermission.cs</DependentUpon>

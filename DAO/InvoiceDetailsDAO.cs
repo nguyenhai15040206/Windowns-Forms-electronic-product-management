@@ -25,8 +25,30 @@ namespace DAO
 
         QLSanPhamDienTuDataContext db = new QLSanPhamDienTuDataContext();
 
+
+
+        #region Load tất cả chi tiết hóa đơn
+        public List<CTHoaDonNEWS> getALLCTHoaDon(int maHD)
+        {
+            var listCTHD = (from cthd in db.CTHoaDons
+                            from sp in db.SanPhams
+                            where cthd.maSanPham == sp.maSanPham &&
+                            cthd.maHoaDon == maHD
+                            select new CTHoaDonNEWS
+                            {
+                                TenSanPham = sp.tenSanPham,
+                                DonGia = cthd.donGia,
+
+                                ThanhTien = cthd.thanhTien,
+                                GiamGia = cthd.giamGia,
+                                SoLuong = cthd.soLuong,
+                            }).ToList();
+            return listCTHD;
+        }
+        #endregion
+
         // thêm chi tiết hóa đơn
-        public bool insertInvoiceDetails(int invoiceID, int productID, int amount, double unitPrice, double discount,double sumMoney,string note)
+        public bool insertInvoiceDetails(int invoiceID, int productID, int amount, double unitPrice, double discount, double sumMoney, string note)
         {
             try
             {
