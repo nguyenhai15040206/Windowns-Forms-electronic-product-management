@@ -25,7 +25,7 @@ namespace QLSanPhamDienTu
 
         private void cboServername_DropDown(object sender, EventArgs e)
         {
-            NguoiDungBUS.Instance.getServerName(cboServername);
+            UserBUS.Instance.getServerName(cboServername);
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace QLSanPhamDienTu
             if(cboServername.Text.Trim() !="" && cboDatabase.Text.Trim()!="" && txtPass.Text.Trim()!=""
                 && txtUsername.Text.Trim() !="")
             {
-                NguoiDungBUS.Instance.saveConfig(cboServername.Text, txtUsername.Text, txtPass.Text, cboDatabase.Text);
+                UserBUS.Instance.saveConfig(cboServername.Text, txtUsername.Text, txtPass.Text, cboDatabase.Text);
                 frmLogin frm = new frmLogin();
                 frm.Show();
                 this.Hide();
@@ -46,7 +46,7 @@ namespace QLSanPhamDienTu
 
         private void cboDatabase_DropDown(object sender, EventArgs e)
         {
-            NguoiDungBUS.Instance.getDatabaseName(cboServername.Text, txtUsername.Text.Trim(), txtPass.Text.Trim(),cboDatabase);
+            UserBUS.Instance.getDatabaseName(cboServername.Text, txtUsername.Text.Trim(), txtPass.Text.Trim(),cboDatabase);
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)

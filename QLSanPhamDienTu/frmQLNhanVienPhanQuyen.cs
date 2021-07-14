@@ -25,39 +25,39 @@ namespace QLSanPhamDienTu
         public frmQLNhanVienPhanQuyen()
         {
             InitializeComponent();
-            maNhom = NguoiDungBUS.Instance.layMaNHomNguoiDungDauTien();
+            maNhom = UserBUS.Instance.layMaNHomNguoiDungDauTien();
         }
         public void loadLaiForm()
         {
-            NguoiDungBUS.Instance.loadNguoiDungChuaCoNhom(gridControl2);
-            NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), gridControl3);
-            NguoiDungBUS.Instance.loadNhomNguoiDung(treeViewNguoiDung);
+            UserBUS.Instance.loadNguoiDungChuaCoNhom(gridControl2);
+            UserBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), gridControl3);
+            UserBUS.Instance.loadNhomNguoiDung(treeViewNguoiDung);
             rowMaNDNhom = -1;
             row = -1;
         }
         private void frmQLNhanVienPhanQuyen_Load(object sender, EventArgs e)
         {
             // load nhóm người dùng lên treeList
-            NguoiDungBUS.Instance.loadNhomNguoiDung(treeViewNguoiDung);
+            UserBUS.Instance.loadNhomNguoiDung(treeViewNguoiDung);
 
             // load nhóm người dùng lên combobox
-            NguoiDungBUS.Instance.loadDSNhomNguoiDungComboBox(cboNhomNguoiDung);
+            UserBUS.Instance.loadDSNhomNguoiDungComboBox(cboNhomNguoiDung);
 
             // load tất cả người dùng
-            NguoiDungBUS.Instance.loadNguoiDung(gridContrrolNguoiDung);
+            UserBUS.Instance.loadNguoiDung(gridContrrolNguoiDung);
 
             // laod ds người dùng chưa có nhóm
-            NguoiDungBUS.Instance.loadNguoiDungChuaCoNhom(gridControl2);
+            UserBUS.Instance.loadNguoiDungChuaCoNhom(gridControl2);
 
             // load người dùng có mã nhóm đầu tiên
-            NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(maNhom, gridControl3);
+            UserBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(maNhom, gridControl3);
 
             // load danh mục màn hình lên treeList
             DanhMucManHinhPhanQuyenBUS.Instance.loadDanhMucManHinh(treeListManHinh);
 
 
             // load nhóm người dùng lên gridControl
-            NguoiDungBUS.Instance.loadNhomNguoiDung_GridCOntrol(gridControlQLNhomND);
+            UserBUS.Instance.loadNhomNguoiDung_GridCOntrol(gridControlQLNhomND);
 
 
             menutItemThem.Enabled = false;
@@ -90,15 +90,15 @@ namespace QLSanPhamDienTu
             if(txtTenNguoiDung.Text.Trim().Length>0&&txtTenDangNhap.Text.Trim().Length>0 && txtMatKhau.Text.Trim().Length>0 && txtDiaChi.Text.Trim().Length>0 &&
                 txtSoDienThoai.Text.Trim().Length>0||txtEmail.Text.Trim().Length>0)
             {
-                if (NguoiDungBUS.Instance.KtraTenNguoiDung(txtTenDangNhap.Text))
+                if (UserBUS.Instance.KtraTenNguoiDung(txtTenDangNhap.Text))
                 {
                     if (CheckDataInput.Instances.isPhoneNumber(txtSoDienThoai.Text))
                     {
-                        if (NguoiDungBUS.Instance.KTraSoDienThoaiTonTai(txtSoDienThoai.Text))
+                        if (UserBUS.Instance.KTraSoDienThoaiTonTai(txtSoDienThoai.Text))
                         {
                             if (CheckDataInput.Instances.isEmail(txtEmail.Text))
                             {
-                                if (NguoiDungBUS.Instance.themNguoiDung(txtTenNguoiDung.Text.Trim(), txtTenDangNhap.Text.Trim(), txtMatKhau.Text,
+                                if (UserBUS.Instance.themNguoiDung(txtTenNguoiDung.Text.Trim(), txtTenDangNhap.Text.Trim(), txtMatKhau.Text,
                                 txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, true))
                                 {
                                     MessageBox.Show("Thêm thành công!");
@@ -147,7 +147,7 @@ namespace QLSanPhamDienTu
             }     
             else
             {
-                if (NguoiDungBUS.Instance.themNguoiDungVaoNhom(row, int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), ""))
+                if (UserBUS.Instance.themNguoiDungVaoNhom(row, int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), ""))
                 {
                     MessageBox.Show("Thêm người dùng vào nhóm thành công!");
                     loadLaiForm();
@@ -168,7 +168,7 @@ namespace QLSanPhamDienTu
             }    
             else
             {
-                if (NguoiDungBUS.Instance.xoaNguoiDungRaKhoiNhom(rowMaNDNhom, int.Parse(cboNhomNguoiDung.SelectedValue.ToString())))
+                if (UserBUS.Instance.xoaNguoiDungRaKhoiNhom(rowMaNDNhom, int.Parse(cboNhomNguoiDung.SelectedValue.ToString())))
                 {
                     MessageBox.Show("Loại người dùng ra khỏi nhóm thành công!");
                     loadLaiForm();
@@ -186,13 +186,13 @@ namespace QLSanPhamDienTu
         {
             try
             {
-                NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), gridControl3);
+                UserBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(int.Parse(cboNhomNguoiDung.SelectedValue.ToString()), gridControl3);
                 row = -1;
                 rowMaNDNhom = -1;
             }
             catch
             {
-                NguoiDungBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(maNhom, gridControl3);
+                UserBUS.Instance.loadDSNhomNguoiDungTheoMaNhom(maNhom, gridControl3);
             }
         }
 
@@ -221,7 +221,7 @@ namespace QLSanPhamDienTu
                 {
                     if(CheckDataInput.Instances.isPhoneNumber(txtSoDienThoai.Text))
                     {
-                        if (NguoiDungBUS.Instance.CapNhatThongTinNguoiDung(int.Parse(txtMaNguoiDung.Text), txtTenNguoiDung.Text, txtTenDangNhap.Text, txtMatKhau.Text, txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, hoatDong))
+                        if (UserBUS.Instance.CapNhatThongTinNguoiDung(int.Parse(txtMaNguoiDung.Text), txtTenNguoiDung.Text, txtTenDangNhap.Text, txtMatKhau.Text, txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, dateTimePickerNgayVL.Value, hoatDong))
                         {
                             MessageBox.Show("Cập nhật thành công");
                             LamMoiDuLieu();
@@ -285,7 +285,7 @@ namespace QLSanPhamDienTu
             {
                 if(XtraMessageBox.Show("Bạn có muốn xóa người dùng này không?","Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
-                    if(NguoiDungBUS.Instance.XoaNguoiDung(maKH))
+                    if(UserBUS.Instance.XoaNguoiDung(maKH))
                     {
                         MessageBox.Show("Xóa thành công");
                         LamMoiDuLieu();

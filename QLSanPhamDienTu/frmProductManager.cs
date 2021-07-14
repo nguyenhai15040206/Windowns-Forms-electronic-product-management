@@ -61,7 +61,7 @@ namespace QLSanPhamDienTu
 
         private void btnThemDanhMuc_Click(object sender, EventArgs e)
         {
-            frmThemDanhMuc frm = new frmThemDanhMuc();
+            frmInsertCategoryAndSupplier frm = new frmInsertCategoryAndSupplier();
             frm.ShowDialog();
         }
 

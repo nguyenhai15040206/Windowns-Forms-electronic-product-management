@@ -29,28 +29,28 @@ namespace QLSanPhamDienTu
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtTenDN = new DevExpress.XtraEditors.TextEdit();
+            this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenDN.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtTenDN
+            // txtUserName
             // 
-            this.txtTenDN.EditValue = "diem";
-            this.txtTenDN.Location = new System.Drawing.Point(236, 38);
-            this.txtTenDN.Name = "txtTenDN";
-            this.txtTenDN.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDN.Properties.Appearance.Options.UseFont = true;
-            this.txtTenDN.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDN.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtTenDN.Size = new System.Drawing.Size(259, 32);
-            this.txtTenDN.TabIndex = 0;
+            this.txtUserName.EditValue = "";
+            this.txtUserName.Location = new System.Drawing.Point(236, 38);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Properties.Appearance.Options.UseFont = true;
+            this.txtUserName.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Properties.AppearanceFocused.Options.UseFont = true;
+            this.txtUserName.Size = new System.Drawing.Size(259, 26);
+            this.txtUserName.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -58,22 +58,22 @@ namespace QLSanPhamDienTu
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(236, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(136, 25);
+            this.labelControl1.Size = new System.Drawing.Size(107, 20);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Tên người dùng:";
             // 
-            // txtMatKhau
+            // txtPassword
             // 
-            this.txtMatKhau.EditValue = "123";
-            this.txtMatKhau.Location = new System.Drawing.Point(236, 94);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
-            this.txtMatKhau.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtMatKhau.Properties.UseSystemPasswordChar = true;
-            this.txtMatKhau.Size = new System.Drawing.Size(259, 32);
-            this.txtMatKhau.TabIndex = 1;
+            this.txtPassword.EditValue = "";
+            this.txtPassword.Location = new System.Drawing.Point(236, 94);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Properties.Appearance.Options.UseFont = true;
+            this.txtPassword.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Properties.AppearanceFocused.Options.UseFont = true;
+            this.txtPassword.Properties.UseSystemPasswordChar = true;
+            this.txtPassword.Size = new System.Drawing.Size(259, 26);
+            this.txtPassword.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -81,7 +81,7 @@ namespace QLSanPhamDienTu
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(236, 68);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(83, 25);
+            this.labelControl2.Size = new System.Drawing.Size(64, 20);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Mật khẩu:";
             // 
@@ -124,7 +124,7 @@ namespace QLSanPhamDienTu
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(507, 176);
@@ -132,16 +132,16 @@ namespace QLSanPhamDienTu
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.txtTenDN);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenDN.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,9 +150,9 @@ namespace QLSanPhamDienTu
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.TextEdit txtTenDN;
+        private DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtMatKhau;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraEditors.SimpleButton btnHuy;

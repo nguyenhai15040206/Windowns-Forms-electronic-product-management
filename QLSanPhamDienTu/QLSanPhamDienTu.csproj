@@ -143,11 +143,11 @@
     <Compile Include="frmProductManager.Designer.cs">
       <DependentUpon>frmProductManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThemDanhMuc.cs">
+    <Compile Include="frmInsertCategoryAndSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThemDanhMuc.Designer.cs">
-      <DependentUpon>frmThemDanhMuc.cs</DependentUpon>
+    <Compile Include="frmInsertCategoryAndSupplier.Designer.cs">
+      <DependentUpon>frmInsertCategoryAndSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInsertProduct.cs">
       <SubType>Form</SubType>
@@ -199,8 +199,8 @@
     <EmbeddedResource Include="frmProductManager.resx">
       <DependentUpon>frmProductManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThemDanhMuc.resx">
-      <DependentUpon>frmThemDanhMuc.cs</DependentUpon>
+    <EmbeddedResource Include="frmInsertCategoryAndSupplier.resx">
+      <DependentUpon>frmInsertCategoryAndSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInsertProduct.resx">
       <DependentUpon>frmInsertProduct.cs</DependentUpon>
@@ -245,6 +245,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data_disk.ico" />
+    <None Include="Resources\z2574152776438_b57d007d2ee389169ddb1fd38b48d69a.jpg" />
     <None Include="Resources\z2525335187690_01de74b6b6234fce8c62460120cb2841-removebg-preview.png" />
     <None Include="Resources\transparent-online-payment-icon-smartphone-icon-payment-icon-5e24073cc2d615.5165774315794194527981-removebg-preview.png" />
     <None Include="Resources\savepink-removebg-preview.png" />
@@ -260,6 +261,9 @@
     <None Include="Resources\icloud-removebg-preview.png" />
     <None Include="Resources\addpink-removebg-preview1.png" />
     <None Include="Resources\addpink-removebg-preview2.png" />
+    <None Include="Resources\mascot_fail.png" />
+    <None Include="Resources\NgoiSao.jpg" />
+    <None Include="Resources\network-mesh-wire-digital-technology-background_1017-27428.jpg" />
     <Content Include="Resources\SanPham\bao-da-2-dien-thoai-tien-dung-davis-3_79a648427d99440b88cbc06769c27fd5_master.jpg" />
     <Content Include="Resources\SanPham\IPHONE11PRO_TRANG.png" />
     <None Include="Resources\add21.ico" />

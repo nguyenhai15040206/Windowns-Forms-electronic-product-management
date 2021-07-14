@@ -16,18 +16,18 @@ using System.Data.Sql;
 
 namespace BUS
 {
-    public class NguoiDungBUS
+    public class UserBUS
     {
-        public static NguoiDungBUS instance;
+        public static UserBUS instance;
 
-        public static NguoiDungBUS Instance
+        public static UserBUS Instance
         {
             get
             {
 
                 if (instance == null)
                 {
-                    instance = new NguoiDungBUS();
+                    instance = new UserBUS();
                 }
                 return instance;
             }
@@ -39,14 +39,14 @@ namespace BUS
             tv.BeginUnboundLoad();
 
             tv.Nodes.Clear();
-            List<QL_NhomNguoiDung> nd = NguoiDungDAO.Instance.loadNhomNguoiDung();
+            List<QL_NhomNguoiDung> nd = UserDAO.Instance.loadNhomNguoiDung();
             for (int i = 0; i < nd.Count; i++)
             {
                 TreeListNode nodes = tv.AppendNode(null, null);
                 nodes.SetValue("name", nd[i].tenNhom.ToString());
                 nodes.Tag = (nd[i].maNhom.ToString()).ToString();
                 string maNhom = (string)nodes.Tag;
-                List<NguoiDung> ndNhomND = NguoiDungDAO.Instance.loadNguoiDungTheoNhom(int.Parse(maNhom.ToString()));
+                List<NguoiDung> ndNhomND = UserDAO.Instance.loadNguoiDungTheoNhom(int.Parse(maNhom.ToString()));
                 for(int j=0;j < ndNhomND.Count; j++)
                 {
                     TreeListNode childNodes = null;
@@ -61,28 +61,28 @@ namespace BUS
 
         public void loadNhomNguoiDung_GridCOntrol(GridControl gv)
         {
-            gv.DataSource = NguoiDungDAO.Instance.loadNhomNguoiDung();
+            gv.DataSource = UserDAO.Instance.loadNhomNguoiDung();
         }
 
         // load dười dùng chưa có nhóm
         public void loadNguoiDungChuaCoNhom(GridControl dgv)
         {
             dgv.DataSource = null;
-            dgv.DataSource = NguoiDungDAO.Instance.loadNguoiDungChuaCoNhom();
+            dgv.DataSource = UserDAO.Instance.loadNguoiDungChuaCoNhom();
         }    
 
 
         // load tất cả người dùng
         public void loadNguoiDung(GridControl gv)
         {
-            gv.DataSource = NguoiDungDAO.Instance.loadNguoiDung();
+            gv.DataSource = UserDAO.Instance.loadNguoiDung();
         }
 
 
         //load danh sách Nhóm người dùng
         public void loadDSNhomNguoiDungComboBox(ComboBox cbo)
         {
-            cbo.DataSource = NguoiDungDAO.Instance.loadNhomNguoiDung();
+            cbo.DataSource = UserDAO.Instance.loadNhomNguoiDung();
             cbo.DisplayMember = "tenNhom";
             cbo.ValueMember = "maNhom";
         }
@@ -90,30 +90,30 @@ namespace BUS
         public void loadDSNhomNguoiDungTheoMaNhom(int maNhom, GridControl gv)
         {
             gv.DataSource = null;
-            gv.DataSource = NguoiDungDAO.Instance.loadNguoiDungTheoNhom(maNhom);
+            gv.DataSource = UserDAO.Instance.loadNguoiDungTheoNhom(maNhom);
         }
         // load màn hình
         public void loadDMManHinh(GridControl gv)
         {
-            gv.DataSource = NguoiDungDAO.Instance.loadDanhMucManHinh("admin");
+            gv.DataSource = UserDAO.Instance.loadDanhMucManHinh("admin");
         }
 
 
         public int layMaNHomNguoiDungDauTien()
         {
-            return NguoiDungDAO.Instance.maNhomNguoiDungDauTien();
+            return UserDAO.Instance.maNhomNguoiDungDauTien();
         }
 
         // get mã nhóm người dùng
         public List<int> getMaNhomNguoiDung(int maNguoiDung)
         {
-            return NguoiDungDAO.Instance.getMaNhomNguoiDung(maNguoiDung);
+            return UserDAO.Instance.getMaNhomNguoiDung(maNguoiDung);
         }
 
         // get ma ManHinh
         public List<QL_PhanQuyen> getMaManHinh(int maNhom)
         {
-            return NguoiDungDAO.Instance.getMaManHinh(maNhom);
+            return UserDAO.Instance.getMaManHinh(maNhom);
         }
 
 
@@ -122,19 +122,19 @@ namespace BUS
         public bool themNguoiDung(string tenNguoiDung, string tenDangNhap, string matKhau, string diaChi, string soDienThoai,
             string email, DateTime ngayVaoLam, bool hoatDong)
         {
-            return NguoiDungDAO.Instance.themNguoiDung(tenNguoiDung, tenDangNhap, Encryptor.MD5Hash(matKhau), diaChi, soDienThoai, email, ngayVaoLam, hoatDong);
+            return UserDAO.Instance.themNguoiDung(tenNguoiDung, tenDangNhap, Encryptor.MD5Hash(matKhau), diaChi, soDienThoai, email, ngayVaoLam, hoatDong);
         }
 
         // thêm người dùng vào nhóm
         public bool themNguoiDungVaoNhom(int maNguoiDung, int maNhom, string ghiChu)
         {
-            return NguoiDungDAO.Instance.themNguoiDungVaoNhom(maNguoiDung, maNhom, ghiChu);
+            return UserDAO.Instance.themNguoiDungVaoNhom(maNguoiDung, maNhom, ghiChu);
         }
 
         // xóa người dùng ra khỏi nhóm
         public bool xoaNguoiDungRaKhoiNhom(int maNguoiDung, int maNhom)
         {
-            return NguoiDungDAO.Instance.xoaNguoiDungRaKhoiNhom(maNguoiDung, maNhom);
+            return UserDAO.Instance.xoaNguoiDungRaKhoiNhom(maNguoiDung, maNhom);
         }
 
         // đăng nhập
@@ -142,7 +142,7 @@ namespace BUS
         // checkConfig
         public int checkConfig()
         {
-            return NguoiDungDAO.Instance.checConfig();
+            return UserDAO.Instance.checConfig();
         }
 
         public void getServerName(ComboBox cbo)
@@ -156,7 +156,7 @@ namespace BUS
         {
             try
             {
-                cbo.DataSource = NguoiDungDAO.Instance.getDatabaseName(server, user, pass);
+                cbo.DataSource = UserDAO.Instance.getDatabaseName(server, user, pass);
                 cbo.DisplayMember = "name";
             }
             catch
@@ -167,11 +167,11 @@ namespace BUS
 
         public void saveConfig(string pServer, string pUser, string pPass, string pDatabaseName)
         {
-            NguoiDungDAO.Instance.saveConfig(pServer, pUser, pPass, pDatabaseName);
+            UserDAO.Instance.saveConfig(pServer, pUser, pPass, pDatabaseName);
         }
         public int dangNhapHeThong(string tenDangNhap, string matKhau)
         {
-            var nguoiDung = NguoiDungDAO.Instance.dangNhapHeThong(tenDangNhap, (matKhau));
+            var nguoiDung = UserDAO.Instance.dangNhapHeThong(tenDangNhap, (matKhau));
             if (nguoiDung == null)
             {
                 return 100;
@@ -186,29 +186,50 @@ namespace BUS
             }
         }
 
+        // láy ra mã người dùng khi đăng nhập
+        public int maNguoiDung(string tenDangNhap)
+        {
+            return UserDAO.Instance.ttNguoiDung(tenDangNhap).maNguoiDung;
+        }
+
+        // lấy ra Tên người dùng và số điện thoại người dùng khi đăng nhập
+        public string thongTinNguoiDung(string tenDangNhap)
+        {
+
+            var nd = UserDAO.Instance.ttNguoiDung(tenDangNhap);
+            return nd.tenNguoiDung + " - " +
+                nd.soDienThoai;
+        }
+
+        public string ttNguoiDung_tenND(int maND)
+        {
+            var nd = UserDAO.Instance.ttNguoiDung_tenND(maND);
+            return nd.tenNguoiDung + " - " + nd.soDienThoai;
+        }
+
 
         ///Kiểm tra số điện thoại tồn tại
         ///
         public bool KTraSoDienThoaiTonTai(string input)
         {
-            return NguoiDungDAO.Instance.LayNguoiDungCoSoDienThoaiTonTai(input);
+            return UserDAO.Instance.LayNguoiDungCoSoDienThoaiTonTai(input);
         }
 
 
         public bool CapNhatThongTinNguoiDung(int ma, string tenNguoiDung, string tenDangNhap, string matKhau, string diaChi, string soDienThoai,
             string email, DateTime ngayVaoLam, bool hoatDong)
         {
-            return NguoiDungDAO.Instance.CapNhatThongTinNguoiDung(ma, tenNguoiDung, tenDangNhap, matKhau, diaChi, soDienThoai, email, ngayVaoLam, hoatDong);
+            return UserDAO.Instance.CapNhatThongTinNguoiDung(ma, tenNguoiDung, tenDangNhap, matKhau, diaChi, soDienThoai, email, ngayVaoLam, hoatDong);
         }
 
         public bool KtraTenNguoiDung(string tenNguoiDung)
         {
-            return NguoiDungDAO.instance.KtraTenNguoiDung(tenNguoiDung);
+            return UserDAO.instance.KtraTenNguoiDung(tenNguoiDung);
         }
 
         public bool XoaNguoiDung( int ma)
         {
-            return NguoiDungDAO.instance.XoaNguoiDung(ma);
+            return UserDAO.instance.XoaNguoiDung(ma);
         }
 
     }

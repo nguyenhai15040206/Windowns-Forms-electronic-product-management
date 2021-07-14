@@ -10,21 +10,21 @@ namespace QLSanPhamDienTu
 {
     static class Program
     {
+        public static frmLogin frm = null;
+        public static frmMain mainForm = null;
+        public static frmConfig frmConfigDatabase = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+            //public static frmDoiMatKhau frmDoiMatKhau = null;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //frmLogin frm = new frmLogin();
-            //if (frm.ShowDialog() == DialogResult.OK)
-            //{
-            //    frm.Close();
-            //    Application.Run(new frmMain());
-            //}
-            Application.Run(new frmInsertProductBySupplier());
+            frm = new frmLogin();
+            Application.Run(frm);
+            //Application.Run(new frmMain());
         }
     }
 }

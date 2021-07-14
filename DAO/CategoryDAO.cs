@@ -43,6 +43,12 @@ namespace DAO
             return listSPDM;
         }
 
+        public DanhMuc getCategoryByID(int id)
+        {
+            var listSPDM = db.DanhMucs.SingleOrDefault(m => m.maDanhMuc == id);
+            return listSPDM;
+        }
+
         public DanhMuc traVeDanhMucVoiMaSP(int maSanPham)
         {
             var danhMuc = (DanhMuc)(from sp in db.SanPhams
@@ -100,14 +106,18 @@ namespace DAO
 
         public bool deleteCategory(int categoryID)
         {
-            var dm = db.DanhMucs.Single(m => m.maDanhMuc == categoryID);
-            if (dm != null)
+            try
             {
-                db.DanhMucs.DeleteOnSubmit(dm);
-                db.SubmitChanges();
-                return true;
+                var dm = db.DanhMucs.Single(m => m.maDanhMuc == categoryID);
+                    db.DanhMucs.DeleteOnSubmit(dm);
+                    db.SubmitChanges();
+                    return true;
             }
-            return false;
+            catch
+            {
+                return false;
+            }
+            
         }
 
 

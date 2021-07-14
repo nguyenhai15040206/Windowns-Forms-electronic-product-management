@@ -9,21 +9,57 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using DevExpress.XtraBars.Docking2010.Views.Tabbed;
 
 namespace QLSanPhamDienTu
 {
-    public partial class frmMain : Form
+    public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
+
+        public static int maND;
+        public delegate void sendData(string value);
+        public sendData thongTinNguoiDung;
+        public sendData maNguoiDung;
         public frmMain()
         {
             InitializeComponent();
+            thongTinNguoiDung = new sendData(getTTNguoiDung);
+            maNguoiDung = new sendData(getMaNguoiDung);
             //WindowState = FormWindowState.Maximized;
+            tabbedView1.DocumentAdded += TabbedView1_DocumentAdded;
         }
 
-        private void menuTTNhanVien_Click(object sender, EventArgs e)
+        public void getTTNguoiDung(string ttNguoiDung)
+        {
+            this.Text = "Phần mềm quản lý đặt sân bóng đá mini - Xin chào!   " + ttNguoiDung;
+        }
+        public void getMaNguoiDung(string maNguoiDung)
+        {
+            maND = int.Parse(maNguoiDung.Trim());
+            //PhanQuyenBUS.Instance.phanQuyen(menuStrip1, maND);
+        }
+
+        private Form IstActive(Type type)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.GetType() == type)
+                {
+                    return f;
+                }
+            }
+            return null;
+        }
+
+        private void TabbedView1_DocumentAdded(object sender, DevExpress.XtraBars.Docking2010.Views.DocumentEventArgs e)
+        {
+            ((Document)tabbedView1.Documents[tabbedView1.Documents.Count - 1]).Appearance.Header.BackColor = Color.SeaShell;
+        }
+
+        private void menuItemPhanQuyen_Click(object sender, EventArgs e)
         {
             Form form = IstActive(typeof(frmQLNhanVienPhanQuyen));
-            if(form == null)
+            if (form == null)
             {
                 frmQLNhanVienPhanQuyen frm = new frmQLNhanVienPhanQuyen();
                 frm.MdiParent = this;
@@ -35,84 +71,72 @@ namespace QLSanPhamDienTu
             }
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        private void menuItemPayCart_Click(object sender, EventArgs e)
         {
-            phanQuyen(menuStrip1);
-        }
-
-        public void phanQuyen(MenuStrip menuStrip1)
-        {
-            List<int> nhomND = NguoiDungBUS.Instance.getMaNhomNguoiDung(1);
-
-            foreach (int item in nhomND)
+            Form form = IstActive(typeof(frmPayCartManager));
+            if (form == null)
             {
-                List<QL_PhanQuyen> dsQuyen = NguoiDungBUS.Instance.getMaManHinh(item);
-                for (int i = 0; i < dsQuyen.Count; i++)
-                {
-                    FindMenuPhanQuyen(menuStrip1.Items, dsQuyen[i].maManHinh.ToString(), (bool)dsQuyen[i].coQuyen);
-                }
-
+                frmPayCartManager frm = new frmPayCartManager();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                form.Activate();
             }
         }
 
-        private void FindMenuPhanQuyen(ToolStripItemCollection mnuItems, string pScreenName, bool pEnable)
+        private void menuItemInvoiceManager_Click(object sender, EventArgs e)
         {
-            foreach (ToolStripItem menu in mnuItems)
-            {
-                if (menu is ToolStripMenuItem && ((ToolStripMenuItem)(menu)).DropDownItems.Count > 0)
-                {
+            //Form form = IstActive(typeof(frmInv));
+            //if (form == null)
+            //{
+            //    frmPayCartManager frm = new frmPayCartManager();
+            //    frm.MdiParent = this;
+            //    frm.Show();
+            //}
+            //else
+            //{
+            //    form.Activate();
+            //}
+        }
 
-                    FindMenuPhanQuyen(((ToolStripMenuItem)(menu)).DropDownItems, pScreenName, pEnable);
-                    menu.Enabled = CheckAllMenuChildVisible(((ToolStripMenuItem)(menu)).DropDownItems);
-                    menu.Visible = menu.Enabled;
-                }
-                else if (string.Equals(pScreenName, menu.Tag))
-                {
-                    menu.Enabled = pEnable; menu.Visible = pEnable;
-                }
+        private void menuItemCustomerManager_Click(object sender, EventArgs e)
+        {
+            Form form = IstActive(typeof(frmCustomerManager));
+            if (form == null)
+            {
+                frmCustomerManager frm = new frmCustomerManager();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                form.Activate();
             }
         }
 
-        private bool CheckAllMenuChildVisible(ToolStripItemCollection mnuItems)
-        {
-            foreach (ToolStripItem menuItem in mnuItems)
-            {
-                if (menuItem is ToolStripMenuItem && menuItem.Enabled)
-                {
-                    return true;
-                }
-                else if (menuItem is ToolStripSeparator)
-                {
-                    continue;
-                }
-            }
-            return false;
-        }
-
-
-        private Form IstActive(Type type)
-        {
-            foreach(Form f in this.MdiChildren)
-            {
-                if(f.GetType() == type)
-                {
-                    return f;
-                }
-            }
-            return null;
-        }
-
-        private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuItemProductManager_Click(object sender, EventArgs e)
         {
             Form form = IstActive(typeof(frmProductManager));
             if (form == null)
             {
                 frmProductManager frm = new frmProductManager();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                form.Activate();
+            }
+        }
+
+        private void menuItemSupplierManager_Click(object sender, EventArgs e)
+        {
+            Form form = IstActive(typeof(frmInsertCategoryAndSupplier));
+            if (form == null)
+            {
+                frmInsertCategoryAndSupplier frm = new frmInsertCategoryAndSupplier();
                 frm.MdiParent = this;
                 frm.Show();
             }

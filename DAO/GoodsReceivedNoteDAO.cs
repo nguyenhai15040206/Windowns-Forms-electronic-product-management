@@ -102,6 +102,8 @@ namespace DAO
             }
         }
 
+
+
         // xóa phiếu nhập (làm cho phiếu nhập hàng đó không còn hiệu lực)
         public bool xoaPhieuNhap(int maPhieuNhap)
         {
@@ -119,15 +121,19 @@ namespace DAO
         }
 
         // cập nhật phiếu nhập
-        public bool capNhatPhieuNhap(int maPhieuNhap, double tongTien, int maNhaCungCap, int maNguoiDung)
+        public bool capNhatPhieuNhap(int suppID)
         {
             try
             {
-                PhieuNhap pn = db.PhieuNhaps.SingleOrDefault(m => m.maPhieuNhap == maPhieuNhap);
-                pn.tienNhap= (decimal?)tongTien;
-                pn.maNhaCungCap = maNhaCungCap;
-                pn.maNguoiDung = maNguoiDung;
-                db.SubmitChanges();
+                var pn = db.PhieuNhaps.Where(m => m.maNhaCungCap == suppID).ToList();
+                if (pn != null)
+                {
+                    for(int i=0; i < pn.Count(); i++)
+                    {
+                        pn[i].maNhaCungCap = null;
+                    }    
+                    db.SubmitChanges();
+                } 
                 return true;
             }
             catch

@@ -58,7 +58,7 @@
     <Compile Include="GoodsRecivedNoteDetailsBUS.cs" />
     <Compile Include="InvoiceBUS.cs" />
     <Compile Include="InvoiceDetailsBUS.cs" />
-    <Compile Include="NguoiDungBUS.cs" />
+    <Compile Include="UserBUS.cs" />
     <Compile Include="NhaSanXuatBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProductBUS.cs" />

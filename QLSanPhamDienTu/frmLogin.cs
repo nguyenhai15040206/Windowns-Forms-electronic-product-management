@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DevExpress.XtraEditors;
 
 namespace QLSanPhamDienTu
 {
     public partial class frmLogin : Form
     {
+
+        public string thongTinND = "";
+        public int maNguoiDung = 0;
         public frmLogin()
         {
             InitializeComponent();
@@ -20,19 +24,19 @@ namespace QLSanPhamDienTu
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtTenDN.Text.Trim().Length <= 0)
+            if (txtUserName.Text.Trim().Length <= 0)
             {
                 MessageBox.Show("Tên đăng nhập không được bỏ trống");
-                this.txtTenDN.Focus();
+                this.txtUserName.Focus();
                 return;
             }
-            if(string.IsNullOrEmpty(txtMatKhau.Text))
+            if(string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Mật khẩu không được bỏ trống");
-                this.txtMatKhau.Focus();
+                this.txtPassword.Focus();
                 return;
             }
-            int kq = NguoiDungBUS.Instance.checkConfig();
+            int kq = UserBUS.Instance.checkConfig();
             if(kq==0) // chuỗi cấu hình phù hợp
             {
                 ProcessLogin(); // cấu hình phù hợp xử lý đăng nhập
@@ -43,8 +47,6 @@ namespace QLSanPhamDienTu
                 // xử lý cấu hình
                 MessageBox.Show("Chuỗi cấu hình không tồn tại");
                 ProcessConfig();
-
-
             }  
             if(kq==2)
             {
@@ -62,17 +64,36 @@ namespace QLSanPhamDienTu
         }
         public void ProcessLogin()
         {
-            if (NguoiDungBUS.Instance.dangNhapHeThong(txtTenDN.Text.Trim(), txtMatKhau.Text.Trim()) == 300)
+            try
             {
-                this.DialogResult = DialogResult.OK;
+                    if (UserBUS.Instance.dangNhapHeThong(txtUserName.Text.Trim(), txtPassword.Text.Trim()) == 300)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                        maNguoiDung = UserBUS.Instance.maNguoiDung(txtUserName.Text.Trim());
+                        thongTinND = UserBUS.Instance.thongTinNguoiDung(txtUserName.Text.Trim());
+                        Program.mainForm = null;
+                        if (Program.mainForm == null || Program.mainForm.IsDisposed)
+                        {
+                            Program.mainForm = new frmMain();
+                            Program.mainForm.thongTinNguoiDung(Program.frm.thongTinND);
+                            Program.mainForm.maNguoiDung(Convert.ToString(Program.frm.maNguoiDung));
+                        }
+                        Program.frm.Visible = false;
+                        Program.mainForm.Show();
+                    }
+                    if (UserBUS.Instance.dangNhapHeThong(txtUserName.Text.Trim(), txtPassword.Text.Trim()) == 200)
+                    {
+                        XtraMessageBox.Show("Tài khoản không khả dụng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    if (UserBUS.Instance.dangNhapHeThong(txtUserName.Text.Trim(), txtPassword.Text.Trim()) == 100)
+                    {
+                        XtraMessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtUserName.Focus();
+                    }
             }
-            if (NguoiDungBUS.Instance.dangNhapHeThong(txtTenDN.Text.Trim(), txtMatKhau.Text.Trim()) == 200)
+            catch
             {
-                MessageBox.Show("Tài khoản không khả dụng");
-            }
-            if (NguoiDungBUS.Instance.dangNhapHeThong(txtTenDN.Text.Trim(), txtMatKhau.Text.Trim()) == 100)
-            {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+                return;
             }
         }
 

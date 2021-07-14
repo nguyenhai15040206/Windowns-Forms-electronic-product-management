@@ -50,9 +50,9 @@ namespace BUS
         }
 
         // cập nhật phiếu nhập
-        public bool capNhatPhieuNhap(int maPhieuNhap, double tongTien, int maNhaCungCap, int maNguoiDung)
+        public bool capNhatPhieuNhap(int suppID)
         {
-            return GoodsReceivedNoteDAO.Instance.capNhatPhieuNhap(maPhieuNhap, tongTien, maNhaCungCap, maNguoiDung);
+            return GoodsReceivedNoteDAO.Instance.capNhatPhieuNhap(suppID);
         }
 
         // mã phiếu nhập mới nhất

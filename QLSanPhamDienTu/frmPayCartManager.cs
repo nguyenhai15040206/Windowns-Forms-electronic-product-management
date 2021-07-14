@@ -249,7 +249,7 @@ namespace QLSanPhamDienTu
         {
             if (txtPhoneNumber.Text.Trim().Length > 0)
             {
-                if(InvoiceBUS.Instance.insertInvoice(dateTimePickerDate.Value.Date,1,sumUnitprice,sumDiscount,sumMoney,"Đã thanh toán",1,true))
+                if(InvoiceBUS.Instance.insertInvoice(dateTimePickerDate.Value.Date,1,sumUnitprice,sumDiscount,sumMoney,"Đã thanh toán",frmMain.maND,true))
                 {
                     int invoiceID = InvoiceBUS.Instance.selectTopOneIsInvoiceID();
                     for (int i = 0; i < dgvInvoiveDetails.Rows.Count - 1; i++)

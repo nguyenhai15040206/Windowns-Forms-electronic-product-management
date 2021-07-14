@@ -50,7 +50,7 @@
     <Compile Include="GoodsReceivedNoteDetailsDAO.cs" />
     <Compile Include="InvoiceDAO.cs" />
     <Compile Include="InvoiceDetailsDAO.cs" />
-    <Compile Include="NguoiDungDAO.cs" />
+    <Compile Include="UserDAO.cs" />
     <Compile Include="NhaSanXuatDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProductDAO.cs" />

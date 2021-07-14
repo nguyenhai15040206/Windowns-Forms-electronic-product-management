@@ -11,18 +11,18 @@ using DTO;
 namespace DAO
 {
     
-    public class NguoiDungDAO
+    public class UserDAO
     {
-        public static NguoiDungDAO instance;
+        public static UserDAO instance;
 
-        public static NguoiDungDAO Instance
+        public static UserDAO Instance
         {
             get
             {
 
                 if (instance == null)
                 {
-                    instance = new NguoiDungDAO();
+                    instance = new UserDAO();
                 }
                 return instance;
             }
@@ -309,6 +309,23 @@ namespace DAO
             {
                 return false;
             }
+        }
+
+        public NguoiDung ttNguoiDung(string tenDangNhap)
+        {
+            return db.NguoiDungs.AsEnumerable().FirstOrDefault(m => m.tenDangNhap == tenDangNhap && m.hoatDong == true);
+        }
+
+        //
+        public NguoiDung ttNguoiDung_tenND(int maND)
+        {
+            return db.NguoiDungs.SingleOrDefault(m => m.maNguoiDung == maND && m.hoatDong == true);
+        }
+
+        // kiểm tra số điện thoại
+        public NguoiDung ttNguoiDung_SoDienThoai(string soDienThoai)
+        {
+            return db.NguoiDungs.SingleOrDefault(m => m.soDienThoai == soDienThoai && m.hoatDong == true);
         }
 
 

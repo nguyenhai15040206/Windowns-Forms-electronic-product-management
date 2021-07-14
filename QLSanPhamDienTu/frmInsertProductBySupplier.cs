@@ -58,7 +58,7 @@ namespace QLSanPhamDienTu
             {
                 if (tongTien != 0)
                 {
-                    if (GoodsReceivedNoteBUS.Instance.themPhieuNhap(tongTien, int.Parse(lookUpEditSupplier.EditValue.ToString()), 1))
+                    if (GoodsReceivedNoteBUS.Instance.themPhieuNhap(tongTien, int.Parse(lookUpEditSupplier.EditValue.ToString()),frmMain.maND))
                     {
                         maPhieuNhap = GoodsReceivedNoteBUS.Instance.maPhieuNhapMoiNhat();
                         for (int i = 0; i < gridViewCTPN.RowCount - 1; i++)

@@ -30,14 +30,14 @@ namespace BUS
         // load tất cả nahf cung cấp lên LookUpEdit
         public void loadNCC_LookUpEdit(LookUpEdit lookUpEdit)
         {
-            lookUpEdit.Properties.DataSource = SupplierDAO.Instance.loadTatCaNhaCungCap();
+            lookUpEdit.Properties.DataSource = SupplierDAO.Instance.getAllDataSupplier();
             lookUpEdit.Properties.ValueMember = "maNhaCungCap";
             lookUpEdit.CustomDisplayText += LookUpEdit_CustomDisplayText;
         }
 
         public int maNCC_soDT(string sdt)
         {
-            return SupplierDAO.Instance.nhaCungCap_SDT(sdt).maNhaCungCap;
+            return SupplierDAO.Instance.supplierByPhoneNumber(sdt).maNhaCungCap;
         }
 
         private void LookUpEdit_CustomDisplayText(object sender, DevExpress.XtraEditors.Controls.CustomDisplayTextEventArgs e)
@@ -51,9 +51,25 @@ namespace BUS
             }
         }
 
-        //public void loadTatCaPhieuNhap(GridControl dgv)
-        //{
-        //    dgv.DataSource = PhieuNhapDAO.Instance.loadTatCaPhieuNhap();
-        //}
+        public void loadDataToGridView(GridControl dgv)
+        {
+            dgv.DataSource = SupplierDAO.Instance.getAllDataSupplier();
+        }
+
+        //
+        public bool insertSupplier(string name, string address, string phonenumber, string email)
+        {
+            return SupplierDAO.Instance.insertSupplier(name, address, phonenumber, email);
+        }
+
+        public bool updateSupplier(int id, string name, string address, string phonenumber, string email)
+        {
+            return SupplierDAO.Instance.updateSupplier(id,name, address, phonenumber, email);
+        }
+
+        public bool deleteSupplierID(int id)
+        {
+            return SupplierDAO.Instance.deleteSupplierID(id);
+        }
     }
 }

@@ -82,6 +82,20 @@ namespace BUS
             return CategoryDAO.Instance.traVeDanhMucVoiMaSP(maSP).tenDanhMuc;
         }
 
+        public string categoryNameByID(int categoryID)
+        {
+            return CategoryDAO.Instance.getCategoryByID(categoryID).tenDanhMuc;
+        }
+
+        public string categoryLogoByID(int categoryID)
+        {
+            return CategoryDAO.Instance.getCategoryByID(categoryID).logoTungDanhMucSP;
+        }
+
+        public string categoryNoteByID(int categoryID)
+        {
+            return CategoryDAO.Instance.getCategoryByID(categoryID).ghiChu;
+        }
 
         // cập nhật
         public bool updateCategory(int categoryID, string CategoryName, int producerID, string note, string logo)

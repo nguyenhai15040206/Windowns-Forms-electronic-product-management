@@ -303,6 +303,16 @@ namespace QLSanPhamDienTu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mascot_fail {
+            get {
+                object obj = ResourceManager.GetObject("mascot_fail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap meo_ban_hang_online_dat_khach_dat_hang {
             get {
                 object obj = ResourceManager.GetObject("meo-ban-hang-online-dat-khach-dat-hang", resourceCulture);
@@ -316,6 +326,26 @@ namespace QLSanPhamDienTu.Properties {
         internal static System.Drawing.Bitmap nen1 {
             get {
                 object obj = ResourceManager.GetObject("nen1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap network_mesh_wire_digital_technology_background_1017_27428 {
+            get {
+                object obj = ResourceManager.GetObject("network-mesh-wire-digital-technology-background_1017-27428", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NgoiSao {
+            get {
+                object obj = ResourceManager.GetObject("NgoiSao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -367,6 +397,16 @@ namespace QLSanPhamDienTu.Properties {
         internal static System.Drawing.Bitmap z2525335187690_01de74b6b6234fce8c62460120cb2841_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("z2525335187690_01de74b6b6234fce8c62460120cb2841-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z2574152776438_b57d007d2ee389169ddb1fd38b48d69a {
+            get {
+                object obj = ResourceManager.GetObject("z2574152776438_b57d007d2ee389169ddb1fd38b48d69a", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
