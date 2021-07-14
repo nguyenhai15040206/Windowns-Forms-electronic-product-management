@@ -131,11 +131,11 @@
     <Compile Include="frmPayCartManager.Designer.cs">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQLNhanVienPhanQuyen.cs">
+    <Compile Include="frmScreenAndPermission.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQLNhanVienPhanQuyen.Designer.cs">
-      <DependentUpon>frmQLNhanVienPhanQuyen.cs</DependentUpon>
+    <Compile Include="frmScreenAndPermission.Designer.cs">
+      <DependentUpon>frmScreenAndPermission.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProductManager.cs">
       <SubType>Form</SubType>
@@ -193,8 +193,8 @@
     <EmbeddedResource Include="frmPayCartManager.resx">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQLNhanVienPhanQuyen.resx">
-      <DependentUpon>frmQLNhanVienPhanQuyen.cs</DependentUpon>
+    <EmbeddedResource Include="frmScreenAndPermission.resx">
+      <DependentUpon>frmScreenAndPermission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductManager.resx">
       <DependentUpon>frmProductManager.cs</DependentUpon>

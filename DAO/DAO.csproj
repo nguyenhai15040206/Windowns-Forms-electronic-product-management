@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="DanhMucManHinhPhanQuyenDAO.cs" />
+    <Compile Include="ScreenAndPermissionDAO.cs" />
     <Compile Include="CategoryDAO.cs" />
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="GoodsReceivedNoteDAO.cs" />

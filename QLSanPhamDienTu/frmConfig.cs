@@ -34,9 +34,14 @@ namespace QLSanPhamDienTu
                 && txtUsername.Text.Trim() !="")
             {
                 UserBUS.Instance.saveConfig(cboServername.Text, txtUsername.Text, txtPass.Text, cboDatabase.Text);
-                frmLogin frm = new frmLogin();
-                frm.Show();
                 this.Hide();
+                Program.frm = null;
+                if (Program.frm == null || Program.frm.IsDisposed)
+                {
+                    Program.frm = new frmLogin();
+                }
+                this.Visible = false;
+                Program.frm.Show();
             }   
             else
             {
@@ -51,7 +56,30 @@ namespace QLSanPhamDienTu
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                // WinForms app
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                // Console app
+                System.Environment.Exit(1);
+            }
+        }
+
+        private void frmConfig_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                // WinForms app
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                // Console app
+                System.Environment.Exit(1);
+            }
         }
     }
 }

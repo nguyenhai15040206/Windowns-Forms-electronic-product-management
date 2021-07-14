@@ -328,6 +328,116 @@ namespace DAO
             return db.NguoiDungs.SingleOrDefault(m => m.soDienThoai == soDienThoai && m.hoatDong == true);
         }
 
+        // load người dùng theo tình trạng
+        public List<NguoiDung> loadNguoiDung_TinhTrang(bool tinhTrang)
+        {
+            var listNguoiDung = db.NguoiDungs.Where(m => m.hoatDong == tinhTrang).ToList();
+            return listNguoiDung;
+        }
+
+        //
+        // load danh mục màn hình
+        public List<DanhMucManHinh> loadTatCaDanhMucManHinh()
+        {
+            var listManHinh = db.DanhMucManHinhs.ToList();
+            return listManHinh;
+        }
+        //
+        // load danh sách cách quyền chức năng
+        public List<NewPermission> danhSachQuyenChucNang(int maNhom)
+        {
+            var quyenChucNang = (from DanhMucManHinh in db.DanhMucManHinhs
+                                 join QL_PhanQuyen in db.QL_PhanQuyens
+                                 on new { DanhMucManHinh.maManHinh, maNhom = maNhom }
+                                 equals new { QL_PhanQuyen.maManHinh, QL_PhanQuyen.maNhom } into QL_PhanQuyen_join
+                                 from QL_PhanQuyen in QL_PhanQuyen_join.DefaultIfEmpty()
+                                 select new NewPermission
+                                 {
+                                     MaManHinh = DanhMucManHinh.maManHinh,
+                                     TenManHinh = DanhMucManHinh.tenManHinh,
+                                     CoQuyen = (bool?)QL_PhanQuyen.coQuyen
+                                 }).ToList();
+            return quyenChucNang;
+        }
+
+        // xóa người dùng, thực ra là tài khoản và thông tin nhân viên này không còn khả dụng nữa
+        public bool xoaNhanVien(int maNguoiDung, bool hoatDong)
+        {
+            try
+            {
+                NguoiDung nd = db.NguoiDungs.SingleOrDefault(m => m.maNguoiDung == maNguoiDung);
+                nd.hoatDong = hoatDong;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // cập nhật nhân viên
+        public bool capNhatNhanVien(int maNhanVien, string tenNguoiDung, string diaChi, string soDienThoai,
+            string email, bool hoatDong)
+        {
+            try
+            {
+                NguoiDung nd = db.NguoiDungs.SingleOrDefault(m => m.maNguoiDung == maNhanVien);
+                if (nd == null)
+                {
+                    return false;
+                }
+                if (soDienThoai == nd.soDienThoai)
+                {
+                    nd.tenNguoiDung = tenNguoiDung;
+                    nd.diaChi = diaChi;
+                    nd.email = email;
+                    nd.hoatDong = hoatDong;
+                    db.SubmitChanges();
+                    return true;
+                }
+                else
+                {
+                    if (ttNguoiDung_SoDienThoai(soDienThoai) == null)
+                    {
+                        nd.tenNguoiDung = tenNguoiDung;
+                        nd.diaChi = diaChi;
+                        nd.email = email;
+                        nd.soDienThoai = soDienThoai;
+                        nd.hoatDong = hoatDong;
+                        db.SubmitChanges();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //
+        // phân quyền
+        public bool phanQuyen(int maNhom, int maaManHinh, bool coQuyen)
+        {
+            try
+            {
+                var phanQuyen = db.QL_PhanQuyens.SingleOrDefault(m => m.maManHinh == maaManHinh && m.maNhom == maNhom);
+                phanQuyen.coQuyen = coQuyen;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
 
 
 

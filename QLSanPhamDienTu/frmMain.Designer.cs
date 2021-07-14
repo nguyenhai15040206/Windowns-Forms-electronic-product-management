@@ -88,12 +88,14 @@ namespace QLSanPhamDienTu
             this.menuItemChangePass.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItemChangePass.Name = "menuItemChangePass";
             this.menuItemChangePass.Size = new System.Drawing.Size(228, 24);
+            this.menuItemChangePass.Tag = "1";
             this.menuItemChangePass.Text = "Đổi mật khẩu";
             // 
             // menuItemPhanQuyen
             // 
             this.menuItemPhanQuyen.Name = "menuItemPhanQuyen";
             this.menuItemPhanQuyen.Size = new System.Drawing.Size(228, 24);
+            this.menuItemPhanQuyen.Tag = "2";
             this.menuItemPhanQuyen.Text = "Tài khoản && Phân quyền";
             this.menuItemPhanQuyen.Click += new System.EventHandler(this.menuItemPhanQuyen_Click);
             // 
@@ -102,6 +104,7 @@ namespace QLSanPhamDienTu
             this.menuItemLogout.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItemLogout.Name = "menuItemLogout";
             this.menuItemLogout.Size = new System.Drawing.Size(228, 24);
+            this.menuItemLogout.Tag = "3";
             this.menuItemLogout.Text = "Đăng xuất";
             // 
             // menuItemExit
@@ -109,6 +112,7 @@ namespace QLSanPhamDienTu
             this.menuItemExit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItemExit.Name = "menuItemExit";
             this.menuItemExit.Size = new System.Drawing.Size(228, 24);
+            this.menuItemExit.Tag = "4";
             this.menuItemExit.Text = "Thoát";
             // 
             // danhMụcToolStripMenuItem
@@ -120,12 +124,14 @@ namespace QLSanPhamDienTu
             this.menuItemNewsManager});
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(82, 23);
+            this.danhMụcToolStripMenuItem.Tag = "";
             this.danhMụcToolStripMenuItem.Text = "Danh mục";
             // 
             // menuItemPayCart
             // 
             this.menuItemPayCart.Name = "menuItemPayCart";
             this.menuItemPayCart.Size = new System.Drawing.Size(198, 24);
+            this.menuItemPayCart.Tag = "5";
             this.menuItemPayCart.Text = "Thanh toán hóa đơn";
             this.menuItemPayCart.Click += new System.EventHandler(this.menuItemPayCart_Click);
             // 
@@ -133,6 +139,7 @@ namespace QLSanPhamDienTu
             // 
             this.menuItemInvoiceManager.Name = "menuItemInvoiceManager";
             this.menuItemInvoiceManager.Size = new System.Drawing.Size(198, 24);
+            this.menuItemInvoiceManager.Tag = "6";
             this.menuItemInvoiceManager.Text = "Quản lý hóa đơn";
             this.menuItemInvoiceManager.Click += new System.EventHandler(this.menuItemInvoiceManager_Click);
             // 
@@ -140,6 +147,7 @@ namespace QLSanPhamDienTu
             // 
             this.menuItemCustomerManager.Name = "menuItemCustomerManager";
             this.menuItemCustomerManager.Size = new System.Drawing.Size(198, 24);
+            this.menuItemCustomerManager.Tag = "7";
             this.menuItemCustomerManager.Text = "Quản lý khách hàng";
             this.menuItemCustomerManager.Click += new System.EventHandler(this.menuItemCustomerManager_Click);
             // 
@@ -147,6 +155,7 @@ namespace QLSanPhamDienTu
             // 
             this.menuItemNewsManager.Name = "menuItemNewsManager";
             this.menuItemNewsManager.Size = new System.Drawing.Size(198, 24);
+            this.menuItemNewsManager.Tag = "8";
             this.menuItemNewsManager.Text = "Quản lý tin tức";
             // 
             // nhậpXuấtKhoToolStripMenuItem
@@ -162,20 +171,24 @@ namespace QLSanPhamDienTu
             // menuItemProductManager
             // 
             this.menuItemProductManager.Name = "menuItemProductManager";
-            this.menuItemProductManager.Size = new System.Drawing.Size(208, 24);
+            this.menuItemProductManager.Size = new System.Drawing.Size(267, 24);
+            this.menuItemProductManager.Tag = "9";
             this.menuItemProductManager.Text = "Quản lý sản phẩm";
             this.menuItemProductManager.Click += new System.EventHandler(this.menuItemProductManager_Click);
             // 
             // menuItemGoodsRevriveNote
             // 
             this.menuItemGoodsRevriveNote.Name = "menuItemGoodsRevriveNote";
-            this.menuItemGoodsRevriveNote.Size = new System.Drawing.Size(208, 24);
+            this.menuItemGoodsRevriveNote.Size = new System.Drawing.Size(267, 24);
+            this.menuItemGoodsRevriveNote.Tag = "10";
             this.menuItemGoodsRevriveNote.Text = "Nhập hàng";
+            this.menuItemGoodsRevriveNote.Click += new System.EventHandler(this.menuItemGoodsRevriveNote_Click);
             // 
             // menuItemSupplierManager
             // 
             this.menuItemSupplierManager.Name = "menuItemSupplierManager";
             this.menuItemSupplierManager.Size = new System.Drawing.Size(267, 24);
+            this.menuItemSupplierManager.Tag = "11";
             this.menuItemSupplierManager.Text = "QL Nhà cung cấp && Danh mục";
             this.menuItemSupplierManager.Click += new System.EventHandler(this.menuItemSupplierManager_Click);
             // 
@@ -196,6 +209,8 @@ namespace QLSanPhamDienTu
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý sản phẩm điện tử. Xin chào! Nguyễn Tấn Hải - 0357866848";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

@@ -51,7 +51,7 @@
     <Compile Include="CheckDataInput.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="CategoryBUS.cs" />
-    <Compile Include="DanhMucManHinhPhanQuyenBUS.cs" />
+    <Compile Include="CategoryScreenAndPermissionBUS.cs" />
     <Compile Include="Encryptor.cs" />
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="GoodsReceivedNoteBUS.cs" />

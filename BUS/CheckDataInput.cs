@@ -86,6 +86,18 @@ namespace BUS
             return false;
         }
 
+        public bool isContainSpace(string input)
+        {
+            string str;
+            for (int i = 0; i < input.Length; i++)
+            {
+                str = input.Substring(i, 1);
+                if (str == " ")
+                    return false;
+            }
+            return true;
+        }
+
         // chuyển tiền thành chữ
         public string formatMoneyToString(double inputNumber, bool suffix = true)
         {

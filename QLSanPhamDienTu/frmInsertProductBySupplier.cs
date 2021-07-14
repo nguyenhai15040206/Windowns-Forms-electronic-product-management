@@ -46,6 +46,7 @@ namespace QLSanPhamDienTu
             toolStripButtonLuuPN.Enabled = true;
             GoodsRecivedNoteDetailsBUS.Instance.loadCTPN_maPhieuNhap(gridControlCTPN, 0);
             lamMoiDuLieu();
+            txtUserName.Text = UserBUS.Instance.ttNguoiDung_tenND(frmMain.maND);
         }
 
         private void toolStripButtonLuuPN_Click(object sender, EventArgs e)
@@ -261,7 +262,6 @@ namespace QLSanPhamDienTu
         {
             maPhieuNhap = 0;
             tongTien = 0;
-            txtUserName.Text = "";
             txtSumMoney.Text = "";
             lookUpEditSupplier.EditValue = null;
 

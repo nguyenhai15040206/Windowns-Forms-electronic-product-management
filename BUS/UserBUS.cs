@@ -215,11 +215,15 @@ namespace BUS
             return UserDAO.Instance.LayNguoiDungCoSoDienThoaiTonTai(input);
         }
 
-
-        public bool CapNhatThongTinNguoiDung(int ma, string tenNguoiDung, string tenDangNhap, string matKhau, string diaChi, string soDienThoai,
-            string email, DateTime ngayVaoLam, bool hoatDong)
+        public bool capNhatNhanVien(int maNhanVien, string tenNguoiDung, string diaChi, string soDienThoai,
+            string email, bool hoatDong)
         {
-            return UserDAO.Instance.CapNhatThongTinNguoiDung(ma, tenNguoiDung, tenDangNhap, matKhau, diaChi, soDienThoai, email, ngayVaoLam, hoatDong);
+            return UserDAO.Instance.capNhatNhanVien(maNhanVien, tenNguoiDung, diaChi, soDienThoai, email, hoatDong);
+        }
+        // xóa người dùng
+        public bool xoaNhanVien(int maNguoiDung, bool hoatDong)
+        {
+            return UserDAO.Instance.xoaNhanVien(maNguoiDung, hoatDong);
         }
 
         public bool KtraTenNguoiDung(string tenNguoiDung)
@@ -230,6 +234,79 @@ namespace BUS
         public bool XoaNguoiDung( int ma)
         {
             return UserDAO.instance.XoaNguoiDung(ma);
+        }
+
+        //
+        public void loadNguoiDung_TinhTrang(GridControl gv, bool tinhTrang)
+        {
+            gv.DataSource = UserDAO.Instance.loadNguoiDung_TinhTrang(tinhTrang);
+        }
+
+        public void loadDSNhomNguoiDung_GridControl(GridControl dgv)
+        {
+            dgv.DataSource = UserDAO.Instance.loadNhomNguoiDung();
+        }
+
+        // load danh mục màn hình lên GridControl
+        public void loadDanhMucManHinh(TreeList tv)
+        {
+            tv.BeginUnboundLoad();
+
+            tv.Nodes.Clear();
+            List<DanhMucManHinh> nd = UserDAO.Instance.loadTatCaDanhMucManHinh();
+            for (int i = 0; i < nd.Count; i++)
+            {
+                TreeListNode nodes = tv.AppendNode(null, null);
+                nodes.SetValue("name", nd[i].tenManHinh.ToString());
+                nodes.Tag = (nd[i].maManHinh.ToString()).ToString();
+            }
+            tv.EndUnboundLoad();
+        }
+
+        // load danh sách quyền chức năng
+        public void loadDanhSachQuyenChucNang(GridControl gv, int maNhom)
+        {
+            gv.DataSource = UserDAO.Instance.danhSachQuyenChucNang(maNhom);
+        }
+
+        public bool KiemTraTenDangNhap(string tenDN)
+        {
+            try
+            {
+                var nguoiDung = UserDAO.Instance.ttNguoiDung(tenDN);
+                if (nguoiDung == null)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        // kiểm tra số điện thoại có bị trùng hay không
+        public bool kiemTraSoDienThoai(string soDIenThoai)
+        {
+            try
+            {
+                var nd = UserDAO.Instance.ttNguoiDung_SoDienThoai(soDIenThoai);
+                if (nd != null)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // phân quyền
+        public bool phanQuyen(int maNhom, int maaManHinh, bool coQuyen)
+        {
+            return UserDAO.Instance.phanQuyen(maNhom, maaManHinh, coQuyen);
         }
 
     }

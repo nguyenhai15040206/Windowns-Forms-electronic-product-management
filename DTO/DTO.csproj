@@ -46,6 +46,7 @@
     <Compile Include="CheckConfig.cs" />
     <Compile Include="KhachHangNews.cs" />
     <Compile Include="NewChiTietPN.cs" />
+    <Compile Include="NewPermission.cs" />
     <Compile Include="NewPhieuNhap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

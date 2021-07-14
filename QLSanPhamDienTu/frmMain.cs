@@ -36,7 +36,7 @@ namespace QLSanPhamDienTu
         public void getMaNguoiDung(string maNguoiDung)
         {
             maND = int.Parse(maNguoiDung.Trim());
-            //PhanQuyenBUS.Instance.phanQuyen(menuStrip1, maND);
+            CategoryScreenAndPermissionBUS.Instance.phanQuyen(menuStrip1, maND);
         }
 
         private Form IstActive(Type type)
@@ -58,10 +58,10 @@ namespace QLSanPhamDienTu
 
         private void menuItemPhanQuyen_Click(object sender, EventArgs e)
         {
-            Form form = IstActive(typeof(frmQLNhanVienPhanQuyen));
+            Form form = IstActive(typeof(frmScreenAndPermission));
             if (form == null)
             {
-                frmQLNhanVienPhanQuyen frm = new frmQLNhanVienPhanQuyen();
+                frmScreenAndPermission frm = new frmScreenAndPermission();
                 frm.MdiParent = this;
                 frm.Show();
             }
@@ -143,6 +143,40 @@ namespace QLSanPhamDienTu
             else
             {
                 form.Activate();
+            }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItemGoodsRevriveNote_Click(object sender, EventArgs e)
+        {
+            Form form = IstActive(typeof(frmInsertProductBySupplier));
+            if (form == null)
+            {
+                frmInsertProductBySupplier frm = new frmInsertProductBySupplier();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                form.Activate();
+            }
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                // WinForms app
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                // Console app
+                System.Environment.Exit(1);
             }
         }
     }

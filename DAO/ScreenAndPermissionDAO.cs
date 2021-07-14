@@ -7,18 +7,18 @@ using DTO;
 
 namespace DAO
 {
-    public class DanhMucManHinhPhanQuyenDAO
+    public class ScreenAndPermissionDAO
     {
         QLSanPhamDienTuDataContext db = new QLSanPhamDienTuDataContext();
-        private static DanhMucManHinhPhanQuyenDAO instance;
+        private static ScreenAndPermissionDAO instance;
 
-        public static DanhMucManHinhPhanQuyenDAO Instance
+        public static ScreenAndPermissionDAO Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new DanhMucManHinhPhanQuyenDAO();
+                    instance = new ScreenAndPermissionDAO();
                 }
                 return instance;
             }
