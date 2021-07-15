@@ -88,10 +88,10 @@ namespace QLSanPhamDienTu
 
         private void menuItemInvoiceManager_Click(object sender, EventArgs e)
         {
-            Form form = IstActive(typeof(frmInvocieManager));
+            Form form = IstActive(typeof(frmInvoice));
             if (form == null)
             {
-                frmInvocieManager frm = new frmInvocieManager();
+                frmInvoice frm = new frmInvoice();
                 frm.MdiParent = this;
                 frm.Show();
             }

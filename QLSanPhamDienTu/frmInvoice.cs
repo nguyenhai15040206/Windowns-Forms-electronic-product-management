@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using QLSanPhamDienTu.Report;
 using System;
