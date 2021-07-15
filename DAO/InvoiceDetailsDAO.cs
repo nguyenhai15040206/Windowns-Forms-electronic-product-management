@@ -38,7 +38,7 @@ namespace DAO
                             {
                                 TenSanPham = sp.tenSanPham,
                                 DonGia = cthd.donGia,
-
+                                MasanPham =  sp.maSanPham,
                                 ThanhTien = cthd.thanhTien,
                                 GiamGia = cthd.giamGia,
                                 SoLuong = cthd.soLuong,

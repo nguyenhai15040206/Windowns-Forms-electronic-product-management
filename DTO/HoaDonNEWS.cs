@@ -11,6 +11,7 @@ namespace DTO
         private int _maHoaDon;
 
         private string _diaChi;
+        private int maNguoiDuong;
 
         private string _tenNguoiDung;
 
@@ -38,5 +39,6 @@ namespace DTO
         public string SoDienThoai { get => _soDienThoai; set => _soDienThoai = value; }
         public double? GiamGia { get => _giamGia; set => _giamGia = value; }
         public string TenKhachHang { get => _tenKhachHang; set => _tenKhachHang = value; }
+        public int MaNguoiDuong { get => maNguoiDuong; set => maNguoiDuong = value; }
     }
 }

@@ -39,6 +39,7 @@ namespace DAO
                           hd.tinhTrang == tinhTrang
                           select new HoaDonNews
                           {
+                              MaNguoiDuong = nd.maNguoiDung,
                               MaHoaDon = hd.maHoaDon,
                               TenNguoiDung = nd.tenNguoiDung,
                               TinhTrang = hd.tinhTrang,

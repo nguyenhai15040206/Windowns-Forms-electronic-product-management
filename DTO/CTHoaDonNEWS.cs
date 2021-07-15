@@ -8,7 +8,7 @@ namespace DTO
 {
     public class CTHoaDonNEWS
     {
-
+        private int masanPham;
         private System.Nullable<decimal> _donGia;
 
         private System.Nullable<double> _giamGia;
@@ -24,5 +24,6 @@ namespace DTO
         public double? GiamGia { get => _giamGia; set => _giamGia = value; }
         public decimal? ThanhTien { get => _thanhTien; set => _thanhTien = value; }
         public int STT { get; set; }
+        public int MasanPham { get => masanPham; set => masanPham = value; }
     }
 }

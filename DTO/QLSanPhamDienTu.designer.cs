@@ -84,7 +84,7 @@ namespace DTO
     #endregion
 		
 		public QLSanPhamDienTuDataContext() : 
-				base(global::DTO.Properties.Settings.Default.QL_SanPhamConnectionString2, mappingSource)
+				base(global::DTO.Properties.Settings.Default.Conn, mappingSource)
 		{
 			OnCreated();
 		}

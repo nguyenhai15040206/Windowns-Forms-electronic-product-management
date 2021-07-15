@@ -171,7 +171,7 @@ namespace BUS
         }
         public int dangNhapHeThong(string tenDangNhap, string matKhau)
         {
-            var nguoiDung = UserDAO.Instance.dangNhapHeThong(tenDangNhap, (matKhau));
+            var nguoiDung = UserDAO.Instance.dangNhapHeThong(tenDangNhap, Encryptor.MD5Hash(matKhau));
             if (nguoiDung == null)
             {
                 return 100;

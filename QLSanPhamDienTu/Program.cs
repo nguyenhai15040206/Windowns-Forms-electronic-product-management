@@ -24,7 +24,7 @@ namespace QLSanPhamDienTu
             Application.SetCompatibleTextRenderingDefault(false);
             frm = new frmLogin();
             Application.Run(frm);
-            //Application.Run(new frmQLThongTinHoaDon());
+            //Application.Run(new frmInvocieManager());
         }
     }
 }

@@ -113,6 +113,12 @@
     <Compile Include="frmCustomerManager.Designer.cs">
       <DependentUpon>frmCustomerManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvoice.Designer.cs">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,11 +143,11 @@
     <Compile Include="frmPayCartManager.Designer.cs">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQLThongTinHoaDon.cs">
+    <Compile Include="frmInvocieManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQLThongTinHoaDon.Designer.cs">
-      <DependentUpon>frmQLThongTinHoaDon.cs</DependentUpon>
+    <Compile Include="frmInvocieManager.Designer.cs">
+      <DependentUpon>frmInvocieManager.cs</DependentUpon>
     </Compile>
     <Compile Include="frmScreenAndPermission.cs">
       <SubType>Form</SubType>
@@ -196,6 +202,9 @@
     <EmbeddedResource Include="frmCustomerManager.resx">
       <DependentUpon>frmCustomerManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInvoice.resx">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,8 +217,8 @@
     <EmbeddedResource Include="frmPayCartManager.resx">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQLThongTinHoaDon.resx">
-      <DependentUpon>frmQLThongTinHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="frmInvocieManager.resx">
+      <DependentUpon>frmInvocieManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScreenAndPermission.resx">
       <DependentUpon>frmScreenAndPermission.cs</DependentUpon>
