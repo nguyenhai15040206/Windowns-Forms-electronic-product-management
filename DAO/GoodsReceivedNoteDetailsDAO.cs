@@ -57,8 +57,7 @@ namespace DAO
 
         public bool themCTPhieuNhap(int maPhieuNhap, int maThucUong, int soLuong, double giaBan, double thanhTien)
         {
-            db = new QLSanPhamDienTuDataContext();
-            db.Refresh(System.Data.Linq.RefreshMode.KeepCurrentValues, db.CTPhieuNhaps);
+            //db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.CTPhieuNhaps);
             try
             {
                 CTPhieuNhap ctpn = new CTPhieuNhap();

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DevExpress.XtraBars.Docking2010.Views.Tabbed;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,38 +9,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUS;
-using DTO;
-using DevExpress.XtraBars.Docking2010.Views.Tabbed;
 
 namespace QLSanPhamDienTu
 {
-    public partial class frmMain : DevExpress.XtraEditors.XtraForm
+    public partial class frmMainForm : Form
     {
-
         public static int maND;
         public delegate void sendData(string value);
         public sendData thongTinNguoiDung;
         public sendData maNguoiDung;
-        public frmMain()
+        public frmMainForm()
         {
             InitializeComponent();
             thongTinNguoiDung = new sendData(getTTNguoiDung);
             maNguoiDung = new sendData(getMaNguoiDung);
             //WindowState = FormWindowState.Maximized;
-            tabbedView1.DocumentAdded += TabbedView1_DocumentAdded;
+            
         }
 
         public void getTTNguoiDung(string ttNguoiDung)
         {
-            this.Text = "Phần mềm quản lý đặt sân bóng đá mini - Xin chào!   " + ttNguoiDung;
+            this.Text = "Phần mềm quản lý sản phẩm điện tử. Xin chào!   " + ttNguoiDung;
         }
         public void getMaNguoiDung(string maNguoiDung)
         {
             maND = int.Parse(maNguoiDung.Trim());
             CategoryScreenAndPermissionBUS.Instance.phanQuyen(menuStrip1, maND);
         }
-
         private Form IstActive(Type type)
         {
             foreach (Form f in this.MdiChildren)
@@ -51,7 +48,12 @@ namespace QLSanPhamDienTu
             return null;
         }
 
-        private void TabbedView1_DocumentAdded(object sender, DevExpress.XtraBars.Docking2010.Views.DocumentEventArgs e)
+        private void frmMainForm_Load(object sender, EventArgs e)
+        {
+            tabbedView1.DocumentAdded += TabbedView1_DocumentAdded1;
+        }
+
+        private void TabbedView1_DocumentAdded1(object sender, DevExpress.XtraBars.Docking2010.Views.DocumentEventArgs e)
         {
             ((Document)tabbedView1.Documents[tabbedView1.Documents.Count - 1]).Appearance.Header.BackColor = Color.SeaShell;
         }
@@ -116,12 +118,42 @@ namespace QLSanPhamDienTu
             }
         }
 
+        private void menuItemNewsManager_Click(object sender, EventArgs e)
+        {
+            Form form = IstActive(typeof(Form1));
+            if (form == null)
+            {
+                Form1 frm = new Form1();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                form.Activate();
+            }
+        }
+
         private void menuItemProductManager_Click(object sender, EventArgs e)
         {
             Form form = IstActive(typeof(frmProductManager));
             if (form == null)
             {
                 frmProductManager frm = new frmProductManager();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                form.Activate();
+            }
+        }
+
+        private void menuItemGoodsRevriveNote_Click(object sender, EventArgs e)
+        {
+            Form form = IstActive(typeof(frmInsertProductBySupplier));
+            if (form == null)
+            {
+                frmInsertProductBySupplier frm = new frmInsertProductBySupplier();
                 frm.MdiParent = this;
                 frm.Show();
             }
@@ -144,60 +176,6 @@ namespace QLSanPhamDienTu
             {
                 form.Activate();
             }
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuItemGoodsRevriveNote_Click(object sender, EventArgs e)
-        {
-            Form form = IstActive(typeof(frmInsertProductBySupplier));
-            if (form == null)
-            {
-                frmInsertProductBySupplier frm = new frmInsertProductBySupplier();
-                frm.MdiParent = this;
-                frm.Show();
-            }
-            else
-            {
-                form.Activate();
-            }
-        }
-
-        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (System.Windows.Forms.Application.MessageLoop)
-            {
-                // WinForms app
-                System.Windows.Forms.Application.Exit();
-            }
-            else
-            {
-                // Console app
-                System.Environment.Exit(1);
-            }
-        }
-
-        private void menuItemLogout_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuItemChangePass_Click(object sender, FormClosingEventArgs e)
-        {
-            //Form form = IstActive(typeof(frmChangePassword));
-            //if (form == null)
-            //{
-            //    frmProductManager frm = new frmProductManager();
-            //    frm.MdiParent = this;
-            //    frm.Show();
-            //}
-            //else
-            //{
-            //    form.Activate();
-            //}
         }
     }
 }

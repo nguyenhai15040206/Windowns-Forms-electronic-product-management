@@ -74,7 +74,7 @@ namespace QLSanPhamDienTu
                         Program.mainForm = null;
                         if (Program.mainForm == null || Program.mainForm.IsDisposed)
                         {
-                            Program.mainForm = new frmMain();
+                            Program.mainForm = new frmMainForm();
                             Program.mainForm.thongTinNguoiDung(Program.frm.thongTinND);
                             Program.mainForm.maNguoiDung(Convert.ToString(Program.frm.maNguoiDung));
                         }

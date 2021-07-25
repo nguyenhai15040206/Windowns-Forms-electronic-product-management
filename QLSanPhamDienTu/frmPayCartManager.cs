@@ -249,7 +249,7 @@ namespace QLSanPhamDienTu
         {
             if (txtPhoneNumber.Text.Trim().Length > 0)
             {
-                if(InvoiceBUS.Instance.insertInvoice(dateTimePickerDate.Value.Date,1,sumUnitprice,sumDiscount,sumMoney,"Đã thanh toán",frmMain.maND,true))
+                if(InvoiceBUS.Instance.insertInvoice(dateTimePickerDate.Value.Date,1,sumUnitprice,sumDiscount,sumMoney,"Đã thanh toán", frmMainForm.maND,true))
                 {
                     int invoiceID = InvoiceBUS.Instance.selectTopOneIsInvoiceID();
                     for (int i = 0; i < dgvInvoiveDetails.Rows.Count - 1; i++)
@@ -284,6 +284,12 @@ namespace QLSanPhamDienTu
             {
                 XtraMessageBox.Show("Vui lòng chọn một khách hàng cần thanh toán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnInvoicePrinting_Click(object sender, EventArgs e)
+        {
+            frmInvoice frm = new frmInvoice();
+            frm.ShowDialog();
         }
     }
 }

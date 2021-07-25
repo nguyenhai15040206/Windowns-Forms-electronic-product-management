@@ -46,7 +46,7 @@ namespace QLSanPhamDienTu
             toolStripButtonLuuPN.Enabled = true;
             GoodsRecivedNoteDetailsBUS.Instance.loadCTPN_maPhieuNhap(gridControlCTPN, 0);
             lamMoiDuLieu();
-            txtUserName.Text = UserBUS.Instance.ttNguoiDung_tenND(frmMain.maND);
+            txtUserName.Text = UserBUS.Instance.ttNguoiDung_tenND(frmMainForm.maND);
         }
 
         private void toolStripButtonLuuPN_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace QLSanPhamDienTu
             {
                 if (tongTien != 0)
                 {
-                    if (GoodsReceivedNoteBUS.Instance.themPhieuNhap(tongTien, int.Parse(lookUpEditSupplier.EditValue.ToString()),frmMain.maND))
+                    if (GoodsReceivedNoteBUS.Instance.themPhieuNhap(tongTien, int.Parse(lookUpEditSupplier.EditValue.ToString()), frmMainForm.maND))
                     {
                         maPhieuNhap = GoodsReceivedNoteBUS.Instance.maPhieuNhapMoiNhat();
                         for (int i = 0; i < gridViewCTPN.RowCount - 1; i++)

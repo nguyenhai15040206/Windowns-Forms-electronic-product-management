@@ -29,21 +29,38 @@ namespace QLSanPhamDienTu
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayCartManager));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dgvInvoiveDetails = new System.Windows.Forms.DataGridView();
+            this.btnDeleteProductInCart = new System.Windows.Forms.DataGridViewImageColumn();
+            this.maSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAddNewProduct = new DevExpress.XtraEditors.SimpleButton();
             this.gridLookUpEditCustomer = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColCustomerID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cboCategoryByNote = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnResetData = new System.Windows.Forms.ToolStripButton();
@@ -57,6 +74,9 @@ namespace QLSanPhamDienTu
             this.label8 = new System.Windows.Forms.Label();
             this.gridLookUpEditProductByNote = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColProductID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColProductName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSumMoney = new System.Windows.Forms.TextBox();
             this.txtDiscount = new System.Windows.Forms.TextBox();
@@ -71,29 +91,11 @@ namespace QLSanPhamDienTu
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvInvoiveDetails = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.btnAddNewProduct = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColCustomerID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColAddress = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColProductID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColProductName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColAmount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnDeleteProductInCart = new System.Windows.Forms.DataGridViewImageColumn();
-            this.maSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiveDetails)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEditCustomer.Properties)).BeginInit();
@@ -101,8 +103,6 @@ namespace QLSanPhamDienTu
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEditProductByNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiveDetails)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,6 +157,136 @@ namespace QLSanPhamDienTu
             this.panel3.Size = new System.Drawing.Size(1294, 288);
             this.panel3.TabIndex = 6;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label23);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 252);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1294, 36);
+            this.panel6.TabIndex = 2;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(9, 9);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(360, 18);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "  Chú ý (*): kiểm tra các thông tin trước khi thanh toán!";
+            // 
+            // dgvInvoiveDetails
+            // 
+            this.dgvInvoiveDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInvoiveDetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvInvoiveDetails.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvInvoiveDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInvoiveDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnDeleteProductInCart,
+            this.maSanPham,
+            this.tenSanPham,
+            this.DVT,
+            this.soLuong,
+            this.donGia,
+            this.giamGia,
+            this.tongTien});
+            this.dgvInvoiveDetails.Location = new System.Drawing.Point(3, 6);
+            this.dgvInvoiveDetails.MultiSelect = false;
+            this.dgvInvoiveDetails.Name = "dgvInvoiveDetails";
+            this.dgvInvoiveDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvInvoiveDetails.Size = new System.Drawing.Size(1288, 240);
+            this.dgvInvoiveDetails.TabIndex = 1;
+            this.dgvInvoiveDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoiveDetails_CellClick);
+            this.dgvInvoiveDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoiveDetails_CellContentClick);
+            this.dgvInvoiveDetails.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoiveDetails_CellValueChanged);
+            // 
+            // btnDeleteProductInCart
+            // 
+            this.btnDeleteProductInCart.HeaderText = "";
+            this.btnDeleteProductInCart.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.btnDeleteProductInCart.Name = "btnDeleteProductInCart";
+            this.btnDeleteProductInCart.ToolTipText = "Xóa thức uống";
+            this.btnDeleteProductInCart.Width = 40;
+            // 
+            // maSanPham
+            // 
+            this.maSanPham.DataPropertyName = "maSanPham";
+            this.maSanPham.HeaderText = "Mã";
+            this.maSanPham.Name = "maSanPham";
+            this.maSanPham.ReadOnly = true;
+            // 
+            // tenSanPham
+            // 
+            this.tenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenSanPham.DataPropertyName = "tenSanPham";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tenSanPham.DefaultCellStyle = dataGridViewCellStyle1;
+            this.tenSanPham.FillWeight = 35.08772F;
+            this.tenSanPham.HeaderText = "Mặt hàng";
+            this.tenSanPham.Name = "tenSanPham";
+            this.tenSanPham.ReadOnly = true;
+            this.tenSanPham.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // DVT
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.DVT.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DVT.HeaderText = "DVT";
+            this.DVT.Name = "DVT";
+            this.DVT.ReadOnly = true;
+            // 
+            // soLuong
+            // 
+            this.soLuong.DataPropertyName = "soluong";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.soLuong.DefaultCellStyle = dataGridViewCellStyle3;
+            this.soLuong.FillWeight = 294.7368F;
+            this.soLuong.HeaderText = "Số lượng";
+            this.soLuong.Name = "soLuong";
+            // 
+            // donGia
+            // 
+            this.donGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donGia.DataPropertyName = "giaBan";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.donGia.DefaultCellStyle = dataGridViewCellStyle4;
+            this.donGia.FillWeight = 35.08772F;
+            this.donGia.HeaderText = "Đơn giá";
+            this.donGia.Name = "donGia";
+            this.donGia.ReadOnly = true;
+            // 
+            // giamGia
+            // 
+            this.giamGia.HeaderText = "Giảm giá";
+            this.giamGia.Name = "giamGia";
+            this.giamGia.ReadOnly = true;
+            // 
+            // tongTien
+            // 
+            this.tongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tongTien.DataPropertyName = "thanhTien";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.tongTien.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tongTien.FillWeight = 35.08772F;
+            this.tongTien.HeaderText = "Tổng tiền";
+            this.tongTien.Name = "tongTien";
+            this.tongTien.ReadOnly = true;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.groupBox1);
@@ -204,6 +334,17 @@ namespace QLSanPhamDienTu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phiếu thanh toán";
             // 
+            // btnAddNewProduct
+            // 
+            this.btnAddNewProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddNewProduct.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddNewProduct.ImageOptions.SvgImage")));
+            this.btnAddNewProduct.Location = new System.Drawing.Point(872, 237);
+            this.btnAddNewProduct.Name = "btnAddNewProduct";
+            this.btnAddNewProduct.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnAddNewProduct.Size = new System.Drawing.Size(37, 36);
+            this.btnAddNewProduct.TabIndex = 47;
+            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
+            // 
             // gridLookUpEditCustomer
             // 
             this.gridLookUpEditCustomer.Location = new System.Drawing.Point(171, 35);
@@ -248,6 +389,48 @@ namespace QLSanPhamDienTu
             this.gridView1.OptionsFind.FindNullPrompt = "Nhập sản phẩm cần tìm";
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColCustomerID
+            // 
+            this.gridColCustomerID.Caption = "Mã khách hàng";
+            this.gridColCustomerID.FieldName = "MaKhachHang";
+            this.gridColCustomerID.MaxWidth = 100;
+            this.gridColCustomerID.Name = "gridColCustomerID";
+            this.gridColCustomerID.Visible = true;
+            this.gridColCustomerID.VisibleIndex = 0;
+            // 
+            // gridColCustomerName
+            // 
+            this.gridColCustomerName.Caption = "Tên khách hàng";
+            this.gridColCustomerName.FieldName = "TenKhachHang";
+            this.gridColCustomerName.Name = "gridColCustomerName";
+            this.gridColCustomerName.Visible = true;
+            this.gridColCustomerName.VisibleIndex = 1;
+            // 
+            // gridColPhoneNumber
+            // 
+            this.gridColPhoneNumber.Caption = "Số điện thoại";
+            this.gridColPhoneNumber.FieldName = "SoDienThoai";
+            this.gridColPhoneNumber.MaxWidth = 100;
+            this.gridColPhoneNumber.Name = "gridColPhoneNumber";
+            this.gridColPhoneNumber.Visible = true;
+            this.gridColPhoneNumber.VisibleIndex = 2;
+            // 
+            // gridColEmail
+            // 
+            this.gridColEmail.Caption = "Email";
+            this.gridColEmail.FieldName = "Email";
+            this.gridColEmail.Name = "gridColEmail";
+            this.gridColEmail.Visible = true;
+            this.gridColEmail.VisibleIndex = 3;
+            // 
+            // gridColAddress
+            // 
+            this.gridColAddress.Caption = "Địa chỉ";
+            this.gridColAddress.FieldName = "DiaChi";
+            this.gridColAddress.Name = "gridColAddress";
+            this.gridColAddress.Visible = true;
+            this.gridColAddress.VisibleIndex = 4;
             // 
             // cboCategoryByNote
             // 
@@ -300,6 +483,7 @@ namespace QLSanPhamDienTu
             this.btnInvoicePrinting.Name = "btnInvoicePrinting";
             this.btnInvoicePrinting.Size = new System.Drawing.Size(146, 34);
             this.btnInvoicePrinting.Text = "In lại hóa đơn";
+            this.btnInvoicePrinting.Click += new System.EventHandler(this.btnInvoicePrinting_Click);
             // 
             // label18
             // 
@@ -405,6 +589,32 @@ namespace QLSanPhamDienTu
             this.gridLookUpEdit1View.OptionsFind.FindNullPrompt = "Nhập sản phẩm cần tìm";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColProductID
+            // 
+            this.gridColProductID.Caption = "Mã sản phẩm";
+            this.gridColProductID.FieldName = "maSanPham";
+            this.gridColProductID.MaxWidth = 100;
+            this.gridColProductID.Name = "gridColProductID";
+            this.gridColProductID.Visible = true;
+            this.gridColProductID.VisibleIndex = 0;
+            // 
+            // gridColProductName
+            // 
+            this.gridColProductName.Caption = "Tên sản phẩm";
+            this.gridColProductName.FieldName = "tenSanPham";
+            this.gridColProductName.Name = "gridColProductName";
+            this.gridColProductName.Visible = true;
+            this.gridColProductName.VisibleIndex = 1;
+            // 
+            // gridColAmount
+            // 
+            this.gridColAmount.Caption = "Số lượng";
+            this.gridColAmount.FieldName = "soLuong";
+            this.gridColAmount.MaxWidth = 100;
+            this.gridColAmount.Name = "gridColAmount";
+            this.gridColAmount.Visible = true;
+            this.gridColAmount.VisibleIndex = 2;
             // 
             // label7
             // 
@@ -553,215 +763,6 @@ namespace QLSanPhamDienTu
             this.label4.TabIndex = 25;
             this.label4.Text = "Chọn khách hàng:";
             // 
-            // dgvInvoiveDetails
-            // 
-            this.dgvInvoiveDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvInvoiveDetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvInvoiveDetails.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvInvoiveDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInvoiveDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.btnDeleteProductInCart,
-            this.maSanPham,
-            this.tenSanPham,
-            this.DVT,
-            this.soLuong,
-            this.donGia,
-            this.giamGia,
-            this.tongTien});
-            this.dgvInvoiveDetails.Location = new System.Drawing.Point(3, 6);
-            this.dgvInvoiveDetails.MultiSelect = false;
-            this.dgvInvoiveDetails.Name = "dgvInvoiveDetails";
-            this.dgvInvoiveDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvInvoiveDetails.Size = new System.Drawing.Size(1288, 240);
-            this.dgvInvoiveDetails.TabIndex = 1;
-            this.dgvInvoiveDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoiveDetails_CellClick);
-            this.dgvInvoiveDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoiveDetails_CellContentClick);
-            this.dgvInvoiveDetails.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoiveDetails_CellValueChanged);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label23);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 252);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1294, 36);
-            this.panel6.TabIndex = 2;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(9, 9);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(360, 18);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "  Chú ý (*): kiểm tra các thông tin trước khi thanh toán!";
-            // 
-            // btnAddNewProduct
-            // 
-            this.btnAddNewProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddNewProduct.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddNewProduct.ImageOptions.SvgImage")));
-            this.btnAddNewProduct.Location = new System.Drawing.Point(872, 237);
-            this.btnAddNewProduct.Name = "btnAddNewProduct";
-            this.btnAddNewProduct.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnAddNewProduct.Size = new System.Drawing.Size(37, 36);
-            this.btnAddNewProduct.TabIndex = 47;
-            this.btnAddNewProduct.Click += new System.EventHandler(this.btnAddNewProduct_Click);
-            // 
-            // gridColCustomerID
-            // 
-            this.gridColCustomerID.Caption = "Mã khách hàng";
-            this.gridColCustomerID.FieldName = "MaKhachHang";
-            this.gridColCustomerID.MaxWidth = 100;
-            this.gridColCustomerID.Name = "gridColCustomerID";
-            this.gridColCustomerID.Visible = true;
-            this.gridColCustomerID.VisibleIndex = 0;
-            // 
-            // gridColCustomerName
-            // 
-            this.gridColCustomerName.Caption = "Tên khách hàng";
-            this.gridColCustomerName.FieldName = "TenKhachHang";
-            this.gridColCustomerName.Name = "gridColCustomerName";
-            this.gridColCustomerName.Visible = true;
-            this.gridColCustomerName.VisibleIndex = 1;
-            // 
-            // gridColPhoneNumber
-            // 
-            this.gridColPhoneNumber.Caption = "Số điện thoại";
-            this.gridColPhoneNumber.FieldName = "SoDienThoai";
-            this.gridColPhoneNumber.MaxWidth = 100;
-            this.gridColPhoneNumber.Name = "gridColPhoneNumber";
-            this.gridColPhoneNumber.Visible = true;
-            this.gridColPhoneNumber.VisibleIndex = 2;
-            // 
-            // gridColEmail
-            // 
-            this.gridColEmail.Caption = "Email";
-            this.gridColEmail.FieldName = "Email";
-            this.gridColEmail.Name = "gridColEmail";
-            this.gridColEmail.Visible = true;
-            this.gridColEmail.VisibleIndex = 3;
-            // 
-            // gridColAddress
-            // 
-            this.gridColAddress.Caption = "Địa chỉ";
-            this.gridColAddress.FieldName = "DiaChi";
-            this.gridColAddress.Name = "gridColAddress";
-            this.gridColAddress.Visible = true;
-            this.gridColAddress.VisibleIndex = 4;
-            // 
-            // gridColProductID
-            // 
-            this.gridColProductID.Caption = "Mã sản phẩm";
-            this.gridColProductID.FieldName = "maSanPham";
-            this.gridColProductID.MaxWidth = 100;
-            this.gridColProductID.Name = "gridColProductID";
-            this.gridColProductID.Visible = true;
-            this.gridColProductID.VisibleIndex = 0;
-            // 
-            // gridColProductName
-            // 
-            this.gridColProductName.Caption = "Tên sản phẩm";
-            this.gridColProductName.FieldName = "tenSanPham";
-            this.gridColProductName.Name = "gridColProductName";
-            this.gridColProductName.Visible = true;
-            this.gridColProductName.VisibleIndex = 1;
-            // 
-            // gridColAmount
-            // 
-            this.gridColAmount.Caption = "Số lượng";
-            this.gridColAmount.FieldName = "soLuong";
-            this.gridColAmount.MaxWidth = 100;
-            this.gridColAmount.Name = "gridColAmount";
-            this.gridColAmount.Visible = true;
-            this.gridColAmount.VisibleIndex = 2;
-            // 
-            // btnDeleteProductInCart
-            // 
-            this.btnDeleteProductInCart.HeaderText = "";
-            this.btnDeleteProductInCart.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.btnDeleteProductInCart.Name = "btnDeleteProductInCart";
-            this.btnDeleteProductInCart.ToolTipText = "Xóa thức uống";
-            this.btnDeleteProductInCart.Width = 40;
-            // 
-            // maSanPham
-            // 
-            this.maSanPham.DataPropertyName = "maSanPham";
-            this.maSanPham.HeaderText = "Mã";
-            this.maSanPham.Name = "maSanPham";
-            this.maSanPham.ReadOnly = true;
-            // 
-            // tenSanPham
-            // 
-            this.tenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenSanPham.DataPropertyName = "tenSanPham";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tenSanPham.DefaultCellStyle = dataGridViewCellStyle11;
-            this.tenSanPham.FillWeight = 35.08772F;
-            this.tenSanPham.HeaderText = "Mặt hàng";
-            this.tenSanPham.Name = "tenSanPham";
-            this.tenSanPham.ReadOnly = true;
-            this.tenSanPham.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // DVT
-            // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            this.DVT.DefaultCellStyle = dataGridViewCellStyle12;
-            this.DVT.HeaderText = "DVT";
-            this.DVT.Name = "DVT";
-            this.DVT.ReadOnly = true;
-            // 
-            // soLuong
-            // 
-            this.soLuong.DataPropertyName = "soluong";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle13.Format = "N0";
-            dataGridViewCellStyle13.NullValue = null;
-            this.soLuong.DefaultCellStyle = dataGridViewCellStyle13;
-            this.soLuong.FillWeight = 294.7368F;
-            this.soLuong.HeaderText = "Số lượng";
-            this.soLuong.Name = "soLuong";
-            // 
-            // donGia
-            // 
-            this.donGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.donGia.DataPropertyName = "giaBan";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Format = "N0";
-            dataGridViewCellStyle14.NullValue = "0";
-            this.donGia.DefaultCellStyle = dataGridViewCellStyle14;
-            this.donGia.FillWeight = 35.08772F;
-            this.donGia.HeaderText = "Đơn giá";
-            this.donGia.Name = "donGia";
-            this.donGia.ReadOnly = true;
-            // 
-            // giamGia
-            // 
-            this.giamGia.HeaderText = "Giảm giá";
-            this.giamGia.Name = "giamGia";
-            this.giamGia.ReadOnly = true;
-            // 
-            // tongTien
-            // 
-            this.tongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tongTien.DataPropertyName = "thanhTien";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Format = "N0";
-            dataGridViewCellStyle15.NullValue = "0";
-            this.tongTien.DefaultCellStyle = dataGridViewCellStyle15;
-            this.tongTien.FillWeight = 35.08772F;
-            this.tongTien.HeaderText = "Tổng tiền";
-            this.tongTien.Name = "tongTien";
-            this.tongTien.ReadOnly = true;
-            // 
             // frmPayCartManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -774,12 +775,15 @@ namespace QLSanPhamDienTu
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPayCartManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPhieuBanHang";
+            this.Text = "Phiếu bán hàng";
             this.Load += new System.EventHandler(this.frmPayCartManager_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiveDetails)).EndInit();
             this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -789,9 +793,6 @@ namespace QLSanPhamDienTu
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEditProductByNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiveDetails)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }

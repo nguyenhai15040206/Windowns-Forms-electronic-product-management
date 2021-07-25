@@ -36,14 +36,35 @@ namespace DTO.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QL_SanPham;User ID=sa;Password=sa201" +
-            "2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QL_SanPham;User ID=sa;Password=tanha" +
+            "i123")]
         public string Conn {
             get {
                 return ((string)(this["Conn"]));
             }
             set {
                 this["Conn"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4MGR8RB\\SQLEXPRESS;Initial Catalog=QL_SanPham;User ID=sa")]
+        public string QL_SanPhamConnectionString2 {
+            get {
+                return ((string)(this["QL_SanPhamConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QL_SanPham;User ID=sa;Password=tanha" +
+            "i123")]
+        public string QL_SanPhamConnectionString1 {
+            get {
+                return ((string)(this["QL_SanPhamConnectionString1"]));
             }
         }
     }

@@ -83,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,29 +131,29 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmInsertProductBySupplier.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInsertProductBySupplier.Designer.cs">
       <DependentUpon>frmInsertProductBySupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainForm.Designer.cs">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewsAndBannerManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewsAndBannerManager.Designer.cs">
+      <DependentUpon>frmNewsAndBannerManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPayCartManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPayCartManager.Designer.cs">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmInvocieManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInvocieManager.Designer.cs">
-      <DependentUpon>frmInvocieManager.cs</DependentUpon>
     </Compile>
     <Compile Include="frmScreenAndPermission.cs">
       <SubType>Form</SubType>
@@ -187,6 +193,9 @@
     <Compile Include="Report\XtraReportPN.Designer.cs">
       <DependentUpon>XtraReportPN.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,17 +217,17 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmInsertProductBySupplier.resx">
       <DependentUpon>frmInsertProductBySupplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMainForm.resx">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewsAndBannerManager.resx">
+      <DependentUpon>frmNewsAndBannerManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPayCartManager.resx">
       <DependentUpon>frmPayCartManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmInvocieManager.resx">
-      <DependentUpon>frmInvocieManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScreenAndPermission.resx">
       <DependentUpon>frmScreenAndPermission.cs</DependentUpon>

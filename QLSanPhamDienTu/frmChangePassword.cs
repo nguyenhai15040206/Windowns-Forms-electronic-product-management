@@ -28,11 +28,11 @@ namespace QLSanPhamDienTu
         {
             if (txtNewPass.Text.Trim().Length > 0 && txtOldPass.Text.Trim().Length > 0 && txtReNewsPass.Text.Trim().Length > 0)
             {
-                if (UserBUS.Instance.KiemTraTenDangNhapPass(frmMain.maND,txtOldPass.Text))
+                if (UserBUS.Instance.KiemTraTenDangNhapPass(frmMainForm.maND,txtOldPass.Text))
                 {
                     if (txtNewPass.Text.Trim() == txtReNewsPass.Text.Trim())
                     {
-                        if (UserBUS.Instance.doiMatKhau(frmMain.maND, txtNewPass.Text))
+                        if (UserBUS.Instance.doiMatKhau(frmMainForm.maND, txtNewPass.Text))
                         {
                             XtraMessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }

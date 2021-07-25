@@ -11,7 +11,7 @@ namespace QLSanPhamDienTu
     static class Program
     {
         public static frmLogin frm = null;
-        public static frmMain mainForm = null;
+        public static frmMainForm mainForm = null;
         public static frmConfig frmConfigDatabase = null;
         /// <summary>
         /// The main entry point for the application.
@@ -24,7 +24,7 @@ namespace QLSanPhamDienTu
             Application.SetCompatibleTextRenderingDefault(false);
             frm = new frmLogin();
             Application.Run(frm);
-            //Application.Run(new frmInvocieManager());
+            //Application.Run(new frmNewsAndBannerManager());
         }
     }
 }
