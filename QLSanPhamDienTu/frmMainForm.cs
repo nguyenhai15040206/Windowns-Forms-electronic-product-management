@@ -120,10 +120,10 @@ namespace QLSanPhamDienTu
 
         private void menuItemNewsManager_Click(object sender, EventArgs e)
         {
-            Form form = IstActive(typeof(Form1));
+            Form form = IstActive(typeof(frmNewsAndBannerManager));
             if (form == null)
             {
-                Form1 frm = new Form1();
+                frmNewsAndBannerManager frm = new frmNewsAndBannerManager();
                 frm.MdiParent = this;
                 frm.Show();
             }
@@ -175,6 +175,34 @@ namespace QLSanPhamDienTu
             else
             {
                 form.Activate();
+            }
+        }
+
+        private void frmMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                // WinForms app
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                // Console app
+                System.Environment.Exit(1);
+            }
+        }
+
+        private void menuItemExit_Click(object sender, EventArgs e)
+        {
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                // WinForms app
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                // Console app
+                System.Environment.Exit(1);
             }
         }
     }

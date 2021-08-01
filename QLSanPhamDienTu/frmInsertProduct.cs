@@ -74,7 +74,7 @@ namespace QLSanPhamDienTu
                 try
                 {
                     string img = ProductBUS.Instance.productImage(int.Parse(txtProductCode.Text)).Trim();
-                    var request = WebRequest.Create("http://192.168.1.3:5000/Upload/"+ img);
+                    var request = WebRequest.Create("http://192.168.1.5:5000/Upload/"+ img);
                     using (var response = request.GetResponse())
                     using (var stream = response.GetResponseStream())
                     {
@@ -187,7 +187,7 @@ namespace QLSanPhamDienTu
                                 {
                                     using (var fileStream = File.Open(fileName, FileMode.Open))
                                     {
-                                        var client = new RestClient("http://192.168.1.3:5000/Home/Introduct/ImagesUpload");
+                                        var client = new RestClient("http://192.168.1.5:5000/Home/Introduct/ImagesUpload");
                                         var request = new RestRequest();
                                         request.Method = Method.POST;
                                         using (MemoryStream memoryStream = new MemoryStream())
@@ -267,7 +267,7 @@ namespace QLSanPhamDienTu
                                     {
                                         using (var fileStream = File.Open(fileName, FileMode.Open))
                                         {
-                                            var client = new RestClient("http://192.168.1.3:5000/Home/Introduct/ImagesUpload");
+                                            var client = new RestClient("http://192.168.1.5:5000/Home/Introduct/ImagesUpload");
                                             var request = new RestRequest();
                                             request.Method = Method.POST;
                                             using (MemoryStream memoryStream = new MemoryStream())

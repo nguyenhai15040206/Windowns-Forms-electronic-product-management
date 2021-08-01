@@ -34,32 +34,32 @@ namespace QLSanPhamDienTu
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.gvBanner = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnMaBanner = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnFileBanner = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnKichHoatBanner = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCalcEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.txtGhiChuBaanner = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btnResetDataBanner = new System.Windows.Forms.ToolStripButton();
+            this.btnInssertBanner = new System.Windows.Forms.ToolStripButton();
+            this.btnUpdateBanner = new System.Windows.Forms.ToolStripButton();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtFileBanner = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.gvNews = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,10 +70,11 @@ namespace QLSanPhamDienTu
             this.gridColumnNgayDang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnHinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnLoaiTin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCalcEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ckbActive = new System.Windows.Forms.CheckBox();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnChoseImages = new DevExpress.XtraEditors.SimpleButton();
@@ -94,16 +95,20 @@ namespace QLSanPhamDienTu
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
-            this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvNews)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonDelete)).BeginInit();
@@ -123,7 +128,7 @@ namespace QLSanPhamDienTu
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1294, 58);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 4;
             // 
             // label3
             // 
@@ -149,47 +154,56 @@ namespace QLSanPhamDienTu
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 58);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1294, 603);
-            this.panel2.TabIndex = 4;
+            this.panel2.TabIndex = 5;
             // 
-            // panel5
+            // panel6
             // 
-            this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(721, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(573, 603);
-            this.panel5.TabIndex = 1;
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(724, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(570, 603);
+            this.panel6.TabIndex = 1;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.gridControl1);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Controls.Add(this.panel9);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(3, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(570, 338);
+            this.panel8.Size = new System.Drawing.Size(567, 603);
             this.panel8.TabIndex = 2;
             // 
-            // gridControl1
+            // panel10
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView2;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.panel10.Controls.Add(this.gvBanner);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(567, 338);
+            this.panel10.TabIndex = 1;
+            // 
+            // gvBanner
+            // 
+            this.gvBanner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvBanner.Location = new System.Drawing.Point(0, 0);
+            this.gvBanner.MainView = this.gridView2;
+            this.gvBanner.Name = "gvBanner";
+            this.gvBanner.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemCalcEdit2,
             this.repositoryItemButtonEdit2});
-            this.gridControl1.Size = new System.Drawing.Size(570, 338);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvBanner.Size = new System.Drawing.Size(567, 338);
+            this.gvBanner.TabIndex = 3;
+            this.gvBanner.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
@@ -200,18 +214,18 @@ namespace QLSanPhamDienTu
             this.gridView2.Appearance.Row.Options.UseFont = true;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7});
-            this.gridView2.GridControl = this.gridControl1;
+            this.gridColumnMaBanner,
+            this.gridColumnFileBanner,
+            this.gridColumnKichHoatBanner});
+            this.gridView2.GridControl = this.gvBanner;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsBehavior.ReadOnly = true;
             this.gridView2.OptionsFind.AlwaysVisible = true;
             this.gridView2.OptionsFind.FindNullPrompt = "Nhập thông tin cần tìm";
             this.gridView2.OptionsView.ColumnAutoWidth = false;
+            this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
+            this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
             // 
             // gridColumn2
             // 
@@ -230,57 +244,35 @@ namespace QLSanPhamDienTu
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // gridColumn3
+            // gridColumnMaBanner
             // 
-            this.gridColumn3.Caption = "Mã tin";
-            this.gridColumn3.FieldName = "maTinTuc";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 94;
+            this.gridColumnMaBanner.Caption = "Mã Banner";
+            this.gridColumnMaBanner.FieldName = "maBanner";
+            this.gridColumnMaBanner.MinWidth = 25;
+            this.gridColumnMaBanner.Name = "gridColumnMaBanner";
+            this.gridColumnMaBanner.Visible = true;
+            this.gridColumnMaBanner.VisibleIndex = 1;
+            this.gridColumnMaBanner.Width = 70;
             // 
-            // gridColumn4
+            // gridColumnFileBanner
             // 
-            this.gridColumn4.Caption = "Tên Tin";
-            this.gridColumn4.FieldName = "tenTinTuc";
-            this.gridColumn4.MinWidth = 25;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 200;
+            this.gridColumnFileBanner.Caption = "FileBanner";
+            this.gridColumnFileBanner.FieldName = "fileBanner";
+            this.gridColumnFileBanner.MinWidth = 25;
+            this.gridColumnFileBanner.Name = "gridColumnFileBanner";
+            this.gridColumnFileBanner.Visible = true;
+            this.gridColumnFileBanner.VisibleIndex = 2;
+            this.gridColumnFileBanner.Width = 334;
             // 
-            // gridColumn5
+            // gridColumnKichHoatBanner
             // 
-            this.gridColumn5.Caption = "Nội dung";
-            this.gridColumn5.FieldName = "noiDung";
-            this.gridColumn5.MinWidth = 25;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 250;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Ngày đăng";
-            this.gridColumn6.DisplayFormat.FormatString = "dd/MM/yyy";
-            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.gridColumn6.FieldName = "ngayDang";
-            this.gridColumn6.MinWidth = 25;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
-            this.gridColumn6.Width = 150;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Kích hoạt";
-            this.gridColumn7.FieldName = "kichHoat";
-            this.gridColumn7.MinWidth = 25;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 5;
-            this.gridColumn7.Width = 50;
+            this.gridColumnKichHoatBanner.Caption = "Kích hoạt";
+            this.gridColumnKichHoatBanner.FieldName = "kichHoat";
+            this.gridColumnKichHoatBanner.MinWidth = 25;
+            this.gridColumnKichHoatBanner.Name = "gridColumnKichHoatBanner";
+            this.gridColumnKichHoatBanner.Visible = true;
+            this.gridColumnKichHoatBanner.VisibleIndex = 3;
+            this.gridColumnKichHoatBanner.Width = 201;
             // 
             // repositoryItemCalcEdit2
             // 
@@ -297,145 +289,163 @@ namespace QLSanPhamDienTu
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             // 
-            // panel7
+            // panel9
             // 
-            this.panel7.Controls.Add(this.toolStrip2);
-            this.panel7.Controls.Add(this.txtGhiChuBaanner);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.checkBox2);
-            this.panel7.Controls.Add(this.simpleButton1);
-            this.panel7.Controls.Add(this.txtFileBanner);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(3, 338);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(570, 265);
-            this.panel7.TabIndex = 1;
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 338);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(567, 265);
+            this.panel9.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.pictureBox2);
+            this.panel11.Controls.Add(this.toolStrip2);
+            this.panel11.Controls.Add(this.checkBox2);
+            this.panel11.Controls.Add(this.simpleButton1);
+            this.panel11.Controls.Add(this.txtFileBanner);
+            this.panel11.Controls.Add(this.label9);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(567, 265);
+            this.panel11.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::QLSanPhamDienTu.Properties.Resources.network_mesh_wire_digital_technology_background_1017_27428;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(113, 123);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(329, 89);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 69;
+            this.pictureBox2.TabStop = false;
             // 
             // toolStrip2
             // 
             this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(35, 35);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.btnResetDataBanner,
+            this.btnInssertBanner,
+            this.btnUpdateBanner});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(570, 42);
-            this.toolStrip2.TabIndex = 56;
+            this.toolStrip2.Size = new System.Drawing.Size(567, 42);
+            this.toolStrip2.TabIndex = 68;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // toolStripButton1
+            // btnResetDataBanner
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = global::QLSanPhamDienTu.Properties.Resources.addpink_removebg_preview;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(106, 39);
-            this.toolStripButton1.Text = "Làm mới";
+            this.btnResetDataBanner.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetDataBanner.Image = global::QLSanPhamDienTu.Properties.Resources.addpink_removebg_preview;
+            this.btnResetDataBanner.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnResetDataBanner.Name = "btnResetDataBanner";
+            this.btnResetDataBanner.Size = new System.Drawing.Size(106, 39);
+            this.btnResetDataBanner.Text = "Làm mới";
+            this.btnResetDataBanner.Click += new System.EventHandler(this.btnResetDataBanner_Click);
             // 
-            // toolStripButton2
+            // btnInssertBanner
             // 
-            this.toolStripButton2.Image = global::QLSanPhamDienTu.Properties.Resources.icloud_removebg_preview;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(131, 39);
-            this.toolStripButton2.Text = "Thêm tin tức";
+            this.btnInssertBanner.Enabled = false;
+            this.btnInssertBanner.Image = global::QLSanPhamDienTu.Properties.Resources.icloud_removebg_preview;
+            this.btnInssertBanner.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInssertBanner.Name = "btnInssertBanner";
+            this.btnInssertBanner.Size = new System.Drawing.Size(159, 39);
+            this.btnInssertBanner.Text = "Thêm Banner QC";
+            this.btnInssertBanner.Click += new System.EventHandler(this.btnInssertBanner_Click);
             // 
-            // toolStripButton3
+            // btnUpdateBanner
             // 
-            this.toolStripButton3.Image = global::QLSanPhamDienTu.Properties.Resources.savepink_removebg_preview;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(107, 39);
-            this.toolStripButton3.Text = "Cập nhật";
-            // 
-            // txtGhiChuBaanner
-            // 
-            this.txtGhiChuBaanner.Location = new System.Drawing.Point(107, 117);
-            this.txtGhiChuBaanner.Name = "txtGhiChuBaanner";
-            this.txtGhiChuBaanner.Size = new System.Drawing.Size(373, 27);
-            this.txtGhiChuBaanner.TabIndex = 55;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 124);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 20);
-            this.label10.TabIndex = 54;
-            this.label10.Text = "Ghi chú:";
+            this.btnUpdateBanner.Enabled = false;
+            this.btnUpdateBanner.Image = global::QLSanPhamDienTu.Properties.Resources.savepink_removebg_preview;
+            this.btnUpdateBanner.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUpdateBanner.Name = "btnUpdateBanner";
+            this.btnUpdateBanner.Size = new System.Drawing.Size(107, 39);
+            this.btnUpdateBanner.Text = "Cập nhật";
+            this.btnUpdateBanner.Click += new System.EventHandler(this.btnUpdateBanner_Click);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(107, 87);
+            this.checkBox2.Location = new System.Drawing.Point(113, 93);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(90, 24);
-            this.checkBox2.TabIndex = 53;
+            this.checkBox2.TabIndex = 67;
             this.checkBox2.Text = "Kích hoạt";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(442, 54);
+            this.simpleButton1.Location = new System.Drawing.Point(448, 60);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(38, 27);
-            this.simpleButton1.TabIndex = 52;
+            this.simpleButton1.TabIndex = 66;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtFileBanner
             // 
             this.txtFileBanner.BackColor = System.Drawing.Color.SeaShell;
-            this.txtFileBanner.Location = new System.Drawing.Point(107, 54);
+            this.txtFileBanner.Location = new System.Drawing.Point(113, 60);
             this.txtFileBanner.Name = "txtFileBanner";
             this.txtFileBanner.ReadOnly = true;
             this.txtFileBanner.Size = new System.Drawing.Size(329, 27);
-            this.txtFileBanner.TabIndex = 51;
+            this.txtFileBanner.TabIndex = 65;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(20, 62);
+            this.label9.Location = new System.Drawing.Point(26, 68);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 20);
-            this.label9.TabIndex = 50;
+            this.label9.TabIndex = 64;
             this.label9.Text = "FileBanner:";
             // 
-            // panel6
+            // panel7
             // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(3, 603);
-            this.panel6.TabIndex = 0;
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(3, 603);
+            this.panel7.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.gvNews);
+            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(721, 603);
+            this.panel3.Size = new System.Drawing.Size(724, 603);
             this.panel3.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.gvNews);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 338);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(724, 265);
+            this.panel5.TabIndex = 2;
             // 
             // gvNews
             // 
             this.gvNews.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gvNews.Location = new System.Drawing.Point(0, 338);
+            this.gvNews.Location = new System.Drawing.Point(0, 0);
             this.gvNews.MainView = this.gridView1;
             this.gvNews.Name = "gvNews";
             this.gvNews.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.buttonDelete,
             this.repositoryItemCalcEdit1,
             this.btnDelete});
-            this.gvNews.Size = new System.Drawing.Size(721, 265);
-            this.gvNews.TabIndex = 1;
+            this.gvNews.Size = new System.Drawing.Size(724, 265);
+            this.gvNews.TabIndex = 2;
             this.gvNews.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -452,7 +462,8 @@ namespace QLSanPhamDienTu
             this.gridColumnND,
             this.gridColumnNgayDang,
             this.gridColumnHinh,
-            this.gridColumnActive});
+            this.gridColumnActive,
+            this.gridColumnLoaiTin});
             this.gridView1.GridControl = this.gvNews;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -460,6 +471,8 @@ namespace QLSanPhamDienTu
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindNullPrompt = "Nhập thông tin cần tìm";
             this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
             // 
             // gridColumn1
             // 
@@ -539,6 +552,14 @@ namespace QLSanPhamDienTu
             this.gridColumnActive.VisibleIndex = 6;
             this.gridColumnActive.Width = 50;
             // 
+            // gridColumnLoaiTin
+            // 
+            this.gridColumnLoaiTin.Caption = "Loại tin tức";
+            this.gridColumnLoaiTin.FieldName = "maLoaiTin";
+            this.gridColumnLoaiTin.Name = "gridColumnLoaiTin";
+            this.gridColumnLoaiTin.Visible = true;
+            this.gridColumnLoaiTin.VisibleIndex = 7;
+            // 
             // repositoryItemCalcEdit1
             // 
             this.repositoryItemCalcEdit1.AutoHeight = false;
@@ -556,7 +577,7 @@ namespace QLSanPhamDienTu
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.checkBox1);
+            this.panel4.Controls.Add(this.ckbActive);
             this.panel4.Controls.Add(this.txtNote);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.btnChoseImages);
@@ -576,18 +597,18 @@ namespace QLSanPhamDienTu
             this.panel4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(721, 338);
-            this.panel4.TabIndex = 0;
+            this.panel4.Size = new System.Drawing.Size(724, 338);
+            this.panel4.TabIndex = 1;
             // 
-            // checkBox1
+            // ckbActive
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(126, 265);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(90, 24);
-            this.checkBox1.TabIndex = 52;
-            this.checkBox1.Text = "Kích hoạt";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckbActive.AutoSize = true;
+            this.ckbActive.Location = new System.Drawing.Point(126, 265);
+            this.ckbActive.Name = "ckbActive";
+            this.ckbActive.Size = new System.Drawing.Size(90, 24);
+            this.ckbActive.TabIndex = 52;
+            this.ckbActive.Text = "Kích hoạt";
+            this.ckbActive.UseVisualStyleBackColor = true;
             // 
             // txtNote
             // 
@@ -613,6 +634,7 @@ namespace QLSanPhamDienTu
             this.btnChoseImages.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnChoseImages.Size = new System.Drawing.Size(38, 27);
             this.btnChoseImages.TabIndex = 49;
+            this.btnChoseImages.Click += new System.EventHandler(this.btnChoseImages_Click_1);
             // 
             // toolStrip1
             // 
@@ -625,7 +647,7 @@ namespace QLSanPhamDienTu
             this.btnCapNhat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 296);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(721, 42);
+            this.toolStrip1.Size = new System.Drawing.Size(724, 42);
             this.toolStrip1.TabIndex = 34;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -641,22 +663,28 @@ namespace QLSanPhamDienTu
             // 
             // btnInsert
             // 
+            this.btnInsert.Enabled = false;
             this.btnInsert.Image = global::QLSanPhamDienTu.Properties.Resources.icloud_removebg_preview;
             this.btnInsert.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(131, 39);
             this.btnInsert.Text = "Thêm tin tức";
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnCapNhat
             // 
+            this.btnCapNhat.Enabled = false;
             this.btnCapNhat.Image = global::QLSanPhamDienTu.Properties.Resources.savepink_removebg_preview;
             this.btnCapNhat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(107, 39);
             this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::QLSanPhamDienTu.Properties.Resources.mascot_fail;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(506, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(205, 245);
@@ -727,6 +755,7 @@ namespace QLSanPhamDienTu
             this.cboKindOfNews.Name = "cboKindOfNews";
             this.cboKindOfNews.Size = new System.Drawing.Size(373, 28);
             this.cboKindOfNews.TabIndex = 5;
+            this.cboKindOfNews.SelectionChangeCommitted += new System.EventHandler(this.cboKindOfNews_SelectionChangeCommitted);
             // 
             // label4
             // 
@@ -755,30 +784,36 @@ namespace QLSanPhamDienTu
             // 
             // frmNewsAndBannerManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1294, 661);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmNewsAndBannerManager";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thêm tin tức và banner";
+            this.Text = "Quản lý tin tức và banner";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gvBanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvNews)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonDelete)).EndInit();
@@ -801,6 +836,31 @@ namespace QLSanPhamDienTu
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.CheckBox ckbActive;
+        private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.SimpleButton btnChoseImages;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnResetData;
+        private System.Windows.Forms.ToolStripButton btnInsert;
+        private System.Windows.Forms.ToolStripButton btnCapNhat;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtImg;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDate;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNewsDescrip;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cboKindOfNews;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNewsName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
         private DevExpress.XtraGrid.GridControl gvNews;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -809,53 +869,29 @@ namespace QLSanPhamDienTu
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenTin;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnND;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnNgayDang;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnHinh;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnActive;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnLoaiTin;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
-        private System.Windows.Forms.ComboBox cboKindOfNews;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNewsName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNewsDescrip;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDate;
-        private System.Windows.Forms.TextBox txtImg;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnResetData;
-        private System.Windows.Forms.ToolStripButton btnInsert;
-        private System.Windows.Forms.ToolStripButton btnCapNhat;
-        private DevExpress.XtraEditors.SimpleButton btnChoseImages;
-        private System.Windows.Forms.TextBox txtNote;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumnHinh;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gvBanner;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaBanner;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnFileBanner;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnKichHoatBanner;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton btnResetDataBanner;
+        private System.Windows.Forms.ToolStripButton btnInssertBanner;
+        private System.Windows.Forms.ToolStripButton btnUpdateBanner;
         private System.Windows.Forms.CheckBox checkBox2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.TextBox txtFileBanner;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtGhiChuBaanner;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }

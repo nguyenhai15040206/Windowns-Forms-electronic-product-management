@@ -108,6 +108,7 @@ namespace QLSanPhamDienTu
             this.menuItemExit.Size = new System.Drawing.Size(228, 24);
             this.menuItemExit.Tag = "4";
             this.menuItemExit.Text = "Thoát";
+            this.menuItemExit.Click += new System.EventHandler(this.menuItemExit_Click);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -208,6 +209,7 @@ namespace QLSanPhamDienTu
             this.Name = "frmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainForm_FormClosing);
             this.Load += new System.EventHandler(this.frmMainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

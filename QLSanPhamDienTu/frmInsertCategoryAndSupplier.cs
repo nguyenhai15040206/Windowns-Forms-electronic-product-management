@@ -66,7 +66,7 @@ namespace QLSanPhamDienTu
                                 {
                                     using (var fileStream = File.Open(fileName, FileMode.Open))
                                     {
-                                        var client = new RestClient("http://192.168.1.3:5000/Home/Introduct/DanhMuc");
+                                        var client = new RestClient("http://192.168.1.5:5000/Home/Introduct/DanhMuc");
                                         var request = new RestRequest();
                                         request.Method = Method.POST;
                                         using (MemoryStream memoryStream = new MemoryStream())
@@ -126,7 +126,7 @@ namespace QLSanPhamDienTu
                         {
                             using (var fileStream = File.Open(fileName, FileMode.Open))
                             {
-                                var client = new RestClient("http://192.168.1.3:5000/Home/Introduct/DanhMuc");
+                                var client = new RestClient("http://192.168.1.5:5000/Home/Introduct/DanhMuc");
                                 var request = new RestRequest();
                                 request.Method = Method.POST;
                                 using (MemoryStream memoryStream = new MemoryStream())
@@ -179,7 +179,7 @@ namespace QLSanPhamDienTu
                 {
                     try
                     {
-                        var request = WebRequest.Create("http://192.168.1.3:5000/DanhMuc/" + logo);
+                        var request = WebRequest.Create("http://192.168.1.5:5000/DanhMuc/" + logo);
                         using (var response = request.GetResponse())
                         using (var stream = response.GetResponseStream())
                         {
