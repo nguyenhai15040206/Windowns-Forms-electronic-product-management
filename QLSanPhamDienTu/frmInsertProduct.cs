@@ -180,7 +180,7 @@ namespace QLSanPhamDienTu
                             }    
                             if(ProductBUS.instance.insertProduct(txtProductName.Text.Trim(), int.Parse(numericUpDownAmount.Value.ToString()),
                                         unitprice, double.Parse(txtUnitPriceImport.Text.Trim()), description, descriptionDetails, txtPromotion.Text.Trim(), double.Parse(numEricUpdownDiscount.Value.ToString()), pickerUpdateDate.Value,
-                                        txtMadeIn.Text.Trim(), txtImage.Text.Trim(), txtListImages.Text.Trim(), int.Parse(cboTrademark.SelectedValue.ToString()), status))
+                                        txtMadeIn.Text.Trim(), txtImage.Text.Trim(), null, int.Parse(cboTrademark.SelectedValue.ToString()), status))
                             {
                                 XtraMessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 try
@@ -258,7 +258,7 @@ namespace QLSanPhamDienTu
                             }
                             if (ProductBUS.instance.updateProduct(int.Parse(txtProductCode.Text),txtProductName.Text.Trim(), int.Parse(numericUpDownAmount.Value.ToString()),
                                          unitprice, double.Parse(txtUnitPriceImport.Text.Trim()), description, descriptionDetails, txtPromotion.Text.Trim(), double.Parse(numEricUpdownDiscount.Value.ToString()), pickerUpdateDate.Value,
-                                        txtMadeIn.Text.Trim(), txtImage.Text.Trim(), txtListImages.Text.Trim(), int.Parse(cboTrademark.SelectedValue.ToString()), status))
+                                        txtMadeIn.Text.Trim(), txtImage.Text.Trim(), null, int.Parse(cboTrademark.SelectedValue.ToString()), status))
                             {
                                 XtraMessageBox.Show("Cập nhật sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 if(!string.IsNullOrEmpty(fileName))

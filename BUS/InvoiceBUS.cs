@@ -31,9 +31,19 @@ namespace BUS
             grv.DataSource = InvoiceDAO.Instance.getALLHoaDon(tt);
         }
 
+        public void getDataInvoiceByNote(GridControl gv,String note)
+        {
+            gv.DataSource = InvoiceDAO.Instance.getALLHoaDonBy_Note(note);
+        }
+
         public bool insertInvoice(DateTime date, int customerID, double sumUnitPrice, double sumDiscount, double sumMoney, string note, int userID, bool status)
         {
             return InvoiceDAO.Instance.insertInvoice(date, customerID, sumUnitPrice, sumDiscount, sumMoney, note, userID, status);
+        }
+
+        public bool updateStatusInvoice(int invoiceID, string note, int UserID)
+        {
+            return InvoiceDAO.Instance.updateStatusInvoice(invoiceID, note, UserID);
         }
 
         public bool deleteInvoice(int invoiceID)
@@ -49,6 +59,11 @@ namespace BUS
         public double sumMoney(int invoiceID)
         {
             return (double)InvoiceDAO.Instance.invoiceByID(invoiceID).tongTien;
+        }
+
+        public int? UserIDByInvoiceID(int invoiceID)
+        {
+            return InvoiceDAO.Instance.invoiceByID(invoiceID).maNguoiDung;
         }
     }
 }

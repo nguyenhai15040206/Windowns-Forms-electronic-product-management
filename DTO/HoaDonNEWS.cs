@@ -11,7 +11,7 @@ namespace DTO
         private int _maHoaDon;
 
         private string _diaChi;
-        private int maNguoiDuong;
+        private int? maNguoiDuong;
 
         private string _tenNguoiDung;
 
@@ -28,6 +28,7 @@ namespace DTO
         private System.Nullable<decimal> _tongTien;
 
         private System.Nullable<bool> _tinhTrang;
+        private string ghiChu;
 
         public int MaHoaDon { get => _maHoaDon; set => _maHoaDon = value; }
         public string TenNguoiDung { get => _tenNguoiDung; set => _tenNguoiDung = value; }
@@ -39,6 +40,7 @@ namespace DTO
         public string SoDienThoai { get => _soDienThoai; set => _soDienThoai = value; }
         public double? GiamGia { get => _giamGia; set => _giamGia = value; }
         public string TenKhachHang { get => _tenKhachHang; set => _tenKhachHang = value; }
-        public int MaNguoiDuong { get => maNguoiDuong; set => maNguoiDuong = value; }
+        public int? MaNguoiDuong { get => maNguoiDuong; set => maNguoiDuong = value; }
+        public string GhiChu { get => ghiChu; set => ghiChu = value; }
     }
 }

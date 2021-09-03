@@ -47,18 +47,22 @@ namespace QLSanPhamDienTu
             this.gridColumnmaND = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnGIamGia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumnTongTien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnTenND = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnTinhTrangThanhToan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gridContrrolCTHD = new DevExpress.XtraGrid.GridControl();
             this.gridViewHD = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnMaSPCTHD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnSoLuongCTHD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoaPN = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -66,6 +70,7 @@ namespace QLSanPhamDienTu
             this.label4 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnCapNhat = new System.Windows.Forms.ToolStripButton();
             this.dateTimePickerNgayDat = new System.Windows.Forms.DateTimePicker();
             this.checkBox = new System.Windows.Forms.CheckBox();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
@@ -199,7 +204,9 @@ namespace QLSanPhamDienTu
             this.gridColumnSDT,
             this.gridColumnmaND,
             this.gridColumnGIamGia,
-            this.gridColumnTongTien});
+            this.gridColumnTongTien,
+            this.gridColumnTenND,
+            this.gridColumnTinhTrangThanhToan});
             this.gridView2.DetailHeight = 333;
             this.gridView2.GridControl = this.gridControlHD;
             this.gridView2.Name = "gridView2";
@@ -208,6 +215,7 @@ namespace QLSanPhamDienTu
             this.gridView2.OptionsFind.FindNullPrompt = "Nhập thông tin cần tìm kiếm";
             this.gridView2.OptionsHint.ShowCellHints = false;
             this.gridView2.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView2.OptionsView.ColumnAutoWidth = false;
             this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
             this.gridView2.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView2_RowCellClick);
             // 
@@ -259,7 +267,7 @@ namespace QLSanPhamDienTu
             this.gridColumnNgayLap.Name = "gridColumnNgayLap";
             this.gridColumnNgayLap.Visible = true;
             this.gridColumnNgayLap.VisibleIndex = 3;
-            this.gridColumnNgayLap.Width = 125;
+            this.gridColumnNgayLap.Width = 128;
             // 
             // gridColumnTenKH
             // 
@@ -269,7 +277,7 @@ namespace QLSanPhamDienTu
             this.gridColumnTenKH.Name = "gridColumnTenKH";
             this.gridColumnTenKH.Visible = true;
             this.gridColumnTenKH.VisibleIndex = 4;
-            this.gridColumnTenKH.Width = 150;
+            this.gridColumnTenKH.Width = 165;
             // 
             // gridColumnSDT
             // 
@@ -279,17 +287,17 @@ namespace QLSanPhamDienTu
             this.gridColumnSDT.Name = "gridColumnSDT";
             this.gridColumnSDT.Visible = true;
             this.gridColumnSDT.VisibleIndex = 5;
-            this.gridColumnSDT.Width = 158;
+            this.gridColumnSDT.Width = 138;
             // 
             // gridColumnmaND
             // 
             this.gridColumnmaND.Caption = "Mã ND";
-            this.gridColumnmaND.FieldName = "MaNguoiDung";
+            this.gridColumnmaND.FieldName = "MaNguoiDuong";
             this.gridColumnmaND.MinWidth = 18;
             this.gridColumnmaND.Name = "gridColumnmaND";
             this.gridColumnmaND.Visible = true;
             this.gridColumnmaND.VisibleIndex = 6;
-            this.gridColumnmaND.Width = 61;
+            this.gridColumnmaND.Width = 71;
             // 
             // gridColumnGIamGia
             // 
@@ -300,8 +308,8 @@ namespace QLSanPhamDienTu
             this.gridColumnGIamGia.MinWidth = 18;
             this.gridColumnGIamGia.Name = "gridColumnGIamGia";
             this.gridColumnGIamGia.Visible = true;
-            this.gridColumnGIamGia.VisibleIndex = 7;
-            this.gridColumnGIamGia.Width = 103;
+            this.gridColumnGIamGia.VisibleIndex = 8;
+            this.gridColumnGIamGia.Width = 153;
             // 
             // gridColumnTongTien
             // 
@@ -312,8 +320,26 @@ namespace QLSanPhamDienTu
             this.gridColumnTongTien.MinWidth = 18;
             this.gridColumnTongTien.Name = "gridColumnTongTien";
             this.gridColumnTongTien.Visible = true;
-            this.gridColumnTongTien.VisibleIndex = 8;
-            this.gridColumnTongTien.Width = 124;
+            this.gridColumnTongTien.VisibleIndex = 9;
+            this.gridColumnTongTien.Width = 165;
+            // 
+            // gridColumnTenND
+            // 
+            this.gridColumnTenND.Caption = "Tên người dùng";
+            this.gridColumnTenND.FieldName = "TenNguoiDung";
+            this.gridColumnTenND.Name = "gridColumnTenND";
+            this.gridColumnTenND.Visible = true;
+            this.gridColumnTenND.VisibleIndex = 7;
+            this.gridColumnTenND.Width = 179;
+            // 
+            // gridColumnTinhTrangThanhToan
+            // 
+            this.gridColumnTinhTrangThanhToan.Caption = "Xác nhận";
+            this.gridColumnTinhTrangThanhToan.FieldName = "GhiChu";
+            this.gridColumnTinhTrangThanhToan.Name = "gridColumnTinhTrangThanhToan";
+            this.gridColumnTinhTrangThanhToan.Visible = true;
+            this.gridColumnTinhTrangThanhToan.VisibleIndex = 10;
+            this.gridColumnTinhTrangThanhToan.Width = 150;
             // 
             // panel4
             // 
@@ -365,9 +391,9 @@ namespace QLSanPhamDienTu
             this.gridViewHD.Appearance.ViewCaption.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridViewHD.Appearance.ViewCaption.Options.UseFont = true;
             this.gridViewHD.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn4,
+            this.gridColumnMaSPCTHD,
             this.gridColumn2,
-            this.gridColumn3,
+            this.gridColumnSoLuongCTHD,
             this.gridColumn14,
             this.gridColumn15,
             this.gridColumn16});
@@ -380,13 +406,13 @@ namespace QLSanPhamDienTu
             this.gridViewHD.OptionsHint.ShowCellHints = false;
             this.gridViewHD.OptionsSelection.ShowCheckBoxSelectorInGroupRow = DevExpress.Utils.DefaultBoolean.False;
             // 
-            // gridColumn4
+            // gridColumnMaSPCTHD
             // 
-            this.gridColumn4.Caption = "Mã sản phẩm";
-            this.gridColumn4.FieldName = "MasanPham";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 0;
+            this.gridColumnMaSPCTHD.Caption = "Mã sản phẩm";
+            this.gridColumnMaSPCTHD.FieldName = "MasanPham";
+            this.gridColumnMaSPCTHD.Name = "gridColumnMaSPCTHD";
+            this.gridColumnMaSPCTHD.Visible = true;
+            this.gridColumnMaSPCTHD.VisibleIndex = 0;
             // 
             // gridColumn2
             // 
@@ -398,15 +424,15 @@ namespace QLSanPhamDienTu
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 178;
             // 
-            // gridColumn3
+            // gridColumnSoLuongCTHD
             // 
-            this.gridColumn3.Caption = "Số lượng";
-            this.gridColumn3.FieldName = "SoLuong";
-            this.gridColumn3.MinWidth = 22;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 84;
+            this.gridColumnSoLuongCTHD.Caption = "Số lượng";
+            this.gridColumnSoLuongCTHD.FieldName = "SoLuong";
+            this.gridColumnSoLuongCTHD.MinWidth = 22;
+            this.gridColumnSoLuongCTHD.Name = "gridColumnSoLuongCTHD";
+            this.gridColumnSoLuongCTHD.Visible = true;
+            this.gridColumnSoLuongCTHD.VisibleIndex = 2;
+            this.gridColumnSoLuongCTHD.Width = 84;
             // 
             // gridColumn14
             // 
@@ -431,6 +457,8 @@ namespace QLSanPhamDienTu
             // gridColumn16
             // 
             this.gridColumn16.Caption = "Thành tiền";
+            this.gridColumn16.DisplayFormat.FormatString = "{0:0,0} vnđ";
+            this.gridColumn16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn16.FieldName = "ThanhTien";
             this.gridColumn16.MinWidth = 22;
             this.gridColumn16.Name = "gridColumn16";
@@ -458,6 +486,8 @@ namespace QLSanPhamDienTu
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label6);
@@ -478,11 +508,37 @@ namespace QLSanPhamDienTu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Tất cả",
+            "Đã thanh toán",
+            "Chờ xác nhận",
+            "Đã xác nhận",
+            "Đã hủy đơn",
+            "Đang giao"});
+            this.comboBox1.Location = new System.Drawing.Point(162, 24);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(235, 26);
+            this.comboBox1.TabIndex = 62;
+            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 21);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "Loại hóa đơn:";
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(24, 175);
+            this.label16.Location = new System.Drawing.Point(24, 197);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(96, 21);
             this.label16.TabIndex = 59;
@@ -492,7 +548,7 @@ namespace QLSanPhamDienTu
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(24, 141);
+            this.label12.Location = new System.Drawing.Point(24, 163);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 21);
             this.label12.TabIndex = 58;
@@ -502,7 +558,7 @@ namespace QLSanPhamDienTu
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 74);
+            this.label6.Location = new System.Drawing.Point(24, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 21);
             this.label6.TabIndex = 55;
@@ -512,7 +568,7 @@ namespace QLSanPhamDienTu
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(24, 108);
+            this.label7.Location = new System.Drawing.Point(24, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 21);
             this.label7.TabIndex = 54;
@@ -522,7 +578,7 @@ namespace QLSanPhamDienTu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 40);
+            this.label4.Location = new System.Drawing.Point(24, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 21);
             this.label4.TabIndex = 56;
@@ -533,7 +589,8 @@ namespace QLSanPhamDienTu
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.btnCapNhat});
             this.toolStrip1.Location = new System.Drawing.Point(3, 257);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(431, 37);
@@ -550,11 +607,21 @@ namespace QLSanPhamDienTu
             this.toolStripButton2.Text = "In hóa đơn";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.Image = global::QLSanPhamDienTu.Properties.Resources.savepink_removebg_preview;
+            this.btnCapNhat.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(110, 34);
+            this.btnCapNhat.Text = "Tình trạng";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
             // dateTimePickerNgayDat
             // 
             this.dateTimePickerNgayDat.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerNgayDat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayDat.Location = new System.Drawing.Point(162, 104);
+            this.dateTimePickerNgayDat.Location = new System.Drawing.Point(162, 126);
             this.dateTimePickerNgayDat.Name = "dateTimePickerNgayDat";
             this.dateTimePickerNgayDat.Size = new System.Drawing.Size(235, 24);
             this.dateTimePickerNgayDat.TabIndex = 52;
@@ -562,7 +629,7 @@ namespace QLSanPhamDienTu
             // checkBox
             // 
             this.checkBox.AutoSize = true;
-            this.checkBox.Location = new System.Drawing.Point(162, 202);
+            this.checkBox.Location = new System.Drawing.Point(162, 224);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(89, 22);
             this.checkBox.TabIndex = 50;
@@ -572,7 +639,7 @@ namespace QLSanPhamDienTu
             // 
             // txtGiamGia
             // 
-            this.txtGiamGia.Location = new System.Drawing.Point(162, 137);
+            this.txtGiamGia.Location = new System.Drawing.Point(162, 159);
             this.txtGiamGia.Name = "txtGiamGia";
             this.txtGiamGia.Size = new System.Drawing.Size(235, 24);
             this.txtGiamGia.TabIndex = 42;
@@ -580,7 +647,7 @@ namespace QLSanPhamDienTu
             // 
             // txtThanhTien
             // 
-            this.txtThanhTien.Location = new System.Drawing.Point(162, 172);
+            this.txtThanhTien.Location = new System.Drawing.Point(162, 194);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(235, 24);
             this.txtThanhTien.TabIndex = 43;
@@ -588,14 +655,14 @@ namespace QLSanPhamDienTu
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(162, 71);
+            this.txtSDT.Location = new System.Drawing.Point(162, 93);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(235, 24);
             this.txtSDT.TabIndex = 41;
             // 
             // txtTenKH
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(162, 37);
+            this.txtTenKH.Location = new System.Drawing.Point(162, 59);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(235, 24);
             this.txtTenKH.TabIndex = 39;
@@ -660,9 +727,9 @@ namespace QLSanPhamDienTu
         private System.Windows.Forms.TextBox txtTenKH;
         private DevExpress.XtraGrid.GridControl gridContrrolCTHD;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewHD;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnMaSPCTHD;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnSoLuongCTHD;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
@@ -679,5 +746,10 @@ namespace QLSanPhamDienTu
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnmaND;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnGIamGia;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumnTongTien;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTenND;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnTinhTrangThanhToan;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolStripButton btnCapNhat;
     }
 }

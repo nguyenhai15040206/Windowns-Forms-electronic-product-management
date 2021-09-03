@@ -17,7 +17,9 @@ namespace QLSanPhamDienTu
     public partial class frmInvoice : Form
     {
         bool tinhtrang = true;
+        private string xacNhanDonHang = string.Empty;
         int maHD = 0;
+        private int? maNguoiDung= 0;
         public frmInvoice()
         {
             InitializeComponent();
@@ -30,12 +32,14 @@ namespace QLSanPhamDienTu
                     item.Text = string.Empty;
                 }
             }
+            comboBox1.SelectedIndex = 0;
         }
 
         private void frmInvoice_Load(object sender, EventArgs e)
         {
             checkBox.Checked = true;
             InvoiceBUS.Instance.getALLHoaDon(gridControlHD, tinhtrang);
+            btnCapNhat.Visible = false;
         }
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)
@@ -87,9 +91,9 @@ namespace QLSanPhamDienTu
                 txtSDT.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnSDT).ToString();
                 dateTimePickerNgayDat.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnNgayLap).ToString();
                 txtGiamGia.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnGIamGia).ToString();
-                txtThanhTien.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnTongTien).ToString();
+                txtThanhTien.Text = string.Format("{0:0,0} vnđ", double.Parse(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnTongTien).ToString()));
                 maHD = int.Parse(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnMaHD).ToString());
-
+                maNguoiDung = InvoiceBUS.Instance.UserIDByInvoiceID(maHD);
                 checkBox.Checked = bool.Parse(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumnTinhTrang).ToString());
                 InvoiceDetailsBUS.Instance.getALLCTHoaDon(gridContrrolCTHD, maHD);
             }
@@ -117,8 +121,8 @@ namespace QLSanPhamDienTu
                                 XtraMessageBox.Show("Hóa đơn này đã được hủy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 for (int i = 0; i < gridViewHD.RowCount; i++)
                                 {
-                                    int maSP = int.Parse(gridViewHD.GetRowCellValue(i, gridColumn4).ToString());
-                                    int soLuong = int.Parse(gridViewHD.GetRowCellValue(i, gridColumn3).ToString());
+                                    int maSP = int.Parse(gridViewHD.GetRowCellValue(i, gridColumnMaSPCTHD).ToString());
+                                    int soLuong = int.Parse(gridViewHD.GetRowCellValue(i, gridColumnSoLuongCTHD).ToString());
                                     ProductBUS.Instance.updateAmouny_Delete(maSP, soLuong);
                                 }
                                 LamMoiDuLieu();
@@ -131,6 +135,73 @@ namespace QLSanPhamDienTu
                         XtraMessageBox.Show("Hóa đơn này không khả dụng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
+            }
+        }
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            maHD = 0;
+            if(comboBox1.SelectedIndex ==0)
+            {
+                InvoiceBUS.Instance.getALLHoaDon(gridControlHD, tinhtrang);
+                btnCapNhat.Visible = false;
+            }
+            else
+            {
+                if(comboBox1.SelectedItem.ToString().Trim()== "Chờ xác nhận")
+                {
+                    btnCapNhat.Text = "Xác nhận đơn hàng";
+                    btnCapNhat.Visible = true;
+                }
+                else if(comboBox1.SelectedItem.ToString().Trim() == "Đã xác nhận")
+                {
+                    btnCapNhat.Text = "Xác nhận giao hàng";
+                    btnCapNhat.Visible = true;
+                }    
+                else
+                {
+                    btnCapNhat.Visible = false;
+                }
+                InvoiceBUS.Instance.getDataInvoiceByNote(gridControlHD, comboBox1.SelectedItem.ToString().Trim());
+            }
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            if(maHD !=0)
+            {
+                if (btnCapNhat.Text.Equals("Xác nhận đơn hàng"))
+                {
+                    if (XtraMessageBox.Show("Bạn đã xác nhận đơn này với khách hàng chưa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (InvoiceBUS.Instance.updateStatusInvoice(maHD, "Đã xác nhận", frmMainForm.maND))
+                        {
+                            XtraMessageBox.Show("Xác nhận đơn hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            InvoiceBUS.Instance.getDataInvoiceByNote(gridControlHD, comboBox1.SelectedItem.ToString().Trim());
+                            for (int i = 0; i < gridViewHD.RowCount; i++)
+                            {
+                                int maSP = int.Parse(gridViewHD.GetRowCellValue(i, gridColumnMaSPCTHD).ToString());
+                                int soLuong = int.Parse(gridViewHD.GetRowCellValue(i, gridColumnSoLuongCTHD).ToString());
+                                ProductBUS.Instance.updateAmount_Buy(maSP, soLuong);
+                            }
+                            LamMoiDuLieu();
+                            maHD = 0;
+                        }
+                    }
+                }
+                if(btnCapNhat.Text.Equals("Xác nhận giao hàng"))
+                {
+                    if (InvoiceBUS.Instance.updateStatusInvoice(maHD, "Đang giao", (int)maNguoiDung))
+                    {
+                        XtraMessageBox.Show("Chuyển sang bộ phận giao hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        InvoiceBUS.Instance.getDataInvoiceByNote(gridControlHD, comboBox1.SelectedItem.ToString().Trim());
+                        maHD = 0;
+                    }
+                }    
+            }
+            else
+            {
+                XtraMessageBox.Show("Vui lòng chọn đơn hàng xác nhận!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

@@ -32,16 +32,15 @@ namespace DAO
         public List<HoaDonNews> getALLHoaDon(bool tinhTrang)
         {
             var listhd = (from hd in db.HoaDons
-                          from nd in db.NguoiDungs
-                          from kh in db.KhachHangs
-                          where hd.maNguoiDung == nd.maNguoiDung &&
-                          hd.maKhachHang == kh.maKhachHang &&
-                          hd.tinhTrang == tinhTrang
+                          join kh in db.KhachHangs on hd.maKhachHang equals kh.maKhachHang
+                          join nd in db.NguoiDungs on hd.maNguoiDung equals nd.maNguoiDung into NguoiDung_join
+                          from ndJoin in NguoiDung_join.DefaultIfEmpty()
+                          where hd.tinhTrang == tinhTrang
                           select new HoaDonNews
                           {
-                              MaNguoiDuong = nd.maNguoiDung,
+                              MaNguoiDuong = ndJoin.maNguoiDung,
                               MaHoaDon = hd.maHoaDon,
-                              TenNguoiDung = nd.tenNguoiDung,
+                              TenNguoiDung = ndJoin.tenNguoiDung,
                               TinhTrang = hd.tinhTrang,
                               DiaChi = kh.diaChi,
                               TenKhachHang = kh.tenKhachHang,
@@ -50,6 +49,32 @@ namespace DAO
                               TongTien = hd.tongTien,
                               NgayBan = hd.ngayBan,
                               NgayGiao = hd.ngayGiao,
+                              GhiChu = hd.ghiChu
+                          }).ToList();
+            return listhd;
+        }
+
+        public List<HoaDonNews> getALLHoaDonBy_Note(string note)
+        {
+            var listhd = (from hd in db.HoaDons
+                          join kh in db.KhachHangs on hd.maKhachHang equals kh.maKhachHang
+                          join nd in db.NguoiDungs on hd.maNguoiDung equals nd.maNguoiDung into NguoiDung_join
+                          from ndJoin in NguoiDung_join.DefaultIfEmpty()
+                          where hd.ghiChu == note && hd.tinhTrang== true
+                          select new HoaDonNews
+                          {
+                              MaNguoiDuong = ndJoin.maNguoiDung,
+                              MaHoaDon = hd.maHoaDon,
+                              TenNguoiDung = ndJoin.tenNguoiDung,
+                              TinhTrang = hd.tinhTrang,
+                              DiaChi = kh.diaChi,
+                              TenKhachHang = kh.tenKhachHang,
+                              SoDienThoai = kh.soDienThoai,
+                              GiamGia = hd.giamGia,
+                              TongTien = hd.tongTien,
+                              NgayBan = hd.ngayBan,
+                              NgayGiao = hd.ngayGiao,
+                              GhiChu = hd.ghiChu
                           }).ToList();
             return listhd;
         }
@@ -103,6 +128,23 @@ namespace DAO
                 return false;
             }
         }
+
+        public bool updateStatusInvoice(int invoiceID, string note, int UserID)
+        {
+            try
+            {
+                HoaDon hd = db.HoaDons.SingleOrDefault(m => m.maHoaDon == invoiceID);
+                hd.ghiChu = note;
+                hd.maNguoiDung = UserID;
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
 
         // hủy hóa đơn(có nghĩa hóa đơn này không có giá trị)
         public bool deleteInvoice(int invoiceID)
