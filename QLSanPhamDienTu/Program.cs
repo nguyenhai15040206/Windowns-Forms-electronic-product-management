@@ -22,9 +22,9 @@ namespace QLSanPhamDienTu
             //public static frmDoiMatKhau frmDoiMatKhau = null;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frm = new frmLogin();
-            Application.Run(frm);
-            //Application.Run(new frmNewsAndBannerManager());
+            //frm = new frmLogin();
+            //Application.Run(frm);
+            Application.Run(new frmProductManager());
         }
     }
 }

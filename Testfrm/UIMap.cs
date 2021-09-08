@@ -1,4 +1,4 @@
-﻿namespace CodedUI_QLSanPham
+﻿namespace Testfrm
 {
     using System;
     using System.Collections.Generic;
@@ -12,7 +12,9 @@
     using System.Drawing;
     using System.Windows.Input;
     using System.Text.RegularExpressions;
-
-
-
+    
+    
+    public partial class UIMap
+    {
+    }
 }
